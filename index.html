@@ -88,9 +88,9 @@ function adjImg(w) {
   // Prefer images/adj_WORD.jpg if exists
   const jpgWords = ['big','fast','happy','hot','sad','short','slow','tall'];
   if (jpgWords.includes(lower)) return 'images/adj_' + lower + '.jpg';
-  // images/adj_WORD.png
-  const pngWords = ['cold','hard','small','soft'];
-  if (pngWords.includes(lower)) return 'images/adj_' + lower + '.png';
+  // images/adj_WORD.gif (was .png, replaced with animated GIFs)
+  const gifWords = ['cold','hard','small','soft'];
+  if (gifWords.includes(lower)) return 'images/adj_' + lower + '.gif';
   // Everything else is GIF in images/adjectives/
   return 'images/adjectives/' + lower + '.gif';
 }
