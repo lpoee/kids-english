@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover,maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>English Fun!</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;font-family:-apple-system,system-ui,sans-serif;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+body{transition:background .8s}
+body.animal-bg{background:linear-gradient(135deg,#0c1929,#1a365d,#234e52)}
+body.color-bg{background:linear-gradient(135deg,#1a0a2e,#4a1942,#6b1d4a)}
+body.fruit-bg{background:linear-gradient(135deg,#0a1f1a,#1a4731,#2d6a4f)}
+body.sensory-bg{background:linear-gradient(135deg,#1a0e1e,#3a1a3e,#2a1a4e)}
+body.size-bg{background:linear-gradient(135deg,#0e1a2e,#1a3a4e,#0e2a3e)}
+body.feelings-bg{background:linear-gradient(135deg,#2e0e1a,#4e1a3a,#3e0e2a)}
+body.logic-bg{background:linear-gradient(135deg,#1a1a2e,#2a2a4e,#1e1e3a)}
+body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
+#app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;padding:4px 6px;overflow:hidden}
+#tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;margin-bottom:2px;z-index:10;overflow-x:auto;width:100%;max-width:100%;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+#tabs::-webkit-scrollbar{display:none}
+.tab{border:none;background:rgba(255,255,255,.06);color:rgba(255,255,255,.45);font-size:11px;font-weight:700;cursor:pointer;transition:all .25s;border-radius:14px;padding:6px 10px;border:2px solid transparent;white-space:nowrap;flex-shrink:0}
+.tab.active{border-color:#ffd700;background:rgba(255,215,0,.15);color:#ffd700;box-shadow:0 0 20px rgba(255,215,0,.2)}
+.tab:active{transform:scale(.93)}
+/* Sub-tabs */
+#sub-tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;z-index:10;width:100%;max-width:100%;overflow-x:auto;padding:2px 0;margin-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;min-height:28px}
+#sub-tabs::-webkit-scrollbar{display:none}
+.sub-tab{border:none;background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);font-size:10px;font-weight:600;cursor:pointer;transition:all .2s;border-radius:20px;padding:4px 12px;border:1.5px solid transparent;white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:.5px}
+.sub-tab.active{border-color:#ffd700;background:rgba(255,215,0,.12);color:#ffd700}
+.sub-tab:active{transform:scale(.92)}
+#main-area{flex:1;width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:0;gap:0}
+#img-card{width:240px;height:240px;border-radius:24px;background:rgba(255,255,255,.04);backdrop-filter:blur(24px);border:3px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;overflow:hidden;transition:transform .15s;z-index:5;box-shadow:0 16px 48px rgba(0,0,0,.3)}
+#img-card:active{transform:scale(.94)}
+#img-card img{max-width:85%;max-height:80%;border-radius:12px;object-fit:contain}
+#img-card .color-block{width:80%;height:80%;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:800;color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.4);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+#word-text{font-family:'Fredoka One',cursive;font-size:48px;font-weight:800;text-align:center;line-height:1.1;margin:4px 0 2px;z-index:10;cursor:pointer;transition:all .3s;letter-spacing:1px}
+#word-text:active{transform:scale(.92)}
+#word-text.animal-text{background:linear-gradient(135deg,#ff9ff3,#feca57,#ff6b6b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(255,159,243,.4))}
+#word-text.color-text{background:linear-gradient(135deg,#ffd700,#ff6348,#ff4757);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(255,215,0,.4))}
+#word-text.fruit-text{background:linear-gradient(135deg,#7bed9f,#2ed573,#ffa502);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(46,213,115,.4))}
+#word-text.sensory-text{background:linear-gradient(135deg,#c084fc,#f472b6,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(192,132,252,.4))}
+#word-text.size-text{background:linear-gradient(135deg,#60a5fa,#34d399,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(96,165,250,.4))}
+#word-text.feelings-text{background:linear-gradient(135deg,#f472b6,#fb923c,#f87171);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(244,114,182,.4))}
+#word-text.logic-text{background:linear-gradient(135deg,#a78bfa,#67e8f9,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(167,139,250,.4))}
+#word-text.pop{animation:textPop .5s ease-out}
+@keyframes textPop{0%{transform:scale(.7)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;font-size:20px;color:rgba(255,255,255,.4);transition:all .2s}
+.arrow:active{background:rgba(255,215,0,.2);border-color:#ffd700;color:#ffd700;transform:translateY(-50%) scale(.82)}
+#arrow-left{left:0}#arrow-right{right:0}
+#counter{color:rgba(255,255,255,.2);font-size:12px;flex-shrink:0;cursor:pointer;padding:6px 16px;border-radius:14px;margin-top:2px;z-index:10}
+#counter span{color:#ffd700;font-weight:700;font-size:15px}
+#autoplay{position:absolute;top:0;right:2px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:20;color:rgba(255,255,255,.3);transition:all .2s}
+#autoplay.active{background:rgba(255,215,0,.12);border-color:#ffd700;color:#ffd700}
+.confetti-piece{position:fixed;pointer-events:none;z-index:400;animation:cf 1.4s ease-out forwards}
+@keyframes cf{0%{opacity:1;transform:translateY(0) rotate(0) scale(1)}100%{opacity:0;transform:translateY(100vh) rotate(800deg) scale(.2)}}
+@media(max-width:360px){#img-card{width:200px;height:200px}#word-text{font-size:40px}}
+</style>
+</head>
+<body class="all-bg">
+<div id="app">
+  <div id="tabs">
+    <button class="tab active" data-cat="all">🌍 All</button>
+    <button class="tab" data-cat="animal">🐾 Animals</button>
+    <button class="tab" data-cat="color">🎨 Colors</button>
+    <button class="tab" data-cat="fruit">🍎 Fruits</button>
+    <button class="tab" data-cat="sensory">👆 Sensory</button>
+    <button class="tab" data-cat="size">📏 Size</button>
+    <button class="tab" data-cat="feelings">💭 Feelings</button>
+    <button class="tab" data-cat="logic">🧠 Logic</button>
+  </div>
+  <div id="sub-tabs"></div>
+  <div id="main-area">
+    <div id="autoplay">▶</div>
+    <div class="arrow" id="arrow-left">◀</div>
+    <div id="img-card"></div>
+    <div id="word-text"></div>
+    <div class="arrow" id="arrow-right">▶</div>
+  </div>
+  <div id="counter"><span id="idx-num">1</span> / <span id="total-num">1</span></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+//  DATA — complete category tree
+// ═══════════════════════════════════════════
+
+// Helper: image path for adjective
+function adjImg(w) {
+  const lower = w.toLowerCase();
+  // Prefer images/adj_WORD.jpg if exists
+  const jpgWords = ['big','fast','happy','hot','sad','short','slow','tall'];
+  if (jpgWords.includes(lower)) return 'images/adj_' + lower + '.jpg';
+  // images/adj_WORD.png
+  const pngWords = ['cold','hard','small','soft'];
+  if (pngWords.includes(lower)) return 'images/adj_' + lower + '.png';
+  // images/adjectives/WORD.jpg
+  const adjJpgWords = ['boiling','brave','freezing','fuzzy','heavy','prickly','scared','shiny','slimy','sticky'];
+  if (adjJpgWords.includes(lower)) return 'images/adjectives/' + lower + '.jpg';
+  // Everything else is .svg in adjectives/
+  return 'images/adjectives/' + lower + '.svg';
+}
+
+function adjAud(w) {
+  return 'audio/adj_' + w.toLowerCase() + '.mp3';
+}
+
+// Color block HTML (no image file)
+function colorBlock(name) {
+  const colors = {Red:'#ff4444',Blue:'#4488ff',Green:'#44cc44',Yellow:'#ffdd44',Orange:'#ff8844',Purple:'#aa44ff'};
+  return '<div class="color-block" style="background:'+(colors[name]||'#888')+'">' + name.charAt(0) + '</div>';
+}
+
+function w(w) { return w; }
+function img(w,p) { return {w,img:p,aud:'audio/'+w.toLowerCase()+'.mp3'}; }
+function adj(w) { return {w,img:adjImg(w),aud:adjAud(w)}; }
+
+const DATA = {
+  animal: {
+    label: '🐾 Animals',
+    words: [
+      img('Cat','images/cat.jpg'), img('Dog','images/dog.jpg'), img('Bird','images/bird.jpg'),
+      img('Lion','images/lion.jpg'), img('Monkey','images/monkey.jpg'), img('Rabbit','images/rabbit.jpg'),
+      img('Elephant','images/elephant.jpg'), img('Bear','images/bear.jpg')
+    ]
+  },
+  color: {
+    label: '🎨 Colors',
+    isColor: true,
+    words: [
+      {w:'Red',aud:'audio/red.mp3'}, {w:'Blue',aud:'audio/blue.mp3'}, {w:'Green',aud:'audio/green.mp3'},
+      {w:'Yellow',aud:'audio/yellow.mp3'}, {w:'Orange',aud:'audio/orange_color.mp3'}, {w:'Purple',aud:'audio/purple.mp3'}
+    ]
+  },
+  fruit: {
+    label: '🍎 Fruits',
+    words: [
+      img('Apple','images/apple.jpg'), img('Banana','images/banana.jpg'), img('Orange','images/orange.jpg'),
+      img('Grape','images/grape.jpg'), img('Pear','images/pear.jpg'), img('Watermelon','images/watermelon.jpg')
+    ]
+  },
+  sensory: {
+    label: '👆 Sensory',
+    subcats: {
+      touch: {
+        label:'Touch',
+        words:[adj('Hard'),adj('Soft'),adj('Fuzzy'),adj('Prickly'),adj('Slimy'),adj('Sticky'),adj('Freezing'),adj('Boiling')]
+      },
+      weight: {
+        label:'Weight',
+        words:[adj('Heavy'),adj('Light'),adj('Strong'),adj('Weak'),adj('Sturdy')]
+      },
+      visual: {
+        label:'Visual',
+        words:[adj('Bright'),adj('Dark'),adj('Shiny'),adj('Dull'),adj('Clear'),adj('Colorful'),adj('Pale')]
+      },
+      sound: {
+        label:'Sound',
+        words:[adj('Loud'),adj('Quiet'),adj('Noisy'),adj('Silent'),adj('Squeaky'),adj('Whispering')]
+      }
+    }
+  },
+  size: {
+    label: '📏 Size',
+    subcats: {
+      size: {
+        label:'Size',
+        words:[adj('Big'),adj('Small'),adj('Tall'),adj('Short'),adj('Long'),adj('Tiny'),adj('Huge'),adj('Wide'),adj('Narrow'),adj('Thick'),adj('Thin')]
+      },
+      form: {
+        label:'Form',
+        words:[adj('Round'),adj('Flat'),adj('Square'),adj('Pointed'),adj('Curved'),adj('Straight'),adj('Crooked')]
+      },
+      speed: {
+        label:'Speed',
+        words:[adj('Fast'),adj('Slow'),adj('Quick'),adj('Rapid')]
+      }
+    }
+  },
+  feelings: {
+    label: '💭 Feelings',
+    subcats: {
+      emotion: {
+        label:'Emotion',
+        words:[adj('Happy'),adj('Sad'),adj('Angry'),adj('Surprised'),adj('Brave'),adj('Scared'),adj('Silly'),adj('Serious')]
+      },
+      opinion: {
+        label:'Opinion',
+        words:[adj('Good'),adj('Bad'),adj('Pretty'),adj('Ugly'),adj('Mean'),adj('Nice'),adj('Difficult'),adj('Easy'),adj('Important')]
+      },
+      condition: {
+        label:'Condition',
+        words:[adj('Clean'),adj('Dirty'),adj('Broken'),adj('Fixed'),adj('New'),adj('Old'),adj('Wet'),adj('Dry'),adj('Empty'),adj('Full')]
+      }
+    }
+  },
+  logic: {
+    label: '🧠 Logic',
+    subcats: {
+      compare: {
+        label:'Compare',
+        words:[adj('Same'),adj('Different'),adj('Alike')]
+      },
+      order: {
+        label:'Order',
+        words:[adj('First'),adj('Last'),adj('Middle'),adj('Next')]
+      },
+      difficulty: {
+        label:'Difficulty',
+        words:[adj('Simple'),adj('Hard'),adj('Tricky')]
+      }
+    }
+  }
+};
+
+// ═══════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════
+const state = {
+  mainCat: 'all',      // 'all' | 'animal' | 'color' | 'fruit' | 'sensory' | 'size' | 'feelings' | 'logic'
+  subCat: null,        // sub-category key (e.g. 'touch') or null for flat categories
+  index: 0,
+  autoplay: false,
+  autoplayTimer: null,
+  currentAudio: null,
+  volume: 0.8
+};
+
+// ═══════════════════════════════════════════
+//  COMPUTED
+// ═══════════════════════════════════════════
+function getCurrentWords() {
+  if (state.mainCat === 'all') {
+    // All words from all categories
+    let all = [];
+    for (const key in DATA) {
+      const cat = DATA[key];
+      if (cat.subcats) {
+        for (const sk in cat.subcats) {
+          all = all.concat(cat.subcats[sk].words);
+        }
+      } else {
+        all = all.concat(cat.words);
+      }
+    }
+    return all;
+  }
+  const cat = DATA[state.mainCat];
+  if (!cat) return [];
+  if (cat.subcats) {
+    if (state.subCat && cat.subcats[state.subCat]) {
+      return cat.subcats[state.subCat].words;
+    }
+    // Default to first subcat
+    const firstKey = Object.keys(cat.subcats)[0];
+    if (firstKey) {
+      // Auto-set subCat if not set
+      if (!state.subCat) state.subCat = firstKey;
+      return cat.subcats[firstKey].words;
+    }
+    return [];
+  }
+  return cat.words;
+}
+
+function getCurrentWord() {
+  const words = getCurrentWords();
+  return words.length > 0 ? words[state.index] : null;
+}
+
+function getTotal() {
+  return getCurrentWords().length;
+}
+
+function getCategoryClass() {
+  const map = {animal:'animal', color:'color', fruit:'fruit', sensory:'sensory', size:'size', feelings:'feelings', logic:'logic'};
+  if (state.mainCat === 'all') return 'all';
+  return map[state.mainCat] || 'all';
+}
+
+function getBackgroundClass() {
+  const map = {animal:'animal-bg', color:'color-bg', fruit:'fruit-bg', sensory:'sensory-bg', size:'size-bg', feelings:'feelings-bg', logic:'logic-bg'};
+  if (state.mainCat === 'all') return 'all-bg';
+  return map[state.mainCat] || 'all-bg';
+}
+
+// ═══════════════════════════════════════════
+//  VIEW
+// ═══════════════════════════════════════════
+const $ = id => document.getElementById(id);
+
+function render() {
+  const word = getCurrentWord();
+  const total = getTotal();
+  const cls = getCategoryClass();
+
+  // Image card
+  const card = $('img-card');
+  if (word) {
+    if (state.mainCat === 'color' || (state.mainCat === 'all' && word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img)) {
+      card.innerHTML = colorBlock(word.w);
+    } else if (word.img) {
+      card.innerHTML = `<img src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
+    } else {
+      card.innerHTML = '';
+    }
+  } else {
+    card.innerHTML = '<div style="color:rgba(255,255,255,.2);font-size:60px">?</div>';
+  }
+
+  // Word text
+  const wt = $('word-text');
+  if (word) {
+    wt.textContent = word.w;
+    wt.className = cls + '-text';
+  } else {
+    wt.textContent = '';
+    wt.className = '';
+  }
+
+  // Counter
+  $('idx-num').textContent = total > 0 ? (state.index + 1) : 0;
+  $('total-num').textContent = total;
+
+  // Background
+  document.body.className = getBackgroundClass();
+
+  // Main tabs highlight
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.cat === state.mainCat);
+  });
+
+  // Sub-tabs
+  renderSubTabs();
+}
+
+function renderSubTabs() {
+  const container = $('sub-tabs');
+  const cat = DATA[state.mainCat];
+  if (!cat || !cat.subcats) {
+    container.innerHTML = '';
+    return;
+  }
+  const keys = Object.keys(cat.subcats);
+  container.innerHTML = keys.map(k =>
+    `<button class="sub-tab${k === state.subCat ? ' active' : ''}" data-sub="${k}">${cat.subcats[k].label}</button>`
+  ).join('');
+
+  // Re-bind sub-tab clicks
+  container.querySelectorAll('.sub-tab').forEach(btn => {
+    btn.addEventListener('click', () => setSubCat(btn.dataset.sub));
+  });
+}
+
+function bounceCard() {
+  const c = $('img-card');
+  if (!c) return;
+  c.style.transform = 'scale(.92)';
+  setTimeout(() => c.style.transform = 'scale(1.05)', 100);
+  setTimeout(() => c.style.transform = 'scale(1)', 220);
+}
+
+function popText() {
+  const t = $('word-text');
+  if (!t) return;
+  t.classList.remove('pop');
+  void t.offsetWidth;
+  t.classList.add('pop');
+}
+
+function confetti(n) {
+  n = n || 20;
+  const colors = ['#ff6b6b','#ffd700','#a55eea','#4ade80','#60a5fa','#fbbf24','#ff9ff3','#ff6348'];
+  for (let i = 0; i < n; i++) {
+    const d = document.createElement('div');
+    d.className = 'confetti-piece';
+    d.style.left = Math.random() * 100 + 'vw';
+    d.style.top = '-20px';
+    d.style.background = colors[Math.floor(Math.random() * colors.length)];
+    d.style.width = (6 + Math.random() * 12) + 'px';
+    d.style.height = (6 + Math.random() * 12) + 'px';
+    d.style.borderRadius = Math.random() > 0.5 ? '50%' : '3px';
+    d.style.animationDelay = Math.random() * 0.4 + 's';
+    d.style.animationDuration = (1 + Math.random() * 1.2) + 's';
+    document.body.appendChild(d);
+    setTimeout(() => d.remove(), 2000);
+  }
+}
+
+function toggleAutoplayUI(on) {
+  $('autoplay').textContent = on ? '⏸' : '▶';
+  $('autoplay').classList.toggle('active', on);
+}
+
+// ═══════════════════════════════════════════
+//  CONTROLLER
+// ═══════════════════════════════════════════
+
+function setMainCat(cat) {
+  if (cat === state.mainCat) return;
+  state.mainCat = cat;
+  state.subCat = null;
+  state.index = 0;
+  render();
+  if (state.autoplay) scheduleAutoplay();
+}
+
+function setSubCat(sub) {
+  state.subCat = sub;
+  state.index = 0;
+  render();
+  if (state.autoplay) scheduleAutoplay();
+}
+
+function prev() {
+  const total = getTotal();
+  if (total === 0) return;
+  state.index = state.index > 0 ? state.index - 1 : total - 1;
+  render();
+  if (state.autoplay) scheduleAutoplay();
+}
+
+function next() {
+  const total = getTotal();
+  if (total === 0) return;
+  state.index = state.index < total - 1 ? state.index + 1 : 0;
+  render();
+  if (state.autoplay) scheduleAutoplay();
+}
+
+function tapWord() {
+  const word = getCurrentWord();
+  if (!word) return;
+  playAudio();
+  confetti(20);
+  bounceCard();
+  popText();
+}
+
+function playAudio() {
+  const word = getCurrentWord();
+  if (!word) return;
+  if (state.currentAudio) {
+    state.currentAudio.pause();
+    state.currentAudio = null;
+  }
+  if (!word.aud) return;
+  const a = new Audio(word.aud);
+  a.volume = state.volume;
+  state.currentAudio = a;
+  a.play().catch(() => {});
+}
+
+function toggleAutoplay() {
+  state.autoplay = !state.autoplay;
+  toggleAutoplayUI(state.autoplay);
+  if (state.autoplay) scheduleAutoplay();
+  else clearTimeout(state.autoplayTimer);
+}
+
+function scheduleAutoplay() {
+  clearTimeout(state.autoplayTimer);
+  state.autoplayTimer = setTimeout(() => {
+    tapWord();
+    setTimeout(() => next(), 1800);
+  }, 800);
+}
+
+// ═══════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════
+function init() {
+  // Tab clicks
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => setMainCat(tab.dataset.cat));
+  });
+
+  // Arrow clicks
+  $('arrow-left').addEventListener('click', prev);
+  $('arrow-right').addEventListener('click', next);
+
+  // Card click → play audio
+  $('img-card').addEventListener('click', tapWord);
+
+  // Word text click → also play
+  $('word-text').addEventListener('click', tapWord);
+
+  // Autoplay
+  $('autoplay').addEventListener('click', toggleAutoplay);
+
+  // Swipe
+  let tx = 0;
+  $('main-area').addEventListener('touchstart', e => { tx = e.touches[0].clientX; });
+  $('main-area').addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) {
+      dx < 0 ? next() : prev();
+    }
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+    if (e.key === ' ') { e.preventDefault(); tapWord(); }
+  });
+
+  // Volume long-press on counter
+  let pt;
+  $('counter').addEventListener('pointerdown', () => {
+    pt = setTimeout(() => {
+      state.volume = state.volume > 0.5 ? 0.2 : 0.8;
+      playAudio();
+    }, 2500);
+  });
+  $('counter').addEventListener('pointerup', () => clearTimeout(pt));
+  $('counter').addEventListener('pointerleave', () => clearTimeout(pt));
+
+  // Initial render
+  render();
+}
+
+// Boot
+document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  init();
+}
+</script>
+</body>
+</html>
