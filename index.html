@@ -19,15 +19,18 @@ body.size-bg{background:linear-gradient(135deg,#0e1a2e,#1a3a4e,#0e2a3e)}
 body.feelings-bg{background:linear-gradient(135deg,#2e0e1a,#4e1a3a,#3e0e2a)}
 body.logic-bg{background:linear-gradient(135deg,#1a1a2e,#2a2a4e,#1e1e3a)}
 body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
-#app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;padding:4px 6px;overflow:hidden}
-#tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;margin-bottom:2px;z-index:10;overflow-x:auto;width:100%;max-width:100%;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-#tabs::-webkit-scrollbar{display:none}
-.tab{border:none;background:rgba(255,255,255,.06);color:rgba(255,255,255,.45);font-size:11px;font-weight:700;cursor:pointer;transition:all .25s;border-radius:14px;padding:6px 10px;border:2px solid transparent;white-space:nowrap;flex-shrink:0}
-.tab.active{border-color:#ffd700;background:rgba(255,215,0,.15);color:#ffd700;box-shadow:0 0 20px rgba(255,215,0,.2)}
-.tab:active{transform:scale(.93)}
-/* Sub-tabs */
-#sub-tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;z-index:10;width:100%;max-width:100%;overflow-x:auto;padding:2px 0;margin-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;min-height:28px}
+#app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;padding:6px 6px 4px;overflow:hidden}
+/* Top tabs */
+#top-tabs{display:flex;gap:6px;flex-shrink:0;justify-content:center;z-index:10;width:100%;max-width:420px;padding:2px 0;margin-bottom:2px}
+.top-tab{border:none;background:rgba(255,255,255,.06);color:rgba(255,255,255,.45);font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;border-radius:16px;padding:8px 18px;border:2px solid transparent;white-space:nowrap;flex:1;max-width:200px;letter-spacing:.5px}
+.top-tab.active{border-color:#ffd700;background:rgba(255,215,0,.15);color:#ffd700;box-shadow:0 0 20px rgba(255,215,0,.2)}
+.top-tab:active{transform:scale(.93)}
+/* Sub-tabs container with slide animation */
+#sub-tabs-wrap{width:100%;max-width:420px;overflow:hidden;flex-shrink:0;position:relative;min-height:36px;margin-bottom:0}
+#sub-tabs{display:flex;gap:4px;flex-wrap:nowrap;justify-content:center;z-index:10;width:100%;padding:4px 0 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .3s ease}
 #sub-tabs::-webkit-scrollbar{display:none}
+#sub-tabs.slide-out{transform:translateY(-12px);opacity:0;pointer-events:none}
+#sub-tabs.slide-in{transform:translateY(0);opacity:1;pointer-events:auto}
 .sub-tab{border:none;background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);font-size:10px;font-weight:600;cursor:pointer;transition:all .2s;border-radius:20px;padding:4px 12px;border:1.5px solid transparent;white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:.5px}
 .sub-tab.active{border-color:#ffd700;background:rgba(255,215,0,.12);color:#ffd700}
 .sub-tab:active{transform:scale(.92)}
@@ -56,22 +59,18 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 #autoplay.active{background:rgba(255,215,0,.12);border-color:#ffd700;color:#ffd700}
 .confetti-piece{position:fixed;pointer-events:none;z-index:400;animation:cf 1.4s ease-out forwards}
 @keyframes cf{0%{opacity:1;transform:translateY(0) rotate(0) scale(1)}100%{opacity:0;transform:translateY(100vh) rotate(800deg) scale(.2)}}
-@media(max-width:360px){#img-card{width:200px;height:200px}#word-text{font-size:40px}}
+@media(max-width:360px){#img-card{width:200px;height:200px}#word-text{font-size:40px}.top-tab{font-size:12px;padding:6px 10px}}
 </style>
 </head>
 <body class="all-bg">
 <div id="app">
-  <div id="tabs">
-    <button class="tab active" data-cat="all">🌍 All</button>
-    <button class="tab" data-cat="animal">🐾 Animals</button>
-    <button class="tab" data-cat="color">🎨 Colors</button>
-    <button class="tab" data-cat="fruit">🍎 Fruits</button>
-    <button class="tab" data-cat="sensory">👆 Sensory</button>
-    <button class="tab" data-cat="size">📏 Size</button>
-    <button class="tab" data-cat="feelings">💭 Feelings</button>
-    <button class="tab" data-cat="logic">🧠 Logic</button>
+  <div id="top-tabs">
+    <button class="top-tab active" data-top="nouns">📦 Nouns 名词</button>
+    <button class="top-tab" data-top="adjectives">🎨 Adjectives 形容词</button>
   </div>
-  <div id="sub-tabs"></div>
+  <div id="sub-tabs-wrap">
+    <div id="sub-tabs"></div>
+  </div>
   <div id="main-area">
     <div id="autoplay">▶</div>
     <div class="arrow" id="arrow-left">◀</div>
@@ -84,19 +83,16 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 
 <script>
 // ═══════════════════════════════════════════
-//  DATA — complete category tree
+//  DATA — 2-level category system
 // ═══════════════════════════════════════════
 
 // Helper: image path for adjective
 function adjImg(w) {
   const lower = w.toLowerCase();
-  // Prefer images/adj_WORD.jpg if exists
   const jpgWords = ['big','fast','happy','hot','sad','short','slow','tall'];
   if (jpgWords.includes(lower)) return 'images/adj_' + lower + '.jpg';
-  // images/adj_WORD.png
   const pngWords = ['cold','hard','small','soft'];
   if (pngWords.includes(lower)) return 'images/adj_' + lower + '.png';
-  // Everything else is GIF in images/adjectives/
   return 'images/adjectives/' + lower + '.gif';
 }
 
@@ -110,103 +106,119 @@ function colorBlock(name) {
   return '<div class="color-block" style="background:'+(colors[name]||'#888')+'">' + name.charAt(0) + '</div>';
 }
 
-function w(w) { return w; }
 function img(w,p) { return {w,img:p,aud:'audio/'+w.toLowerCase()+'.mp3'}; }
 function adj(w) { return {w,img:adjImg(w),aud:adjAud(w)}; }
 
 const DATA = {
-  animal: {
-    label: '🐾 Animals',
-    words: [
-      img('Cat','images/cat.jpg'), img('Dog','images/dog.jpg'), img('Bird','images/bird.jpg'),
-      img('Lion','images/lion.jpg'), img('Monkey','images/monkey.jpg'), img('Rabbit','images/rabbit.jpg'),
-      img('Elephant','images/elephant.jpg'), img('Bear','images/bear.jpg')
-    ]
-  },
-  color: {
-    label: '🎨 Colors',
-    isColor: true,
-    words: [
-      {w:'Red',aud:'audio/red.mp3'}, {w:'Blue',aud:'audio/blue.mp3'}, {w:'Green',aud:'audio/green.mp3'},
-      {w:'Yellow',aud:'audio/yellow.mp3'}, {w:'Orange',aud:'audio/orange_color.mp3'}, {w:'Purple',aud:'audio/purple.mp3'}
-    ]
-  },
-  fruit: {
-    label: '🍎 Fruits',
-    words: [
-      img('Apple','images/apple.jpg'), img('Banana','images/banana.jpg'), img('Orange','images/orange.jpg'),
-      img('Grape','images/grape.jpg'), img('Pear','images/pear.jpg'), img('Watermelon','images/watermelon.jpg')
-    ]
-  },
-  sensory: {
-    label: '👆 Sensory',
-    subcats: {
-      touch: {
-        label:'Touch',
-        words:[adj('Hard'),adj('Soft'),adj('Fuzzy'),adj('Prickly'),adj('Slimy'),adj('Sticky'),adj('Freezing'),adj('Boiling')]
+  nouns: {
+    label: '📦 Nouns 名词',
+    cats: {
+      animal: {
+        label: '🐾 Animals 动物',
+        gradClass: 'animal',
+        words: [
+          img('Cat','images/cat.jpg'), img('Dog','images/dog.jpg'), img('Bird','images/bird.jpg'),
+          img('Lion','images/lion.jpg'), img('Monkey','images/monkey.jpg'), img('Rabbit','images/rabbit.jpg'),
+          img('Elephant','images/elephant.jpg'), img('Bear','images/bear.jpg')
+        ]
       },
-      weight: {
-        label:'Weight',
-        words:[adj('Heavy'),adj('Light'),adj('Strong'),adj('Weak'),adj('Sturdy')]
+      fruit: {
+        label: '🍎 Fruits 水果',
+        gradClass: 'fruit',
+        words: [
+          img('Apple','images/apple.jpg'), img('Banana','images/banana.jpg'), img('Orange','images/orange.jpg'),
+          img('Grape','images/grape.jpg'), img('Pear','images/pear.jpg'), img('Watermelon','images/watermelon.jpg')
+        ]
       },
-      visual: {
-        label:'Visual',
-        words:[adj('Bright'),adj('Dark'),adj('Shiny'),adj('Dull'),adj('Clear'),adj('Colorful'),adj('Pale')]
-      },
-      sound: {
-        label:'Sound',
-        words:[adj('Loud'),adj('Quiet'),adj('Noisy'),adj('Silent'),adj('Squeaky'),adj('Whispering')]
+      color: {
+        label: '🎨 Colors 颜色',
+        gradClass: 'color',
+        isColor: true,
+        words: [
+          {w:'Red',aud:'audio/red.mp3'}, {w:'Blue',aud:'audio/blue.mp3'}, {w:'Green',aud:'audio/green.mp3'},
+          {w:'Yellow',aud:'audio/yellow.mp3'}, {w:'Orange',aud:'audio/orange_color.mp3'}, {w:'Purple',aud:'audio/purple.mp3'}
+        ]
       }
     }
   },
-  size: {
-    label: '📏 Size',
-    subcats: {
+  adjectives: {
+    label: '🎨 Adjectives 形容词',
+    cats: {
+      sensory: {
+        label: '👆 Sensory 感官',
+        gradClass: 'sensory',
+        subcats: {
+          touch: {
+            label:'Touch',
+            words:[adj('Hard'),adj('Soft'),adj('Fuzzy'),adj('Prickly'),adj('Slimy'),adj('Sticky'),adj('Freezing'),adj('Boiling')]
+          },
+          weight: {
+            label:'Weight',
+            words:[adj('Heavy'),adj('Light'),adj('Strong'),adj('Weak'),adj('Sturdy')]
+          },
+          visual: {
+            label:'Visual',
+            words:[adj('Bright'),adj('Dark'),adj('Shiny'),adj('Dull'),adj('Clear'),adj('Colorful'),adj('Pale')]
+          },
+          sound: {
+            label:'Sound',
+            words:[adj('Loud'),adj('Quiet'),adj('Noisy'),adj('Silent'),adj('Squeaky'),adj('Whispering')]
+          }
+        }
+      },
       size: {
-        label:'Size',
-        words:[adj('Big'),adj('Small'),adj('Tall'),adj('Short'),adj('Long'),adj('Tiny'),adj('Huge'),adj('Wide'),adj('Narrow'),adj('Thick'),adj('Thin')]
+        label: '📏 Size 大小',
+        gradClass: 'size',
+        subcats: {
+          sizeAdj: {
+            label:'Size',
+            words:[adj('Big'),adj('Small'),adj('Tall'),adj('Short'),adj('Long'),adj('Tiny'),adj('Huge'),adj('Wide'),adj('Narrow'),adj('Thick'),adj('Thin')]
+          },
+          form: {
+            label:'Form',
+            words:[adj('Round'),adj('Flat'),adj('Square'),adj('Pointed'),adj('Curved'),adj('Straight'),adj('Crooked')]
+          },
+          speed: {
+            label:'Speed',
+            words:[adj('Fast'),adj('Slow'),adj('Quick'),adj('Rapid')]
+          }
+        }
       },
-      form: {
-        label:'Form',
-        words:[adj('Round'),adj('Flat'),adj('Square'),adj('Pointed'),adj('Curved'),adj('Straight'),adj('Crooked')]
+      feelings: {
+        label: '💭 Feelings 情感',
+        gradClass: 'feelings',
+        subcats: {
+          emotion: {
+            label:'Emotion',
+            words:[adj('Happy'),adj('Sad'),adj('Angry'),adj('Surprised'),adj('Brave'),adj('Scared'),adj('Silly'),adj('Serious')]
+          },
+          opinion: {
+            label:'Opinion',
+            words:[adj('Good'),adj('Bad'),adj('Pretty'),adj('Ugly'),adj('Mean'),adj('Nice'),adj('Difficult'),adj('Easy'),adj('Important')]
+          },
+          condition: {
+            label:'Condition',
+            words:[adj('Clean'),adj('Dirty'),adj('Broken'),adj('Fixed'),adj('New'),adj('Old'),adj('Wet'),adj('Dry'),adj('Empty'),adj('Full')]
+          }
+        }
       },
-      speed: {
-        label:'Speed',
-        words:[adj('Fast'),adj('Slow'),adj('Quick'),adj('Rapid')]
-      }
-    }
-  },
-  feelings: {
-    label: '💭 Feelings',
-    subcats: {
-      emotion: {
-        label:'Emotion',
-        words:[adj('Happy'),adj('Sad'),adj('Angry'),adj('Surprised'),adj('Brave'),adj('Scared'),adj('Silly'),adj('Serious')]
-      },
-      opinion: {
-        label:'Opinion',
-        words:[adj('Good'),adj('Bad'),adj('Pretty'),adj('Ugly'),adj('Mean'),adj('Nice'),adj('Difficult'),adj('Easy'),adj('Important')]
-      },
-      condition: {
-        label:'Condition',
-        words:[adj('Clean'),adj('Dirty'),adj('Broken'),adj('Fixed'),adj('New'),adj('Old'),adj('Wet'),adj('Dry'),adj('Empty'),adj('Full')]
-      }
-    }
-  },
-  logic: {
-    label: '🧠 Logic',
-    subcats: {
-      compare: {
-        label:'Compare',
-        words:[adj('Same'),adj('Different'),adj('Alike')]
-      },
-      order: {
-        label:'Order',
-        words:[adj('First'),adj('Last'),adj('Middle'),adj('Next')]
-      },
-      difficulty: {
-        label:'Difficulty',
-        words:[adj('Simple'),adj('Hard'),adj('Tricky')]
+      logic: {
+        label: '🧠 Logic 逻辑',
+        gradClass: 'logic',
+        subcats: {
+          compare: {
+            label:'Compare',
+            words:[adj('Same'),adj('Different'),adj('Alike')]
+          },
+          order: {
+            label:'Order',
+            words:[adj('First'),adj('Last'),adj('Middle'),adj('Next')]
+          },
+          difficulty: {
+            label:'Difficulty',
+            words:[adj('Simple'),adj('Hard'),adj('Tricky')]
+          }
+        }
       }
     }
   }
@@ -216,8 +228,10 @@ const DATA = {
 //  STATE
 // ═══════════════════════════════════════════
 const state = {
-  mainCat: 'all',      // 'all' | 'animal' | 'color' | 'fruit' | 'sensory' | 'size' | 'feelings' | 'logic'
-  subCat: null,        // sub-category key (e.g. 'touch') or null for flat categories
+  topLevel: 'nouns',   // 'nouns' | 'adjectives'
+  subCat: null,        // sub-category key (e.g. 'animal') or null for "all"
+  subSubCat: null,     // deeper sub-category for adjectives (e.g. 'touch') or null
+  allMode: true,       // true = show all words under this top level
   index: 0,
   autoplay: false,
   autoplayTimer: null,
@@ -228,38 +242,53 @@ const state = {
 // ═══════════════════════════════════════════
 //  COMPUTED
 // ═══════════════════════════════════════════
-function getCurrentWords() {
-  if (state.mainCat === 'all') {
-    // All words from all categories
+function getSubCats(top) {
+  return Object.keys(DATA[top].cats);
+}
+
+function getWordsForSubCat(top, catKey) {
+  const cat = DATA[top].cats[catKey];
+  if (!cat) return [];
+  if (cat.subcats) {
     let all = [];
-    for (const key in DATA) {
-      const cat = DATA[key];
-      if (cat.subcats) {
-        for (const sk in cat.subcats) {
-          all = all.concat(cat.subcats[sk].words);
-        }
-      } else {
-        all = all.concat(cat.words);
-      }
+    for (const sk in cat.subcats) {
+      all = all.concat(cat.subcats[sk].words);
     }
     return all;
   }
-  const cat = DATA[state.mainCat];
-  if (!cat) return [];
-  if (cat.subcats) {
-    if (state.subCat && cat.subcats[state.subCat]) {
-      return cat.subcats[state.subCat].words;
-    }
-    // Default to first subcat
-    const firstKey = Object.keys(cat.subcats)[0];
-    if (firstKey) {
-      // Auto-set subCat if not set
-      if (!state.subCat) state.subCat = firstKey;
-      return cat.subcats[firstKey].words;
-    }
-    return [];
+  return cat.words || [];
+}
+
+function getAllWords(top) {
+  let all = [];
+  const cats = DATA[top].cats;
+  for (const ck in cats) {
+    all = all.concat(getWordsForSubCat(top, ck));
   }
-  return cat.words;
+  return all;
+}
+
+function getCurrentWords() {
+  if (state.allMode) {
+    return getAllWords(state.topLevel);
+  }
+  if (state.subCat) {
+    const cat = DATA[state.topLevel].cats[state.subCat];
+    if (!cat) return [];
+    if (cat.subcats) {
+      if (state.subSubCat && cat.subcats[state.subSubCat]) {
+        return cat.subcats[state.subSubCat].words;
+      }
+      const firstKey = Object.keys(cat.subcats)[0];
+      if (firstKey) {
+        if (!state.subSubCat) state.subSubCat = firstKey;
+        return cat.subcats[firstKey].words;
+      }
+      return [];
+    }
+    return cat.words || [];
+  }
+  return getAllWords(state.topLevel);
 }
 
 function getCurrentWord() {
@@ -271,16 +300,18 @@ function getTotal() {
   return getCurrentWords().length;
 }
 
-function getCategoryClass() {
-  const map = {animal:'animal', color:'color', fruit:'fruit', sensory:'sensory', size:'size', feelings:'feelings', logic:'logic'};
-  if (state.mainCat === 'all') return 'all';
-  return map[state.mainCat] || 'all';
+function getGradClass() {
+  if (state.allMode || !state.subCat) return 'all';
+  const cat = DATA[state.topLevel].cats[state.subCat];
+  return cat ? (cat.gradClass || 'all') : 'all';
 }
 
-function getBackgroundClass() {
+function getBgClass() {
+  if (state.allMode || !state.subCat) return 'all-bg';
+  const cat = DATA[state.topLevel].cats[state.subCat];
+  if (!cat) return 'all-bg';
   const map = {animal:'animal-bg', color:'color-bg', fruit:'fruit-bg', sensory:'sensory-bg', size:'size-bg', feelings:'feelings-bg', logic:'logic-bg'};
-  if (state.mainCat === 'all') return 'all-bg';
-  return map[state.mainCat] || 'all-bg';
+  return map[cat.gradClass] || 'all-bg';
 }
 
 // ═══════════════════════════════════════════
@@ -291,12 +322,13 @@ const $ = id => document.getElementById(id);
 function render() {
   const word = getCurrentWord();
   const total = getTotal();
-  const cls = getCategoryClass();
+  const cls = getGradClass();
 
   // Image card
   const card = $('img-card');
   if (word) {
-    if (state.mainCat === 'color' || (state.mainCat === 'all' && word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img)) {
+    const isColorWord = word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img;
+    if (isColorWord) {
       card.innerHTML = colorBlock(word.w);
     } else if (word.img) {
       card.innerHTML = `<img src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
@@ -322,33 +354,56 @@ function render() {
   $('total-num').textContent = total;
 
   // Background
-  document.body.className = getBackgroundClass();
+  document.body.className = getBgClass();
 
-  // Main tabs highlight
-  document.querySelectorAll('.tab').forEach(t => {
-    t.classList.toggle('active', t.dataset.cat === state.mainCat);
-  });
-
-  // Sub-tabs
+  // Render sub-tabs
   renderSubTabs();
 }
 
 function renderSubTabs() {
   const container = $('sub-tabs');
-  const cat = DATA[state.mainCat];
-  if (!cat || !cat.subcats) {
-    container.innerHTML = '';
-    return;
-  }
-  const keys = Object.keys(cat.subcats);
-  container.innerHTML = keys.map(k =>
-    `<button class="sub-tab${k === state.subCat ? ' active' : ''}" data-sub="${k}">${cat.subcats[k].label}</button>`
-  ).join('');
+  const topData = DATA[state.topLevel];
+  if (!topData) return;
 
-  // Re-bind sub-tab clicks
-  container.querySelectorAll('.sub-tab').forEach(btn => {
-    btn.addEventListener('click', () => setSubCat(btn.dataset.sub));
+  const catKeys = Object.keys(topData.cats);
+  const labels = [];
+
+  // "All" button
+  labels.push(
+    `<button class="sub-tab${state.allMode ? ' active' : ''}" data-action="all">🌍 All</button>`
+  );
+
+  catKeys.forEach(k => {
+    const cat = topData.cats[k];
+    const active = !state.allMode && state.subCat === k;
+    labels.push(
+      `<button class="sub-tab${active ? ' active' : ''}" data-action="cat" data-sub="${k}">${cat.label}</button>`
+    );
   });
+
+  container.innerHTML = labels.join('');
+
+  // Bind sub-tab clicks
+  container.querySelectorAll('.sub-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.action === 'all') {
+        setSubCat(null, true);
+      } else {
+        setSubCat(btn.dataset.sub, false);
+      }
+    });
+  });
+}
+
+function animateSubTabs() {
+  const container = $('sub-tabs');
+  container.classList.add('slide-out');
+  setTimeout(() => {
+    renderSubTabs();
+    container.classList.remove('slide-out');
+    container.classList.add('slide-in');
+    setTimeout(() => container.classList.remove('slide-in'), 350);
+  }, 180);
 }
 
 function bounceCard() {
@@ -395,19 +450,48 @@ function toggleAutoplayUI(on) {
 //  CONTROLLER
 // ═══════════════════════════════════════════
 
-function setMainCat(cat) {
-  if (cat === state.mainCat) return;
-  state.mainCat = cat;
+function setTopLevel(top) {
+  if (top === state.topLevel) return;
+  state.topLevel = top;
   state.subCat = null;
+  state.subSubCat = null;
+  state.allMode = true;
   state.index = 0;
-  render();
+
+  // Animate sub-tabs transition
+  const container = $('sub-tabs');
+  container.classList.add('slide-out');
+  setTimeout(() => {
+    render();
+    container.classList.remove('slide-out');
+    container.classList.add('slide-in');
+    setTimeout(() => container.classList.remove('slide-in'), 350);
+  }, 180);
+
+  // Update top tab highlight
+  document.querySelectorAll('.top-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.top === top);
+  });
+
   if (state.autoplay) scheduleAutoplay();
 }
 
-function setSubCat(sub) {
-  state.subCat = sub;
+function setSubCat(cat, isAll) {
+  if (!isAll && state.subCat === cat) return;
+  state.allMode = isAll;
+  state.subCat = cat;
+  state.subSubCat = null;
   state.index = 0;
-  render();
+
+  const container = $('sub-tabs');
+  container.classList.add('slide-out');
+  setTimeout(() => {
+    render();
+    container.classList.remove('slide-out');
+    container.classList.add('slide-in');
+    setTimeout(() => container.classList.remove('slide-in'), 350);
+  }, 180);
+
   if (state.autoplay) scheduleAutoplay();
 }
 
@@ -469,9 +553,9 @@ function scheduleAutoplay() {
 //  INIT
 // ═══════════════════════════════════════════
 function init() {
-  // Tab clicks
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => setMainCat(tab.dataset.cat));
+  // Top tab clicks
+  document.querySelectorAll('.top-tab').forEach(tab => {
+    tab.addEventListener('click', () => setTopLevel(tab.dataset.top));
   });
 
   // Arrow clicks
