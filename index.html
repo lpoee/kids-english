@@ -65,14 +65,6 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 <body class="all-bg">
 <div id="app">
   <div id="tabs">
-    <button class="tab active" data-cat="all">🌍 All</button>
-    <button class="tab" data-cat="animal">🐾 Animals</button>
-    <button class="tab" data-cat="color">🎨 Colors</button>
-    <button class="tab" data-cat="fruit">🍎 Fruits</button>
-    <button class="tab" data-cat="sensory">👆 Sensory</button>
-    <button class="tab" data-cat="size">📏 Size</button>
-    <button class="tab" data-cat="feelings">💭 Feelings</button>
-    <button class="tab" data-cat="logic">🧠 Logic</button>
   </div>
   <div id="sub-tabs"></div>
   <div id="main-area">
@@ -219,7 +211,7 @@ const DATA = {
 //  STATE
 // ═══════════════════════════════════════════
 const state = {
-  mainCat: 'all',      // 'all' | 'animal' | 'color' | 'fruit' | 'sensory' | 'size' | 'feelings' | 'logic'
+  mainCat: 'all',      // 'all' or any key from DATA
   subCat: null,        // sub-category key (e.g. 'touch') or null for flat categories
   index: 0,
   autoplay: false,
@@ -327,13 +319,27 @@ function render() {
   // Background
   document.body.className = getBackgroundClass();
 
-  // Main tabs highlight
-  document.querySelectorAll('.tab').forEach(t => {
-    t.classList.toggle('active', t.dataset.cat === state.mainCat);
-  });
+  // Main tabs — rebuild to keep active state in sync
+  renderMainTabs();
 
   // Sub-tabs
   renderSubTabs();
+}
+
+function renderMainTabs() {
+  const container = $('tabs');
+  const keys = Object.keys(DATA);
+  // Build tabs: 'All' first, then each category
+  let html = `<button class="tab${state.mainCat === 'all' ? ' active' : ''}" data-cat="all">🌍 All</button>`;
+  for (const k of keys) {
+    const cat = DATA[k];
+    html += `<button class="tab${k === state.mainCat ? ' active' : ''}" data-cat="${k}">${cat.label}</button>`;
+  }
+  container.innerHTML = html;
+  // Re-bind tab clicks
+  container.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => setMainCat(btn.dataset.cat));
+  });
 }
 
 function renderSubTabs() {
@@ -472,10 +478,8 @@ function scheduleAutoplay() {
 //  INIT
 // ═══════════════════════════════════════════
 function init() {
-  // Tab clicks
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => setMainCat(tab.dataset.cat));
-  });
+  // Build main tabs dynamically from DATA
+  renderMainTabs();
 
   // Arrow clicks
   $('arrow-left').addEventListener('click', prev);
