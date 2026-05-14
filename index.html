@@ -96,11 +96,8 @@ function adjImg(w) {
   // images/adj_WORD.png
   const pngWords = ['cold','hard','small','soft'];
   if (pngWords.includes(lower)) return 'images/adj_' + lower + '.png';
-  // images/adjectives/WORD.jpg
-  const adjJpgWords = ['alike','angry','bad','boiling','brave','bright','broken','clean','clear','colorful','crooked','curved','dark','different','difficult','dirty','dry','dull','easy','empty','first','fixed','flat','freezing','full','fuzzy','good','heavy','huge','important','last','light','long','loud','mean','middle','narrow','new','next','nice','noisy','old','pale','pointed','pretty','prickly','quick','quiet','rapid','round','same','scared','serious','shiny','silent','silly','simple','slimy','square','squeaky','sticky','straight','strong','sturdy','surprised','thick','thin','tiny','tricky','ugly','weak','wet','whispering','wide'];
-  if (adjJpgWords.includes(lower)) return 'images/adjectives/' + lower + '.jpg';
-  // Everything else is .svg in adjectives/
-  return 'images/adjectives/' + lower + '.svg';
+  // Everything else is GIF in images/adjectives/
+  return 'images/adjectives/' + lower + '.gif';
 }
 
 function adjAud(w) {
