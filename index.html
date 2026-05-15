@@ -583,7 +583,9 @@ function playAudio() {
     cn.volume = state.volume;
     state.currentAudio = cn;
     cn.play().catch(() => {});
+    const cnMax = setTimeout(() => { if (state.autoplay) next(); }, 4000);
     cn.addEventListener('ended', () => {
+      clearTimeout(cnMax);
       if (state.autoplay) setTimeout(() => next(), 600);
     });
   });
