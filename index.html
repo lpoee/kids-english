@@ -642,6 +642,10 @@ function init() {
   $('counter').addEventListener('pointerup', () => clearTimeout(pt));
   $('counter').addEventListener('pointerleave', () => clearTimeout(pt));
 
+  // Random start
+  const total = getTotal();
+  if (total > 0) state.index = Math.floor(Math.random() * total);
+
   // Initial render
   render();
 }
