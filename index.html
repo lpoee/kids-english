@@ -576,20 +576,30 @@ function playAudio() {
   const a = new Audio(word.aud);
   a.volume = state.volume;
   state.currentAudio = a;
-  a.play().catch(() => {});
-  // Chain Chinese audio after English ends
-  a.addEventListener('ended', function playCn() {
-    a.removeEventListener('ended', playCn);
+  let enDone = false;
+  function startCnOrAdvance() {
+    if (enDone) return;
+    enDone = true;
     const cnPath = word.aud.replace('audio/', 'audio_cn/');
     const cn = new Audio(cnPath);
     cn.volume = state.volume;
     state.currentAudio = cn;  // track Chinese audio
-    cn.play().catch(() => {});
-    // When Chinese audio ends, if autoplay is on, advance after a short pause
-    cn.addEventListener('ended', () => {
+    let cnDone = false;
+    function advanceIfAutoplay() {
+      if (cnDone) return;
+      cnDone = true;
       if (state.autoplay) setTimeout(() => next(), 600);
-    });
-  });
+    }
+    cn.addEventListener('ended', advanceIfAutoplay);
+    cn.addEventListener('error', advanceIfAutoplay);
+    // Safety: force advance after 5s if audio never resolves
+    setTimeout(advanceIfAutoplay, 5000);
+    cn.play().catch(advanceIfAutoplay);
+  }
+  a.addEventListener('ended', startCnOrAdvance);
+  a.addEventListener('error', startCnOrAdvance);
+  setTimeout(startCnOrAdvance, 5000);
+  a.play().catch(startCnOrAdvance);
 }
 
 function toggleAutoplay() {
