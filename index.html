@@ -582,7 +582,7 @@ function playAudio() {
     const cn = new Audio(cnPath);
     cn.volume = state.volume;
     state.currentAudio = cn;
-    cn.play().catch(() => { if (state.autoplay) setTimeout(() => next(), 600); });
+    cn.play().catch(() => {});
     cn.addEventListener('ended', () => {
       if (state.autoplay) setTimeout(() => next(), 600);
     });
