@@ -327,6 +327,22 @@ const DATA = {
 };
 
 // ═══════════════════════════════════════════
+//  WEB AUDIO API — reliable on mobile Safari
+// ═══════════════════════════════════════════
+let audioCtx = null;
+let currentSource = null;
+
+function ensureAudioCtx() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+  return audioCtx;
+}
+
+// ═══════════════════════════════════════════
 //  STATE
 // ═══════════════════════════════════════════
 const state = {
@@ -335,7 +351,6 @@ const state = {
   index: 0,
   autoplay: false,
   autoplayTimer: null,
-  currentAudio: null,
   volume: 0.8
 };
 
@@ -570,17 +585,37 @@ function playAudio() {
   const word = getCurrentWord();
   if (!word) return;
   if (!word.aud) return;
-  if (state.currentAudio) {
-    state.currentAudio.pause();
-    state.currentAudio = null;
+  
+  // Stop any current playback
+  if (currentSource) {
+    try { currentSource.stop(); } catch(e) {}
+    currentSource = null;
   }
-  const a = new Audio(word.aud);
-  a.volume = state.volume;
-  state.currentAudio = a;
-  a.onended = () => {
-    if (state.autoplay) setTimeout(() => next(), 600);
-  };
-  a.play().catch(() => {});
+  
+  const ctx = ensureAudioCtx();
+  
+  fetch(word.aud)
+    .then(r => {
+      if (!r.ok) throw new Error('fetch failed');
+      return r.arrayBuffer();
+    })
+    .then(buf => ctx.decodeAudioData(buf))
+    .then(audioBuffer => {
+      const source = ctx.createBufferSource();
+      source.buffer = audioBuffer;
+      const gain = ctx.createGain();
+      gain.gain.value = state.volume;
+      source.connect(gain);
+      gain.connect(ctx.destination);
+      source.start(0);
+      currentSource = source;
+      
+      source.onended = () => {
+        currentSource = null;
+        if (state.autoplay) setTimeout(() => next(), 600);
+      };
+    })
+    .catch(() => {});
 }
 
 function toggleAutoplay() {
@@ -589,9 +624,9 @@ function toggleAutoplay() {
   if (state.autoplay) scheduleAutoplay();
   else {
     clearTimeout(state.autoplayTimer);
-    if (state.currentAudio) {
-      state.currentAudio.pause();
-      state.currentAudio = null;
+    if (currentSource) {
+      try { currentSource.stop(); } catch(e) {}
+      currentSource = null;
     }
   }
 }
@@ -608,6 +643,10 @@ function scheduleAutoplay() {
 //  INIT
 // ═══════════════════════════════════════════
 function init() {
+  // Ensure AudioContext is resumed on first user interaction
+  document.addEventListener('touchstart', () => ensureAudioCtx(), {once: true});
+  document.addEventListener('click', () => ensureAudioCtx(), {once: true});
+
   // Build main tabs dynamically from DATA
   renderMainTabs();
 
