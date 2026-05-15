@@ -21,6 +21,10 @@ body.sensory-bg{background:linear-gradient(135deg,#1a0e1e,#3a1a3e,#2a1a4e)}
 body.size-bg{background:linear-gradient(135deg,#0e1a2e,#1a3a4e,#0e2a3e)}
 body.feelings-bg{background:linear-gradient(135deg,#2e0e1a,#4e1a3a,#3e0e2a)}
 body.logic-bg{background:linear-gradient(135deg,#1a1a2e,#2a2a4e,#1e1e3a)}
+body.body-bg{background:linear-gradient(135deg,#1a0e0e,#4a1a1a,#2e0e0e)}
+body.food-bg{background:linear-gradient(135deg,#1a1a0e,#3a4a1a,#2a3a0e)}
+body.home-bg{background:linear-gradient(135deg,#1a1a0e,#4a4a1a,#2e2e0e)}
+body.actions-bg{background:linear-gradient(135deg,#0e1a2e,#1a3a5e,#0e2a4e)}
 body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 #app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;padding:4px 6px;overflow:hidden}
 #tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;margin-bottom:2px;z-index:10;overflow-x:auto;width:100%;max-width:100%;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -48,6 +52,10 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 #word-text.size-text{background:linear-gradient(135deg,#60a5fa,#34d399,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(96,165,250,.4))}
 #word-text.feelings-text{background:linear-gradient(135deg,#f472b6,#fb923c,#f87171);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(244,114,182,.4))}
 #word-text.logic-text{background:linear-gradient(135deg,#a78bfa,#67e8f9,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(167,139,250,.4))}
+#word-text.body-text{background:linear-gradient(135deg,#ff9999,#ff6b6b,#ff4757);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(255,107,107,.4))}
+#word-text.food-text{background:linear-gradient(135deg,#7bed9f,#2ed573,#ffa502);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(46,213,115,.4))}
+#word-text.home-text{background:linear-gradient(135deg,#ffd700,#f0e68c,#daa520);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(255,215,0,.4))}
+#word-text.actions-text{background:linear-gradient(135deg,#74b9ff,#48dbfb,#0abde3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(116,185,255,.4))}
 #word-text.pop{animation:textPop .5s ease-out}
 @keyframes textPop{0%{transform:scale(.7)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
 .arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;font-size:20px;color:rgba(255,255,255,.4);transition:all .2s}
@@ -226,6 +234,44 @@ const DATA = {
         words:[adj('Simple'),adj('Hard'),adj('Tricky')]
       }
     }
+  },
+  body: {
+    label: '🧍 Body',
+    gradClass: 'body',
+    words: [
+      img('Eye','images/eye.svg'), img('Ear','images/ear.svg'), img('Nose','images/nose.svg'),
+      img('Mouth','images/mouth.svg'), img('Hand','images/hand.svg'), img('Foot','images/foot.svg'),
+      img('Head','images/head.svg'), img('Arm','images/arm.svg')
+    ]
+  },
+  food: {
+    label: '🍕 Food',
+    gradClass: 'food',
+    words: [
+      img('Bread','images/bread.svg'), img('Cake','images/cake.svg'), img('Cookie','images/cookie.svg'),
+      img('Milk','images/milk.svg'), img('Egg','images/egg.svg'), img('Cheese','images/cheese.svg'),
+      img('Rice','images/rice.svg'), img('Water','images/water.svg'), img('Candy','images/candy.svg'),
+      {w:'Ice Cream', img:'images/ice_cream.svg', aud:'audio/ice_cream.mp3'}
+    ]
+  },
+  home: {
+    label: '🏠 Home',
+    gradClass: 'home',
+    words: [
+      img('Bed','images/bed.svg'), img('Chair','images/chair.svg'), img('Table','images/table.svg'),
+      img('Door','images/door.svg'), img('Window','images/window.svg'), img('Cup','images/cup.svg'),
+      img('Spoon','images/spoon.svg'), img('Clock','images/clock.svg')
+    ]
+  },
+  actions: {
+    label: '🏃 Actions',
+    gradClass: 'actions',
+    words: [
+      img('Eat','images/eat.svg'), img('Drink','images/drink.svg'), img('Sleep','images/sleep.svg'),
+      img('Run','images/run.svg'), img('Jump','images/jump.svg'), img('Walk','images/walk.svg'),
+      img('Sit','images/sit.svg'), img('Stand','images/stand.svg'), img('Clap','images/clap.svg'),
+      img('Wave','images/wave.svg')
+    ]
   }
 };
 
@@ -289,13 +335,13 @@ function getTotal() {
 }
 
 function getCategoryClass() {
-  const map = {animal:'animal', color:'color', fruit:'fruit', sensory:'sensory', size:'size', feelings:'feelings', logic:'logic'};
+  const map = {animal:'animal', color:'color', fruit:'fruit', sensory:'sensory', size:'size', feelings:'feelings', logic:'logic', body:'body', food:'food', home:'home', actions:'actions'};
   if (state.mainCat === 'all') return 'all';
   return map[state.mainCat] || 'all';
 }
 
 function getBackgroundClass() {
-  const map = {animal:'animal-bg', color:'color-bg', fruit:'fruit-bg', sensory:'sensory-bg', size:'size-bg', feelings:'feelings-bg', logic:'logic-bg'};
+  const map = {animal:'animal-bg', color:'color-bg', fruit:'fruit-bg', sensory:'sensory-bg', size:'size-bg', feelings:'feelings-bg', logic:'logic-bg', body:'body-bg', food:'food-bg', home:'home-bg', actions:'actions-bg'};
   if (state.mainCat === 'all') return 'all-bg';
   return map[state.mainCat] || 'all-bg';
 }
