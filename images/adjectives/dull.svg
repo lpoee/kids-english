@@ -1,0 +1,5 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="32" fill="#9ca3af" stroke="#6b7280" stroke-width="3"/>
+  <rect x="20" y="46" width="25" height="8" rx="4" fill="#6b7280"/>
+  <text x="50" y="55" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">DULL</text>
+</svg>

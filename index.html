@@ -85,41 +85,35 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 // Helper: image path for adjective
 function adjImg(w) {
   const lower = w.toLowerCase();
-  // Prefer images/adj_WORD.jpg if exists
-  const jpgWords = ['big','fast','hot','short','slow','tall'];
-  if (jpgWords.includes(lower)) return 'images/adj_' + lower + '.jpg';
-  // images/adj_WORD.gif (was .png, replaced with animated GIFs)
-  const gifWords = ['cold','hard','small','soft'];
-  if (gifWords.includes(lower)) return 'images/adj_' + lower + '.gif';
-  // Emotion words — use clean Twemoji SVGs (copied to images/adjectives/)
-  const emotionWords = ['happy','sad','angry','surprised','brave','scared','silly','serious'];
-  if (emotionWords.includes(lower)) return 'images/adjectives/' + lower + '.svg';
-  // Shape words — inline SVG illustrations
-  const shapeSvgs = {
-    round:    '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="#4ade80" stroke="#16a34a" stroke-width="4"/></svg>',
-    flat:     '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="50" x2="90" y2="50" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/></svg>',
-    square:   '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="15" width="70" height="70" rx="4" fill="#60a5fa" stroke="#2563eb" stroke-width="4"/></svg>',
-    pointed:  '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,10 90,85 10,85" fill="#f87171" stroke="#dc2626" stroke-width="4"/></svg>',
-    curved:   '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M15,70 Q50,10 85,70" fill="none" stroke="#a78bfa" stroke-width="6" stroke-linecap="round"/></svg>',
-    straight: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="15" y1="50" x2="85" y2="50" stroke="#34d399" stroke-width="6" stroke-linecap="round"/><circle cx="15" cy="50" r="4" fill="#34d399"/><circle cx="85" cy="50" r="4" fill="#34d399"/></svg>',
-    crooked:  '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polyline points="15,80 35,20 55,80 75,20 92,60" fill="none" stroke="#fb923c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-  };
-  if (shapeSvgs[lower]) return 'data:image/svg+xml,' + encodeURIComponent(shapeSvgs[lower]);
-  // Logic words — inline SVG illustrations
-  const logicSvgs = {
-    same:     '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="50" r="22" fill="#60a5fa" stroke="#2563eb" stroke-width="3"/><circle cx="70" cy="50" r="22" fill="#60a5fa" stroke="#2563eb" stroke-width="3"/></svg>',
-    different:'<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="50" r="22" fill="#f87171" stroke="#dc2626" stroke-width="3"/><rect x="58" y="28" width="36" height="44" rx="4" fill="#60a5fa" stroke="#2563eb" stroke-width="3"/></svg>',
-    alike:    '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="25,70 45,20 65,70" fill="#a78bfa" stroke="#7c3aed" stroke-width="3"/><polygon points="50,70 70,20 90,70" fill="#a78bfa" stroke="#7c3aed" stroke-width="3"/></svg>',
-    first:    '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="50" r="18" fill="#fbbf24" stroke="#d97706" stroke-width="3"/><text x="25" y="57" text-anchor="middle" font-size="24" font-weight="bold" fill="#92400e">1</text><line x1="50" y1="50" x2="90" y2="50" stroke="#34d399" stroke-width="4" stroke-linecap="round"/><polygon points="80,40 90,50 80,60" fill="#34d399"/></svg>',
-    last:     '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="50" x2="50" y2="50" stroke="#34d399" stroke-width="4" stroke-linecap="round"/><polygon points="20,40 10,50 20,60" fill="#34d399"/><circle cx="75" cy="50" r="18" fill="#fbbf24" stroke="#d97706" stroke-width="3"/><text x="75" y="57" text-anchor="middle" font-size="24" font-weight="bold" fill="#92400e">3</text></svg>',
-    middle:   '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="50" x2="30" y2="50" stroke="#34d399" stroke-width="4" stroke-linecap="round"/><line x1="70" y1="50" x2="90" y2="50" stroke="#34d399" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="50" r="18" fill="#fbbf24" stroke="#d97706" stroke-width="3"/><text x="50" y="57" text-anchor="middle" font-size="24" font-weight="bold" fill="#92400e">2</text></svg>',
-    next:     '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="50" r="15" fill="#d1d5db" stroke="#6b7280" stroke-width="3"/><circle cx="75" cy="50" r="18" fill="#60a5fa" stroke="#2563eb" stroke-width="3"/><polygon points="68,38 82,50 68,62" fill="#fff"/><line x1="47" y1="50" x2="60" y2="50" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/></svg>',
-    simple:   '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="35" fill="#4ade80" stroke="#16a34a" stroke-width="3"/><circle cx="42" cy="42" r="4" fill="#14532d"/><circle cx="58" cy="42" r="4" fill="#14532d"/><path d="M35,58 Q50,68 65,58" fill="none" stroke="#14532d" stroke-width="3" stroke-linecap="round"/></svg>',
-    hard:     '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="15" width="70" height="70" rx="8" fill="#f87171" stroke="#dc2626" stroke-width="3"/><circle cx="50" cy="40" r="12" fill="#fff"/><path d="M35,55 L50,40" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M50,52 L50,68" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M45,68 L55,68" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>',
-    tricky:   '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="38" fill="#fbbf24" stroke="#d97706" stroke-width="3"/><text x="50" y="42" text-anchor="middle" font-size="44" font-weight="bold" fill="#92400e">?</text><circle cx="50" cy="72" r="5" fill="#92400e"/></svg>'
-  };
-  if (logicSvgs[lower]) return 'data:image/svg+xml,' + encodeURIComponent(logicSvgs[lower]);
-  // Everything else is GIF in images/adjectives/
+  // All words using clean SVG files (Twemoji + custom SVGs in images/adjectives/)
+  const svgWords = [
+    // Emotion (8)
+    'happy','sad','angry','surprised','brave','scared','silly','serious',
+    // Shape (7)
+    'round','flat','square','pointed','curved','straight','crooked',
+    // Logic (10)
+    'same','different','alike','first','last','middle','next','simple','hard','tricky',
+    // Touch (8)
+    'hard','soft','fuzzy','prickly','slimy','sticky','freezing','boiling',
+    // Weight (5)
+    'heavy','light','strong','weak','sturdy',
+    // Visual (7)
+    'bright','dark','shiny','dull','clear','colorful','pale',
+    // Sound (6)
+    'loud','quiet','noisy','silent','squeaky','whispering',
+    // Size (11)
+    'big','small','tall','short','long','tiny','huge','wide','narrow','thick','thin',
+    // Speed (4)
+    'fast','slow','quick','rapid',
+    // Condition (10)
+    'clean','dirty','broken','fixed','new','old','wet','dry','empty','full',
+    // Opinion (9)
+    'good','bad','pretty','ugly','mean','nice','difficult','easy','important'
+  ];
+  if (svgWords.includes(lower)) return 'images/adjectives/' + lower + '.svg';
+  // hot uses JPG
+  if (lower === 'hot') return 'images/adj_hot.jpg';
+  // cold and a few others still use GIF
   return 'images/adjectives/' + lower + '.gif';
 }
 
