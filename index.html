@@ -135,6 +135,14 @@ function colorBlock(name) {
   return '<div class="color-block" style="background:'+(colors[name]||'#888')+'">' + name.charAt(0) + '</div>';
 }
 
+function phraseEmoji(emoji) {
+  return '<div style="font-size:100px;text-align:center;line-height:1">' + emoji + '</div>';
+}
+
+function phraseItem(text, emoji, fname) {
+  return {w:text, emoji:phraseEmoji(emoji), aud:'audio/phrase_'+fname+'.mp3'};
+}
+
 function w(w) { return w; }
 function img(w,p) { return {w,img:p,aud:'audio/'+w.toLowerCase()+'.mp3'}; }
 function adj(w) { return {w,img:adjImg(w),aud:adjAud(w)}; }
@@ -272,6 +280,47 @@ const DATA = {
       img('Sit','images/sit.svg'), img('Stand','images/stand.svg'), img('Clap','images/clap.svg'),
       img('Wave','images/wave.svg')
     ]
+  },
+  phrases: {
+    label: '💬 Phrases',
+    gradClass: 'logic',
+    subcats: {
+      greetings: {
+        label:'Greetings',
+        words:[
+          phraseItem('Hello!','👋','hello'),
+          phraseItem('Goodbye!','👋','goodbye'),
+          phraseItem('Good morning','☀️','good_morning'),
+          phraseItem('Good night','🌙','good_night'),
+          phraseItem('How are you?','🤔','how_are_you'),
+          phraseItem("I'm fine","😊",'im_fine')
+        ]
+      },
+      responses: {
+        label:'Responses',
+        words:[
+          phraseItem('Thank you','🙏','thank_you'),
+          phraseItem("You're welcome","😊",'youre_welcome'),
+          phraseItem('Please','🥺','please'),
+          phraseItem('Sorry','😔','sorry'),
+          phraseItem('Yes!','👍','yes'),
+          phraseItem('No','🙅','no')
+        ]
+      },
+      actions: {
+        label:'Actions',
+        words:[
+          phraseItem('I love you','❤️','i_love_you'),
+          phraseItem("Let's go!",'🚀','lets_go'),
+          phraseItem('Stop!','✋','stop'),
+          phraseItem('Come here','👉','come_here'),
+          phraseItem('Wait','⏳','wait'),
+          phraseItem('Help me','🆘','help_me'),
+          phraseItem("I'm hungry",'🍽️','im_hungry'),
+          phraseItem("I'm thirsty",'🥤','im_thirsty')
+        ]
+      }
+    }
   }
 };
 
@@ -335,13 +384,13 @@ function getTotal() {
 }
 
 function getCategoryClass() {
-  const map = {animal:'animal', color:'color', fruit:'fruit', sensory:'sensory', size:'size', feelings:'feelings', logic:'logic', body:'body', food:'food', home:'home', actions:'actions'};
+  const map = {animal:'animal', color:'color', fruit:'fruit', sensory:'sensory', size:'size', feelings:'feelings', logic:'logic', body:'body', food:'food', home:'home', actions:'actions', phrases:'logic'};
   if (state.mainCat === 'all') return 'all';
   return map[state.mainCat] || 'all';
 }
 
 function getBackgroundClass() {
-  const map = {animal:'animal-bg', color:'color-bg', fruit:'fruit-bg', sensory:'sensory-bg', size:'size-bg', feelings:'feelings-bg', logic:'logic-bg', body:'body-bg', food:'food-bg', home:'home-bg', actions:'actions-bg'};
+  const map = {animal:'animal-bg', color:'color-bg', fruit:'fruit-bg', sensory:'sensory-bg', size:'size-bg', feelings:'feelings-bg', logic:'logic-bg', body:'body-bg', food:'food-bg', home:'home-bg', actions:'actions-bg', phrases:'logic-bg'};
   if (state.mainCat === 'all') return 'all-bg';
   return map[state.mainCat] || 'all-bg';
 }
@@ -361,6 +410,8 @@ function render() {
   if (word) {
     if (state.mainCat === 'color' || (state.mainCat === 'all' && word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img)) {
       card.innerHTML = colorBlock(word.w);
+    } else if (word.emoji) {
+      card.innerHTML = word.emoji; // phraseEmoji is already evaluated at DATA build time
     } else if (word.img) {
       card.innerHTML = `<img src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
     } else {
