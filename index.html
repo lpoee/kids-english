@@ -72,6 +72,7 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 </style>
 </head>
 <body class="all-bg">
+<audio id="player" preload="auto" style="display:none"></audio>
 <div id="app">
   <div id="tabs">
   </div>
@@ -568,27 +569,24 @@ function tapWord() {
 function playAudio() {
   const word = getCurrentWord();
   if (!word) return;
-  if (state.currentAudio) {
-    state.currentAudio.pause();
-    state.currentAudio = null;
-  }
   if (!word.aud) return;
-  const a = new Audio(word.aud);
-  a.volume = state.volume;
-  state.currentAudio = a;
-  a.play().catch(() => {});
-  a.addEventListener('ended', () => {
+  const p = $('player');
+  p.pause();
+  p.src = word.aud;
+  p.volume = state.volume;
+  state.currentAudio = p;
+  const onErr = (e) => { $('counter').textContent = '🔇 ' + (e && e.message || 'blocked'); };
+  p.onerror = onErr;
+  p.play().catch(onErr);
+  p.onended = () => {
+    p.onerror = null;
     const cnPath = word.aud.replace('audio/', 'audio_cn/');
-    const cn = new Audio(cnPath);
-    cn.volume = state.volume;
-    state.currentAudio = cn;
-    cn.play().catch(() => {});
-    const cnMax = setTimeout(() => { if (state.autoplay) next(); }, 4000);
-    cn.addEventListener('ended', () => {
-      clearTimeout(cnMax);
+    p.src = cnPath;
+    p.play().catch(onErr);
+    p.onended = () => {
       if (state.autoplay) setTimeout(() => next(), 600);
-    });
-  });
+    };
+  };
 }
 
 function toggleAutoplay() {
