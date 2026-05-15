@@ -583,7 +583,12 @@ function playAudio() {
     const cnPath = word.aud.replace('audio/', 'audio_cn/');
     const cn = new Audio(cnPath);
     cn.volume = state.volume;
+    state.currentAudio = cn;  // track Chinese audio
     cn.play().catch(() => {});
+    // When Chinese audio ends, if autoplay is on, advance
+    cn.addEventListener('ended', () => {
+      if (state.autoplay) next();
+    });
   });
 }
 
@@ -591,14 +596,20 @@ function toggleAutoplay() {
   state.autoplay = !state.autoplay;
   toggleAutoplayUI(state.autoplay);
   if (state.autoplay) scheduleAutoplay();
-  else clearTimeout(state.autoplayTimer);
+  else {
+    clearTimeout(state.autoplayTimer);
+    if (state.currentAudio) {
+      state.currentAudio.pause();
+      state.currentAudio = null;
+    }
+  }
 }
 
 function scheduleAutoplay() {
   clearTimeout(state.autoplayTimer);
   state.autoplayTimer = setTimeout(() => {
     tapWord();
-    setTimeout(() => next(), 1800);
+    // Don't hard-code next() — audio ended event handles advancement
   }, 800);
 }
 
