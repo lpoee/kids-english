@@ -585,9 +585,9 @@ function playAudio() {
     cn.volume = state.volume;
     state.currentAudio = cn;  // track Chinese audio
     cn.play().catch(() => {});
-    // When Chinese audio ends, if autoplay is on, advance
+    // When Chinese audio ends, if autoplay is on, advance after a short pause
     cn.addEventListener('ended', () => {
-      if (state.autoplay) next();
+      if (state.autoplay) setTimeout(() => next(), 600);
     });
   });
 }
