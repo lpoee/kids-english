@@ -728,6 +728,11 @@ function playAudio() {
         currentSource = null;
         // Play Chinese audio after 500ms delay
         setTimeout(() => {
+          // Only play Chinese audio for phrases, skip for single words
+          if (!word.aud.includes('phrase_')) {
+            if (state.autoplay) setTimeout(() => next(), 600);
+            return;
+          }
           const cnPath = word.aud.replace('audio/', 'audio_cn/');
           fetch(cnPath)
             .then(r => { if (!r.ok) throw new Error('no cn'); return r.arrayBuffer(); })
