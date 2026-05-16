@@ -149,6 +149,10 @@ function phraseItem(text, emoji, fname) {
   return {w:text, emoji:phraseEmoji(emoji), aud:'audio/phrase_'+fname+'.mp3'};
 }
 
+function emojiItem(w, emoji) {
+  return {w, emoji: '<div style="font-size:120px;text-align:center;line-height:1">' + emoji + '</div>', aud:'audio/'+w.toLowerCase()+'.mp3'};
+}
+
 function w(w) { return w; }
 function img(w,p) { return {w,img:p,aud:'audio/'+w.toLowerCase()+'.mp3'}; }
 function adj(w) { return {w,img:adjImg(w),aud:adjAud(w)}; }
@@ -159,7 +163,10 @@ const DATA = {
     words: [
       img('Cat','images/cat.jpg'), img('Dog','images/dog.jpg'), img('Bird','images/bird.jpg'),
       img('Lion','images/lion.jpg'), img('Monkey','images/monkey.jpg'), img('Rabbit','images/rabbit.jpg'),
-      img('Elephant','images/elephant.jpg'), img('Bear','images/bear.jpg')
+      img('Elephant','images/elephant.jpg'), img('Bear','images/bear.jpg'),
+      emojiItem('Fish','🐟'), emojiItem('Frog','🐸'), emojiItem('Duck','🦆'), emojiItem('Pig','🐷'),
+      emojiItem('Cow','🐮'), emojiItem('Horse','🐴'), emojiItem('Sheep','🐑'), emojiItem('Chicken','🐔'),
+      emojiItem('Tiger','🐯'), emojiItem('Panda','🐼'), emojiItem('Turtle','🐢'), emojiItem('Butterfly','🦋')
     ]
   },
   color: {
@@ -174,7 +181,17 @@ const DATA = {
     label: '🍎 Fruits',
     words: [
       img('Apple','images/apple.jpg'), img('Banana','images/banana.jpg'), img('Orange','images/orange.jpg'),
-      img('Grape','images/grape.jpg'), img('Pear','images/pear.jpg'), img('Watermelon','images/watermelon.jpg')
+      img('Grape','images/grape.jpg'), img('Pear','images/pear.jpg'), img('Watermelon','images/watermelon.jpg'),
+      emojiItem('Strawberry','🍓'), emojiItem('Cherry','🍒'), emojiItem('Peach','🍑'),
+      emojiItem('Mango','🥭'), emojiItem('Pineapple','🍍'), emojiItem('Lemon','🍋')
+    ]
+  },
+  plants: {
+    label: '🌿 Plants',
+    gradClass: 'fruit',
+    words: [
+      emojiItem('Flower','🌸'),
+      emojiItem('Tree','🌳')
     ]
   },
   sensory: {
