@@ -445,6 +445,7 @@ const DATA = {
 // ═══════════════════════════════════════════
 let audioCtx = null;
 let currentSource = null;
+let cnPlayTimer = null;
 
 function ensureAudioCtx() {
   if (!audioCtx) {
@@ -705,6 +706,11 @@ function playAudio() {
     try { currentSource.stop(); } catch(e) {}
     currentSource = null;
   }
+  // Cancel any pending Chinese playback from previous word
+  if (cnPlayTimer) {
+    clearTimeout(cnPlayTimer);
+    cnPlayTimer = null;
+  }
   
   const ctx = ensureAudioCtx();
   
@@ -726,13 +732,9 @@ function playAudio() {
       
       source.onended = () => {
         currentSource = null;
-        // Play Chinese audio after 500ms delay
-        setTimeout(() => {
-          // Only play Chinese audio for phrases, skip for single words
-          if (!word.aud.includes('phrase_')) {
-            if (state.autoplay) setTimeout(() => next(), 600);
-            return;
-          }
+        // Play Chinese audio after 500ms delay (for ALL words)
+        if (cnPlayTimer) clearTimeout(cnPlayTimer);
+        cnPlayTimer = setTimeout(() => {
           const cnPath = word.aud.replace('audio/', 'audio_cn/');
           fetch(cnPath)
             .then(r => { if (!r.ok) throw new Error('no cn'); return r.arrayBuffer(); })
