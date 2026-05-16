@@ -26,25 +26,27 @@ body.food-bg{background:linear-gradient(135deg,#1a1a0e,#3a4a1a,#2a3a0e)}
 body.home-bg{background:linear-gradient(135deg,#1a1a0e,#4a4a1a,#2e2e0e)}
 body.actions-bg{background:linear-gradient(135deg,#0e1a2e,#1a3a5e,#0e2a4e)}
 body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
-#app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;padding:4px 6px;overflow:hidden}
-#tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;margin-bottom:2px;z-index:10;overflow-x:auto;width:100%;max-width:100%;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+#app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;padding:0;overflow:hidden}
+#tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;z-index:100;overflow-x:auto;width:100%;max-width:100%;padding:6px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:absolute;top:0;left:0;background:linear-gradient(rgba(0,0,0,.5),transparent);pointer-events:auto}
 #tabs::-webkit-scrollbar{display:none}
 .tab{border:none;background:rgba(255,255,255,.06);color:rgba(255,255,255,.45);font-size:11px;font-weight:700;cursor:pointer;transition:all .25s;border-radius:14px;padding:6px 10px;border:2px solid transparent;white-space:nowrap;flex-shrink:0}
 .tab.active{border-color:#ffd700;background:rgba(255,215,0,.15);color:#ffd700;box-shadow:0 0 20px rgba(255,215,0,.2)}
 .tab:active{transform:scale(.93)}
 /* Sub-tabs */
-#sub-tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;z-index:10;width:100%;max-width:100%;overflow-x:auto;padding:2px 0;margin-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;min-height:28px}
+#sub-tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;z-index:100;width:100%;max-width:100%;overflow-x:auto;padding:6px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;min-height:28px;position:absolute;top:38px;left:0;background:linear-gradient(rgba(0,0,0,.3),transparent);pointer-events:auto}
 #sub-tabs::-webkit-scrollbar{display:none}
 .sub-tab{border:none;background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);font-size:10px;font-weight:600;cursor:pointer;transition:all .2s;border-radius:20px;padding:4px 12px;border:1.5px solid transparent;white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:.5px}
 .sub-tab.active{border-color:#ffd700;background:rgba(255,215,0,.12);color:#ffd700}
 .sub-tab:active{transform:scale(.92)}
-#main-area{flex:1;width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:0;gap:0}
-#img-card{width:240px;height:240px;border-radius:24px;background:rgba(255,255,255,.04);backdrop-filter:blur(24px);border:3px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;overflow:hidden;transition:transform .15s;z-index:5;box-shadow:0 16px 48px rgba(0,0,0,.3)}
-#img-card:active{transform:scale(.94)}
-#img-card img{max-width:85%;max-height:80%;border-radius:12px;object-fit:contain}
-#img-card .color-block{width:80%;height:80%;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:800;color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.4);box-shadow:0 8px 32px rgba(0,0,0,.3)}
-#word-text{color:#fff;font-family:'Fredoka One',cursive;font-size:48px;font-weight:800;text-align:center;line-height:1.1;margin:4px 0 2px;z-index:10;cursor:pointer;transition:all .3s;letter-spacing:1px}
-#word-text:active{transform:scale(.92)}
+#main-area{flex:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:0;gap:0}
+#img-card{width:100%;height:100%;background:rgba(255,255,255,.03);cursor:pointer;position:relative;overflow:hidden;transition:transform .15s;z-index:5}
+#img-card:active{transform:scale(.96)}
+#img-container{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1}
+#img-container img{width:100%;height:100%;object-fit:cover}
+#img-container .color-block{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:120px;font-weight:800;color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.4);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+#word-text{position:absolute;bottom:0;left:0;right:0;padding:32px 16px 16px;text-align:center;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-family:'Fredoka One',cursive;font-size:40px;font-weight:800;line-height:1.2;z-index:10;cursor:pointer;transition:all .3s;letter-spacing:1px}
+#word-text:active{transform:scale(.94)}
+#word-text.pop{animation:textPop .5s ease-out}
 #word-text.animal-text{background:linear-gradient(135deg,#ff9ff3,#feca57,#ff6b6b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(255,159,243,.4))}
 #word-text.color-text{background:linear-gradient(135deg,#ffd700,#ff6348,#ff4757);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(255,215,0,.4))}
 #word-text.fruit-text{background:linear-gradient(135deg,#7bed9f,#2ed573,#ffa502);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(46,213,115,.4))}
@@ -58,17 +60,17 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 #word-text.home-text{background:linear-gradient(135deg,#ffd700,#f0e68c,#daa520);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(255,215,0,.4))}
 #word-text.actions-text{background:linear-gradient(135deg,#74b9ff,#48dbfb,#0abde3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 8px rgba(116,185,255,.4))}
 #word-text.pop{animation:textPop .5s ease-out}
-@keyframes textPop{0%{transform:scale(.7)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
-.arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;font-size:20px;color:rgba(255,255,255,.4);transition:all .2s}
-.arrow:active{background:rgba(255,215,0,.2);border-color:#ffd700;color:#ffd700;transform:translateY(-50%) scale(.82)}
-#arrow-left{left:0}#arrow-right{right:0}
-#counter{color:rgba(255,255,255,.2);font-size:12px;flex-shrink:0;cursor:pointer;padding:6px 16px;border-radius:14px;margin-top:2px;z-index:10}
+@keyframes textPop{0%{transform:scale(.7)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.25);border:2px solid rgba(255,255,255,.12);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:15;font-size:22px;color:rgba(255,255,255,.7);transition:all .2s;backdrop-filter:blur(4px)}
+.arrow:active{background:rgba(255,215,0,.3);border-color:#ffd700;color:#ffd700;transform:translateY(-50%) scale(.82)}
+#arrow-left{left:8px}#arrow-right{right:8px}
+#counter{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.5);font-size:12px;cursor:pointer;padding:4px 14px;border-radius:20px;z-index:15;background:rgba(0,0,0,.2);backdrop-filter:blur(4px)}
 #counter span{color:#ffd700;font-weight:700;font-size:15px}
-#autoplay{position:absolute;top:0;right:2px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.1);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:20;color:rgba(255,255,255,.3);transition:all .2s}
-#autoplay.active{background:rgba(255,215,0,.12);border-color:#ffd700;color:#ffd700}
+#autoplay{position:absolute;top:80px;right:8px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.25);border:2px solid rgba(255,255,255,.1);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;z-index:20;color:rgba(255,255,255,.6);transition:all .2s;backdrop-filter:blur(4px)}
+#autoplay.active{background:rgba(255,215,0,.2);border-color:#ffd700;color:#ffd700}
 .confetti-piece{position:fixed;pointer-events:none;z-index:400;animation:cf 1.4s ease-out forwards}
 @keyframes cf{0%{opacity:1;transform:translateY(0) rotate(0) scale(1)}100%{opacity:0;transform:translateY(100vh) rotate(800deg) scale(.2)}}
-@media(max-width:360px){#img-card{width:200px;height:200px}#word-text{font-size:40px}}
+@media(max-width:360px){#word-text{font-size:32px}}
 </style>
 </head>
 <body class="all-bg">
@@ -78,11 +80,13 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
   </div>
   <div id="sub-tabs"></div>
   <div id="main-area">
-    <div id="autoplay">▶</div>
-    <div class="arrow" id="arrow-left">◀</div>
-    <div id="img-card"></div>
-    <div id="word-text"></div>
-    <div class="arrow" id="arrow-right">▶</div>
+    <div id="img-card">
+      <div id="img-container"></div>
+      <div id="autoplay">▶</div>
+      <div class="arrow" id="arrow-left">◀</div>
+      <div id="word-text"></div>
+      <div class="arrow" id="arrow-right">▶</div>
+    </div>
   </div>
   <div id="counter"><span id="idx-num">1</span> / <span id="total-num">1</span></div>
 </div>
@@ -287,43 +291,153 @@ const DATA = {
     label: '💬 Phrases',
     gradClass: 'logic',
     subcats: {
+      daily: {
+        label:'Daily',
+        words:[
+          phraseItem('Wake up','☀️','wake_up'),
+          phraseItem('Get up','🛏️','get_up'),
+          phraseItem('Brush teeth','🪥','brush_teeth'),
+          phraseItem('Wash face','💧','wash_face'),
+          phraseItem('Wash hands','🤲','wash_hands'),
+          phraseItem('Get dressed','👕','get_dressed'),
+          phraseItem('Put on shoes','👟','put_on_shoes'),
+          phraseItem('Take off shoes','👟','take_off_shoes'),
+          phraseItem('Time to eat','🍽️','time_to_eat'),
+          phraseItem('Breakfast time','🥣','breakfast_time'),
+          phraseItem('Lunch time','🍱','lunch_time'),
+          phraseItem('Dinner time','🍛','dinner_time'),
+          phraseItem('Snack time','🍪','snack_time'),
+          phraseItem('Clean up','🧹','clean_up'),
+          phraseItem('Tidy up','🧸','tidy_up'),
+          phraseItem('Put away','📦','put_away'),
+          phraseItem('Bath time','🛁','bath_time'),
+          phraseItem('Time for bed','😴','time_for_bed'),
+          phraseItem('Go to sleep','💤','go_to_sleep'),
+          phraseItem('Sweet dreams','🌙','sweet_dreams'),
+          phraseItem('Good morning','☀️','good_morning'),
+          phraseItem('Good night','🌙','good_night')
+        ]
+      },
       greetings: {
         label:'Greetings',
         words:[
-          phraseItem('Hello!','👋','hello'),
-          phraseItem('Goodbye!','👋','goodbye'),
-          phraseItem('Good morning','☀️','good_morning'),
-          phraseItem('Good night','🌙','good_night'),
-          phraseItem('How are you?','🤔','how_are_you'),
-          phraseItem("I'm fine","😊",'im_fine')
-        ]
-      },
-      responses: {
-        label:'Responses',
-        words:[
-          phraseItem('Thank you','🙏','thank_you'),
-          phraseItem("You're welcome","😊",'youre_welcome'),
+          phraseItem('Hello','👋','hello'),
+          phraseItem('Goodbye','👋','goodbye'),
+          phraseItem('See you later','👋','see_you_later'),
+          phraseItem('See you tomorrow','🌅','see_you_tomorrow'),
+          phraseItem('How are you','🤔','how_are_you'),
+          phraseItem("I'm fine",'😊','im_fine'),
+          phraseItem("I'm okay",'🙂','im_okay'),
+          phraseItem("What's your name",'🏷️','whats_your_name'),
+          phraseItem('My name is','📛','my_name_is'),
+          phraseItem('Nice to meet you','🤝','nice_to_meet_you'),
           phraseItem('Please','🥺','please'),
+          phraseItem('Thank you','🙏','thank_you'),
+          phraseItem("You're welcome",'😊','youre_welcome'),
+          phraseItem('Excuse me','🤚','excuse_me'),
           phraseItem('Sorry','😔','sorry'),
-          phraseItem('Yes!','👍','yes'),
-          phraseItem('No','🙅','no')
+          phraseItem("It's okay",'👌','its_okay'),
+          phraseItem('No problem','✅','no_problem'),
+          phraseItem('Bless you','😇','bless_you')
         ]
       },
-      actions: {
-        label:'Actions',
+      feelings: {
+        label:'Feelings',
         words:[
+          phraseItem("I'm happy",'😊','im_happy'),
+          phraseItem("I'm sad",'😢','im_sad'),
+          phraseItem("I'm angry",'😠','im_angry'),
+          phraseItem("I'm scared",'😨','im_scared'),
+          phraseItem("I'm excited",'🤩','im_excited'),
+          phraseItem("I'm bored",'😐','im_bored'),
+          phraseItem('I like it','👍','i_like_it'),
+          phraseItem("I don't like it",'👎','i_dont_like_it'),
           phraseItem('I love you','❤️','i_love_you'),
-          phraseItem("Let's go!",'🚀','lets_go'),
-          phraseItem('Stop!','✋','stop'),
-          phraseItem('Come here','👉','come_here'),
-          phraseItem('Wait','⏳','wait'),
-          phraseItem('Help me','🆘','help_me'),
+          phraseItem("That's funny",'😂','thats_funny'),
+          phraseItem("That's silly",'🤪','thats_silly')
+        ]
+      },
+      needs: {
+        label:'Needs',
+        words:[
           phraseItem("I'm hungry",'🍽️','im_hungry'),
-          phraseItem("I'm thirsty",'🥤','im_thirsty')
+          phraseItem("I'm thirsty",'🥤','im_thirsty'),
+          phraseItem("I'm tired",'😴','im_tired'),
+          phraseItem('I need help','🆘','help_me'),
+          phraseItem('Can you help me','❓','can_you_help_me'),
+          phraseItem('I want','✋','i_want'),
+          phraseItem("I don't want",'🙅','i_dont_want'),
+          phraseItem('More please','➕','more_please'),
+          phraseItem('No more','✋','no_more'),
+          phraseItem("I'm done",'✅','im_done'),
+          phraseItem('All done','🎉','all_done'),
+          phraseItem("I don't know",'🤷','i_dont_know'),
+          phraseItem("I don't understand",'🤔','i_dont_understand')
+        ]
+      },
+      play: {
+        label:'Play',
+        words:[
+          phraseItem("Let's go",'🚀','lets_go'),
+          phraseItem("Let's play",'🎮','lets_play'),
+          phraseItem('My turn','🙋','my_turn'),
+          phraseItem('Your turn','👉','your_turn'),
+          phraseItem('Share please','🤝','share_please'),
+          phraseItem('Be careful','⚠️','be_careful'),
+          phraseItem('Slow down','🐢','slow_down'),
+          phraseItem('Listen','👂','listen'),
+          phraseItem('Look','👀','look'),
+          phraseItem('Sit down','💺','sit_down'),
+          phraseItem('Stand up','🧍','stand_up'),
+          phraseItem('Line up','🚶','line_up'),
+          phraseItem('Quiet please','🤫','quiet_please'),
+          phraseItem('Raise your hand','✋','raise_your_hand'),
+          phraseItem('Try again','🔄','try_again'),
+          phraseItem('Good job','🌟','good_job'),
+          phraseItem('Well done','👏','well_done'),
+          phraseItem('You can do it','💪','you_can_do_it')
+        ]
+      },
+      questions: {
+        label:'Questions',
+        words:[
+          phraseItem("What's this",'❓','whats_this'),
+          phraseItem("What's that",'👉','whats_that'),
+          phraseItem('Where is it','🔍','where_is_it'),
+          phraseItem('Where are you','🗺️','where_are_you'),
+          phraseItem('Who is it','🕵️','who_is_it'),
+          phraseItem("Who's that",'👤','whos_that'),
+          phraseItem('Why','🤨','why'),
+          phraseItem('When','⏰','when'),
+          phraseItem('How','🛠️','how'),
+          phraseItem('Is it','✅','is_it'),
+          phraseItem('Can I','🙋','can_i'),
+          phraseItem('Do you','👉','do_you'),
+          phraseItem('May I','🤲','may_i')
+        ]
+      },
+      instructions: {
+        label:'Instructions',
+        words:[
+          phraseItem('Yes','👍','yes'),
+          phraseItem('No','🙅','no'),
+          phraseItem('Come here','👉','come_here'),
+          phraseItem('Go there','👈','go_there'),
+          phraseItem('Wait','⏳','wait'),
+          phraseItem('Stop','✋','stop'),
+          phraseItem('Open','📂','open'),
+          phraseItem('Close','📁','close'),
+          phraseItem('Turn on','🔛','turn_on'),
+          phraseItem('Turn off','🔚','turn_off'),
+          phraseItem('Put it here','📍','put_it_here'),
+          phraseItem('Give me','🤲','give_me'),
+          phraseItem('Show me','👆','show_me'),
+          phraseItem('Touch','👉','touch'),
+          phraseItem('Point to','☝️','point_to')
         ]
       }
     }
-  }
+  },
 };
 
 // ═══════════════════════════════════════════
@@ -422,20 +536,20 @@ function render() {
   const total = getTotal();
   const cls = getCategoryClass();
 
-  // Image card
-  const card = $('img-card');
+  // Image card content — use img-container to avoid destroying overlay children
+  const imgContainer = $('img-container');
   if (word) {
     if (state.mainCat === 'color' || (state.mainCat === 'all' && word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img)) {
-      card.innerHTML = colorBlock(word.w);
+      imgContainer.innerHTML = colorBlock(word.w);
     } else if (word.emoji) {
-      card.innerHTML = word.emoji; // phraseEmoji is already evaluated at DATA build time
+      imgContainer.innerHTML = word.emoji; // phraseEmoji is already evaluated at DATA build time
     } else if (word.img) {
-      card.innerHTML = `<img src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
+      imgContainer.innerHTML = `<img src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
     } else {
-      card.innerHTML = '';
+      imgContainer.innerHTML = '';
     }
   } else {
-    card.innerHTML = '<div style="color:rgba(255,255,255,.2);font-size:60px">?</div>';
+    imgContainer.innerHTML = '<div style="color:rgba(255,255,255,.2);font-size:60px">?</div>';
   }
 
   // Word text
@@ -655,10 +769,14 @@ function init() {
   $('arrow-right').addEventListener('click', next);
 
   // Card click → play audio
-  $('img-card').addEventListener('click', tapWord);
+  $('img-card').addEventListener('click', function(e) {
+    // Don't trigger if clicking on arrow or autoplay buttons
+    if (e.target.closest('.arrow') || e.target.closest('#autoplay')) return;
+    tapWord();
+  });
 
-  // Word text click → also play
-  $('word-text').addEventListener('click', tapWord);
+  // Word text click → also play (stop propagation to avoid double-fire with card)
+  $('word-text').addEventListener('click', function(e) { e.stopPropagation(); tapWord(); });
 
   // Autoplay
   $('autoplay').addEventListener('click', toggleAutoplay);
