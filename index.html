@@ -726,7 +726,29 @@ function playAudio() {
       
       source.onended = () => {
         currentSource = null;
-        if (state.autoplay) setTimeout(() => next(), 600);
+        // Play Chinese audio after 500ms delay
+        setTimeout(() => {
+          const cnPath = word.aud.replace('audio/', 'audio_cn/');
+          fetch(cnPath)
+            .then(r => { if (!r.ok) throw new Error('no cn'); return r.arrayBuffer(); })
+            .then(buf => ctx.decodeAudioData(buf))
+            .then(cnBuf => {
+              const cnSource = ctx.createBufferSource();
+              cnSource.buffer = cnBuf;
+              const cnGain = ctx.createGain();
+              cnGain.gain.value = state.volume;
+              cnSource.connect(cnGain);
+              cnGain.connect(ctx.destination);
+              cnSource.start(0);
+              cnSource.onended = () => {
+                if (state.autoplay) setTimeout(() => next(), 600);
+              };
+            })
+            .catch(() => {
+              // No Chinese audio — advance autoplay if needed
+              if (state.autoplay) setTimeout(() => next(), 600);
+            });
+        }, 500);
       };
     })
     .catch(() => {});
