@@ -39,11 +39,24 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 .sub-tab.active{border-color:#ffd700;background:rgba(255,215,0,.12);color:#ffd700}
 .sub-tab:active{transform:scale(.92)}
 #main-area{flex:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:0;gap:0}
-#img-card{width:100%;height:100%;max-width:100vw;max-height:calc(100vh - 120px);aspect-ratio:1/1;background:rgba(255,255,255,.03);cursor:pointer;position:relative;overflow:hidden;transition:transform .15s;z-index:5;border-radius:8px}
+#img-card{width:100%;height:100%;max-width:100vw;max-height:calc(100vh - 120px);aspect-ratio:1/1;background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.05));cursor:pointer;position:relative;overflow:hidden;transition:transform .15s;z-index:5;border-radius:26px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.16)}
+#img-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 22%,rgba(6,18,32,.08) 75%,rgba(6,18,32,.24));pointer-events:none;z-index:2}
 #img-card:active{transform:scale(.96)}
-#img-container{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1}
-#img-container img{width:100%;height:100%;object-fit:contain}
-#img-container .color-block{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:120px;font-weight:800;color:#fff;text-shadow:0 4px 12px rgba(0,0,0,.4);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+#img-container{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1;padding:26px 26px 98px;background:
+radial-gradient(circle at 50% 18%,rgba(255,255,255,.22),rgba(255,255,255,0) 34%),
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.12),rgba(255,255,255,0) 22%),
+linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+#img-container img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 28px rgba(0,0,0,.24))}
+#img-container img.photo-asset{width:92%;height:92%;padding:18px;background:rgba(255,255,255,.62);border-radius:28px;box-shadow:0 12px 32px rgba(15,23,42,.16)}
+#img-container img.generated-asset{width:100%;height:100%}
+#img-container img.vector-asset{width:94%;height:94%}
+#img-container .color-stage{width:100%;height:100%;border-radius:32px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--color-soft),var(--color));box-shadow:inset 0 18px 30px rgba(255,255,255,.24)}
+#img-container .color-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 24%,rgba(255,255,255,.55),rgba(255,255,255,0) 30%)}
+#img-container .color-stage::after{content:"";position:absolute;left:8%;right:8%;bottom:-10%;height:26%;border-radius:999px;background:rgba(7,17,28,.15);filter:blur(10px)}
+#img-container .color-swatch{width:46%;aspect-ratio:1;border-radius:38%;background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.05));border:8px solid rgba(255,255,255,.24);box-shadow:0 20px 36px rgba(8,15,28,.18);position:relative;display:flex;align-items:center;justify-content:center}
+#img-container .color-swatch::before{content:"";position:absolute;top:14%;left:18%;width:32%;height:16%;border-radius:999px;background:rgba(255,255,255,.4);transform:rotate(-18deg)}
+#img-container .color-word{position:absolute;bottom:16%;left:0;right:0;text-align:center;font-family:'Fredoka One',cursive;font-size:74px;letter-spacing:3px;color:#fff;text-shadow:0 6px 18px rgba(0,0,0,.28)}
+#img-container .color-dot{width:54%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.22);border:10px solid rgba(255,255,255,.28)}
 #word-text{position:absolute;bottom:40px;left:0;right:0;padding:16px 16px 12px;text-align:center;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-family:'Fredoka One',cursive;font-size:34px;font-weight:800;line-height:1.2;z-index:10;cursor:pointer;transition:all .3s;letter-spacing:1px}
 #word-text:active{transform:scale(.94)}
 #word-text.pop{animation:textPop .5s ease-out}
@@ -135,10 +148,29 @@ function adjAud(w) {
   return 'audio/adj_' + w.toLowerCase() + '.mp3';
 }
 
+function slugify(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+}
+
+function generatedImg(kind, slug) {
+  return 'images/generated/' + kind + '/' + slug + '.svg';
+}
+
 // Color block HTML (no image file)
 function colorBlock(name) {
-  const colors = {Red:'#ff4444',Blue:'#4488ff',Green:'#44cc44',Yellow:'#ffdd44',Orange:'#ff8844',Purple:'#aa44ff'};
-  return '<div class="color-block" style="background:'+(colors[name]||'#888')+'">' + name.charAt(0) + '</div>';
+  const colors = {
+    Red:{base:'#ff5f57',soft:'#ffd6d3'},
+    Blue:{base:'#4c8dff',soft:'#d8e7ff'},
+    Green:{base:'#4fd26d',soft:'#dcf8e3'},
+    Yellow:{base:'#ffd44d',soft:'#fff5bd'},
+    Orange:{base:'#ff9a45',soft:'#ffe1c4'},
+    Purple:{base:'#b16dff',soft:'#eadbff'}
+  };
+  const palette = colors[name] || {base:'#888',soft:'#ddd'};
+  return `<div class="color-stage" style="--color:${palette.base};--color-soft:${palette.soft}">
+    <div class="color-swatch"><div class="color-dot"></div></div>
+    <div class="color-word">${name}</div>
+  </div>`;
 }
 
 function phraseEmoji(emoji) {
@@ -146,11 +178,11 @@ function phraseEmoji(emoji) {
 }
 
 function phraseItem(text, emoji, fname) {
-  return {w:text, emoji:phraseEmoji(emoji), aud:'audio/phrase_'+fname+'.mp3'};
+  return {w:text, img:generatedImg('phrases', fname), aud:'audio/phrase_'+fname+'.mp3'};
 }
 
 function emojiItem(w, emoji) {
-  return {w, emoji: '<div style="font-size:120px;text-align:center;line-height:1">' + emoji + '</div>', aud:'audio/'+w.toLowerCase()+'.mp3'};
+  return {w, img:generatedImg('emoji', slugify(w)), aud:'audio/' + slugify(w) + '.mp3'};
 }
 
 function w(w) { return w; }
@@ -169,125 +201,29 @@ const DATA = {
       emojiItem('Tiger','🐯'), emojiItem('Panda','🐼'), emojiItem('Turtle','🐢'), emojiItem('Butterfly','🦋')
     ]
   },
-  color: {
-    label: '🎨 Colors',
-    isColor: true,
-    words: [
-      {w:'Red',aud:'audio/red.mp3'}, {w:'Blue',aud:'audio/blue.mp3'}, {w:'Green',aud:'audio/green.mp3'},
-      {w:'Yellow',aud:'audio/yellow.mp3'}, {w:'Orange',aud:'audio/orange_color.mp3'}, {w:'Purple',aud:'audio/purple.mp3'}
-    ]
-  },
-  fruit: {
-    label: '🍎 Fruits',
+  food: {
+    label: '🍎 Food',
     words: [
       img('Apple','images/apple.jpg'), img('Banana','images/banana.jpg'), img('Orange','images/orange.jpg'),
       img('Grape','images/grape.jpg'), img('Pear','images/pear.jpg'), img('Watermelon','images/watermelon.jpg'),
       emojiItem('Strawberry','🍓'), emojiItem('Cherry','🍒'), emojiItem('Peach','🍑'),
-      emojiItem('Mango','🥭'), emojiItem('Pineapple','🍍'), emojiItem('Lemon','🍋')
-    ]
-  },
-  plants: {
-    label: '🌿 Plants',
-    gradClass: 'fruit',
-    words: [
-      emojiItem('Flower','🌸'),
-      emojiItem('Tree','🌳')
-    ]
-  },
-  sensory: {
-    label: '👆 Sensory',
-    subcats: {
-      touch: {
-        label:'Touch',
-        words:[adj('Hard'),adj('Soft'),adj('Fuzzy'),adj('Prickly'),adj('Slimy'),adj('Sticky'),adj('Freezing'),adj('Boiling')]
-      },
-      weight: {
-        label:'Weight',
-        words:[adj('Heavy'),adj('Light'),adj('Strong'),adj('Weak'),adj('Sturdy')]
-      },
-      visual: {
-        label:'Visual',
-        words:[adj('Bright'),adj('Dark'),adj('Shiny'),adj('Dull'),adj('Clear'),adj('Colorful'),adj('Pale')]
-      },
-      sound: {
-        label:'Sound',
-        words:[adj('Loud'),adj('Quiet'),adj('Noisy'),adj('Silent'),adj('Squeaky'),adj('Whispering')]
-      }
-    }
-  },
-  size: {
-    label: '📏 Size',
-    subcats: {
-      size: {
-        label:'Size',
-        words:[adj('Big'),adj('Small'),adj('Tall'),adj('Short'),adj('Long'),adj('Tiny'),adj('Huge'),adj('Wide'),adj('Narrow'),adj('Thick'),adj('Thin')]
-      },
-      form: {
-        label:'Form',
-        words:[adj('Round'),adj('Flat'),adj('Square'),adj('Pointed'),adj('Curved'),adj('Straight'),adj('Crooked')]
-      },
-      speed: {
-        label:'Speed',
-        words:[adj('Fast'),adj('Slow'),adj('Quick'),adj('Rapid')]
-      }
-    }
-  },
-  feelings: {
-    label: '💭 Feelings',
-    subcats: {
-      emotion: {
-        label:'Emotion',
-        words:[adj('Happy'),adj('Sad'),adj('Angry'),adj('Surprised'),adj('Brave'),adj('Scared'),adj('Silly'),adj('Serious')]
-      },
-      opinion: {
-        label:'Opinion',
-        words:[adj('Good'),adj('Bad'),adj('Pretty'),adj('Ugly'),adj('Mean'),adj('Nice'),adj('Difficult'),adj('Easy'),adj('Important')]
-      },
-      condition: {
-        label:'Condition',
-        words:[adj('Clean'),adj('Dirty'),adj('Broken'),adj('Fixed'),adj('New'),adj('Old'),adj('Wet'),adj('Dry'),adj('Empty'),adj('Full')]
-      }
-    }
-  },
-  logic: {
-    label: '🧠 Logic',
-    subcats: {
-      compare: {
-        label:'Compare',
-        words:[adj('Same'),adj('Different'),adj('Alike')]
-      },
-      order: {
-        label:'Order',
-        words:[adj('First'),adj('Last'),adj('Middle'),adj('Next')]
-      },
-      difficulty: {
-        label:'Difficulty',
-        words:[adj('Simple'),adj('Hard'),adj('Tricky')]
-      }
-    }
-  },
-  body: {
-    label: '🧍 Body',
-    gradClass: 'body',
-    words: [
-      img('Eye','images/eye.svg'), img('Ear','images/ear.svg'), img('Nose','images/nose.svg'),
-      img('Mouth','images/mouth.svg'), img('Hand','images/hand.svg'), img('Foot','images/foot.svg'),
-      img('Head','images/head.svg'), img('Arm','images/arm.svg')
-    ]
-  },
-  food: {
-    label: '🍕 Food',
-    gradClass: 'food',
-    words: [
+      emojiItem('Mango','🥭'), emojiItem('Pineapple','🍍'), emojiItem('Lemon','🍋'),
       img('Bread','images/bread.svg'), img('Cake','images/cake.svg'), img('Cookie','images/cookie.svg'),
       img('Milk','images/milk.svg'), img('Egg','images/egg.svg'), img('Cheese','images/cheese.svg'),
       img('Rice','images/rice.svg'), img('Water','images/water.svg'), img('Candy','images/candy.svg'),
       {w:'Ice Cream', img:'images/ice_cream.svg', aud:'audio/ice_cream.mp3'}
     ]
   },
+  body: {
+    label: '🧍 Body',
+    words: [
+      img('Eye','images/eye.svg'), img('Ear','images/ear.svg'), img('Nose','images/nose.svg'),
+      img('Mouth','images/mouth.svg'), img('Hand','images/hand.svg'), img('Foot','images/foot.svg'),
+      img('Head','images/head.svg'), img('Arm','images/arm.svg')
+    ]
+  },
   home: {
     label: '🏠 Home',
-    gradClass: 'home',
     words: [
       img('Bed','images/bed.svg'), img('Chair','images/chair.svg'), img('Table','images/table.svg'),
       img('Door','images/door.svg'), img('Window','images/window.svg'), img('Cup','images/cup.svg'),
@@ -296,7 +232,6 @@ const DATA = {
   },
   actions: {
     label: '🏃 Actions',
-    gradClass: 'actions',
     words: [
       img('Eat','images/eat.svg'), img('Drink','images/drink.svg'), img('Sleep','images/sleep.svg'),
       img('Run','images/run.svg'), img('Jump','images/jump.svg'), img('Walk','images/walk.svg'),
@@ -304,9 +239,28 @@ const DATA = {
       img('Wave','images/wave.svg')
     ]
   },
+  color: {
+    label: '🎨 Colors & Shapes',
+    words: [
+      {w:'Red',aud:'audio/red.mp3'},
+      {w:'Blue',aud:'audio/blue.mp3'},
+      {w:'Green',aud:'audio/green.mp3'},
+      {w:'Yellow',aud:'audio/yellow.mp3'},
+      {w:'Orange',aud:'audio/orange_color.mp3'},
+      {w:'Purple',aud:'audio/purple.mp3'},
+      adj('Big'),
+      adj('Small'),
+      adj('Tall'),
+      adj('Short'),
+      adj('Long'),
+      adj('Round'),
+      adj('Square'),
+      adj('Fast'),
+      adj('Slow')
+    ]
+  },
   phrases: {
-    label: '💬 Phrases',
-    gradClass: 'logic',
+    label: '💬 Daily Phrases & Feelings',
     subcats: {
       daily: {
         label:'Daily',
@@ -325,12 +279,9 @@ const DATA = {
           phraseItem('Dinner time','🍛','dinner_time'),
           phraseItem('Snack time','🍪','snack_time'),
           phraseItem('Clean up','🧹','clean_up'),
-          phraseItem('Tidy up','🧸','tidy_up'),
-          phraseItem('Put away','📦','put_away'),
           phraseItem('Bath time','🛁','bath_time'),
           phraseItem('Time for bed','😴','time_for_bed'),
           phraseItem('Go to sleep','💤','go_to_sleep'),
-          phraseItem('Sweet dreams','🌙','sweet_dreams'),
           phraseItem('Good morning','☀️','good_morning'),
           phraseItem('Good night','🌙','good_night')
         ]
@@ -341,7 +292,6 @@ const DATA = {
           phraseItem('Hello','👋','hello'),
           phraseItem('Goodbye','👋','goodbye'),
           phraseItem('See you later','👋','see_you_later'),
-          phraseItem('See you tomorrow','🌅','see_you_tomorrow'),
           phraseItem('How are you','🤔','how_are_you'),
           phraseItem("I'm fine",'😊','im_fine'),
           phraseItem("I'm okay",'🙂','im_okay'),
@@ -353,9 +303,7 @@ const DATA = {
           phraseItem("You're welcome",'😊','youre_welcome'),
           phraseItem('Excuse me','🤚','excuse_me'),
           phraseItem('Sorry','😔','sorry'),
-          phraseItem("It's okay",'👌','its_okay'),
-          phraseItem('No problem','✅','no_problem'),
-          phraseItem('Bless you','😇','bless_you')
+          phraseItem("It's okay",'👌','its_okay')
         ]
       },
       feelings: {
@@ -365,13 +313,10 @@ const DATA = {
           phraseItem("I'm sad",'😢','im_sad'),
           phraseItem("I'm angry",'😠','im_angry'),
           phraseItem("I'm scared",'😨','im_scared'),
-          phraseItem("I'm excited",'🤩','im_excited'),
-          phraseItem("I'm bored",'😐','im_bored'),
           phraseItem('I like it','👍','i_like_it'),
           phraseItem("I don't like it",'👎','i_dont_like_it'),
           phraseItem('I love you','❤️','i_love_you'),
-          phraseItem("That's funny",'😂','thats_funny'),
-          phraseItem("That's silly",'🤪','thats_silly')
+          phraseItem("That's funny",'😂','thats_funny')
         ]
       },
       needs: {
@@ -388,8 +333,7 @@ const DATA = {
           phraseItem('No more','✋','no_more'),
           phraseItem("I'm done",'✅','im_done'),
           phraseItem('All done','🎉','all_done'),
-          phraseItem("I don't know",'🤷','i_dont_know'),
-          phraseItem("I don't understand",'🤔','i_dont_understand')
+          phraseItem("I don't know",'🤷','i_dont_know')
         ]
       },
       play: {
@@ -423,14 +367,7 @@ const DATA = {
           phraseItem('Where is it','🔍','where_is_it'),
           phraseItem('Where are you','🗺️','where_are_you'),
           phraseItem('Who is it','🕵️','who_is_it'),
-          phraseItem("Who's that",'👤','whos_that'),
-          phraseItem('Why','🤨','why'),
-          phraseItem('When','⏰','when'),
-          phraseItem('How','🛠️','how'),
-          phraseItem('Is it','✅','is_it'),
-          phraseItem('Can I','🙋','can_i'),
-          phraseItem('Do you','👉','do_you'),
-          phraseItem('May I','🤲','may_i')
+          phraseItem('Can I','🙋','can_i')
         ]
       },
       instructions: {
@@ -444,8 +381,6 @@ const DATA = {
           phraseItem('Stop','✋','stop'),
           phraseItem('Open','📂','open'),
           phraseItem('Close','📁','close'),
-          phraseItem('Turn on','🔛','turn_on'),
-          phraseItem('Turn off','🔚','turn_off'),
           phraseItem('Put it here','📍','put_it_here'),
           phraseItem('Give me','🤲','give_me'),
           phraseItem('Show me','👆','show_me'),
@@ -454,7 +389,7 @@ const DATA = {
         ]
       }
     }
-  },
+  }
 };
 
 // ═══════════════════════════════════════════
@@ -533,13 +468,13 @@ function getTotal() {
 }
 
 function getCategoryClass() {
-  const map = {animal:'animal', color:'color', fruit:'fruit', sensory:'sensory', size:'size', feelings:'feelings', logic:'logic', body:'body', food:'food', home:'home', actions:'actions', phrases:'logic'};
+  const map = {animal:'animal', color:'color', body:'body', food:'food', home:'home', actions:'actions', phrases:'feelings'};
   if (state.mainCat === 'all') return 'all';
   return map[state.mainCat] || 'all';
 }
 
 function getBackgroundClass() {
-  const map = {animal:'animal-bg', color:'color-bg', fruit:'fruit-bg', sensory:'sensory-bg', size:'size-bg', feelings:'feelings-bg', logic:'logic-bg', body:'body-bg', food:'food-bg', home:'home-bg', actions:'actions-bg', phrases:'logic-bg'};
+  const map = {animal:'animal-bg', color:'color-bg', body:'body-bg', food:'food-bg', home:'home-bg', actions:'actions-bg', phrases:'feelings-bg'};
   if (state.mainCat === 'all') return 'all-bg';
   return map[state.mainCat] || 'all-bg';
 }
@@ -549,6 +484,13 @@ function getBackgroundClass() {
 // ═══════════════════════════════════════════
 const $ = id => document.getElementById(id);
 
+function imageClass(path) {
+  const lower = String(path || '').toLowerCase();
+  if (lower.includes('/generated/')) return 'generated-asset';
+  if (/\.(jpg|jpeg|png|gif)$/.test(lower)) return 'photo-asset';
+  return 'vector-asset';
+}
+
 function render() {
   const word = getCurrentWord();
   const total = getTotal();
@@ -557,12 +499,12 @@ function render() {
   // Image card content — use img-container to avoid destroying overlay children
   const imgContainer = $('img-container');
   if (word) {
-    if (state.mainCat === 'color' || (state.mainCat === 'all' && word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img)) {
+    if (word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img) {
       imgContainer.innerHTML = colorBlock(word.w);
     } else if (word.emoji) {
       imgContainer.innerHTML = word.emoji; // phraseEmoji is already evaluated at DATA build time
     } else if (word.img) {
-      imgContainer.innerHTML = `<img src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
+      imgContainer.innerHTML = `<img class="${imageClass(word.img)}" src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
     } else {
       imgContainer.innerHTML = '';
     }
