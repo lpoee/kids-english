@@ -114,12 +114,6 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 // Helper: image path for adjective
 function adjImg(w) {
   const lower = w.toLowerCase();
-  if (ADJ_PHOTO_WORDS.has(lower)) {
-    return assetPath(
-      'images/generated_adjs/' + lower + '.jpeg',
-      'images/adj_photos/' + lower + '.jpg'
-    );
-  }
   // All words using clean SVG files (Twemoji + custom SVGs in images/adjectives/)
   const svgWords = [
     // Emotion (8)
@@ -164,66 +158,12 @@ function generatedImg(kind, slug) {
   return 'images/generated/' + kind + '/' + slug + '.svg';
 }
 
-function assetPath(src) {
-  const fallbacks = Array.prototype.slice.call(arguments, 1).filter(Boolean);
-  return {src, fallbacks};
-}
-
-function getImgSrc(img) {
-  return typeof img === 'string' ? img : img.src;
-}
-
-function getFallbackChain(img) {
-  return typeof img === 'string' ? [] : (img.fallbacks || []);
-}
-
-const PHOTO_WORDS = new Set([
-  'cat','dog','bird','lion','monkey','rabbit','elephant','bear','fish','frog',
-  'duck','pig','cow','horse','sheep','chicken','tiger','panda','turtle','butterfly',
-  'apple','banana','orange','grape','pear','watermelon','strawberry','cherry','peach',
-  'mango','pineapple','lemon','bread','cake','cookie','milk','egg','cheese','rice',
-  'water','candy','ice_cream','eye','ear','nose','mouth','hand','foot','head','arm',
-  'bed','chair','table','door','window','cup','spoon','clock','eat','drink','sleep',
-  'run','jump','walk','sit','stand','clap','wave'
-]);
-
 function vocabImg(w) {
   const slug = slugify(w);
-  if (PHOTO_WORDS.has(slug)) {
-    return assetPath(
-      'images/generated_words/' + slug + '.jpeg',
-      'images/photos/' + slug + '.jpg'
-    );
-  }
   return generatedImg('vocab', slug);
 }
 
-const ADJ_PHOTO_WORDS = new Set(['big','small','tall','short','long','round','square','fast','slow']);
-
-const PHOTO_PHRASES = new Set([
-  'wake_up','get_up','brush_teeth','wash_face','wash_hands','get_dressed','put_on_shoes',
-  'take_off_shoes','time_to_eat','breakfast_time','lunch_time','dinner_time','snack_time',
-  'clean_up','bath_time','time_for_bed','go_to_sleep','good_morning','good_night','hello',
-  'goodbye','see_you_later','how_are_you','im_fine','im_okay','whats_your_name','my_name_is',
-  'nice_to_meet_you','please','thank_you','youre_welcome','excuse_me','sorry','its_okay',
-  'im_happy','im_sad','im_angry','im_scared','i_like_it','i_dont_like_it','i_love_you',
-  'thats_funny','im_hungry','im_thirsty','im_tired','help_me','can_you_help_me','i_want',
-  'i_dont_want','more_please','no_more','im_done','all_done','i_dont_know','lets_go',
-  'lets_play','my_turn','your_turn','share_please','be_careful','slow_down','listen','look',
-  'sit_down','stand_up','line_up','quiet_please','raise_your_hand','try_again','good_job',
-  'well_done','you_can_do_it','whats_this','whats_that','where_is_it','where_are_you',
-  'who_is_it','can_i','yes','no','come_here','go_there','wait','stop','open','close',
-  'put_it_here','give_me','show_me','touch','point_to'
-]);
-
 function phraseImg(fname) {
-  if (PHOTO_PHRASES.has(fname)) {
-    return assetPath(
-      'images/generated_phrase_gifs/' + fname + '.gif',
-      'images/generated_phrases/' + fname + '.jpeg',
-      'images/phrase_photos/' + fname + '.jpg'
-    );
-  }
   return generatedImg('phrases', fname);
 }
 
@@ -554,17 +494,6 @@ function imageClass(path) {
   return 'vector-asset';
 }
 
-function advanceFallback(imgEl) {
-  const chain = (imgEl.dataset.fallbacks || '').split('|').filter(Boolean);
-  if (!chain.length) {
-    imgEl.style.display = 'none';
-    return;
-  }
-  const next = chain.shift();
-  imgEl.dataset.fallbacks = chain.join('|');
-  imgEl.src = next;
-}
-
 function render() {
   const word = getCurrentWord();
   const total = getTotal();
@@ -579,10 +508,8 @@ function render() {
     } else if (word.emoji) {
       imgContainer.innerHTML = word.emoji; // phraseEmoji is already evaluated at DATA build time
     } else if (word.img) {
-      const imgSrc = getImgSrc(word.img);
-      const fallbackChain = getFallbackChain(word.img).join('|');
-      if (imageClass(imgSrc) === 'photo-asset') imgContainer.className = 'photo-stage';
-      imgContainer.innerHTML = `<img class="${imageClass(imgSrc)}" src="${imgSrc}" alt="${word.w}" data-fallbacks="${fallbackChain}" onerror="advanceFallback(this)">`;
+      if (imageClass(word.img) === 'photo-asset') imgContainer.className = 'photo-stage';
+      imgContainer.innerHTML = `<img class="${imageClass(word.img)}" src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
     } else {
       imgContainer.innerHTML = '';
     }
