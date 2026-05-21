@@ -27,13 +27,13 @@ body.home-bg{background:linear-gradient(135deg,#1a1a0e,#4a4a1a,#2e2e0e)}
 body.actions-bg{background:linear-gradient(135deg,#0e1a2e,#1a3a5e,#0e2a4e)}
 body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 #app{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;padding:0;overflow:hidden}
-#tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;z-index:100;overflow-x:auto;width:100%;max-width:100%;padding:6px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:absolute;top:0;left:0;background:linear-gradient(rgba(0,0,0,.5),transparent);pointer-events:auto}
+#tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:flex-start;z-index:100;overflow-x:auto;width:100%;max-width:100%;padding:6px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:absolute;top:0;left:0;background:linear-gradient(rgba(0,0,0,.5),transparent);pointer-events:auto}
 #tabs::-webkit-scrollbar{display:none}
 .tab{border:none;background:rgba(255,255,255,.06);color:rgba(255,255,255,.45);font-size:11px;font-weight:700;cursor:pointer;transition:all .25s;border-radius:14px;padding:6px 10px;border:2px solid transparent;white-space:nowrap;flex-shrink:0}
 .tab.active{border-color:#ffd700;background:rgba(255,215,0,.15);color:#ffd700;box-shadow:0 0 20px rgba(255,215,0,.2)}
 .tab:active{transform:scale(.93)}
 /* Sub-tabs */
-#sub-tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:center;z-index:100;width:100%;max-width:100%;overflow-x:auto;padding:6px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;min-height:28px;position:absolute;top:38px;left:0;background:linear-gradient(rgba(0,0,0,.3),transparent);pointer-events:auto}
+#sub-tabs{display:flex;gap:4px;flex-shrink:0;flex-wrap:nowrap;justify-content:flex-start;z-index:100;width:100%;max-width:100%;overflow-x:auto;padding:6px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;min-height:28px;position:absolute;top:38px;left:0;background:linear-gradient(rgba(0,0,0,.3),transparent);pointer-events:auto}
 #sub-tabs::-webkit-scrollbar{display:none}
 .sub-tab{border:none;background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);font-size:10px;font-weight:600;cursor:pointer;transition:all .2s;border-radius:20px;padding:4px 12px;border:1.5px solid transparent;white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:.5px}
 .sub-tab.active{border-color:#ffd700;background:rgba(255,215,0,.12);color:#ffd700}
