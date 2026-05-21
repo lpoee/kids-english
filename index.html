@@ -555,6 +555,9 @@ function renderMainTabs() {
   container.querySelectorAll('.tab').forEach(btn => {
     btn.addEventListener('click', () => setMainCat(btn.dataset.cat));
   });
+  // Scroll active tab into view
+  const activeTab = container.querySelector('.tab.active');
+  if (activeTab) activeTab.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
 }
 
 function renderSubTabs() {
@@ -573,6 +576,9 @@ function renderSubTabs() {
   container.querySelectorAll('.sub-tab').forEach(btn => {
     btn.addEventListener('click', () => setSubCat(btn.dataset.sub));
   });
+  // Scroll active sub-tab into view
+  const activeSub = container.querySelector('.sub-tab.active');
+  if (activeSub) activeSub.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
 }
 
 function bounceCard() {
