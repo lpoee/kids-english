@@ -139,7 +139,7 @@ function adjImg(w) {
     // Opinion (9)
     'good','bad','pretty','ugly','mean','nice','difficult','easy','important'
   ];
-  if (svgWords.includes(lower)) return 'images/adjectives/' + lower + '.svg';
+  if (svgWords.includes(lower)) return 'images/adjectives/' + lower + '.png';
   // hot uses JPG
   if (lower === 'hot') return 'images/adj_hot.jpg';
   // cold and a few others still use GIF
@@ -155,7 +155,7 @@ function slugify(text) {
 }
 
 function generatedImg(kind, slug) {
-  return 'images/generated/' + kind + '/' + slug + '.svg';
+  return 'images/generated/' + kind + '/' + slug + '.png';
 }
 
 function vocabImg(w) {
