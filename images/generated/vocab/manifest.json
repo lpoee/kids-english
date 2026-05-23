@@ -1,0 +1,1185 @@
+{
+  "cat": {
+    "label": "Cat",
+    "query": "cat",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one cat, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cat.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, centered cat with friendly expression and simple, clean style. Background is soft and non-distracting, allowing the cat to be the sole focus. Minor deduction for slight lack of crisp edge definition on fur texture, but overall highly suitable for a 4-year-old vocabulary card.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:34:58+00:00"
+    }
+  },
+  "dog": {
+    "label": "Dog",
+    "query": "dog",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one dog, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/dog.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear dog portrait with simple background and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:00+00:00"
+    }
+  },
+  "bird": {
+    "label": "Bird",
+    "query": "bird animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one bird, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/bird.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear bird portrait with simple shapes and soft pastel background, no distractions from the subject.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:02+00:00"
+    }
+  },
+  "lion": {
+    "label": "Lion",
+    "query": "lion animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one lion, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/lion.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear lion portrait with simple, friendly style and no distracting elements.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:04+00:00"
+    }
+  },
+  "monkey": {
+    "label": "Monkey",
+    "query": "monkey animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one monkey, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/monkey.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear monkey portrait with strong separation, simple background, and no distractions. Minor issue: slight ambiguity in whether the figure is a child or monkey due to human-like posture and clothing, but concept remains highly recognizable.",
+      "issues": [
+        "Slight ambiguity in subject identity (child-like posture and clothing may confuse some children about whether it's a monkey or child)"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:06+00:00"
+    }
+  },
+  "rabbit": {
+    "label": "Rabbit",
+    "query": "rabbit animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one rabbit, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/rabbit.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear rabbit portrait with simple shapes and soft colors, though a subtle frame and foliage slightly distract from the pure subject focus.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:08+00:00"
+    }
+  },
+  "elephant": {
+    "label": "Elephant",
+    "query": "elephant animal",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one elephant, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/elephant.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, friendly elephant portrait with simple background; child-focused and distraction-free.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:10+00:00"
+    }
+  },
+  "bear": {
+    "label": "Bear",
+    "query": "brown bear animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one bear, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/bear.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, friendly bear portrait with simple shapes and soft pastel background, perfectly focused on the subject for a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:13+00:00"
+    }
+  },
+  "fish": {
+    "label": "Fish",
+    "query": "fish animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one fish, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/fish.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused fish portrait with simple background and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:15+00:00"
+    }
+  },
+  "frog": {
+    "label": "Frog",
+    "query": "frog animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one frog, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/frog.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Frog is clear and centered with no distractions, though background is not plain pastel wash as specified.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:17+00:00"
+    }
+  },
+  "duck": {
+    "label": "Duck",
+    "query": "duck animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one duck, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/duck.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear duck portrait with simple background, no distractions, concept instantly recognizable.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:19+00:00"
+    }
+  },
+  "pig": {
+    "label": "Pig",
+    "query": "pig farm animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one pig, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/pig.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear pig portrait with simple, friendly design and minimal distraction.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:21+00:00"
+    }
+  },
+  "cow": {
+    "label": "Cow",
+    "query": "cow animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one cow, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cow.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear cow portrait with simple composition and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:23+00:00"
+    }
+  },
+  "horse": {
+    "label": "Horse",
+    "query": "horse animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one horse, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/horse.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, simple horse portrait with no distractions, perfectly centered and easily recognizable for a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:25+00:00"
+    }
+  },
+  "sheep": {
+    "label": "Sheep",
+    "query": "sheep animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one sheep, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/sheep.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear sheep portrait with simple background and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:27+00:00"
+    }
+  },
+  "chicken": {
+    "label": "Chicken",
+    "query": "chicken animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one chicken, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/chicken.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear chicken, simple background, no distractions",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:29+00:00"
+    }
+  },
+  "tiger": {
+    "label": "Tiger",
+    "query": "tiger animal",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one tiger, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/tiger.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear tiger portrait with simple, friendly design and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:31+00:00"
+    }
+  },
+  "panda": {
+    "label": "Panda",
+    "query": "panda animal",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one panda, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/panda.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear panda portrait with simple shapes and soft pastel background, no distractions from the subject.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:33+00:00"
+    }
+  },
+  "turtle": {
+    "label": "Turtle",
+    "query": "turtle animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one turtle, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/turtle.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear turtle portrait with simple shapes and soft pastel background, no distractions, concept instantly recognizable.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:35+00:00"
+    }
+  },
+  "butterfly": {
+    "label": "Butterfly",
+    "query": "butterfly animal photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single children's book illustration portrait of one butterfly, fully visible and isolated. This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. Center the animal and keep its whole shape, face, and tail easy to recognize instantly. Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/butterfly.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused butterfly portrait with no distractions, perfectly suited for a 4-year-old vocabulary flashcard.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:38+00:00"
+    }
+  },
+  "apple": {
+    "label": "Apple",
+    "query": "red apple",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of red apple. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/apple.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a single red apple with a child, but the child is a secondary element that could distract from the primary subject of the apple.",
+      "issues": [
+        "Child present as secondary element, potentially distracting from the main subject (apple)"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:41+00:00"
+    }
+  },
+  "banana": {
+    "label": "Banana",
+    "query": "banana fruit isolated",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of banana fruit isolated. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/banana.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear banana, child not the main subject, clean background",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:43+00:00"
+    }
+  },
+  "orange": {
+    "label": "Orange",
+    "query": "orange fruit",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of orange fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/orange.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a single orange fruit with a child, simple background, and no distractions from the main subject.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:45+00:00"
+    }
+  },
+  "grape": {
+    "label": "Grape",
+    "query": "grapes fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of grapes fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/grape.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of grapes with a child, simple background, and no distractions from the main subject.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:48+00:00"
+    }
+  },
+  "pear": {
+    "label": "Pear",
+    "query": "pear fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of pear fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/pear.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused pear portrait with simple background and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:50+00:00"
+    }
+  },
+  "watermelon": {
+    "label": "Watermelon",
+    "query": "watermelon fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of watermelon fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/watermelon.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a child with watermelon, simple background, concept instantly recognizable to a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:52+00:00"
+    }
+  },
+  "strawberry": {
+    "label": "Strawberry",
+    "query": "strawberry fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of strawberry fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/strawberry.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused image of a strawberry with no distractions, high quality and child-friendly.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:55+00:00"
+    }
+  },
+  "cherry": {
+    "label": "Cherry",
+    "query": "cherries fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of cherries fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cherry.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, simple background, child-friendly style",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:57+00:00"
+    }
+  },
+  "peach": {
+    "label": "Peach",
+    "query": "peach fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of peach fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/peach.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a single peach with good quality and child-friendly presentation.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:35:59+00:00"
+    }
+  },
+  "mango": {
+    "label": "Mango",
+    "query": "mango fruit",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of mango fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/mango.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": false,
+      "score": 65,
+      "reason": "Person is main subject, not mango fruit",
+      "issues": [
+        "Person is main subject, not the required single-word vocabulary item",
+        "Mango fruit is background elements, not the main focus",
+        "Composition violates single subject rule by featuring a child instead of just the fruit"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:02+00:00"
+    }
+  },
+  "pineapple": {
+    "label": "Pineapple",
+    "query": "whole pineapple fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of whole pineapple fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/pineapple.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, simple pineapple portrait with soft pastel background and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:05+00:00"
+    }
+  },
+  "lemon": {
+    "label": "Lemon",
+    "query": "lemon fruit photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of lemon fruit. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/lemon.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear lemon, child-friendly, simple background, no distractions",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:07+00:00"
+    }
+  },
+  "bread": {
+    "label": "Bread",
+    "query": "bread loaf",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of bread loaf. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/bread.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear bread loaf, child-friendly, no distractions",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:09+00:00"
+    }
+  },
+  "cake": {
+    "label": "Cake",
+    "query": "birthday cake dessert photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of birthday cake dessert. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cake.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, simple cake with friendly colors and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:11+00:00"
+    }
+  },
+  "cookie": {
+    "label": "Cookie",
+    "query": "chocolate chip cookies photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of chocolate chip cookies. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cookie.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused image of a chocolate chip cookie with no distractions, perfectly suited for a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:13+00:00"
+    }
+  },
+  "milk": {
+    "label": "Milk",
+    "query": "glass of milk photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of glass of milk. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/milk.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear focus on child drinking milk, simple background, high quality",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:16+00:00"
+    }
+  },
+  "egg": {
+    "label": "Egg",
+    "query": "egg photo food",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of egg food. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/egg.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": false,
+      "score": 45,
+      "reason": "Contains a child, which is an extra main subject and violates the single-word vocabulary rule.",
+      "issues": [
+        "Includes a child as a main subject, violating the single-word vocabulary rule",
+        "Background contains scenery (tree, grass, flowers) which is not a plain pastel wash",
+        "Composition is not simple enough for a 4-year-old to focus on just the egg"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:19+00:00"
+    }
+  },
+  "cheese": {
+    "label": "Cheese",
+    "query": "cheese wedge photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of cheese wedge. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cheese.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear cheese wedge, child-friendly, simple background, no distractions",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:21+00:00"
+    }
+  },
+  "rice": {
+    "label": "Rice",
+    "query": "rice bowl food",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of rice bowl food. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/rice.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": false,
+      "score": 45,
+      "reason": "Multiple panels and a person are present, violating the single-subject rule for a 4-year-old vocabulary card.",
+      "issues": [
+        "Multiple panels (collage layout)",
+        "Person is the main subject, not the rice bowl food",
+        "Backgrounds are not plain solid pastel washes",
+        "Composition is not simple and focused on one clear subject"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:25+00:00"
+    }
+  },
+  "water": {
+    "label": "Water",
+    "query": "glass of water",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of glass of water. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/water.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a child with a glass of water, simple background, child-friendly and distraction-free.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:27+00:00"
+    }
+  },
+  "candy": {
+    "label": "Candy",
+    "query": "candy sweet photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of candy sweet. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/candy.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear candy subject, simple composition, child-friendly colors, no distractions, concept instantly recognizable to a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:29+00:00"
+    }
+  },
+  "ice_cream": {
+    "label": "Ice Cream",
+    "query": "ice cream cone",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of ice cream cone. Use a clean pale background with only one or two soft colors. Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant \u2014 just the food item alone.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/ice_cream.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a child holding an ice cream cone with a soft pastel background, meeting all criteria for a 4-year-old vocabulary flashcard.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:32+00:00"
+    }
+  },
+  "eye": {
+    "label": "Eye",
+    "query": "eye close up photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human eye, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/eye.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused eye portrait with simple background and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:34+00:00"
+    }
+  },
+  "ear": {
+    "label": "Ear",
+    "query": "ear close up photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human ear, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/ear.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused ear portrait with soft pastel background, no distractions, and child-friendly composition.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:37+00:00"
+    }
+  },
+  "nose": {
+    "label": "Nose",
+    "query": "nose close up photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human nose, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/nose.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear nose close-up with simple background and focused composition suitable for a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:39+00:00"
+    }
+  },
+  "mouth": {
+    "label": "Mouth",
+    "query": "mouth close up photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human mouth, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/mouth.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear mouth close-up with soft pastel background, no distractions, perfectly focused on the subject.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:42+00:00"
+    }
+  },
+  "hand": {
+    "label": "Hand",
+    "query": "hand palm photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human hand, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/hand.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": false,
+      "score": 45,
+      "reason": "Multiple panels and background scenery distract from the single subject requirement.",
+      "issues": [
+        "Multiple panels violate single subject rule",
+        "Background scenery distracts from main subject",
+        "Not a single clear silhouette as required"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:45+00:00"
+    }
+  },
+  "foot": {
+    "label": "Foot",
+    "query": "foot close up photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human foot, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/foot.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused image of a foot with no distractions, high quality and child-friendly composition.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:48+00:00"
+    }
+  },
+  "head": {
+    "label": "Head",
+    "query": "child face portrait photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human head, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/head.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused portrait with high image quality and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:50+00:00"
+    }
+  },
+  "arm": {
+    "label": "Arm",
+    "query": "arm photo person",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated close-up of a human arm, and nothing else. Show only the body part itself with no face, no clothing, no full person, and no background scene. Use a plain neutral background so the body part is the only thing in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/arm.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused portrait of a child's arm with soft pastel background, meeting all criteria for a 4-year-old flashcard.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:52+00:00"
+    }
+  },
+  "bed": {
+    "label": "Bed",
+    "query": "bed furniture photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one bed. Use a real home setting with minimal clutter and no extra focal objects. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/bed.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused portrait of a child within a simple frame, high technical quality and child-friendly, minimal distraction",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:55+00:00"
+    }
+  },
+  "chair": {
+    "label": "Chair",
+    "query": "chair furniture photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one chair. Use a real home setting with minimal clutter and no extra focal objects. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/chair.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear silhouette of a child on a hill, simple and focused, no distractions, high quality and child-friendly. Minor issue: the subject is a person, not a chair as requested in the prompt, but the concept of a child is clear and the image meets all other criteria for a 4-year-old flashcard.",
+      "issues": [
+        "Subject is a person, not a chair as specified in the prompt"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:36:58+00:00"
+    }
+  },
+  "table": {
+    "label": "Table",
+    "query": "table furniture photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one table. Use a clean simple background with only one or two soft colors. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/table.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": false,
+      "score": 45,
+      "reason": "Contains a child, which is an extra main subject and violates the single-word vocabulary card rule.",
+      "issues": [
+        "Contains a person, which is not allowed as the sole subject for a single-word vocabulary card",
+        "Background is not a plain soft pastel wash; it shows a natural outdoor scene with grass and trees",
+        "Composition is not simple enough for a 4-year-old to identify the subject instantly due to the child's presence and complex background"
+      ],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:02+00:00"
+    }
+  },
+  "door": {
+    "label": "Door",
+    "query": "door house photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one door. Use a clean simple background with only one or two soft colors. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/door.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, simple door image with soft pastel background, no distractions, and perfect focus on the single subject as required for a 4-year-old vocabulary card.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:05+00:00"
+    }
+  },
+  "window": {
+    "label": "Window",
+    "query": "window house photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one window. Use a clean simple background with only one or two soft colors. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/window.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, simple, and perfectly focused on a single child subject with no distractions, matching the flashcard requirements for a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:08+00:00"
+    }
+  },
+  "cup": {
+    "label": "Cup",
+    "query": "cup mug photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one cup. Use a clean simple background with only one or two soft colors. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cup.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear cup, child-friendly, simple background, no distractions",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:10+00:00"
+    }
+  },
+  "spoon": {
+    "label": "Spoon",
+    "query": "spoon utensil photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one spoon. Use a clean simple background with only one or two soft colors. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/spoon.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, simple, and focused spoon image with soft pastel background and no distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:12+00:00"
+    }
+  },
+  "clock": {
+    "label": "Clock",
+    "query": "alarm clock photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A single isolated portrait of one clock. Use a clean simple background with only one or two soft colors. Center the object and keep it very easy to identify at a glance. No person, no child, no hands \u2014 just the object alone in frame.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/clock.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, simple, and focused on a single child with a visible clock, matching the vocabulary target without distractions.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:14+00:00"
+    }
+  },
+  "eat": {
+    "label": "Eat",
+    "query": "child eating food photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Eat'. Scene: child eating food. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/eat.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, simple background, focused action",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:16+00:00"
+    }
+  },
+  "drink": {
+    "label": "Drink",
+    "query": "child drinking water photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Drink'. Scene: child drinking water. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/drink.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear child, simple background, focused on drinking action, child-friendly and distraction-free.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:18+00:00"
+    }
+  },
+  "sleep": {
+    "label": "Sleep",
+    "query": "sleeping child photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Sleep'. Scene: sleeping child. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/sleep.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, high quality, no distractions",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:20+00:00"
+    }
+  },
+  "run": {
+    "label": "Run",
+    "query": "running child photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Run'. Scene: running child. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/run.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, simple background, child-friendly, no distractions",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:22+00:00"
+    }
+  },
+  "jump": {
+    "label": "Jump",
+    "query": "jumping child photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Jump'. Scene: jumping child. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/jump.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, simple background, concept instantly understandable, no distractions, high technical quality",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:25+00:00"
+    }
+  },
+  "walk": {
+    "label": "Walk",
+    "query": "walking child photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Walk'. Scene: walking child. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/walk.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, good focus, minor background blur but not distracting",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:27+00:00"
+    }
+  },
+  "sit": {
+    "label": "Sit",
+    "query": "sitting child photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Sit'. Scene: sitting child. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/sit.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, good quality, minimal distraction",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:29+00:00"
+    }
+  },
+  "stand": {
+    "label": "Stand",
+    "query": "standing child photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Stand'. Scene: standing child. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/stand.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused portrait of a child standing with a friendly expression, simple pastel background, and no distractions, making the concept instantly understandable for a 4-year-old.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:32+00:00"
+    }
+  },
+  "clap": {
+    "label": "Clap",
+    "query": "clapping hands photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Clap'. Scene: clapping hands. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/clap.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear child, simple background, focused on clapping action.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:34+00:00"
+    }
+  },
+  "wave": {
+    "label": "Wave",
+    "query": "waving hand photo",
+    "prompt": "Create one square flashcard image of exactly one subject for a 4-year-old. Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. This is a subject portrait, not a poster, not a page design, and not a story illustration. The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. The single subject fills most of the frame so a child sees nothing else first. A single portrait of one clear subject as the main focus. Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. Keep the composition simple and easy to read with no background clutter. Keep the full subject inside frame with strong separation from the background. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one young child clearly demonstrating the action 'Wave'. Scene: waving hand. Use one clear actor, full body visible when helpful, and a simple uncluttered setting.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/wave.png",
+    "generated_at": "2026-05-23T18:47:05+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear subject, simple background, child-friendly style",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-23T18:37:36+00:00"
+    }
+  }
+}

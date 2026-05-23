@@ -260,6 +260,8 @@ ADJ_SELECTIONS = {
     "square": {"query": "square box photo", "index": 1},
     "fast": {"query": "fast runner photo", "index": 1},
     "slow": {"query": "slow snail photo", "index": 1},
+    "wide": {"query": "wide door photo", "index": 1},
+    "narrow": {"query": "narrow alley photo", "index": 1},
 }
 
 PHRASE_SELECTIONS = {

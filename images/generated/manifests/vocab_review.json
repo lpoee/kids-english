@@ -1,0 +1,860 @@
+{
+  "apple": {
+    "label": "Apple",
+    "query": "red apple",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child and table, violating the single-subject rule for a 4-year-old vocabulary card.",
+    "issues": [
+      "Contains a child and table, which are not allowed as the sole subject",
+      "Background is not a plain soft pastel wash but a natural scene with greenery and window",
+      "Multiple apples are present, violating the 'one clear subject' requirement",
+      "Composition is not a single isolated portrait but a scene with multiple elements"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:58+00:00",
+    "output_file": "images/generated/vocab/apple.png"
+  },
+  "arm": {
+    "label": "Arm",
+    "query": "arm photo person",
+    "pass": false,
+    "score": 45,
+    "reason": "The image shows a child's face, not an arm, and includes a background, violating the core requirements for a single, clear, isolated subject on a plain background.",
+    "issues": [
+      "Subject is a face, not an arm",
+      "Background is not a plain soft pastel wash",
+      "Includes clothing and full child, not just the arm",
+      "Composition is a portrait, not a single isolated body part"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:32+00:00",
+    "output_file": "images/generated/vocab/arm.png"
+  },
+  "banana": {
+    "label": "Banana",
+    "query": "banana fruit isolated",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child, which is an extra main subject and violates the single-subject rule for a 4-year-old vocabulary card.",
+    "issues": [
+      "Contains a child, which is an extra main subject and violates the single-subject rule for a 4-year-old vocabulary card."
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:01+00:00",
+    "output_file": "images/generated/vocab/banana.png"
+  },
+  "bear": {
+    "label": "Bear",
+    "query": "brown bear animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, friendly bear portrait with simple background and no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:29+00:00",
+    "output_file": "images/generated/vocab/bear.png"
+  },
+  "bed": {
+    "label": "Bed",
+    "query": "bed furniture photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child, which is a person and not allowed for a single-word vocabulary card.",
+    "issues": [
+      "Contains a child (person) which violates the single-word vocabulary rule",
+      "Background is a solid color but the child is the main subject, not the bed"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:35+00:00",
+    "output_file": "images/generated/vocab/bed.png"
+  },
+  "bird": {
+    "label": "Bird",
+    "query": "bird animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear bird portrait with simple shapes and soft pastel background, no distractions from the subject.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:18+00:00",
+    "output_file": "images/generated/vocab/bird.png"
+  },
+  "bread": {
+    "label": "Bread",
+    "query": "bread loaf",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains child and table, distracting from bread subject",
+    "issues": [
+      "Includes child and table (extra subjects)",
+      "Background not plain (window visible)",
+      "Composition not focused solely on bread loaf"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:35+00:00",
+    "output_file": "images/generated/vocab/bread.png"
+  },
+  "butterfly": {
+    "label": "Butterfly",
+    "query": "butterfly animal photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Clear, focused butterfly portrait with no distractions, perfectly suited for a 4-year-old vocabulary flashcard.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:54+00:00",
+    "output_file": "images/generated/vocab/butterfly.png"
+  },
+  "cake": {
+    "label": "Cake",
+    "query": "birthday cake dessert photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, colorful cake with simple shapes and soft pastel background, instantly recognizable to a child.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:38+00:00",
+    "output_file": "images/generated/vocab/cake.png"
+  },
+  "candy": {
+    "label": "Candy",
+    "query": "candy sweet photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
+    "issues": [
+      "Includes a child instead of just the candy",
+      "Background has flowers and leaves, which is not a plain pastel wash"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:59+00:00",
+    "output_file": "images/generated/vocab/candy.png"
+  },
+  "cat": {
+    "label": "Cat",
+    "query": "cat",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, centered cat with friendly expression and simple, clean style. Background is soft and non-distracting, allowing the cat to be the sole focus. Minor deduction for slight lack of crisp edge definition on fur texture, but overall highly suitable for a 4-year-old vocabulary card.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:14+00:00",
+    "output_file": "images/generated/vocab/cat.png"
+  },
+  "chair": {
+    "label": "Chair",
+    "query": "chair furniture photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear silhouette of a chair, simple composition, no distractions, child-friendly colors and shapes, concept instantly recognizable.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:37+00:00",
+    "output_file": "images/generated/vocab/chair.png"
+  },
+  "cheese": {
+    "label": "Cheese",
+    "query": "cheese wedge photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear cheese wedge, simple background, child-friendly, no distractions",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:49+00:00",
+    "output_file": "images/generated/vocab/cheese.png"
+  },
+  "cherry": {
+    "label": "Cherry",
+    "query": "cherries fruit photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
+    "issues": [
+      "Includes a child as the main subject instead of just cherries",
+      "Background contains trees and grass, which are distracting elements not allowed for a single-word card"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:22+00:00",
+    "output_file": "images/generated/vocab/cherry.png"
+  },
+  "chicken": {
+    "label": "Chicken",
+    "query": "chicken animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear chicken, simple background, no distractions",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:45+00:00",
+    "output_file": "images/generated/vocab/chicken.png"
+  },
+  "clap": {
+    "label": "Clap",
+    "query": "clapping hands photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear child, simple background, focused on clapping action",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:14+00:00",
+    "output_file": "images/generated/vocab/clap.png"
+  },
+  "clock": {
+    "label": "Clock",
+    "query": "alarm clock photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child which is not allowed for a single-word vocabulary card",
+    "issues": [
+      "Contains a person which violates the single-word vocabulary rule",
+      "Background has decorative elements and is not a plain soft pastel wash",
+      "Composition is not simple with multiple elements competing for attention",
+      "Child is the main focus instead of the clock as the sole subject"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:54+00:00",
+    "output_file": "images/generated/vocab/clock.png"
+  },
+  "cookie": {
+    "label": "Cookie",
+    "query": "chocolate chip cookies photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, isolated chocolate chip cookie with crisp edges and soft pastel background. No distractions, perfectly centered and fills frame. Minor deduction for slight background texture not perfectly flat.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:40+00:00",
+    "output_file": "images/generated/vocab/cookie.png"
+  },
+  "cow": {
+    "label": "Cow",
+    "query": "cow animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear cow portrait with simple composition and no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:39+00:00",
+    "output_file": "images/generated/vocab/cow.png"
+  },
+  "cup": {
+    "label": "Cup",
+    "query": "cup mug photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child which is not allowed for a single-word vocabulary card",
+    "issues": [
+      "Contains a child which is not allowed for a single-word vocabulary card",
+      "Background is plain but subject is not the sole focus as required by rules for a single-word vocabulary card"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:49+00:00",
+    "output_file": "images/generated/vocab/cup.png"
+  },
+  "dog": {
+    "label": "Dog",
+    "query": "dog",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear dog portrait with simple background and no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:16+00:00",
+    "output_file": "images/generated/vocab/dog.png"
+  },
+  "door": {
+    "label": "Door",
+    "query": "door house photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, simple door image with soft pastel background, no distractions, and perfect focus on the single subject as required for a 4-year-old vocabulary card.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:43+00:00",
+    "output_file": "images/generated/vocab/door.png"
+  },
+  "drink": {
+    "label": "Drink",
+    "query": "child drinking water photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear child, simple background, focused on drinking action, child-friendly and distraction-free.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:58+00:00",
+    "output_file": "images/generated/vocab/drink.png"
+  },
+  "duck": {
+    "label": "Duck",
+    "query": "duck animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear duck portrait with simple background, no distractions, concept instantly recognizable.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:35+00:00",
+    "output_file": "images/generated/vocab/duck.png"
+  },
+  "ear": {
+    "label": "Ear",
+    "query": "ear close up photo",
+    "pass": false,
+    "score": 45,
+    "reason": "The image shows a child's face, not a close-up of an ear as required, making the concept unclear for a 4-year-old.",
+    "issues": [
+      "Subject is a face, not an ear",
+      "Includes clothing and background elements that distract from the target concept",
+      "Not a single isolated body part as specified"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:08+00:00",
+    "output_file": "images/generated/vocab/ear.png"
+  },
+  "eat": {
+    "label": "Eat",
+    "query": "child eating food photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear subject, simple background, focused action",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:56+00:00",
+    "output_file": "images/generated/vocab/eat.png"
+  },
+  "egg": {
+    "label": "Egg",
+    "query": "egg photo food",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child and background elements that distract from the single subject (egg).",
+    "issues": [
+      "Includes a child (extra main subject)",
+      "Background contains scenery (tree, grass, flowers) which violates plain background rule",
+      "Composition is not a single isolated portrait of the egg"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:47+00:00",
+    "output_file": "images/generated/vocab/egg.png"
+  },
+  "elephant": {
+    "label": "Elephant",
+    "query": "elephant animal",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, friendly elephant portrait with simple background; subject is instantly recognizable and uncluttered.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:27+00:00",
+    "output_file": "images/generated/vocab/elephant.png"
+  },
+  "eye": {
+    "label": "Eye",
+    "query": "eye close up photo",
+    "pass": false,
+    "score": 45,
+    "reason": "The image shows a full child portrait instead of a single eye, and the background contains distracting foliage and a frame, violating the requirement for a plain, solid background with only the target body part visible.",
+    "issues": [
+      "Subject is a full child, not a single eye",
+      "Background contains foliage and a frame, not a plain solid pastel wash",
+      "Composition is not a simple close-up of just the eye",
+      "Includes clothing and full body, which distracts from the target concept"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:05+00:00",
+    "output_file": "images/generated/vocab/eye.png"
+  },
+  "fish": {
+    "label": "Fish",
+    "query": "fish animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, simple, and focused on the fish with no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:31+00:00",
+    "output_file": "images/generated/vocab/fish.png"
+  },
+  "foot": {
+    "label": "Foot",
+    "query": "foot close up photo",
+    "pass": false,
+    "score": 0,
+    "reason": "Multiple panels and missing foot focus",
+    "issues": [
+      "Multiple panels instead of one",
+      "No foot close-up, shows full child instead of foot",
+      "Background not plain enough for child focus"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:25+00:00",
+    "output_file": "images/generated/vocab/foot.png"
+  },
+  "frog": {
+    "label": "Frog",
+    "query": "frog animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Frog is clear and centered with no distractions, though background is not plain pastel wash as specified.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:33+00:00",
+    "output_file": "images/generated/vocab/frog.png"
+  },
+  "grape": {
+    "label": "Grape",
+    "query": "grapes fruit photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child and table, which distract from the single subject requirement.",
+    "issues": [
+      "Contains a child and table, which are extra main subjects and violate the single-subject rule",
+      "Background is not a plain soft pastel wash but a natural outdoor scene with grass and trees",
+      "Composition is not simple and clean; multiple grape colors and a child create visual clutter",
+      "The grapes are not the only subject and are partially obscured by the child's hands and body"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:09+00:00",
+    "output_file": "images/generated/vocab/grape.png"
+  },
+  "hand": {
+    "label": "Hand",
+    "query": "hand palm photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Multiple panels and background scenery distract from the single subject requirement.",
+    "issues": [
+      "Multiple panels violate single image rule",
+      "Background contains scenery (trees, sky, ocean) instead of plain pastel wash",
+      "Subject is a child, not a hand, and includes clothing and full body",
+      "Composition is not a single isolated close-up of a hand",
+      "Fails child_friendliness due to complex scene and lack of clear focus on hand"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:22+00:00",
+    "output_file": "images/generated/vocab/hand.png"
+  },
+  "head": {
+    "label": "Head",
+    "query": "child face portrait photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, focused portrait with high image quality and no distractions, perfectly suited for a 4-year-old.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:28+00:00",
+    "output_file": "images/generated/vocab/head.png"
+  },
+  "horse": {
+    "label": "Horse",
+    "query": "horse animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, simple horse portrait with no distractions, perfectly suited for a 4-year-old vocabulary flashcard.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:41+00:00",
+    "output_file": "images/generated/vocab/horse.png"
+  },
+  "ice_cream": {
+    "label": "Ice Cream",
+    "query": "ice cream cone",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, simple, and focused on the ice cream cone with a friendly child, but the child is a secondary element that distracts from the single-subject requirement.",
+    "issues": [
+      "Child is present, violating the single-subject rule",
+      "Background is plain but the child's presence makes it not a pure subject portrait"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:01+00:00",
+    "output_file": "images/generated/vocab/ice_cream.png"
+  },
+  "jump": {
+    "label": "Jump",
+    "query": "jumping child photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear subject, simple background, concept instantly understandable",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:04+00:00",
+    "output_file": "images/generated/vocab/jump.png"
+  },
+  "lemon": {
+    "label": "Lemon",
+    "query": "lemon fruit photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear lemon, simple background, child-friendly, no distractions",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:32+00:00",
+    "output_file": "images/generated/vocab/lemon.png"
+  },
+  "lion": {
+    "label": "Lion",
+    "query": "lion animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear lion portrait with simple, friendly style and no distracting elements. Background is soft and non-distracting, keeping focus on the animal.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:20+00:00",
+    "output_file": "images/generated/vocab/lion.png"
+  },
+  "mango": {
+    "label": "Mango",
+    "query": "mango fruit",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child instead of just the mango fruit, violating the single-subject rule for a 4-year-old vocabulary card.",
+    "issues": [
+      "Includes a child as the main subject instead of just the mango fruit",
+      "Background contains decorative elements (leaves and fruit) that distract from the main subject",
+      "Multiple subjects (child and fruit) compete for attention, violating the 'one clear subject' requirement"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:28+00:00",
+    "output_file": "images/generated/vocab/mango.png"
+  },
+  "milk": {
+    "label": "Milk",
+    "query": "glass of milk photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
+    "issues": [
+      "Includes a child, violating the single-subject rule",
+      "Multiple milk containers create visual clutter and distract from the single subject",
+      "Background, while plain, is not a simple solid color and may confuse a young child"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:44+00:00",
+    "output_file": "images/generated/vocab/milk.png"
+  },
+  "monkey": {
+    "label": "Monkey",
+    "query": "monkey animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear monkey portrait with strong separation and child-friendly style, though background is not perfectly plain.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:23+00:00",
+    "output_file": "images/generated/vocab/monkey.png"
+  },
+  "mouth": {
+    "label": "Mouth",
+    "query": "mouth close up photo",
+    "pass": false,
+    "score": 0,
+    "reason": "Fails core requirements: shows a child's face instead of a mouth, includes background scenery, and uses a multi-panel layout, violating the single subject and plain background rules for a 4-year-old flashcard.",
+    "issues": [
+      "Shows a child's face instead of a mouth",
+      "Includes background scenery (hills/sky)",
+      "Uses a multi-panel split screen layout",
+      "Subject is not isolated; fills frame with multiple panels",
+      "Background is not a plain soft pastel wash"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:18+00:00",
+    "output_file": "images/generated/vocab/mouth.png"
+  },
+  "nose": {
+    "label": "Nose",
+    "query": "nose close up photo",
+    "pass": false,
+    "score": 45,
+    "reason": "The image shows a full child portrait instead of a close-up of just the nose, violating the core requirement of showing only the nose with no face or clothing visible. The subject is not isolated as a single body part, and the framing includes the entire head and torso, making the target concept unclear for a 4-year-old.",
+    "issues": [
+      "Subject is a full child portrait, not a close-up of just the nose",
+      "Face and clothing are visible, violating the 'no face, no clothing' rule",
+      "Background is a framed photo on a wall, which is a decorative element and not a plain soft pastel wash",
+      "The image is a framed picture, which is explicitly prohibited as a 'framed picture grid' or 'border'",
+      "The composition is not a single isolated body part but a full portrait, making the target concept ambiguous"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:14+00:00",
+    "output_file": "images/generated/vocab/nose.png"
+  },
+  "orange": {
+    "label": "Orange",
+    "query": "orange fruit",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
+    "issues": [
+      "Includes a child, violating the single-subject rule for a 4-year-old vocabulary card",
+      "Background is plain but composition is not focused solely on the orange fruit as the main subject"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:05+00:00",
+    "output_file": "images/generated/vocab/orange.png"
+  },
+  "panda": {
+    "label": "Panda",
+    "query": "panda animal",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear panda portrait with simple shapes and soft pastel background, no distractions from the subject.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:50+00:00",
+    "output_file": "images/generated/vocab/panda.png"
+  },
+  "peach": {
+    "label": "Peach",
+    "query": "peach fruit photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:24+00:00",
+    "output_file": "images/generated/vocab/peach.png"
+  },
+  "pear": {
+    "label": "Pear",
+    "query": "pear fruit photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child instead of a single pear, violating the single-subject rule for a 4-year-old vocabulary card.",
+    "issues": [
+      "Includes a child as the main subject instead of a single pear fruit",
+      "Multiple pears distract from the single-subject requirement"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:12+00:00",
+    "output_file": "images/generated/vocab/pear.png"
+  },
+  "pig": {
+    "label": "Pig",
+    "query": "pig farm animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear pig portrait with simple, friendly design and minimal distraction.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:37+00:00",
+    "output_file": "images/generated/vocab/pig.png"
+  },
+  "pineapple": {
+    "label": "Pineapple",
+    "query": "whole pineapple fruit photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, simple pineapple portrait with soft pastel background and no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:30+00:00",
+    "output_file": "images/generated/vocab/pineapple.png"
+  },
+  "rabbit": {
+    "label": "Rabbit",
+    "query": "rabbit animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear rabbit portrait with simple shapes and soft colors, though a subtle frame and foliage slightly distract from the pure subject focus.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:25+00:00",
+    "output_file": "images/generated/vocab/rabbit.png"
+  },
+  "rice": {
+    "label": "Rice",
+    "query": "rice bowl food",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child as the main subject, which is not allowed for a single-word vocabulary card.",
+    "issues": [
+      "Main subject is a child, not the rice bowl food",
+      "Multiple panels with repeated variants of the subject",
+      "Background is not a plain soft pastel wash",
+      "Includes a plate and bowl, which are extra elements beyond the single food item"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:52+00:00",
+    "output_file": "images/generated/vocab/rice.png"
+  },
+  "run": {
+    "label": "Run",
+    "query": "running child photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear subject, simple background, child-friendly, no distractions",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:02+00:00",
+    "output_file": "images/generated/vocab/run.png"
+  },
+  "sheep": {
+    "label": "Sheep",
+    "query": "sheep animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear sheep portrait with simple background and no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:43+00:00",
+    "output_file": "images/generated/vocab/sheep.png"
+  },
+  "sit": {
+    "label": "Sit",
+    "query": "sitting child photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear subject, good quality, minimal distraction",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:08+00:00",
+    "output_file": "images/generated/vocab/sit.png"
+  },
+  "sleep": {
+    "label": "Sleep",
+    "query": "sleeping child photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear subject, high quality, no distractions",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:00+00:00",
+    "output_file": "images/generated/vocab/sleep.png"
+  },
+  "spoon": {
+    "label": "Spoon",
+    "query": "spoon utensil photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, simple, and focused spoon image with soft pastel background and no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:51+00:00",
+    "output_file": "images/generated/vocab/spoon.png"
+  },
+  "stand": {
+    "label": "Stand",
+    "query": "standing child photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear, focused portrait of a child standing with a friendly expression, simple pastel background, and no distractions, making the concept instantly understandable for a 4-year-old.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:12+00:00",
+    "output_file": "images/generated/vocab/stand.png"
+  },
+  "strawberry": {
+    "label": "Strawberry",
+    "query": "strawberry fruit photo",
+    "pass": false,
+    "score": 0,
+    "reason": "Image contains a child, not a strawberry fruit, so the subject is incorrect and fails the core requirement of showing only the target object for a 4-year-old vocabulary card.",
+    "issues": [
+      "Contains a person (child) instead of the required strawberry fruit as the sole subject",
+      "Subject is not instantly recognizable as a strawberry fruit; it's a human portrait, making the concept ambiguous for a 4-year-old vocabulary card"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:19+00:00",
+    "output_file": "images/generated/vocab/strawberry.png"
+  },
+  "table": {
+    "label": "Table",
+    "query": "table furniture photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
+    "issues": [
+      "Contains a child, which is not allowed for a single-word vocabulary card."
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:40+00:00",
+    "output_file": "images/generated/vocab/table.png"
+  },
+  "tiger": {
+    "label": "Tiger",
+    "query": "tiger animal",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear tiger portrait with simple, friendly design and no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:47+00:00",
+    "output_file": "images/generated/vocab/tiger.png"
+  },
+  "turtle": {
+    "label": "Turtle",
+    "query": "turtle animal photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear turtle portrait with simple shapes and soft pastel background, no distractions.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:47:52+00:00",
+    "output_file": "images/generated/vocab/turtle.png"
+  },
+  "walk": {
+    "label": "Walk",
+    "query": "walking child photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear subject, good focus, minor background blur but not distracting",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:07+00:00",
+    "output_file": "images/generated/vocab/walk.png"
+  },
+  "water": {
+    "label": "Water",
+    "query": "glass of water",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child and table, which distract from the single subject requirement.",
+    "issues": [
+      "Includes a child and table, violating the single subject rule",
+      "Background is plain but composition is not focused solely on the glass of water",
+      "Multiple elements compete for attention, making the concept unclear for a 4-year-old"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:56+00:00",
+    "output_file": "images/generated/vocab/water.png"
+  },
+  "watermelon": {
+    "label": "Watermelon",
+    "query": "watermelon fruit photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child instead of only the watermelon fruit as the sole subject, violating the single-word vocabulary card rule.",
+    "issues": [
+      "Includes a child as the main subject instead of only the watermelon fruit",
+      "Multiple watermelon slices create clutter and distract from the single subject requirement"
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:48:15+00:00",
+    "output_file": "images/generated/vocab/watermelon.png"
+  },
+  "wave": {
+    "label": "Wave",
+    "query": "waving hand photo",
+    "pass": true,
+    "score": 95,
+    "reason": "Clear subject, simple background, child-friendly style",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:16+00:00",
+    "output_file": "images/generated/vocab/wave.png"
+  },
+  "window": {
+    "label": "Window",
+    "query": "window house photo",
+    "pass": false,
+    "score": 45,
+    "reason": "Contains a child instead of a window as the sole subject, violating the single-object requirement for a 4-year-old vocabulary card.",
+    "issues": [
+      "Subject is a child, not a window (required single object)",
+      "Background is a soft pastel wash, which is acceptable, but the presence of a person makes the concept unclear and distracting for a child learning a single word."
+    ],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:49:47+00:00",
+    "output_file": "images/generated/vocab/window.png"
+  }
+}

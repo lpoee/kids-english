@@ -1,0 +1,123 @@
+{
+  "big": {
+    "label": "Big",
+    "query": "big elephant photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Clear, simple, and distraction-free image with a large and small circle and a clear arrow, perfectly matching the 'big' concept for a 4-year-old.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:19+00:00",
+    "output_file": "images/generated/adjectives/big.png"
+  },
+  "fast": {
+    "label": "Fast",
+    "query": "fast runner photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect for 4-year-old: clear cheetah, obvious speed arrow, simple pastel background, no distractions, instantly teaches 'fast'.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:35+00:00",
+    "output_file": "images/generated/adjectives/fast.png"
+  },
+  "long": {
+    "label": "Long",
+    "query": "long rope photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect clarity and focus on the 'long' concept with no distractions, meeting all criteria for a 4-year-old learner.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:28+00:00",
+    "output_file": "images/generated/adjectives/long.png"
+  },
+  "narrow": {
+    "label": "Narrow",
+    "query": "narrow alley photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect clarity and focus on the target concept with no distractions, meeting all criteria for a 4-year-old learner.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:43+00:00",
+    "output_file": "images/generated/adjectives/narrow.png"
+  },
+  "round": {
+    "label": "Round",
+    "query": "round ball photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfectly meets all criteria: clear round shape, simple background, no distractions, age-appropriate style",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:30+00:00",
+    "output_file": "images/generated/adjectives/round.png"
+  },
+  "short": {
+    "label": "Short",
+    "query": "short pencil photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect clarity and focus for a 4-year-old",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:26+00:00",
+    "output_file": "images/generated/adjectives/short.png"
+  },
+  "slow": {
+    "label": "Slow",
+    "query": "slow snail photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Clear, simple turtle on plain pastel background with no distractions, perfectly matching the 'slow' concept for a 4-year-old.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:38+00:00",
+    "output_file": "images/generated/adjectives/slow.png"
+  },
+  "small": {
+    "label": "Small",
+    "query": "small kitten photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect clarity and focus for a 4-year-old",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:21+00:00",
+    "output_file": "images/generated/adjectives/small.png"
+  },
+  "square": {
+    "label": "Square",
+    "query": "square box photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect for 4-year-old: clear square, simple, no distractions, warm style",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:32+00:00",
+    "output_file": "images/generated/adjectives/square.png"
+  },
+  "tall": {
+    "label": "Tall",
+    "query": "tall tree photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect clarity and focus on the target concept with no distractions, meeting all criteria for a 4-year-old learner.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:24+00:00",
+    "output_file": "images/generated/adjectives/tall.png"
+  },
+  "wide": {
+    "label": "Wide",
+    "query": "wide door photo",
+    "pass": true,
+    "score": 100,
+    "reason": "Perfect clarity and focus on the 'wide' concept with no distractions, meeting all criteria for a 4-year-old.",
+    "issues": [],
+    "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+    "reviewed_at": "2026-05-23T18:50:41+00:00",
+    "output_file": "images/generated/adjectives/wide.png"
+  }
+}

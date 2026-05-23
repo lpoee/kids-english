@@ -41,12 +41,15 @@ body.all-bg{background:linear-gradient(135deg,#0c1929,#1a0a2e,#0a1f1a)}
 #main-area{flex:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:0;gap:0}
 #img-card{width:min(100vw, calc(100vh - 120px));height:min(100vw, calc(100vh - 120px));max-width:100vw;max-height:calc(100vh - 120px);aspect-ratio:1/1;background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.05));cursor:pointer;position:relative;overflow:hidden;transition:transform .15s;z-index:5;border-radius:26px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.16)}
 #img-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 22%,rgba(6,18,32,.08) 75%,rgba(6,18,32,.24));pointer-events:none;z-index:2}
+#img-card.no-image-stage{background:rgba(255,255,255,.04);border:3px solid rgba(255,255,255,.08);box-shadow:0 16px 48px rgba(0,0,0,.3);backdrop-filter:blur(24px)}
+#img-card.no-image-stage::before{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 24%,rgba(6,18,32,.08) 78%,rgba(6,18,32,.18))}
 #img-card:active{transform:scale(.96)}
 #img-container{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1;padding:26px 26px 98px;background:
 radial-gradient(circle at 50% 18%,rgba(255,255,255,.22),rgba(255,255,255,0) 34%),
 radial-gradient(circle at 20% 20%,rgba(255,255,255,.12),rgba(255,255,255,0) 22%),
 linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 #img-container.photo-stage{padding:14px 14px 92px;background:transparent}
+#img-container.no-image-stage{padding:0;background:transparent}
 #img-container img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 28px rgba(0,0,0,.24))}
 #img-container img.photo-asset{width:92%;height:92%;padding:18px;background:rgba(255,255,255,.62);border-radius:28px;box-shadow:0 12px 32px rgba(15,23,42,.16)}
 #img-container.photo-stage img.photo-asset{width:100%;height:100%;padding:0;background:transparent;border-radius:24px;box-shadow:none}
@@ -59,6 +62,11 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 #img-container .color-swatch::before{content:"";position:absolute;top:14%;left:18%;width:32%;height:16%;border-radius:999px;background:rgba(255,255,255,.4);transform:rotate(-18deg)}
 #img-container .color-word{position:absolute;bottom:16%;left:0;right:0;text-align:center;font-family:'Fredoka One',cursive;font-size:74px;letter-spacing:3px;color:#fff;text-shadow:0 6px 18px rgba(0,0,0,.28)}
 #img-container .color-dot{width:54%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.22);border:10px solid rgba(255,255,255,.28)}
+#img-container .fallback-stage{width:100%;height:100%;border-radius:32px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;background:var(--fallback-bg);box-shadow:inset 0 18px 30px rgba(255,255,255,.18)}
+#img-container .fallback-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 18%,rgba(255,255,255,.34),rgba(255,255,255,0) 34%),radial-gradient(circle at 20% 20%,rgba(255,255,255,.14),rgba(255,255,255,0) 24%)}
+#img-container .fallback-stage::after{content:"";position:absolute;left:10%;right:10%;bottom:-12%;height:26%;border-radius:999px;background:rgba(7,17,28,.18);filter:blur(14px)}
+#img-container .fallback-emoji{position:relative;z-index:1;font-size:110px;line-height:1;filter:drop-shadow(0 14px 24px rgba(0,0,0,.22))}
+#img-container .fallback-chip{position:relative;z-index:1;max-width:88%;padding:16px 22px;border-radius:28px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.18);box-shadow:0 18px 36px rgba(0,0,0,.18);font-family:'Fredoka One',cursive;font-size:clamp(28px,7vw,56px);line-height:1.1;letter-spacing:1px;color:#fff;text-align:center;text-shadow:0 4px 16px rgba(0,0,0,.26)}
 #word-text{position:absolute;bottom:40px;left:0;right:0;padding:16px 16px 12px;text-align:center;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-family:'Fredoka One',cursive;font-size:34px;font-weight:800;line-height:1.2;z-index:10;cursor:pointer;transition:all .3s;letter-spacing:1px}
 #word-text:active{transform:scale(.94)}
 #word-text.pop{animation:textPop .5s ease-out}
@@ -114,26 +122,29 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 // Helper: image path for adjective
 function adjImg(w) {
   const lower = w.toLowerCase();
-  // All words using clean SVG files (Twemoji + custom SVGs in images/adjectives/)
+  // New SDXL-generated adjectives (11 comparison words)
+  const sdxlWords = ['big','small','tall','short','long','round','square','fast','slow','wide','narrow'];
+  if (sdxlWords.includes(lower)) return 'images/generated/adjectives/' + lower + '.png';
+  // All other words using clean SVG files (Twemoji + custom SVGs in images/adjectives/)
   const svgWords = [
     // Emotion (8)
     'happy','sad','angry','surprised','brave','scared','silly','serious',
     // Shape (7)
-    'round','flat','square','pointed','curved','straight','crooked',
+    'flat','pointed','curved','straight','crooked',
     // Logic (10)
     'same','different','alike','first','last','middle','next','simple','hard','tricky',
     // Touch (8)
-    'hard','soft','fuzzy','prickly','slimy','sticky','freezing','boiling',
+    'soft','fuzzy','prickly','slimy','sticky','freezing','boiling',
     // Weight (5)
     'heavy','light','strong','weak','sturdy',
     // Visual (7)
     'bright','dark','shiny','dull','clear','colorful','pale',
     // Sound (6)
     'loud','quiet','noisy','silent','squeaky','whispering',
-    // Size (11)
-    'big','small','tall','short','long','tiny','huge','wide','narrow','thick','thin',
+    // Size (9)
+    'tiny','huge','thick','thin',
     // Speed (4)
-    'fast','slow','quick','rapid',
+    'quick','rapid',
     // Condition (10)
     'clean','dirty','broken','fixed','new','old','wet','dry','empty','full',
     // Opinion (9)
@@ -187,7 +198,12 @@ function colorBlock(name) {
     Green:{base:'#4fd26d',soft:'#dcf8e3'},
     Yellow:{base:'#ffd44d',soft:'#fff5bd'},
     Orange:{base:'#ff9a45',soft:'#ffe1c4'},
-    Purple:{base:'#b16dff',soft:'#eadbff'}
+    Purple:{base:'#b16dff',soft:'#eadbff'},
+    Pink:{base:'#ff7eb3',soft:'#ffe0ec'},
+    Brown:{base:'#a0724e',soft:'#ede0d4'},
+    Gray:{base:'#999',soft:'#e8e8e8'},
+    Black:{base:'#333',soft:'#bbb'},
+    White:{base:'#f0f0f0',soft:'#fff'}
   };
   const palette = colors[name] || {base:'#888',soft:'#ddd'};
   return `<div class="color-stage" style="--color:${palette.base};--color-soft:${palette.soft}">
@@ -201,7 +217,7 @@ function phraseEmoji(emoji) {
 }
 
 function phraseItem(text, emoji, fname) {
-  return {w:text, img:phraseImg(fname), aud:'audio/phrase_'+fname+'.mp3'};
+  return {w:text, img:phraseImg(fname), aud:'audio/phrase_'+fname+'.mp3', emoji};
 }
 
 function emojiItem(w, emoji) {
@@ -251,11 +267,18 @@ const DATA = {
       {w:'Yellow',aud:'audio/yellow.mp3'},
       {w:'Orange',aud:'audio/orange_color.mp3'},
       {w:'Purple',aud:'audio/purple.mp3'},
+      {w:'Pink',aud:'audio/pink.mp3'},
+      {w:'Brown',aud:'audio/brown.mp3'},
+      {w:'Gray',aud:'audio/gray.mp3'},
+      {w:'Black',aud:'audio/black.mp3'},
+      {w:'White',aud:'audio/white.mp3'},
       adj('Big'),
       adj('Small'),
       adj('Tall'),
       adj('Short'),
       adj('Long'),
+      adj('Wide'),
+      adj('Narrow'),
       adj('Round'),
       adj('Square'),
       adj('Fast'),
@@ -477,15 +500,14 @@ function getCategoryClass() {
 }
 
 function getBackgroundClass() {
-  const map = {animal:'animal-bg', color:'color-bg', body:'body-bg', food:'food-bg', home:'home-bg', actions:'actions-bg', phrases:'feelings-bg'};
-  if (state.mainCat === 'all') return 'all-bg';
-  return map[state.mainCat] || 'all-bg';
+  return getCategoryClass() + '-bg';
 }
 
 // ═══════════════════════════════════════════
 //  VIEW
 // ═══════════════════════════════════════════
 const $ = id => document.getElementById(id);
+const IMAGES_ENABLED = true;
 
 function imageClass(path) {
   const lower = String(path || '').toLowerCase();
@@ -494,27 +516,63 @@ function imageClass(path) {
   return 'vector-asset';
 }
 
+function fallbackGradient(cls) {
+  const gradients = {
+    animal: 'linear-gradient(135deg,#1f3f63,#2f6fa1,#2c8d83)',
+    color: 'linear-gradient(135deg,#612b92,#c0438a,#ff7a59)',
+    fruit: 'linear-gradient(135deg,#22543d,#2f855a,#e53e3e)',
+    sensory: 'linear-gradient(135deg,#553c9a,#805ad5,#d53f8c)',
+    size: 'linear-gradient(135deg,#1d4ed8,#0ea5e9,#14b8a6)',
+    feelings: 'linear-gradient(135deg,#be185d,#f97316,#ef4444)',
+    logic: 'linear-gradient(135deg,#312e81,#2563eb,#0891b2)',
+    body: 'linear-gradient(135deg,#9f1239,#ef4444,#fb7185)',
+    food: 'linear-gradient(135deg,#4d7c0f,#84cc16,#f59e0b)',
+    home: 'linear-gradient(135deg,#7c6f16,#ca8a04,#facc15)',
+    actions: 'linear-gradient(135deg,#1d4ed8,#2563eb,#06b6d4)',
+    all: 'linear-gradient(135deg,#1d3557,#6d2e8b,#1f7a63)'
+  };
+  return gradients[cls] || gradients.all;
+}
+
+function fallbackStage(word, cls) {
+  const emoji = word && word.emoji ? `<div class="fallback-emoji">${word.emoji}</div>` : '';
+  const label = word ? `<div class="fallback-chip">${word.w}</div>` : '<div class="fallback-chip">?</div>';
+  return `<div class="fallback-stage" style="--fallback-bg:${fallbackGradient(cls)}">${emoji}${label}</div>`;
+}
+
 function render() {
   const word = getCurrentWord();
   const total = getTotal();
   const cls = getCategoryClass();
+  const imgCard = $('img-card');
 
   // Image card content — use img-container to avoid destroying overlay children
   const imgContainer = $('img-container');
   imgContainer.className = '';
+  imgCard.classList.remove('no-image-stage');
   if (word) {
-    if (word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w) && !word.img) {
+    if (word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w)) {
       imgContainer.innerHTML = colorBlock(word.w);
-    } else if (word.emoji) {
-      imgContainer.innerHTML = word.emoji; // phraseEmoji is already evaluated at DATA build time
-    } else if (word.img) {
+    } else if (IMAGES_ENABLED && word.img) {
       if (imageClass(word.img) === 'photo-asset') imgContainer.className = 'photo-stage';
-      imgContainer.innerHTML = `<img class="${imageClass(word.img)}" src="${word.img}" alt="${word.w}" onerror="this.style.display='none'">`;
+      imgContainer.innerHTML = `<img class="${imageClass(word.img)}" src="${word.img}" alt="${word.w}">`;
+      const img = imgContainer.querySelector('img');
+      if (img) {
+        img.addEventListener('error', () => {
+          imgCard.classList.add('no-image-stage');
+          imgContainer.className = 'no-image-stage';
+          imgContainer.innerHTML = fallbackStage(word, cls);
+        }, {once: true});
+      }
     } else {
-      imgContainer.innerHTML = '';
+      imgCard.classList.add('no-image-stage');
+      imgContainer.className = 'no-image-stage';
+      imgContainer.innerHTML = fallbackStage(word, cls);
     }
   } else {
-    imgContainer.innerHTML = '<div style="color:rgba(255,255,255,.2);font-size:60px">?</div>';
+    imgCard.classList.add('no-image-stage');
+    imgContainer.className = 'no-image-stage';
+    imgContainer.innerHTML = fallbackStage(null, cls);
   }
 
   // Word text
