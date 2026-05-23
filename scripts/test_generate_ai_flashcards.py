@@ -44,6 +44,42 @@ class GenerateAiFlashcardsTest(unittest.TestCase):
         self.assertEqual(args.model, "sd_xl_base_1.0.safetensors")
         self.assertEqual(args.generator, "comfyui")
 
+    def test_build_comfyui_workflow_uses_flux2_klein_nodes(self):
+        spec = self.module.AssetSpec(
+            slug="grape",
+            prompt="grape prompt",
+            out_dir=Path("/tmp/out"),
+            filename="grape.png",
+            asset_type="still",
+            label="Grape",
+            query="grape",
+        )
+        workflow = self.module.build_comfyui_workflow(
+            spec=spec,
+            checkpoint=self.module.FLUX2_KLEIN_CHECKPOINT,
+            width=1024,
+            height=1024,
+            seed=123,
+            negative="no person",
+        )
+        self.assertEqual(workflow["64"]["class_type"], "UNETLoader")
+        self.assertEqual(workflow["67"]["class_type"], "CLIPLoader")
+        self.assertEqual(workflow["68"]["class_type"], "VAELoader")
+        self.assertEqual(workflow["64"]["inputs"]["unet_name"], self.module.FLUX2_KLEIN_CHECKPOINT)
+        self.assertEqual(workflow["67"]["inputs"]["clip_name"], self.module.FLUX2_KLEIN_TEXT_ENCODER)
+        self.assertEqual(workflow["68"]["inputs"]["vae_name"], self.module.FLUX2_VAE)
+        self.assertEqual(workflow["69"]["inputs"]["text"], "no person")
+
+    def test_ensure_comfyui_ready_accepts_flux2_klein_models(self):
+        responses = [
+            {"devices": [{"name": "cuda:1"}]},
+            {"UNETLoader": {"input": {"required": {"unet_name": [[self.module.FLUX2_KLEIN_CHECKPOINT]]}}}},
+            {"CLIPLoader": {"input": {"required": {"clip_name": [[self.module.FLUX2_KLEIN_TEXT_ENCODER]]}}}},
+            {"VAELoader": {"input": {"required": {"vae_name": [[self.module.FLUX2_VAE]]}}}},
+        ]
+        with mock.patch.object(self.module, "comfyui_json_request", side_effect=responses):
+            self.module.ensure_comfyui_ready(self.module.FLUX2_KLEIN_CHECKPOINT)
+
     def test_parse_review_payload_extracts_wrapped_json(self):
         parsed = self.module.parse_review_payload(
             'review: {"pass": true, "score": 91, "reason": "clear concept", "issues": []}'
@@ -183,15 +219,64 @@ class GenerateAiFlashcardsTest(unittest.TestCase):
 
     def test_word_prompt_requires_single_clear_subject_and_consistent_style(self):
         prompt = self.module.word_prompt("cat", "cat photo")
-        self.assertIn("for a 4-year-old", prompt)
-        self.assertIn("one clear subject", prompt)
-        self.assertIn("This is a subject portrait, not a poster, not a page design, and not a story illustration.", prompt)
+        self.assertIn("Show one clear main subject only.", prompt)
+        self.assertIn("This is a flashcard image, not a poster, page design, or story scene.", prompt)
         self.assertIn("framed picture grid", prompt)
         self.assertIn("multi-panel layout", prompt)
-        self.assertIn("No people, no child, no human hands", prompt)
+        self.assertIn("Show one cat only.", prompt)
         self.assertIn("plain pale background", prompt)
-        self.assertIn("not a story scene, grid, or room scene", prompt)
-        self.assertIn("Do not show a room, furniture, shelf, window", prompt)
+        self.assertIn("no scenery or props", prompt)
+
+    def test_food_prompt_requires_object_only_product_photo(self):
+        prompt = self.module.word_prompt("grape", "grapes fruit")
+        self.assertIn("square photo of exactly one food item", prompt)
+        self.assertIn("realistic studio object photography", prompt)
+        self.assertIn("not portrait photography", prompt)
+        self.assertIn("one complete hanging bunch of small oval translucent green grapes on a branching vine", prompt)
+        self.assertIn("exactly one complete food item fully inside frame", prompt)
+        self.assertIn("single bunch must read clearly as one whole cluster", prompt)
+        self.assertIn("stem visible near the top", prompt)
+        self.assertIn("generous plain background around it", prompt)
+        self.assertIn("Do not zoom in to a pile or texture of loose grapes", prompt)
+        self.assertIn("not as apples or round fruit", prompt)
+        self.assertIn("object-only with no people and no visible body parts", prompt)
+        self.assertIn("unsupported against the seamless studio background", prompt)
+        self.assertIn("fully inside the frame with empty margin on every side", prompt.lower())
+        self.assertIn("no bowl, no plate, no table", prompt.lower())
+        self.assertIn("no drink", prompt.lower())
+        self.assertIn("no nearby prop", prompt.lower())
+        self.assertNotIn("preschool learning card", prompt)
+        self.assertNotIn("child", prompt.lower())
+
+    def test_cherry_prompt_uses_cherry_specific_cluster_language(self):
+        prompt = self.module.word_prompt("cherry", "cherries fruit")
+        self.assertIn("one complete pair or small cluster of glossy red cherries attached together by thin stems", prompt)
+        self.assertIn("one attached pair or a very small cherry cluster", prompt)
+        self.assertIn("Do not zoom in to a repeating cherry pattern", prompt)
+        self.assertNotIn("small oval grape", prompt)
+        self.assertNotIn("apples or round fruit", prompt)
+
+    def test_food_words_use_food_negative_prompt(self):
+        spec = self.module.AssetSpec(
+            slug="grape",
+            prompt="grape prompt",
+            out_dir=Path("/tmp"),
+            filename="grape.png",
+            asset_type="still",
+            label="Grape",
+            query="grapes fruit",
+        )
+        negative = self.module.negative_prompt_for_spec(spec)
+        self.assertIsNotNone(negative)
+        self.assertIn("portrait", negative)
+        self.assertIn("person", negative)
+        self.assertIn("table", negative)
+        self.assertIn("glass", negative)
+        self.assertIn("vase", negative)
+        self.assertIn("black frame", negative)
+        self.assertIn("duplicate fruit", negative)
+        self.assertIn("cropped subject", negative)
+        self.assertIn("macro close-up", negative)
 
     def test_generation_attempt_prompt_escalates_to_isolated_subject_for_animals(self):
         spec = self.module.AssetSpec(
@@ -206,9 +291,107 @@ class GenerateAiFlashcardsTest(unittest.TestCase):
         first_prompt = self.module.prompt_for_generation_attempt(spec, attempt=1)
         later_prompt = self.module.prompt_for_generation_attempt(spec, attempt=3)
         self.assertEqual(first_prompt, spec.prompt)
-        self.assertIn("isolated vocabulary flashcard portrait", later_prompt)
+        self.assertIn("Create one flashcard image of a single cat.", later_prompt)
         self.assertIn("empty pastel background", later_prompt)
-        self.assertIn("no scenery", later_prompt)
+        self.assertIn("no scenery or props", later_prompt)
+
+    def test_generation_attempt_prompt_escalates_to_packshot_for_food(self):
+        spec = self.module.AssetSpec(
+            slug="grape",
+            prompt=self.module.word_prompt("grape", "grapes fruit"),
+            out_dir=Path("/tmp"),
+            filename="grape.png",
+            asset_type="still",
+            label="Grape",
+            query="grapes fruit",
+        )
+        later_prompt = self.module.prompt_for_generation_attempt(spec, attempt=3)
+        self.assertIn("studio object photo", later_prompt)
+        self.assertIn("one complete hanging bunch of small oval translucent green grapes on a branching vine", later_prompt)
+        self.assertIn("single bunch must read clearly as one whole cluster", later_prompt)
+        self.assertIn("stem visible near the top", later_prompt)
+        self.assertIn("not as apples or round fruit", later_prompt)
+        self.assertIn("zero humans, zero faces, zero hands, zero dishes, and zero tables", later_prompt.lower())
+        self.assertIn("unsupported against the seamless studio background", later_prompt)
+        self.assertIn("empty margin on every side", later_prompt.lower())
+        self.assertIn("no nearby prop", later_prompt.lower())
+
+    def test_generation_attempt_prompt_uses_cherry_specific_cluster_rules(self):
+        spec = self.module.AssetSpec(
+            slug="cherry",
+            prompt=self.module.word_prompt("cherry", "cherries fruit"),
+            out_dir=Path("/tmp"),
+            filename="cherry.png",
+            asset_type="still",
+            label="Cherry",
+            query="cherries fruit",
+        )
+        later_prompt = self.module.prompt_for_generation_attempt(spec, attempt=3)
+        self.assertIn("glossy red cherries attached together by thin stems", later_prompt)
+        self.assertIn("very small cherry cluster", later_prompt)
+        self.assertIn("repeating cherry pattern", later_prompt)
+        self.assertNotIn("small oval grape", later_prompt)
+
+    def test_cluster_fruit_preserves_full_subject(self):
+        grape = self.module.AssetSpec(
+            slug="grape",
+            prompt="grape prompt",
+            out_dir=Path("/tmp"),
+            filename="grape.png",
+            asset_type="still",
+            label="Grape",
+            query="grapes fruit",
+        )
+        cat = self.module.AssetSpec(
+            slug="cat",
+            prompt="cat prompt",
+            out_dir=Path("/tmp"),
+            filename="cat.png",
+            asset_type="still",
+            label="Cat",
+            query="cat photo",
+        )
+        self.assertTrue(self.module.preserves_full_subject(grape))
+        self.assertFalse(self.module.preserves_full_subject(cat))
+
+    def test_normalize_generated_image_contains_cluster_fruit_without_cropping_edges(self):
+        spec = self.module.AssetSpec(
+            slug="grape",
+            prompt="grape prompt",
+            out_dir=Path("/tmp"),
+            filename="grape.png",
+            asset_type="still",
+            label="Grape",
+            query="grapes fruit",
+        )
+        image = Image.new("RGB", (400, 200), "#eee4d4")
+        for x in range(0, 12):
+            for y in range(40, 160):
+                image.putpixel((x, y), (0, 0, 255))
+        for x in range(388, 400):
+            for y in range(40, 160):
+                image.putpixel((x, y), (255, 0, 0))
+
+        normalized = self.module.normalize_generated_image(image, spec, width=300, height=300)
+
+        left_found = False
+        right_found = False
+        for x in range(0, 60):
+            for y in range(80, 220):
+                if normalized.getpixel((x, y)) == (0, 0, 255):
+                    left_found = True
+                    break
+            if left_found:
+                break
+        for x in range(240, 300):
+            for y in range(80, 220):
+                if normalized.getpixel((x, y)) == (255, 0, 0):
+                    right_found = True
+                    break
+            if right_found:
+                break
+        self.assertTrue(left_found)
+        self.assertTrue(right_found)
 
     def test_phrase_prompt_requires_toddler_friendly_scene_illustration(self):
         prompt = self.module.phrase_prompt("lets_play", "two children happily starting a simple game together")
@@ -216,6 +399,39 @@ class GenerateAiFlashcardsTest(unittest.TestCase):
         self.assertIn("one easy-to-read moment", prompt)
         self.assertIn("toddler can understand instantly", prompt)
         self.assertIn("no background clutter", prompt)
+        self.assertIn("Use Chinese children", prompt)
+        self.assertIn("use a Chinese parent and child", prompt)
+
+    def test_body_word_prompt_avoids_identifiable_identity_features(self):
+        prompt = self.module.word_prompt("eye", "eye")
+        self.assertIn("real close-up photo", prompt)
+        self.assertIn("Chinese child's eye area", prompt)
+        self.assertIn("identity is not visible", prompt)
+        self.assertIn("No full face, no hairstyle, no clothing, no jewelry", prompt)
+
+    def test_action_word_prompt_avoids_recognizable_faces(self):
+        prompt = self.module.word_prompt("run", "running child")
+        self.assertIn("one Chinese preschool child", prompt)
+        self.assertIn("exactly one child and exactly one body", prompt)
+        self.assertIn("full body visible", prompt)
+        self.assertIn("natural side view sports-photo composition", prompt)
+        self.assertIn("simple plain clothing with no logos", prompt)
+        self.assertIn("no border or poster frame", prompt)
+
+    def test_action_words_use_person_compatible_negative_prompt(self):
+        spec = self.module.AssetSpec(
+            slug="run",
+            prompt="run prompt",
+            out_dir=Path("/tmp"),
+            filename="run.png",
+            asset_type="still",
+            label="Run",
+            query="running child",
+        )
+        negative = self.module.negative_prompt_for_spec(spec)
+        self.assertIsNotNone(negative)
+        self.assertIn("duplicate person", negative)
+        self.assertNotIn("person, child, human", negative)
 
     def test_review_prompt_uses_explicit_toddler_flashcard_rubric(self):
         prompt = self.module.QA_PROMPT

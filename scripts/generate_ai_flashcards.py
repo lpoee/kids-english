@@ -38,6 +38,9 @@ GIF_EXT = ".gif"
 COMFYUI_URL = os.environ.get("COMFYUI_URL", "http://127.0.0.1:8188")
 DEFAULT_GENERATOR = os.environ.get("FLASHCARD_GENERATOR", "comfyui")
 DEFAULT_CHECKPOINT = os.environ.get("FLASHCARD_SD_CHECKPOINT", "sd_xl_base_1.0.safetensors")
+FLUX2_KLEIN_CHECKPOINT = "flux-2-klein-4b.safetensors"
+FLUX2_KLEIN_TEXT_ENCODER = "qwen_3_4b.safetensors"
+FLUX2_VAE = "flux2-vae.safetensors"
 COMFYUI_TIMEOUT = int(os.environ.get("COMFYUI_TIMEOUT", "300"))
 COMFYUI_POLL = float(os.environ.get("COMFYUI_POLL", "3"))
 REVIEW_IMAGE_MAX_EDGE = 512
@@ -90,24 +93,50 @@ FLASHCARD_STYLE = (
 )
 
 VOCAB_FLASHCARD_STYLE = (
-    "Create one square flashcard image of exactly one subject for a 4-year-old. "
-    "Use simple clean shapes, friendly colors, crisp edges, and one clear silhouette. "
-    "This is a subject portrait, not a poster, not a page design, and not a story illustration. "
-    "The background must be a nearly solid, plain, soft pastel wash with no scenery, no furniture, no sky, no grass, and no decorative elements. "
-    "The single subject fills most of the frame so a child sees nothing else first. "
+    "Create one square flashcard image of exactly one subject. "
+    "Use a simple educational composition with one large centered subject, clean edges, and a plain soft background. "
+    "This is a flashcard image, not a poster, page design, or story scene. "
+)
+
+FOOD_FLASHCARD_STYLE = (
+    "Create one square photo of exactly one food item. "
+    "Use realistic studio object photography, not illustration, not portrait photography, and not a story scene. "
+    "The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. "
 )
 
 FLASHCARD_NEGATIVE = "No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout."
 
 FLASHCARD_ARTIFACT_NEGATIVE = (
-    "text, letters, words, watermark, logo, signature, brand name, border, frame, collage, split screen, "
-    "grid, tiled layout, contact sheet, comic page, picture book page, sticker sheet, montage, repeated subject, thumbnails, "
-    "second animal, background animal, duplicate animal, multiple unrelated subjects, busy background, stock photo overlay, screenshot, UI elements, poster, "
-    "cropped subject, blurry, noisy, low contrast, scary, uncanny, deformed anatomy, extra fingers, "
-    "character sheet, reference sheet, turnaround, multi-view, 2x2, 3x3 grid, 4-panel, storyboard, product catalog, "
-    "photo album page, scrapbook page, collage frame, comparison sheet, lineup, variation sheet, sample sheet, "
-    "person, child, human, face, people, kid, baby, toddler, hands holding object, person eating, person sitting, person standing, "
-    "family, parent, adult, boy, girl, cartoon child"
+    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "multi-panel layout, repeated subject, duplicate subject, poster"
+)
+
+# Adjective cards need comparison layouts (two shapes + arrow) — strip terms that kill those.
+FLASHCARD_ADJ_NEGATIVE = (
+    "text, watermark, logo, border, frame, collage, split screen, "
+    "poster, busy background, scary"
+)
+
+# Action cards need a person, but still must forbid duplicate figures, poster layouts, and text.
+FLASHCARD_ACTION_NEGATIVE = (
+    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "multi-panel layout, duplicate person, duplicate child, repeated figure, poster"
+)
+
+# Food cards must be object-only photos with no portrait framing.
+FLASHCARD_FOOD_NEGATIVE = (
+    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "multi-panel layout, poster, portrait, person, child, face, hand, plate, bowl, table, "
+    "cup, glass, bottle, vase, jar, carafe, drink, pitcher, basket, tray, "
+    "placemat, napkin, cutting board, square card, paper sheet, black frame, serving dish, "
+    "cropped subject, duplicate fruit, second bunch, second item, repeated object, "
+    "pile of grapes, loose grapes, fruit pattern, macro close-up, extreme close-up"
+)
+
+# Body-part cards need visible skin — strip terms that suppress body features.
+FLASHCARD_BODY_NEGATIVE = (
+    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "multi-panel layout, poster, jewelry, hat, glasses"
 )
 
 ANIMAL_WORDS = {
@@ -119,6 +148,7 @@ FOOD_WORDS = {
     "mango", "pineapple", "lemon", "bread", "cake", "cookie", "milk", "egg", "cheese", "rice",
     "water", "candy", "ice_cream",
 }
+CLUSTER_FRUIT_WORDS = {"grape", "cherry"}
 BODY_WORDS = {"eye", "ear", "nose", "mouth", "hand", "foot", "head", "arm"}
 HOME_WORDS = {"bed", "chair", "table", "door", "window", "cup", "spoon", "clock"}
 ACTION_WORDS = {"eat", "drink", "sleep", "run", "jump", "walk", "sit", "stand", "clap", "wave"}
@@ -484,27 +514,96 @@ def requires_clean_background(spec: AssetSpec) -> bool:
     return spec.asset_type == "still" and spec.slug in (ANIMAL_WORDS | FOOD_WORDS | HOME_WORDS)
 
 
+def food_subject_phrase(slug: str, desc: str) -> str:
+    if slug == "grape":
+        return "one complete hanging bunch of small oval translucent green grapes on a branching vine, with the stem visible"
+    if slug == "cherry":
+        return "one complete pair or small cluster of glossy red cherries attached together by thin stems"
+    return desc
+
+
+def food_positioning_phrase(slug: str) -> str:
+    if slug in CLUSTER_FRUIT_WORDS:
+        return (
+            "The fruit is unsupported against the seamless studio background with nothing underneath it. "
+            "Show the complete bunch fully inside the frame with empty margin on every side, "
+            "no bowl, no plate, no table, no container, no drink, and no nearby prop."
+        )
+    return "Keep the frame clean with no person and no portrait staging."
+
+
+def food_framing_phrase(slug: str) -> str:
+    if slug == "grape":
+        return (
+            "The single bunch must read clearly as one whole cluster with the stem visible near the top. "
+            "Keep the entire cluster inside the frame with generous plain background around it. "
+            "Do not zoom in to a pile or texture of loose grapes. "
+            "For grapes, each fruit should read as a small oval grape, not as apples or round fruit."
+        )
+    if slug == "cherry":
+        return (
+            "The fruit must read clearly as one attached pair or a very small cherry cluster with the stems visible. "
+            "Keep the full cherries inside the frame with generous plain background around them. "
+            "Do not zoom in to a repeating cherry pattern or wallpaper-like layout."
+        )
+    return (
+        "The food item must occupy at least 80% of the frame, be centered, "
+        "and be the only thing noticed first at a glance."
+    )
+
+
+def preserves_full_subject(spec: AssetSpec) -> bool:
+    return spec.asset_type == "still" and spec.slug in CLUSTER_FRUIT_WORDS
+
+
+def background_fill_color(image: Image.Image) -> tuple[int, int, int]:
+    strip = background_border_strip(image)
+    stat = ImageStat.Stat(strip)
+    return tuple(int(round(channel)) for channel in stat.mean[:3])
+
+
+def normalize_generated_image(image: Image.Image, spec: AssetSpec, *, width: int, height: int) -> Image.Image:
+    rgb = image.convert("RGB")
+    if preserves_full_subject(spec):
+        contained = ImageOps.contain(
+            rgb,
+            (width, height),
+            method=Image.Resampling.LANCZOS,
+        )
+        canvas = Image.new("RGB", (width, height), background_fill_color(rgb))
+        offset = ((width - contained.width) // 2, (height - contained.height) // 2)
+        canvas.paste(contained, offset)
+        return canvas
+    return ImageOps.fit(
+        rgb,
+        (width, height),
+        method=Image.Resampling.LANCZOS,
+        centering=(0.5, 0.5),
+    )
+
+
 def prompt_for_generation_attempt(spec: AssetSpec, *, attempt: int) -> str:
     if attempt < 3 or not requires_clean_background(spec):
         return spec.prompt
     label = spec.label.lower()
     if spec.slug in ANIMAL_WORDS:
         return (
-            f"Create one isolated vocabulary flashcard portrait of a {label} for a 4-year-old child. "
-            "Show exactly one full animal centered in frame on an empty pastel background with one or two soft colors only. "
-            "Use a simple sticker-like educational illustration style with a clean silhouette, full body, clear face, and no scenery. "
-            "No room, no furniture, no toys, no plants, no props, no people, no hands, no second animal, no repeated subject, no frame, no border, and no page layout."
+            f"Create one flashcard image of a single {label}. "
+            "Show one full animal, centered and large in frame, on an empty pastel background. "
+            "Keep the shape clear, simple, and isolated, with no scenery or props."
         )
     if spec.slug in FOOD_WORDS:
         return (
-            f"Create one isolated vocabulary flashcard portrait of {clean_query(spec.query)} for a 4-year-old child. "
-            "Show exactly one food item centered in frame on an empty pastel background with one or two soft colors only. "
-            "Use a simple educational illustration style with a clean silhouette and no plate, table scene, packaging, or extra objects."
+            f"Create one studio object photo of only {food_subject_phrase(spec.slug, clean_query(spec.query))}. "
+            "Show exactly one food item centered in frame on a seamless empty pale background. "
+            f"{food_framing_phrase(spec.slug)} "
+            "Use zero humans, zero faces, zero hands, zero dishes, and zero tables. "
+            f"{food_positioning_phrase(spec.slug)}"
         )
     return (
-        f"Create one isolated vocabulary flashcard portrait of one {label} for a 4-year-old child. "
-        "Show exactly one object centered in frame on an empty pastel background with one or two soft colors only. "
-        "Use a simple educational illustration style with no scenery, no extra focal objects, no border, and no page layout."
+        f"Create one flashcard image of a single {label}. "
+        "Show one object, large and centered, on an empty pastel background. "
+        "Keep it simple, isolated, and free of extra objects or scenery."
     )
 
 
@@ -607,7 +706,8 @@ def review_image(spec: AssetSpec, *, qa_url: str, qa_model: str, timeout: int) -
         )
     elif spec.asset_type == "still" and spec.slug in FOOD_WORDS | HOME_WORDS:
         extra_review_rule = (
-            "This is a single-word vocabulary card. Reject the image if a person or extra unrelated main subject is needed to understand the scene."
+            "This is a single-word vocabulary card. Reject the image if a person or extra unrelated main subject is needed to understand the scene. "
+            "Reject portrait-style compositions where a child face competes with the object. Reject decorative frames, windows, or staged poster-like layouts."
         )
 
     payload = {
@@ -817,51 +917,49 @@ def word_prompt(slug: str, query: str) -> str:
     label = title_case_slug(slug)
     desc = clean_query(query)
     shared = (
-        f"{VOCAB_FLASHCARD_STYLE}A single portrait of one clear subject as the main focus. "
-        "Exactly one scene and one main subject, never multiple panels and never repeated variants of the subject. "
-        "Keep the composition simple and easy to read with no background clutter. "
-        "Keep the full subject inside frame with strong separation from the background. "
-        "No person, no child, no human, no face, no hands — unless the word itself requires a person. "
+        f"{VOCAB_FLASHCARD_STYLE}Show one clear main subject only. "
+        "Keep the full subject inside frame, centered, and large. "
+        "Keep the composition simple and easy to read. "
         f"{FLASHCARD_NEGATIVE} "
     )
 
     if slug in ANIMAL_WORDS:
         return (
-            f"{shared}A single children's book illustration portrait of one {label.lower()}, fully visible and isolated. "
-            "This is a vocabulary flashcard portrait, not a story scene, grid, or room scene. "
-            "Use only a plain pale background or a very simple studio-like ground plane with one or two soft colors and no scenery. "
-            "Center the animal and keep its whole shape, face, and tail easy to recognize instantly. "
-            "Do not show a room, furniture, shelf, window, curtain, picture frame, moon, stars, landscape, playground, house, or any decorative story background. "
-            "No second animal anywhere in the frame, including background, reflections, posters, toys, or repeated variants. "
-            "No people, no child, no human hands, no human body parts, and no clothes or accessories that imply a person."
+            f"{shared}Show one {label.lower()} only. "
+            "Full body visible, centered, isolated, and easy to recognize instantly. "
+            "Use a plain pale background and no scenery or props."
         )
     if slug in FOOD_WORDS:
-        background = "clean pale background with only one or two soft colors" if slug in PLAIN_BG_WORDS else "simple clean background with only one or two soft colors"
+        subject = food_subject_phrase(slug, desc)
         return (
-            f"{shared}A single isolated portrait of {desc}. "
-            f"Use a {background}. "
-            "Keep the food item large in frame, the only subject, whole, and instantly recognizable to a 4-year-old. "
-            "No person, no child, no hands, no plate scene, no table, no kitchen, no restaurant — just the food item alone."
+            f"{FOOD_FLASHCARD_STYLE}Show only {subject}. "
+            "Show exactly one complete food item fully inside frame. "
+            f"{food_framing_phrase(slug)} "
+            "Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. "
+            "Keep the frame object-only with no people and no visible body parts. "
+            f"{food_positioning_phrase(slug)}"
         )
     if slug in BODY_WORDS:
         return (
-            f"{shared}A single isolated close-up of a human {label.lower()}, and nothing else. "
-            "Show only the body part itself with no face, no clothing, no full person, and no background scene. "
-            "Use a plain neutral background so the body part is the only thing in frame."
+            f"{shared}A real close-up photo of only a Chinese child's {label.lower()} area, and nothing else. "
+            "Crop tightly so the target body part fills the frame and identity is not visible. "
+            "No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. "
+            "Use soft studio lighting and a plain neutral background so the body part is the only focus."
         )
     if slug in HOME_WORDS:
-        background = "clean simple background with only one or two soft colors" if slug in PLAIN_BG_WORDS else "real home setting with minimal clutter and no extra focal objects"
         return (
-            f"{shared}A single isolated portrait of one {label.lower()}. "
-            f"Use a {background}. "
+            f"{shared}Show one {label.lower()} only. "
             "Center the object and keep it very easy to identify at a glance. "
-            "No person, no child, no hands — just the object alone in frame."
+            "Use a plain or very simple background with no extra focal objects."
         )
     if slug in ACTION_WORDS:
         return (
-            f"{shared}Show one young child clearly demonstrating the action '{label}'. "
+            f"{shared}A real action photo of one Chinese preschool child clearly demonstrating the action '{label}'. "
             f"Scene: {desc}. "
-            "Use one clear actor, full body visible when helpful, and a simple uncluttered setting."
+            "Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. "
+            "Use a natural side view sports-photo composition so the motion reads instantly. "
+            "Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. "
+            "Keep the action itself as the only thing that matters."
         )
     return (
         f"{shared}Show {desc}. "
@@ -889,7 +987,7 @@ def phrase_prompt(slug: str, query: str) -> str:
         f"{FLASHCARD_STYLE}Create a clear scene illustration for a kids English flashcard. "
         f"The sentence to teach is '{label}'. "
         f"Show this literally in one easy-to-read moment: {desc}. "
-        "Use one child or a parent and child when needed so the toddler can understand instantly. "
+        "Use Chinese children. If more than one person is needed, use a Chinese parent and child so the toddler can understand instantly. "
         "Keep the scene simple, with no background clutter, and make the key action or feeling obvious. "
         f"{FLASHCARD_NEGATIVE}"
     )
@@ -1006,9 +1104,113 @@ def parse_size(size: str) -> tuple[int, int]:
     return int(match.group(1)), int(match.group(2))
 
 
-def build_comfyui_workflow(*, spec: AssetSpec, checkpoint: str, width: int, height: int, seed: int) -> dict[str, Any]:
+def is_flux2_klein_checkpoint(checkpoint: str) -> bool:
+    return checkpoint == FLUX2_KLEIN_CHECKPOINT
+
+
+def build_flux2_klein_workflow(
+    *,
+    spec: AssetSpec,
+    width: int,
+    height: int,
+    seed: int,
+    negative: str,
+) -> dict[str, Any]:
+    return {
+        "61": {
+            "class_type": "KSamplerSelect",
+            "inputs": {"sampler_name": "euler"},
+        },
+        "62": {
+            "class_type": "Flux2Scheduler",
+            "inputs": {"steps": 20, "width": width, "height": height},
+        },
+        "63": {
+            "class_type": "CFGGuider",
+            "inputs": {
+                "model": ["64", 0],
+                "positive": ["65", 0],
+                "negative": ["69", 0],
+                "cfg": 5,
+            },
+        },
+        "64": {
+            "class_type": "UNETLoader",
+            "inputs": {
+                "unet_name": FLUX2_KLEIN_CHECKPOINT,
+                "weight_dtype": "default",
+            },
+        },
+        "65": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+                "clip": ["67", 0],
+                "text": spec.prompt,
+            },
+        },
+        "66": {
+            "class_type": "EmptyFlux2LatentImage",
+            "inputs": {"width": width, "height": height, "batch_size": 1},
+        },
+        "67": {
+            "class_type": "CLIPLoader",
+            "inputs": {
+                "clip_name": FLUX2_KLEIN_TEXT_ENCODER,
+                "type": "flux2",
+                "device": "default",
+            },
+        },
+        "68": {
+            "class_type": "VAELoader",
+            "inputs": {"vae_name": FLUX2_VAE},
+        },
+        "69": {
+            "class_type": "CLIPTextEncode",
+            "inputs": {
+                "clip": ["67", 0],
+                "text": negative,
+            },
+        },
+        "70": {
+            "class_type": "RandomNoise",
+            "inputs": {"noise_seed": seed},
+        },
+        "71": {
+            "class_type": "SamplerCustomAdvanced",
+            "inputs": {
+                "noise": ["70", 0],
+                "guider": ["63", 0],
+                "sampler": ["61", 0],
+                "sigmas": ["62", 0],
+                "latent_image": ["66", 0],
+            },
+        },
+        "72": {
+            "class_type": "VAEDecode",
+            "inputs": {"samples": ["71", 0], "vae": ["68", 0]},
+        },
+        "73": {
+            "class_type": "SaveImage",
+            "inputs": {
+                "images": ["72", 0],
+                "filename_prefix": f"kids_flashcards_{spec.slug}",
+            },
+        },
+    }
+
+
+def build_comfyui_workflow(*, spec: AssetSpec, checkpoint: str, width: int, height: int, seed: int, negative: str | None = None) -> dict[str, Any]:
     steps = 36
     cfg = 7.5
+    neg_text = negative if negative is not None else FLASHCARD_ARTIFACT_NEGATIVE
+    if is_flux2_klein_checkpoint(checkpoint):
+        return build_flux2_klein_workflow(
+            spec=spec,
+            width=width,
+            height=height,
+            seed=seed,
+            negative=neg_text,
+        )
     return {
         "1": {
             "class_type": "CheckpointLoaderSimple",
@@ -1021,7 +1223,7 @@ def build_comfyui_workflow(*, spec: AssetSpec, checkpoint: str, width: int, heig
         "3": {
             "class_type": "CLIPTextEncode",
             "inputs": {
-                "text": FLASHCARD_ARTIFACT_NEGATIVE,
+                "text": neg_text,
                 "clip": ["1", 1],
             },
         },
@@ -1058,6 +1260,18 @@ def build_comfyui_workflow(*, spec: AssetSpec, checkpoint: str, width: int, heig
     }
 
 
+def negative_prompt_for_spec(spec: AssetSpec) -> str | None:
+    if spec.slug in FOOD_WORDS:
+        return FLASHCARD_FOOD_NEGATIVE
+    if spec.slug in BODY_WORDS:
+        return FLASHCARD_BODY_NEGATIVE
+    if spec.slug in ACTION_WORDS:
+        return FLASHCARD_ACTION_NEGATIVE
+    if spec.slug in ADJ_SELECTIONS:
+        return FLASHCARD_ADJ_NEGATIVE
+    return None
+
+
 def comfyui_json_request(url: str, payload: dict[str, Any] | None = None, *, timeout: int = 30) -> dict[str, Any]:
     data = None if payload is None else json.dumps(payload).encode("utf-8")
     request = urlrequest.Request(
@@ -1073,16 +1287,66 @@ def comfyui_json_request(url: str, payload: dict[str, Any] | None = None, *, tim
 def ensure_comfyui_ready(checkpoint: str, *, timeout: int = 10) -> None:
     try:
         stats = comfyui_json_request(f"{COMFYUI_URL}/system_stats", None, timeout=timeout)
-        checkpoint_info = comfyui_json_request(
-            f"{COMFYUI_URL}/object_info/CheckpointLoaderSimple",
-            None,
-            timeout=timeout,
-        )
+        if is_flux2_klein_checkpoint(checkpoint):
+            unet_info = comfyui_json_request(
+                f"{COMFYUI_URL}/object_info/UNETLoader",
+                None,
+                timeout=timeout,
+            )
+            clip_info = comfyui_json_request(
+                f"{COMFYUI_URL}/object_info/CLIPLoader",
+                None,
+                timeout=timeout,
+            )
+            vae_info = comfyui_json_request(
+                f"{COMFYUI_URL}/object_info/VAELoader",
+                None,
+                timeout=timeout,
+            )
+        else:
+            checkpoint_info = comfyui_json_request(
+                f"{COMFYUI_URL}/object_info/CheckpointLoaderSimple",
+                None,
+                timeout=timeout,
+            )
     except (urlerror.URLError, TimeoutError, json.JSONDecodeError) as exc:
         raise SystemExit(f"ComfyUI not ready at {COMFYUI_URL}: {exc}") from exc
 
     if not stats.get("devices"):
         raise SystemExit(f"ComfyUI reported no devices at {COMFYUI_URL}")
+
+    if is_flux2_klein_checkpoint(checkpoint):
+        unets = (
+            unet_info.get("UNETLoader", {})
+            .get("input", {})
+            .get("required", {})
+            .get("unet_name", [[]])[0]
+        )
+        clips = (
+            clip_info.get("CLIPLoader", {})
+            .get("input", {})
+            .get("required", {})
+            .get("clip_name", [[]])[0]
+        )
+        vaes = (
+            vae_info.get("VAELoader", {})
+            .get("input", {})
+            .get("required", {})
+            .get("vae_name", [[]])[0]
+        )
+        missing = []
+        if checkpoint not in unets:
+            missing.append(f"unet={checkpoint}")
+        if FLUX2_KLEIN_TEXT_ENCODER not in clips:
+            missing.append(f"clip={FLUX2_KLEIN_TEXT_ENCODER}")
+        if FLUX2_VAE not in vaes:
+            missing.append(f"vae={FLUX2_VAE}")
+        if missing:
+            raise SystemExit(
+                "Flux.2 Klein models not available in ComfyUI at "
+                f"{COMFYUI_URL}: {', '.join(missing)}"
+            )
+        return
 
     checkpoints = (
         checkpoint_info.get("CheckpointLoaderSimple", {})
@@ -1201,12 +1465,14 @@ def generate_local_asset(
         tmp_dir.mkdir(parents=True, exist_ok=True)
         attempt_spec = replace(spec, prompt=prompt_for_generation_attempt(spec, attempt=attempt))
         try:
+            neg = negative_prompt_for_spec(spec)
             workflow = build_comfyui_workflow(
                 spec=attempt_spec,
                 checkpoint=checkpoint,
                 width=width,
                 height=height,
                 seed=seed,
+                negative=neg,
             )
             prompt_id = comfyui_submit(workflow)
             history = comfyui_wait(prompt_id)
@@ -1215,13 +1481,7 @@ def generate_local_asset(
                 raise RuntimeError("ComfyUI produced no image outputs")
             raw_path = max(files, key=lambda path: path.stat().st_size)
             with Image.open(raw_path) as image:
-                image = image.convert("RGB")
-                image = ImageOps.fit(
-                    image,
-                    (width, height),
-                    method=Image.Resampling.LANCZOS,
-                    centering=(0.5, 0.5),
-                )
+                image = normalize_generated_image(image, spec, width=width, height=height)
                 if looks_like_multi_panel_layout(image):
                     raise RuntimeError("generated image looks like a multi-panel layout")
                 review_path = tmp_dir / f"{spec.slug}-review.png"
