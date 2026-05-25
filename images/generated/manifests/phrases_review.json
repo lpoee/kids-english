@@ -114,10 +114,10 @@
     "query": "family dinner photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear, simple dinner scene with a child and parent, big gestures, and no distractions. Text is present but not part of the image content. All elements support instant recognition of 'Dinner Time' for a 4-year-old.",
+    "reason": "Clear, simple scene with a child at a table with food and a parent, perfectly matching 'Dinner Time' for a 4-year-old. No distractions, high clarity, and child-friendly style.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T13:53:24+00:00",
+    "reviewed_at": "2026-05-25T14:58:35+00:00",
     "output_file": "images/generated/phrases/dinner_time.png"
   },
   "excuse_me": {
@@ -345,10 +345,10 @@
     "query": "child finished activity photo",
     "pass": true,
     "score": 100,
-    "reason": "Clear, simple scene with child and adult, big gestures, and readable text make the concept instantly clear for a 4-year-old.",
+    "reason": "Clear, simple scene with a child finishing an activity, big gestures, and no distractions; concept instantly understandable to a 4-year-old.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T13:54:52+00:00",
+    "reviewed_at": "2026-05-25T14:58:40+00:00",
     "output_file": "images/generated/phrases/im_done.png"
   },
   "im_fine": {
@@ -587,10 +587,10 @@
     "query": "open door photo",
     "pass": true,
     "score": 100,
-    "reason": "Clear, simple, and perfectly matches the word 'Open' with a child opening a door.",
+    "reason": "Clear, simple, and perfectly matches the concept with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T13:56:05+00:00",
+    "reviewed_at": "2026-05-25T14:58:47+00:00",
     "output_file": "images/generated/phrases/open.png"
   },
   "please": {
@@ -642,12 +642,10 @@
     "query": "quiet finger lips child photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear concept, child-friendly style, minimal distractions, but minor spelling error in text.",
-    "issues": [
-      "Spelling error in 'Quiacit place' text"
-    ],
+    "reason": "Clear concept, simple design, no distractions",
+    "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T13:55:26+00:00",
+    "reviewed_at": "2026-05-25T14:58:43+00:00",
     "output_file": "images/generated/phrases/quiet_please.png"
   },
   "raise_your_hand": {
@@ -735,7 +733,7 @@
     "reason": "Clear, simple scene with a child apologizing to a parent, matching the word 'Sorry'.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T13:54:09+00:00",
+    "reviewed_at": "2026-05-25T14:58:38+00:00",
     "output_file": "images/generated/phrases/sorry.png"
   },
   "stand_up": {
@@ -754,10 +752,10 @@
     "query": "stop hand gesture photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear, simple scene with a child and adult showing a stop hand gesture, matching the word 'Stop' and the learning goal for a 4-year-old.",
+    "reason": "Clear, simple scene with a child making a stop gesture and a parent, perfectly suited for a 4-year-old English flashcard.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T13:56:03+00:00",
+    "reviewed_at": "2026-05-25T14:58:45+00:00",
     "output_file": "images/generated/phrases/stop.png"
   },
   "take_off_shoes": {

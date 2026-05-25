@@ -111,7 +111,13 @@ FOOD_FLASHCARD_STYLE = (
     "The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. "
 )
 
-FLASHCARD_NEGATIVE = "No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout."
+FLASHCARD_NEGATIVE = (
+    "No text, no letters, no words, no numbers, no alphabet, no writing, no captions, "
+    "no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, "
+    "no watermark, no logo, no signature, no brand name, "
+    "no border, no frame, no collage, no split screen, no framed picture grid, "
+    "no multi-panel layout, no comic panel, no storybook page layout."
+)
 
 FLASHCARD_ARTIFACT_NEGATIVE = (
     "text, watermark, logo, border, frame, collage, split screen, grid, "

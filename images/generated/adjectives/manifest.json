@@ -2,11 +2,11 @@
   "big": {
     "label": "Big",
     "query": "big elephant photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Big' with simple geometry on a plain background. Scene: Two identical red circles on a plain pastel background. A bright arrow points to the very large circle that fills most of the frame. The other circle is very small beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Big' with simple geometry on a plain background. Scene: Two identical red circles on a plain pastel background. A bright arrow points to the very large circle that fills most of the frame. The other circle is very small beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/big.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -19,11 +19,11 @@
   "small": {
     "label": "Small",
     "query": "small kitten photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Small' with simple geometry on a plain background. Scene: Two identical yellow circles on a plain pastel background. A bright arrow points to the very tiny circle. The other circle is very large beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Small' with simple geometry on a plain background. Scene: Two identical yellow circles on a plain pastel background. A bright arrow points to the very tiny circle. The other circle is very large beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/small.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -36,11 +36,11 @@
   "tall": {
     "label": "Tall",
     "query": "tall tree photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Tall' with simple geometry on a plain background. Scene: Two identical green rectangles on a plain pastel background. Both rectangles have exactly the same width. A bright arrow points to the very tall rectangle reaching the top of the frame. The other rectangle is very short beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Tall' with simple geometry on a plain background. Scene: Two identical green rectangles on a plain pastel background. Both rectangles have exactly the same width. A bright arrow points to the very tall rectangle reaching the top of the frame. The other rectangle is very short beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/tall.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -53,11 +53,11 @@
   "short": {
     "label": "Short",
     "query": "short pencil photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Short' with simple geometry on a plain background. Scene: Two identical blue rectangles on a plain pastel background. Both rectangles have exactly the same width. A bright arrow points to the very short rectangle. The other rectangle is very tall beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Short' with simple geometry on a plain background. Scene: Two identical blue rectangles on a plain pastel background. Both rectangles have exactly the same width. A bright arrow points to the very short rectangle. The other rectangle is very tall beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/short.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -70,11 +70,11 @@
   "long": {
     "label": "Long",
     "query": "long rope photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Long' with simple geometry on a plain background. Scene: Two identical red horizontal lines on a plain pastel background. Both lines have exactly the same thickness. A bright arrow points to the very long line stretching all the way across the frame. The other line is very short beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Long' with simple geometry on a plain background. Scene: Two identical red horizontal lines on a plain pastel background. Both lines have exactly the same thickness. A bright arrow points to the very long line stretching all the way across the frame. The other line is very short beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/long.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -87,11 +87,11 @@
   "round": {
     "label": "Round",
     "query": "round ball photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Round' with simple geometry on a plain background. Scene: A perfectly round red circle centered on a plain pastel background. The round shape is the only thing in the image. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Round' with simple geometry on a plain background. Scene: A perfectly round red circle centered on a plain pastel background. The round shape is the only thing in the image. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/round.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -104,11 +104,11 @@
   "square": {
     "label": "Square",
     "query": "square box photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Square' with simple geometry on a plain background. Scene: A clear square shape centered on a plain pastel background. The square shape is the only thing in the image. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Square' with simple geometry on a plain background. Scene: A clear square shape centered on a plain pastel background. The square shape is the only thing in the image. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/square.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -121,11 +121,11 @@
   "fast": {
     "label": "Fast",
     "query": "fast runner photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Fast' with simple geometry on a plain background. Scene: A cheetah running with visible speed lines on a plain pastel background. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Fast' with simple geometry on a plain background. Scene: A cheetah running with visible speed lines on a plain pastel background. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/fast.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -138,11 +138,11 @@
   "slow": {
     "label": "Slow",
     "query": "slow snail photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Slow' with simple geometry on a plain background. Scene: A turtle walking slowly on a plain pastel background. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Slow' with simple geometry on a plain background. Scene: A turtle walking slowly on a plain pastel background. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/slow.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -155,11 +155,11 @@
   "wide": {
     "label": "Wide",
     "query": "wide door photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Wide' with simple geometry on a plain background. Scene: Two identical purple rectangles on a plain pastel background. Both rectangles have exactly the same height. A bright arrow points to the very wide rectangle stretching across the frame. The other rectangle is very narrow beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Wide' with simple geometry on a plain background. Scene: Two identical purple rectangles on a plain pastel background. Both rectangles have exactly the same height. A bright arrow points to the very wide rectangle stretching across the frame. The other rectangle is very narrow beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/wide.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
@@ -172,11 +172,11 @@
   "narrow": {
     "label": "Narrow",
     "query": "narrow alley photo",
-    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Narrow' with simple geometry on a plain background. Scene: Two identical orange rectangles on a plain pastel background. Both rectangles have exactly the same height. A bright arrow points to the very narrow rectangle. The other rectangle is very wide beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. Teach the adjective 'Narrow' with simple geometry on a plain background. Scene: Two identical orange rectangles on a plain pastel background. Both rectangles have exactly the same height. A bright arrow points to the very narrow rectangle. The other rectangle is very wide beside it. Use the absolute simplest shapes possible with no decoration or realism. A bright, obvious arrow points directly at the target. Keep the background completely plain pastel with no other elements. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/narrow.png",
-    "generated_at": "2026-05-25T13:56:18+00:00",
+    "generated_at": "2026-05-25T14:58:47+00:00",
     "review": {
       "pass": true,
       "score": 100,
