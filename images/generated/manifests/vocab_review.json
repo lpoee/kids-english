@@ -7,7 +7,7 @@
     "reason": "Clear, centered red apple on plain background, no distractions, concept instantly recognizable for a child.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:29+00:00",
+    "reviewed_at": "2026-05-25T04:47:51+00:00",
     "output_file": "images/generated/vocab/apple.png"
   },
   "arm": {
@@ -15,10 +15,10 @@
     "query": "arm photo person",
     "pass": true,
     "score": 95,
-    "reason": "Clear, focused image of a single arm with no distractions, easily understandable for a child",
+    "reason": "Clear, simple arm shape with soft colors and clean lines on a plain background, perfectly suited for a 4-year-old.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:30+00:00",
+    "reviewed_at": "2026-05-25T04:48:52+00:00",
     "output_file": "images/generated/vocab/arm.png"
   },
   "banana": {
@@ -29,7 +29,7 @@
     "reason": "Clear, focused banana on plain background, no distractions, child-friendly",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:31+00:00",
+    "reviewed_at": "2026-05-25T04:47:53+00:00",
     "output_file": "images/generated/vocab/banana.png"
   },
   "bear": {
@@ -40,7 +40,7 @@
     "reason": "Clear, cute bear, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:00+00:00",
+    "reviewed_at": "2026-05-25T04:47:22+00:00",
     "output_file": "images/generated/vocab/bear.png"
   },
   "bed": {
@@ -51,7 +51,7 @@
     "reason": "Clear, simple, focused image of a bed with no distractions or competing elements for a 4-year-old learner.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:32+00:00",
+    "reviewed_at": "2026-05-25T04:48:54+00:00",
     "output_file": "images/generated/vocab/bed.png"
   },
   "bird": {
@@ -62,7 +62,7 @@
     "reason": "Clear, cute bird with simple shapes and bright colors, perfectly centered and isolated on a plain background, ideal for a 4-year-old's vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:23:49+00:00",
+    "reviewed_at": "2026-05-25T04:47:11+00:00",
     "output_file": "images/generated/vocab/bird.png"
   },
   "bread": {
@@ -73,7 +73,7 @@
     "reason": "Clear, focused bread loaf with no distractions, perfectly meeting all criteria for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:55+00:00",
+    "reviewed_at": "2026-05-25T04:48:16+00:00",
     "output_file": "images/generated/vocab/bread.png"
   },
   "butterfly": {
@@ -84,7 +84,7 @@
     "reason": "Clear, cute butterfly with simple shapes and bright colors on a plain background, perfectly focused on the target concept.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:27+00:00",
+    "reviewed_at": "2026-05-25T04:47:49+00:00",
     "output_file": "images/generated/vocab/butterfly.png"
   },
   "cake": {
@@ -95,7 +95,7 @@
     "reason": "Clear, focused, and age-appropriate birthday cake image with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:57+00:00",
+    "reviewed_at": "2026-05-25T04:48:19+00:00",
     "output_file": "images/generated/vocab/cake.png"
   },
   "candy": {
@@ -106,7 +106,7 @@
     "reason": "Clear, focused candy image with no distractions, perfectly meeting the single-object requirement for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:12+00:00",
+    "reviewed_at": "2026-05-25T04:48:33+00:00",
     "output_file": "images/generated/vocab/candy.png"
   },
   "cat": {
@@ -117,7 +117,7 @@
     "reason": "Clear, cute cat, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:23:45+00:00",
+    "reviewed_at": "2026-05-25T04:47:06+00:00",
     "output_file": "images/generated/vocab/cat.png"
   },
   "chair": {
@@ -128,7 +128,7 @@
     "reason": "Clear, simple chair illustration with no distractions, perfectly centered for instant recognition by a 4-year-old.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:35+00:00",
+    "reviewed_at": "2026-05-25T04:48:57+00:00",
     "output_file": "images/generated/vocab/chair.png"
   },
   "cheese": {
@@ -136,10 +136,10 @@
     "query": "cheese wedge photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear cheese wedge, centered, no distractions, child-friendly style",
+    "reason": "Clear, focused cheese wedge with no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:06+00:00",
+    "reviewed_at": "2026-05-25T04:48:27+00:00",
     "output_file": "images/generated/vocab/cheese.png"
   },
   "cherry": {
@@ -147,10 +147,10 @@
     "query": "cherries fruit photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card with no distractions or technical flaws.",
+    "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:44+00:00",
+    "reviewed_at": "2026-05-25T04:48:06+00:00",
     "output_file": "images/generated/vocab/cherry.png"
   },
   "chicken": {
@@ -161,7 +161,7 @@
     "reason": "Clear, cute chicken, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:18+00:00",
+    "reviewed_at": "2026-05-25T04:47:39+00:00",
     "output_file": "images/generated/vocab/chicken.png"
   },
   "clap": {
@@ -172,18 +172,18 @@
     "reason": "Clear, centered child clapping with no distractions, warm and simple style suitable for a 4-year-old.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:26:07+00:00",
+    "reviewed_at": "2026-05-25T04:49:30+00:00",
     "output_file": "images/generated/vocab/clap.png"
   },
   "clock": {
     "label": "Clock",
     "query": "alarm clock photo",
     "pass": true,
-    "score": 100,
+    "score": 95,
     "reason": "Clear, simple clock on plain background, instantly recognizable, no distractions, perfect for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:48+00:00",
+    "reviewed_at": "2026-05-25T04:49:10+00:00",
     "output_file": "images/generated/vocab/clock.png"
   },
   "cookie": {
@@ -194,7 +194,7 @@
     "reason": "Clear, focused image of a cookie with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:59+00:00",
+    "reviewed_at": "2026-05-25T04:48:21+00:00",
     "output_file": "images/generated/vocab/cookie.png"
   },
   "cow": {
@@ -205,7 +205,7 @@
     "reason": "Clear, cute cow, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:12+00:00",
+    "reviewed_at": "2026-05-25T04:47:33+00:00",
     "output_file": "images/generated/vocab/cow.png"
   },
   "cup": {
@@ -216,7 +216,7 @@
     "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:43+00:00",
+    "reviewed_at": "2026-05-25T04:49:06+00:00",
     "output_file": "images/generated/vocab/cup.png"
   },
   "dog": {
@@ -227,7 +227,7 @@
     "reason": "Clear, cute dog, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:23:47+00:00",
+    "reviewed_at": "2026-05-25T04:47:08+00:00",
     "output_file": "images/generated/vocab/dog.png"
   },
   "door": {
@@ -238,7 +238,7 @@
     "reason": "Clear, simple door image with no distractions, perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:39+00:00",
+    "reviewed_at": "2026-05-25T04:49:01+00:00",
     "output_file": "images/generated/vocab/door.png"
   },
   "drink": {
@@ -249,7 +249,7 @@
     "reason": "Clear, simple, and focused illustration of a child drinking water with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:52+00:00",
+    "reviewed_at": "2026-05-25T04:49:15+00:00",
     "output_file": "images/generated/vocab/drink.png"
   },
   "duck": {
@@ -260,7 +260,7 @@
     "reason": "Clear, cute duck, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:07+00:00",
+    "reviewed_at": "2026-05-25T04:47:28+00:00",
     "output_file": "images/generated/vocab/duck.png"
   },
   "ear": {
@@ -268,10 +268,10 @@
     "query": "ear close up photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear, focused ear image with good lighting and no distractions.",
+    "reason": "Clear, simple ear diagram with soft colors and clean lines, perfectly focused on the concept with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:18+00:00",
+    "reviewed_at": "2026-05-25T04:48:40+00:00",
     "output_file": "images/generated/vocab/ear.png"
   },
   "eat": {
@@ -282,7 +282,7 @@
     "reason": "Clear, simple, and focused image of a child eating with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:50+00:00",
+    "reviewed_at": "2026-05-25T04:49:12+00:00",
     "output_file": "images/generated/vocab/eat.png"
   },
   "egg": {
@@ -293,7 +293,7 @@
     "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:03+00:00",
+    "reviewed_at": "2026-05-25T04:48:25+00:00",
     "output_file": "images/generated/vocab/egg.png"
   },
   "elephant": {
@@ -304,7 +304,7 @@
     "reason": "Clear, cute elephant, perfectly centered, no distractions, ideal for a 4-year-old.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:23:58+00:00",
+    "reviewed_at": "2026-05-25T04:47:19+00:00",
     "output_file": "images/generated/vocab/elephant.png"
   },
   "eye": {
@@ -312,10 +312,10 @@
     "query": "eye close up photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear eye focus, simple background, child-friendly",
+    "reason": "Clear, simple eye diagram with soft pastel colors and thick outlines, perfectly focused on the concept with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:16+00:00",
+    "reviewed_at": "2026-05-25T04:48:37+00:00",
     "output_file": "images/generated/vocab/eye.png"
   },
   "fish": {
@@ -326,18 +326,18 @@
     "reason": "Perfectly meets all criteria for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:03+00:00",
+    "reviewed_at": "2026-05-25T04:47:24+00:00",
     "output_file": "images/generated/vocab/fish.png"
   },
   "foot": {
     "label": "Foot",
     "query": "foot close up photo",
     "pass": true,
-    "score": 100,
-    "reason": "Clear, focused, and age-appropriate image of a child's foot with no distractions.",
+    "score": 95,
+    "reason": "Clear, simple foot illustration with soft colors and clean lines, perfectly focused for a 4-year-old.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:26+00:00",
+    "reviewed_at": "2026-05-25T04:48:48+00:00",
     "output_file": "images/generated/vocab/foot.png"
   },
   "frog": {
@@ -348,7 +348,7 @@
     "reason": "Clear, cute frog, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:05+00:00",
+    "reviewed_at": "2026-05-25T04:47:26+00:00",
     "output_file": "images/generated/vocab/frog.png"
   },
   "grape": {
@@ -359,18 +359,18 @@
     "reason": "Clear, focused image of a single grape bunch with no distractions, perfectly meeting the requirements for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:35+00:00",
+    "reviewed_at": "2026-05-25T04:47:57+00:00",
     "output_file": "images/generated/vocab/grape.png"
   },
   "hand": {
     "label": "Hand",
     "query": "hand palm photo",
     "pass": true,
-    "score": 95,
-    "reason": "Clear, focused image of a single hand with no distractions, easily understandable for a child",
+    "score": 100,
+    "reason": "Clear, simple, and perfectly suited for a 4-year-old",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:24+00:00",
+    "reviewed_at": "2026-05-25T04:48:46+00:00",
     "output_file": "images/generated/vocab/hand.png"
   },
   "head": {
@@ -378,10 +378,10 @@
     "query": "child face portrait photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear, friendly cartoon face with no distractions.",
+    "reason": "Clear, simple, and friendly child face with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:28+00:00",
+    "reviewed_at": "2026-05-25T04:48:50+00:00",
     "output_file": "images/generated/vocab/head.png"
   },
   "horse": {
@@ -392,7 +392,7 @@
     "reason": "Clear, cute, focused horse illustration perfect for a 4-year-old.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:14+00:00",
+    "reviewed_at": "2026-05-25T04:47:35+00:00",
     "output_file": "images/generated/vocab/horse.png"
   },
   "ice_cream": {
@@ -403,7 +403,7 @@
     "reason": "Clear, centered ice cream cone with no distractions, easily recognizable for a child.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:14+00:00",
+    "reviewed_at": "2026-05-25T04:48:35+00:00",
     "output_file": "images/generated/vocab/ice_cream.png"
   },
   "jump": {
@@ -414,7 +414,7 @@
     "reason": "Clear, simple, and focused image of a child jumping with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:58+00:00",
+    "reviewed_at": "2026-05-25T04:49:21+00:00",
     "output_file": "images/generated/vocab/jump.png"
   },
   "lemon": {
@@ -422,10 +422,10 @@
     "query": "lemon fruit photo",
     "pass": true,
     "score": 100,
-    "reason": "Clear lemon image, high quality, no distractions, perfectly centered for a 4-year-old",
+    "reason": "Clear lemon image, no distractions, child-friendly",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:53+00:00",
+    "reviewed_at": "2026-05-25T04:48:14+00:00",
     "output_file": "images/generated/vocab/lemon.png"
   },
   "lion": {
@@ -436,7 +436,7 @@
     "reason": "Clear, cute lion, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:23:52+00:00",
+    "reviewed_at": "2026-05-25T04:47:13+00:00",
     "output_file": "images/generated/vocab/lion.png"
   },
   "mango": {
@@ -447,18 +447,18 @@
     "reason": "Clear, centered mango with no distractions, perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:48+00:00",
+    "reviewed_at": "2026-05-25T04:48:10+00:00",
     "output_file": "images/generated/vocab/mango.png"
   },
   "milk": {
     "label": "Milk",
     "query": "glass of milk photo",
     "pass": true,
-    "score": 95,
-    "reason": "Clear, centered glass of milk on plain pastel background with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+    "score": 100,
+    "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:01+00:00",
+    "reviewed_at": "2026-05-25T04:48:23+00:00",
     "output_file": "images/generated/vocab/milk.png"
   },
   "monkey": {
@@ -469,7 +469,7 @@
     "reason": "Clear, cute monkey, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:23:54+00:00",
+    "reviewed_at": "2026-05-25T04:47:15+00:00",
     "output_file": "images/generated/vocab/monkey.png"
   },
   "mouth": {
@@ -477,10 +477,10 @@
     "query": "mouth close up photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear focus on mouth, soft skin, no distractions, concept instantly clear for child",
+    "reason": "Clear, simple mouth shape with soft pastel colors and clean outlines, perfectly focused on the concept with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:22+00:00",
+    "reviewed_at": "2026-05-25T04:48:44+00:00",
     "output_file": "images/generated/vocab/mouth.png"
   },
   "nose": {
@@ -488,10 +488,10 @@
     "query": "nose close up photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear, focused nose image with good lighting and no distractions.",
+    "reason": "Clear, simple nose shape with soft colors and clean outline, perfectly focused on the concept with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:20+00:00",
+    "reviewed_at": "2026-05-25T04:48:42+00:00",
     "output_file": "images/generated/vocab/nose.png"
   },
   "orange": {
@@ -502,7 +502,7 @@
     "reason": "Clear, centered orange with no distractions, perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:33+00:00",
+    "reviewed_at": "2026-05-25T04:47:55+00:00",
     "output_file": "images/generated/vocab/orange.png"
   },
   "panda": {
@@ -513,7 +513,7 @@
     "reason": "Clear, cute panda with no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:22+00:00",
+    "reviewed_at": "2026-05-25T04:47:44+00:00",
     "output_file": "images/generated/vocab/panda.png"
   },
   "peach": {
@@ -524,7 +524,7 @@
     "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:46+00:00",
+    "reviewed_at": "2026-05-25T04:48:08+00:00",
     "output_file": "images/generated/vocab/peach.png"
   },
   "pear": {
@@ -535,7 +535,7 @@
     "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:37+00:00",
+    "reviewed_at": "2026-05-25T04:47:59+00:00",
     "output_file": "images/generated/vocab/pear.png"
   },
   "pig": {
@@ -546,7 +546,7 @@
     "reason": "Clear, cute pig, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:09+00:00",
+    "reviewed_at": "2026-05-25T04:47:30+00:00",
     "output_file": "images/generated/vocab/pig.png"
   },
   "pineapple": {
@@ -557,7 +557,7 @@
     "reason": "Clear, focused pineapple illustration with no distractions, perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:50+00:00",
+    "reviewed_at": "2026-05-25T04:48:12+00:00",
     "output_file": "images/generated/vocab/pineapple.png"
   },
   "rabbit": {
@@ -568,7 +568,7 @@
     "reason": "Perfectly meets all criteria for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:23:56+00:00",
+    "reviewed_at": "2026-05-25T04:47:17+00:00",
     "output_file": "images/generated/vocab/rabbit.png"
   },
   "rice": {
@@ -579,7 +579,7 @@
     "reason": "Clear, focused image of rice in a bowl with no distractions, perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:08+00:00",
+    "reviewed_at": "2026-05-25T04:48:29+00:00",
     "output_file": "images/generated/vocab/rice.png"
   },
   "run": {
@@ -590,7 +590,7 @@
     "reason": "Clear, simple, and focused image of a child running with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:56+00:00",
+    "reviewed_at": "2026-05-25T04:49:19+00:00",
     "output_file": "images/generated/vocab/run.png"
   },
   "sheep": {
@@ -598,10 +598,10 @@
     "query": "sheep animal photo",
     "pass": true,
     "score": 100,
-    "reason": "Clear, cute sheep with no distractions",
+    "reason": "Clear, cute sheep, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:16+00:00",
+    "reviewed_at": "2026-05-25T04:47:37+00:00",
     "output_file": "images/generated/vocab/sheep.png"
   },
   "sit": {
@@ -612,7 +612,7 @@
     "reason": "Clear, simple, and focused illustration of a child sitting with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:26:03+00:00",
+    "reviewed_at": "2026-05-25T04:49:25+00:00",
     "output_file": "images/generated/vocab/sit.png"
   },
   "sleep": {
@@ -623,7 +623,7 @@
     "reason": "Clear, simple, and focused illustration of a child sleeping with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:54+00:00",
+    "reviewed_at": "2026-05-25T04:49:17+00:00",
     "output_file": "images/generated/vocab/sleep.png"
   },
   "spoon": {
@@ -631,10 +631,10 @@
     "query": "spoon utensil photo",
     "pass": true,
     "score": 95,
-    "reason": "Clear, simple, and focused spoon image with no distractions, suitable for a 4-year-old.",
+    "reason": "Clear, centered spoon on plain background, no distractions, child-friendly style",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:46+00:00",
+    "reviewed_at": "2026-05-25T04:49:08+00:00",
     "output_file": "images/generated/vocab/spoon.png"
   },
   "stand": {
@@ -645,7 +645,7 @@
     "reason": "Clear, simple, and focused illustration of a child standing with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:26:05+00:00",
+    "reviewed_at": "2026-05-25T04:49:28+00:00",
     "output_file": "images/generated/vocab/stand.png"
   },
   "strawberry": {
@@ -656,7 +656,7 @@
     "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:42+00:00",
+    "reviewed_at": "2026-05-25T04:48:04+00:00",
     "output_file": "images/generated/vocab/strawberry.png"
   },
   "table": {
@@ -667,7 +667,7 @@
     "reason": "Clear, simple, focused image of a table with no distractions, perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:37+00:00",
+    "reviewed_at": "2026-05-25T04:48:59+00:00",
     "output_file": "images/generated/vocab/table.png"
   },
   "tiger": {
@@ -678,7 +678,7 @@
     "reason": "Clear, cute tiger, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:20+00:00",
+    "reviewed_at": "2026-05-25T04:47:42+00:00",
     "output_file": "images/generated/vocab/tiger.png"
   },
   "turtle": {
@@ -686,10 +686,10 @@
     "query": "turtle animal photo",
     "pass": true,
     "score": 100,
-    "reason": "Clear, cute turtle, instantly recognizable, no distractions, perfect for a 4-year-old.",
+    "reason": "Clear, cute turtle, instantly recognizable, no distractions",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:25+00:00",
+    "reviewed_at": "2026-05-25T04:47:46+00:00",
     "output_file": "images/generated/vocab/turtle.png"
   },
   "walk": {
@@ -700,7 +700,7 @@
     "reason": "Clear, simple, and focused illustration of a child walking with no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:26:01+00:00",
+    "reviewed_at": "2026-05-25T04:49:23+00:00",
     "output_file": "images/generated/vocab/walk.png"
   },
   "water": {
@@ -711,7 +711,7 @@
     "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:10+00:00",
+    "reviewed_at": "2026-05-25T04:48:31+00:00",
     "output_file": "images/generated/vocab/water.png"
   },
   "watermelon": {
@@ -722,7 +722,7 @@
     "reason": "Clear, centered, and focused on a single watermelon with no distractions, perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:24:40+00:00",
+    "reviewed_at": "2026-05-25T04:48:02+00:00",
     "output_file": "images/generated/vocab/watermelon.png"
   },
   "wave": {
@@ -733,7 +733,7 @@
     "reason": "Clear, simple, and focused on the waving action with a friendly child character and no distractions.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:26:10+00:00",
+    "reviewed_at": "2026-05-25T04:49:32+00:00",
     "output_file": "images/generated/vocab/wave.png"
   },
   "window": {
@@ -744,7 +744,7 @@
     "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
     "issues": [],
     "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-    "reviewed_at": "2026-05-25T04:25:41+00:00",
+    "reviewed_at": "2026-05-25T04:49:04+00:00",
     "output_file": "images/generated/vocab/window.png"
   }
 }

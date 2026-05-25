@@ -6,14 +6,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/big.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, simple, and distraction-free image with a large and small circle and a clear arrow, perfectly matching the 'big' concept for a 4-year-old.",
+      "reason": "Clear big vs small comparison with focused arrow on large circle, no distractions, perfect for 4-year-old",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:19+00:00"
+      "reviewed_at": "2026-05-25T04:44:27+00:00"
     }
   },
   "small": {
@@ -23,14 +23,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/small.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfect clarity and focus for a 4-year-old",
+      "reason": "Perfect for teaching 'small' with clear size contrast, simple shapes, and no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:21+00:00"
+      "reviewed_at": "2026-05-25T04:44:29+00:00"
     }
   },
   "tall": {
@@ -40,14 +40,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/tall.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfect clarity and focus on the target concept with no distractions, meeting all criteria for a 4-year-old learner.",
+      "reason": "Perfect for teaching 'tall' with clear size contrast and focused arrow on a clean background.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:24+00:00"
+      "reviewed_at": "2026-05-25T04:44:31+00:00"
     }
   },
   "short": {
@@ -57,14 +57,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/short.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Perfect clarity and focus for a 4-year-old",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:26+00:00"
+      "reviewed_at": "2026-05-25T04:44:34+00:00"
     }
   },
   "long": {
@@ -74,14 +74,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/long.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfect clarity and focus on the 'long' concept with no distractions, meeting all criteria for a 4-year-old learner.",
+      "reason": "Perfect clarity and focus for a 4-year-old",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:28+00:00"
+      "reviewed_at": "2026-05-25T04:44:36+00:00"
     }
   },
   "round": {
@@ -91,14 +91,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/round.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfectly meets all criteria: clear round shape, simple background, no distractions, age-appropriate style",
+      "reason": "Perfectly meets all criteria for a 4-year-old learner: clear round shape, simple red circle on plain pastel background, bright yellow arrow draws instant focus, no distractions, warm and friendly style, technically flawless with crisp edges and no artifacts.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:30+00:00"
+      "reviewed_at": "2026-05-25T04:44:39+00:00"
     }
   },
   "square": {
@@ -108,14 +108,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/square.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfect for 4-year-old: clear square, simple, no distractions, warm style",
+      "reason": "Perfect for 4-year-old: clear square, simple arrow, no distractions, bright colors, centered subject, age-appropriate style",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:32+00:00"
+      "reviewed_at": "2026-05-25T04:44:41+00:00"
     }
   },
   "fast": {
@@ -125,14 +125,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/fast.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfect for 4-year-old: clear cheetah, obvious speed arrow, simple pastel background, no distractions, instantly teaches 'fast'.",
+      "reason": "Perfect for 4-year-old: clear cheetah, obvious speed, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:35+00:00"
+      "reviewed_at": "2026-05-25T04:44:43+00:00"
     }
   },
   "slow": {
@@ -142,14 +142,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/slow.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, simple turtle on plain pastel background with no distractions, perfectly matching the 'slow' concept for a 4-year-old.",
+      "reason": "Perfectly meets all criteria for a 4-year-old learner.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:38+00:00"
+      "reviewed_at": "2026-05-25T04:44:46+00:00"
     }
   },
   "wide": {
@@ -159,14 +159,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/wide.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfect clarity and focus on the 'wide' concept with no distractions, meeting all criteria for a 4-year-old.",
+      "reason": "Perfect clarity and focus for a 4-year-old",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:41+00:00"
+      "reviewed_at": "2026-05-25T04:44:48+00:00"
     }
   },
   "narrow": {
@@ -176,14 +176,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/adjectives/narrow.png",
-    "generated_at": "2026-05-25T04:26:10+00:00",
+    "generated_at": "2026-05-25T04:49:32+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Perfect clarity and focus on the target concept with no distractions, meeting all criteria for a 4-year-old learner.",
+      "reason": "Perfect clarity and focus for a 4-year-old",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:43+00:00"
+      "reviewed_at": "2026-05-25T04:44:50+00:00"
     }
   }
 }

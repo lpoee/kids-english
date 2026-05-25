@@ -162,13 +162,13 @@ FLASHCARD_FOOD_NEGATIVE = (
     "cartoon, illustration, animation, drawing, painting, sketch, 3d render"
 )
 
-# Body-part cards must be macro photography with NO children, NO faces, NO people.
+# Body-part cards must be cute cartoon educational diagrams — NO realism, NO faces, NO people.
 FLASHCARD_BODY_NEGATIVE = (
     "text, watermark, logo, border, frame, collage, split screen, grid, "
     "multi-panel layout, poster, child, children, kid, person, face, people, human, "
-    "jewelry, hat, glasses, realistic skin texture, photographic lighting, "
-    "cartoon, illustration, animation, drawing, painting, sketch, 3d render, "
-    "toy, doll, mannequin, plastic, puppet"
+    "realistic photo, photography, photograph, photographic, photorealistic, macro, close-up, "
+    "realistic skin texture, photographic lighting, skin pores, hair follicle, "
+    "toy, doll, mannequin, plastic, puppet, 3d render, CGI, hyperrealistic"
 )
 
 # Home-object cards must be product photography with NO children, NO people.
@@ -328,45 +328,59 @@ def food_prompt_module(slug: str, desc: str) -> str:
 
 
 def body_prompt_module(label: str) -> str:
-    """Macro photography prompts for body parts — NO illustration/cartoon style."""
+    """Cute cartoon educational diagram prompts for body parts — NO realism, NO faces."""
     label_lower = label.lower()
-    body_macro_prompts = {
+    body_diagram_prompts = {
         "eye": (
-            "A close-up macro photograph of a single human eye, iris detail clearly visible, "
-            "studio lighting, on plain pastel blue background, no face, no other features, just one eye isolated"
+            "A simple cute flat vector diagram of a single human eye with iris and pupil, "
+            "children's educational style, soft rounded shapes, gentle pastel colors, "
+            "thick clean outlines, no face, no realism, no photograph, "
+            "isolated on plain soft background"
         ),
         "ear": (
-            "A close-up macro photograph of a single human ear, studio lighting, "
-            "on plain pastel background, no face, no head shape, isolated ear only"
+            "A simple cute flat vector diagram of a single human ear, "
+            "children's educational style, soft rounded shapes, gentle pastel colors, "
+            "thick clean outlines, no face, no head silhouette, no realism, "
+            "isolated on plain soft background"
         ),
         "nose": (
-            "A close-up photograph of a single human nose, studio lighting, "
-            "on plain pastel background, no face, no eyes, no mouth, isolated nose only"
+            "A simple cute flat vector diagram of a single human nose, "
+            "children's educational style, soft rounded shapes, gentle pastel colors, "
+            "thick clean outlines, no face, no eyes, no realism, "
+            "isolated on plain soft background"
         ),
         "mouth": (
-            "A close-up macro photograph of a single child's mouth with lips only, "
-            "smooth soft natural skin, no teeth visible, no facial hair, no skin texture, "
-            "studio lighting, on plain pastel background, no face, no eyes, no nose, isolated mouth only"
+            "A simple cute flat vector diagram of a single human mouth with lips, "
+            "children's educational style, soft rounded shapes, gentle pastel colors, "
+            "thick clean outlines, no face, no teeth, no realism, "
+            "isolated on plain soft background"
         ),
         "hand": (
-            "A photograph of a single open human hand, palm facing camera, studio lighting, "
-            "on plain pastel background, no arm, no wrist, no face, isolated hand only"
+            "A simple cute flat vector diagram of a single open human hand, "
+            "children's educational style, soft rounded shapes, gentle pastel colors, "
+            "thick clean outlines, no arm, no realism, "
+            "isolated on plain soft background"
         ),
         "foot": (
-            "A macro photograph of a single child's foot, side view, clean smooth natural skin, "
-            "soft natural skin tone, studio lighting, "
-            "on plain pastel background, no leg, no ankle, no person, isolated foot only"
+            "A simple cute flat vector diagram of a single human foot, "
+            "children's educational style, soft rounded shapes, gentle pastel colors, "
+            "thick clean outlines, no leg, no realism, "
+            "isolated on plain soft background"
         ),
         "arm": (
-            "A photograph of a single human arm from shoulder to hand, studio lighting, "
-            "on plain pastel background, no face, no torso, isolated arm only"
+            "A simple cute flat vector diagram of a single human arm, "
+            "children's educational style, soft rounded shapes, gentle pastel colors, "
+            "thick clean outlines, no torso, no realism, "
+            "isolated on plain soft background"
         ),
     }
-    if label_lower in body_macro_prompts:
-        return body_macro_prompts[label_lower]
+    if label_lower in body_diagram_prompts:
+        return body_diagram_prompts[label_lower]
     return (
-        f"A close-up macro photograph of a single human {label_lower}, studio lighting, "
-        "on plain pastel background, no face, no person, isolated"
+        f"A simple cute flat vector educational diagram of a single human {label_lower}, "
+        "children's book diagram style, soft rounded shapes, gentle pastel colors, "
+        "thick clean outlines, no face, no realism, no photograph, no person, "
+        "isolated on plain pastel background, simple and instantly recognizable for a 4-year-old"
     )
 
 
