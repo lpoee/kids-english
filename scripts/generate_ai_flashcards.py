@@ -416,13 +416,21 @@ def phrase_shared_base(label: str, desc: str) -> str:
         f"{FLASHCARD_STYLE}Create a clear scene illustration for a kids English flashcard. "
         f"The sentence to teach is '{label}'. "
         f"Show this literally in one easy-to-read moment: {desc}. "
+        "Draw one cute simple Chinese toddler with a clear round face, big expressive eyes, "
+        "and a small simple body. Keep the character design minimal and readable — "
+        "no detailed clothing, no complex hair, no realistic proportions. "
     )
 
 
 def phrase_scene_module() -> str:
     return (
-        "Use Chinese children. If more than one person is needed, use a Chinese parent and child so the toddler can understand instantly. "
-        "Keep the scene simple, with no background clutter, and make the key action or feeling obvious. "
+        "The main character must be a cute simple Chinese toddler with black hair, "
+        "round face, and big friendly eyes. "
+        "If a second person is shown, make them a Chinese parent — taller, clearly adult. "
+        "Keep the scene extremely simple: plain pastel background, no furniture, no decorations, "
+        "no outdoor scenery unless essential to the action. "
+        "Make the key action exaggerated and obvious — big gestures, clear body language — "
+        "so a 4-year-old understands the meaning instantly without reading any text. "
         f"{FLASHCARD_NEGATIVE}"
     )
 
