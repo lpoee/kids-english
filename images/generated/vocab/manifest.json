@@ -6,14 +6,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cat.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute cat, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:06+00:00"
+      "reviewed_at": "2026-05-25T16:37:13+00:00"
     }
   },
   "dog": {
@@ -23,14 +23,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/dog.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute dog, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:08+00:00"
+      "reviewed_at": "2026-05-25T16:37:15+00:00"
     }
   },
   "bird": {
@@ -40,14 +40,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bird.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, cute bird with simple shapes and bright colors, perfectly centered and isolated on a plain background, ideal for a 4-year-old's vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:11+00:00"
+      "reviewed_at": "2026-05-25T16:37:18+00:00"
     }
   },
   "lion": {
@@ -57,14 +57,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/lion.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute lion, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:13+00:00"
+      "reviewed_at": "2026-05-25T16:37:20+00:00"
     }
   },
   "monkey": {
@@ -74,14 +74,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/monkey.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute monkey, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:15+00:00"
+      "reviewed_at": "2026-05-25T16:37:22+00:00"
     }
   },
   "rabbit": {
@@ -91,14 +91,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/rabbit.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Perfectly meets all criteria for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:17+00:00"
+      "reviewed_at": "2026-05-25T16:37:24+00:00"
     }
   },
   "elephant": {
@@ -108,14 +108,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/elephant.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute elephant, perfectly centered, no distractions, ideal for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:19+00:00"
+      "reviewed_at": "2026-05-25T16:37:27+00:00"
     }
   },
   "bear": {
@@ -125,14 +125,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bear.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute bear, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:22+00:00"
+      "reviewed_at": "2026-05-25T16:37:29+00:00"
     }
   },
   "fish": {
@@ -142,14 +142,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/fish.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Perfectly meets all criteria for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:24+00:00"
+      "reviewed_at": "2026-05-25T16:37:31+00:00"
     }
   },
   "frog": {
@@ -159,14 +159,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/frog.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute frog, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:26+00:00"
+      "reviewed_at": "2026-05-25T16:37:33+00:00"
     }
   },
   "duck": {
@@ -176,14 +176,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/duck.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute duck, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:28+00:00"
+      "reviewed_at": "2026-05-25T16:37:36+00:00"
     }
   },
   "pig": {
@@ -193,14 +193,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/pig.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute pig, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:30+00:00"
+      "reviewed_at": "2026-05-25T16:37:38+00:00"
     }
   },
   "cow": {
@@ -210,14 +210,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cow.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute cow, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:33+00:00"
+      "reviewed_at": "2026-05-25T16:37:40+00:00"
     }
   },
   "horse": {
@@ -227,14 +227,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/horse.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute, focused horse illustration perfect for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:35+00:00"
+      "reviewed_at": "2026-05-25T16:37:42+00:00"
     }
   },
   "sheep": {
@@ -244,14 +244,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/sheep.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, cute sheep, instantly recognizable, no distractions",
+      "reason": "Clear, cute sheep with no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:37+00:00"
+      "reviewed_at": "2026-05-25T16:37:45+00:00"
     }
   },
   "chicken": {
@@ -261,14 +261,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/chicken.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute chicken, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:39+00:00"
+      "reviewed_at": "2026-05-25T16:37:47+00:00"
     }
   },
   "tiger": {
@@ -278,14 +278,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/tiger.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute tiger, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:42+00:00"
+      "reviewed_at": "2026-05-25T16:37:49+00:00"
     }
   },
   "panda": {
@@ -295,14 +295,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/panda.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, cute panda with no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:44+00:00"
+      "reviewed_at": "2026-05-25T16:37:51+00:00"
     }
   },
   "turtle": {
@@ -312,14 +312,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/turtle.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, cute turtle, instantly recognizable, no distractions",
+      "reason": "Clear, cute turtle, instantly recognizable, no distractions, perfect for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:46+00:00"
+      "reviewed_at": "2026-05-25T16:37:53+00:00"
     }
   },
   "butterfly": {
@@ -329,14 +329,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/butterfly.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, cute butterfly with simple shapes and bright colors on a plain background, perfectly focused on the target concept.",
+      "reason": "Clear, cute butterfly with simple shapes and bright colors on a plain background, perfectly focused for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:49+00:00"
+      "reviewed_at": "2026-05-25T16:37:56+00:00"
     }
   },
   "apple": {
@@ -346,14 +346,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/apple.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, centered red apple on plain background, no distractions, concept instantly recognizable for a child.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:51+00:00"
+      "reviewed_at": "2026-05-25T16:37:58+00:00"
     }
   },
   "banana": {
@@ -363,14 +363,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/banana.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, focused banana on plain background, no distractions, child-friendly",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:53+00:00"
+      "reviewed_at": "2026-05-25T16:38:00+00:00"
     }
   },
   "orange": {
@@ -380,14 +380,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/orange.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, centered orange with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+      "reason": "Clear, centered orange on plain background, no distractions, perfect for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:55+00:00"
+      "reviewed_at": "2026-05-25T16:38:02+00:00"
     }
   },
   "grape": {
@@ -397,14 +397,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/grape.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused image of a single grape bunch with no distractions, perfectly meeting the requirements for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:57+00:00"
+      "reviewed_at": "2026-05-25T16:38:04+00:00"
     }
   },
   "pear": {
@@ -414,14 +414,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/pear.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:47:59+00:00"
+      "reviewed_at": "2026-05-25T16:38:06+00:00"
     }
   },
   "watermelon": {
@@ -431,14 +431,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/watermelon.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, centered, and focused on a single watermelon with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:02+00:00"
+      "reviewed_at": "2026-05-25T16:38:08+00:00"
     }
   },
   "strawberry": {
@@ -448,14 +448,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/strawberry.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:04+00:00"
+      "reviewed_at": "2026-05-25T16:38:10+00:00"
     }
   },
   "cherry": {
@@ -465,14 +465,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cherry.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "reason": "Clear, focused, and child-friendly with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:06+00:00"
+      "reviewed_at": "2026-05-25T16:38:12+00:00"
     }
   },
   "peach": {
@@ -482,14 +482,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/peach.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:08+00:00"
+      "reviewed_at": "2026-05-25T16:38:15+00:00"
     }
   },
   "mango": {
@@ -499,14 +499,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/mango.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, centered mango with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:10+00:00"
+      "reviewed_at": "2026-05-25T16:38:17+00:00"
     }
   },
   "pineapple": {
@@ -516,14 +516,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/pineapple.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused pineapple illustration with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:12+00:00"
+      "reviewed_at": "2026-05-25T16:38:19+00:00"
     }
   },
   "lemon": {
@@ -533,14 +533,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/lemon.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear lemon image, no distractions, child-friendly",
+      "reason": "Clear lemon image, high quality, no distractions, perfectly centered and isolated for a 4-year-old learner",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:14+00:00"
+      "reviewed_at": "2026-05-25T16:38:21+00:00"
     }
   },
   "bread": {
@@ -550,14 +550,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bread.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused bread loaf with no distractions, perfectly meeting all criteria for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:16+00:00"
+      "reviewed_at": "2026-05-25T16:38:23+00:00"
     }
   },
   "cake": {
@@ -567,14 +567,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cake.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and age-appropriate birthday cake image with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:19+00:00"
+      "reviewed_at": "2026-05-25T16:38:25+00:00"
     }
   },
   "cookie": {
@@ -584,14 +584,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cookie.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, focused image of a cookie with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:21+00:00"
+      "reviewed_at": "2026-05-25T16:38:27+00:00"
     }
   },
   "milk": {
@@ -601,14 +601,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/milk.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
-      "score": 100,
-      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "score": 95,
+      "reason": "Clear, centered glass of milk on plain pastel background with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:23+00:00"
+      "reviewed_at": "2026-05-25T16:38:30+00:00"
     }
   },
   "egg": {
@@ -618,14 +618,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/egg.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:25+00:00"
+      "reviewed_at": "2026-05-25T16:38:32+00:00"
     }
   },
   "cheese": {
@@ -635,14 +635,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cheese.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, focused cheese wedge with no distractions",
+      "reason": "Clear, focused cheese wedge with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:27+00:00"
+      "reviewed_at": "2026-05-25T16:38:34+00:00"
     }
   },
   "rice": {
@@ -652,14 +652,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/rice.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, focused image of rice in a bowl with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:29+00:00"
+      "reviewed_at": "2026-05-25T16:38:36+00:00"
     }
   },
   "water": {
@@ -669,14 +669,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/water.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:31+00:00"
+      "reviewed_at": "2026-05-25T16:38:39+00:00"
     }
   },
   "candy": {
@@ -686,14 +686,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/candy.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, focused candy image with no distractions, perfectly meeting the single-object requirement for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:33+00:00"
+      "reviewed_at": "2026-05-25T16:38:41+00:00"
     }
   },
   "ice_cream": {
@@ -703,14 +703,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/ice_cream.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, centered ice cream cone with no distractions, easily recognizable for a child.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:35+00:00"
+      "reviewed_at": "2026-05-25T16:38:43+00:00"
     }
   },
   "eye": {
@@ -720,14 +720,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/eye.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple eye diagram with soft pastel colors and thick outlines, perfectly focused on the concept with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:37+00:00"
+      "reviewed_at": "2026-05-25T16:38:45+00:00"
     }
   },
   "ear": {
@@ -737,14 +737,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/ear.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple ear diagram with soft colors and clean lines, perfectly focused on the concept with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:40+00:00"
+      "reviewed_at": "2026-05-25T16:38:47+00:00"
     }
   },
   "nose": {
@@ -754,14 +754,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/nose.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple nose shape with soft colors and clean outline, perfectly focused on the concept with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:42+00:00"
+      "reviewed_at": "2026-05-25T16:38:49+00:00"
     }
   },
   "mouth": {
@@ -771,14 +771,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/mouth.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple mouth shape with soft pastel colors and clean outlines, perfectly focused on the concept with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:44+00:00"
+      "reviewed_at": "2026-05-25T16:38:52+00:00"
     }
   },
   "hand": {
@@ -788,14 +788,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/hand.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, simple, and perfectly suited for a 4-year-old",
+      "reason": "Clear, simple, and perfectly suited for a 4-year-old. No distractions, high quality, and concept is instantly understandable.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:46+00:00"
+      "reviewed_at": "2026-05-25T16:38:54+00:00"
     }
   },
   "foot": {
@@ -805,14 +805,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/foot.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple foot illustration with soft colors and clean lines, perfectly focused for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:48+00:00"
+      "reviewed_at": "2026-05-25T16:38:56+00:00"
     }
   },
   "head": {
@@ -822,14 +822,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/head.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple, and friendly child face with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:50+00:00"
+      "reviewed_at": "2026-05-25T16:38:58+00:00"
     }
   },
   "arm": {
@@ -839,14 +839,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/arm.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple arm shape with soft colors and clean lines on a plain background, perfectly suited for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:52+00:00"
+      "reviewed_at": "2026-05-25T16:39:00+00:00"
     }
   },
   "bed": {
@@ -856,14 +856,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bed.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, simple, focused image of a bed with no distractions or competing elements for a 4-year-old learner.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:54+00:00"
+      "reviewed_at": "2026-05-25T16:39:02+00:00"
     }
   },
   "chair": {
@@ -873,14 +873,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/chair.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple chair illustration with no distractions, perfectly centered for instant recognition by a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:57+00:00"
+      "reviewed_at": "2026-05-25T16:39:05+00:00"
     }
   },
   "table": {
@@ -890,14 +890,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/table.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, simple, focused image of a table with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:48:59+00:00"
+      "reviewed_at": "2026-05-25T16:39:07+00:00"
     }
   },
   "door": {
@@ -907,14 +907,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/door.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple door image with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:01+00:00"
+      "reviewed_at": "2026-05-25T16:39:09+00:00"
     }
   },
   "window": {
@@ -924,14 +924,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/window.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:04+00:00"
+      "reviewed_at": "2026-05-25T16:39:11+00:00"
     }
   },
   "cup": {
@@ -941,14 +941,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cup.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:06+00:00"
+      "reviewed_at": "2026-05-25T16:39:13+00:00"
     }
   },
   "spoon": {
@@ -958,14 +958,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/spoon.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, centered spoon on plain background, no distractions, child-friendly style",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:08+00:00"
+      "reviewed_at": "2026-05-25T16:39:16+00:00"
     }
   },
   "clock": {
@@ -975,184 +975,184 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/clock.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
       "reason": "Clear, simple clock on plain background, instantly recognizable, no distractions, perfect for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:10+00:00"
+      "reviewed_at": "2026-05-25T16:39:18+00:00"
     }
   },
   "eat": {
     "label": "Eat",
     "query": "child eating food photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Eat'. Scene: child eating food. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Eat'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/eat.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused image of a child eating with no distractions.",
+      "reason": "Clear concept, high quality, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:12+00:00"
+      "reviewed_at": "2026-05-25T16:39:20+00:00"
     }
   },
   "drink": {
     "label": "Drink",
     "query": "child drinking water photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Drink'. Scene: child drinking water. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Drink'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/drink.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused illustration of a child drinking water with no distractions.",
+      "reason": "Clear concept, high quality, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:15+00:00"
+      "reviewed_at": "2026-05-25T16:39:22+00:00"
     }
   },
   "sleep": {
     "label": "Sleep",
     "query": "sleeping child photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Sleep'. Scene: sleeping child. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Sleep'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/sleep.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, simple, and focused illustration of a child sleeping with no distractions.",
+      "score": 100,
+      "reason": "Clear, cute child illustration with simple pose and no distractions, perfectly suited for a 4-year-old learning English.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:17+00:00"
+      "reviewed_at": "2026-05-25T16:39:25+00:00"
     }
   },
   "run": {
     "label": "Run",
     "query": "running child photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Run'. Scene: running child. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Run'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/run.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused image of a child running with no distractions.",
+      "reason": "Clear, cute child running with no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:19+00:00"
+      "reviewed_at": "2026-05-25T16:39:27+00:00"
     }
   },
   "jump": {
     "label": "Jump",
     "query": "jumping child photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Jump'. Scene: jumping child. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Jump'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/jump.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused image of a child jumping with no distractions.",
+      "reason": "Clear jumping action, child is centered and obvious, no distractions, warm and friendly style",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:21+00:00"
+      "reviewed_at": "2026-05-25T16:39:30+00:00"
     }
   },
   "walk": {
     "label": "Walk",
     "query": "walking child photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Walk'. Scene: walking child. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Walk'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/walk.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused illustration of a child walking with no distractions.",
+      "reason": "Clear walking action, child is centered and obvious, no distractions, warm and friendly style",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:23+00:00"
+      "reviewed_at": "2026-05-25T16:39:32+00:00"
     }
   },
   "sit": {
     "label": "Sit",
     "query": "sitting child photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Sit'. Scene: sitting child. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Sit'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/sit.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused illustration of a child sitting with no distractions.",
+      "reason": "Clear, cute child sitting with big obvious motion, no distractions, high quality and child-friendly style",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:25+00:00"
+      "reviewed_at": "2026-05-25T16:39:34+00:00"
     }
   },
   "stand": {
     "label": "Stand",
     "query": "standing child photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Stand'. Scene: standing child. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Stand'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/stand.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, simple, and focused illustration of a child standing with no distractions.",
+      "score": 100,
+      "reason": "Perfect for 4-year-old: clear standing pose, cute style, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:28+00:00"
+      "reviewed_at": "2026-05-25T16:39:37+00:00"
     }
   },
   "clap": {
     "label": "Clap",
     "query": "clapping hands photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Clap'. Scene: clapping hands. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Clap'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/clap.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, centered child clapping with no distractions, warm and simple style suitable for a 4-year-old.",
+      "reason": "Clear, cute, focused child doing the exact action with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:30+00:00"
+      "reviewed_at": "2026-05-25T16:39:39+00:00"
     }
   },
   "wave": {
     "label": "Wave",
     "query": "waving hand photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout. A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action 'Wave'. Scene: waving hand. Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. Use a clear side-view cartoon composition so the motion reads instantly. Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. Keep the action itself as the only thing that matters.",
+    "prompt": "Create one high-quality square cute children's animation illustration for a kids English learning app. Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. Make it instantly recognizable to a 4-year-old. The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. A single cute Chinese toddler performing the action 'Wave'. Full body visible, centered, plain pastel background. Show the child clearly doing the action \u2014 big obvious motion. No other people, no props unless essential, no text. No text, no letters, no words, no numbers, no alphabet, no writing, no captions, no labels, no titles, no headings, no typography, no fonts, no dialogue bubbles, no speech bubbles, no thought bubbles, no watermark, no logo, no signature, no brand name, no border, no frame, no collage, no split screen, no framed picture grid, no multi-panel layout, no comic panel, no storybook page layout.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/wave.png",
-    "generated_at": "2026-05-25T14:58:47+00:00",
+    "generated_at": "2026-05-25T16:39:42+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, simple, and focused on the waving action with a friendly child character and no distractions.",
+      "score": 100,
+      "reason": "Perfect for 4-year-old: clear waving action, simple background, cute style, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-25T04:49:32+00:00"
+      "reviewed_at": "2026-05-25T16:39:42+00:00"
     }
   }
 }

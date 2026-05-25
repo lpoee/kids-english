@@ -113,14 +113,16 @@ FOOD_FLASHCARD_STYLE = (
 
 FLASHCARD_NEGATIVE = (
     "No text, no letters, no words, no numbers, no alphabet, no writing, no captions, "
-    "no labels, no dialogue bubbles, no speech bubbles, no thought bubbles, "
+    "no labels, no titles, no headings, no typography, no fonts, "
+    "no dialogue bubbles, no speech bubbles, no thought bubbles, "
     "no watermark, no logo, no signature, no brand name, "
     "no border, no frame, no collage, no split screen, no framed picture grid, "
     "no multi-panel layout, no comic panel, no storybook page layout."
 )
 
 FLASHCARD_ARTIFACT_NEGATIVE = (
-    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "text, letters, words, alphabet, writing, captions, labels, titles, headings, "
+    "typography, font, watermark, logo, border, frame, collage, split screen, grid, "
     "multi-panel layout, repeated subject, duplicate subject, poster"
 )
 
@@ -132,7 +134,8 @@ FLASHCARD_ADJ_NEGATIVE = (
 
 # Action cards need a person, but still must forbid duplicate figures, poster layouts, and text.
 FLASHCARD_ACTION_NEGATIVE = (
-    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "text, letters, words, alphabet, writing, captions, labels, titles, headings, "
+    "typography, font, watermark, logo, border, frame, collage, split screen, grid, "
     "multi-panel layout, duplicate person, duplicate child, repeated figure, poster"
 )
 
@@ -1197,7 +1200,14 @@ def word_prompt(slug: str, query: str) -> str:
     if slug in HOME_WORDS:
         return home_object_prompt_module(label)
     if slug in ACTION_WORDS:
-        return f"{shared}{action_prompt_module(label, desc)}"
+        return (
+            f"{FLASHCARD_STYLE}"
+            f"A single cute Chinese toddler performing the action '{label}'. "
+            f"Full body visible, centered, plain pastel background. "
+            f"Show the child clearly doing the action — big obvious motion. "
+            f"No other people, no props unless essential, no text. "
+            f"{FLASHCARD_NEGATIVE}"
+        )
     return f"{shared}{generic_vocab_prompt_module(desc)}"
 
 
