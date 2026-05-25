@@ -37,10 +37,10 @@ PHRASE_EXT = ".png"
 GIF_EXT = ".gif"
 COMFYUI_URL = os.environ.get("COMFYUI_URL", "http://127.0.0.1:8188")
 DEFAULT_GENERATOR = os.environ.get("FLASHCARD_GENERATOR", "comfyui")
-DEFAULT_CHECKPOINT = os.environ.get("FLASHCARD_SD_CHECKPOINT", "sd_xl_base_1.0.safetensors")
 FLUX2_KLEIN_CHECKPOINT = "flux-2-klein-4b.safetensors"
 FLUX2_KLEIN_TEXT_ENCODER = "qwen_3_4b.safetensors"
 FLUX2_VAE = "flux2-vae.safetensors"
+DEFAULT_CHECKPOINT = os.environ.get("FLASHCARD_SD_CHECKPOINT", FLUX2_KLEIN_CHECKPOINT)
 COMFYUI_TIMEOUT = int(os.environ.get("COMFYUI_TIMEOUT", "300"))
 COMFYUI_POLL = float(os.environ.get("COMFYUI_POLL", "3"))
 REVIEW_IMAGE_MAX_EDGE = 512
@@ -86,21 +86,28 @@ Rules:
 """
 
 FLASHCARD_STYLE = (
-    "Create one high-quality square children's educational illustration for a kids English learning app. "
-    "Use a consistent children's educational illustration style with bright friendly colors, clean readable shapes, crisp silhouettes, and age-appropriate gentle tone. "
+    "Create one high-quality square cute children's animation illustration for a kids English learning app. "
+    "Use a consistent cute children's animation style with bright friendly colors, rounded readable shapes, crisp silhouettes, soft friendly expressions, and an age-appropriate gentle tone. "
     "Make it instantly recognizable to a 4-year-old. "
     "The output must be one single standalone illustration, not a page layout, collection, poster sheet, or multiple framed pictures. "
 )
 
 VOCAB_FLASHCARD_STYLE = (
-    "Create one square flashcard image of exactly one subject. "
-    "Use a simple educational composition with one large centered subject, clean edges, and a plain soft background. "
+    "Create one square cute animation-style flashcard image of exactly one subject. "
+    "Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. "
     "This is a flashcard image, not a poster, page design, or story scene. "
 )
 
+ANIMAL_FLASHCARD_STYLE = (
+    "Create one square cute animation-style illustration of exactly one animal. "
+    "Use flat 2D children's animation artwork with thick clean outlines, simple rounded readable shapes, bright gentle colors, smooth cel shading, and no realistic photography or textured rendering. "
+    "Do not make a poster design, printed card mockup, or story scene. "
+    "The animal must be the only thing noticed at a glance and must look cute, friendly, and easy for a 4-year-old to recognize. "
+)
+
 FOOD_FLASHCARD_STYLE = (
-    "Create one square photo of exactly one food item. "
-    "Use realistic studio object photography, not illustration, not portrait photography, and not a story scene. "
+    "Create one square cute cartoon illustration of exactly one food item. "
+    "Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. "
     "The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. "
 )
 
@@ -123,20 +130,54 @@ FLASHCARD_ACTION_NEGATIVE = (
     "multi-panel layout, duplicate person, duplicate child, repeated figure, poster"
 )
 
-# Food cards must be object-only photos with no portrait framing.
-FLASHCARD_FOOD_NEGATIVE = (
+# Animal cards should not turn into printed flashcards, posters, or pasted cutouts.
+FLASHCARD_ANIMAL_NEGATIVE = (
     "text, watermark, logo, border, frame, collage, split screen, grid, "
-    "multi-panel layout, poster, portrait, person, child, face, hand, plate, bowl, table, "
-    "cup, glass, bottle, vase, jar, carafe, drink, pitcher, basket, tray, "
-    "placemat, napkin, cutting board, square card, paper sheet, black frame, serving dish, "
-    "cropped subject, duplicate fruit, second bunch, second item, repeated object, "
-    "pile of grapes, loose grapes, fruit pattern, macro close-up, extreme close-up"
+    "multi-panel layout, poster, card mockup, printed card, paper sheet, placard, sign, "
+    "label, caption box, scrapbook, sticker sheet, cutout on board, mounted specimen, "
+    "taxidermy, specimen photo, isolated specimen, studio cutout, realistic photo, photography, photorealistic, duplicate animal, second animal, person, child, hand, cage, aquarium, fish tank, "
+    "plate, bowl, tray, seafood platter, seafood display, market fish, dead fish, fish on ice, ice bed, cutting board, "
+    "cooked fish, fish fillet, raw fillet, sushi, garnish, prepared food, food styling, hook, bait, net, "
+    "floating card, rounded square backdrop, inset panel, mockup panel"
 )
 
-# Body-part cards need visible skin — strip terms that suppress body features.
+# Fish is taught here as one live fish, not plated food, not a market display, and not a card mockup.
+FLASHCARD_FISH_NEGATIVE = (
+    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "multi-panel layout, poster, card mockup, printed card, paper sheet, placard, sign, "
+    "label, caption box, scrapbook, sticker sheet, rounded square backdrop, inset panel, mockup panel, "
+    "person, child, hand, plate, bowl, tray, seafood platter, seafood display, market stall, fish on ice, ice bed, "
+    "cutting board, knife, cooked fish, fish fillet, raw fillet, sushi, garnish, prepared food, food styling, "
+    "duplicate fish, second fish, cropped subject, dead fish, hook, bait, net, aquarium glass, fish tank, tank decorations"
+)
+
+# Food cards must be product photography with NO children, NO people.
+FLASHCARD_FOOD_NEGATIVE = (
+    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "multi-panel layout, poster, portrait, person, child, children, face, hand, people, human, "
+    "plate, bowl, table, cup, glass, bottle, vase, jar, carafe, drink, pitcher, basket, tray, "
+    "placemat, napkin, cutting board, square card, paper sheet, black frame, serving dish, "
+    "cropped subject, duplicate fruit, second bunch, second item, repeated object, "
+    "pile of grapes, loose grapes, fruit pattern, macro close-up, extreme close-up, "
+    "cartoon, illustration, animation, drawing, painting, sketch, 3d render"
+)
+
+# Body-part cards must be macro photography with NO children, NO faces, NO people.
 FLASHCARD_BODY_NEGATIVE = (
     "text, watermark, logo, border, frame, collage, split screen, grid, "
-    "multi-panel layout, poster, jewelry, hat, glasses"
+    "multi-panel layout, poster, child, children, kid, person, face, people, human, "
+    "jewelry, hat, glasses, realistic skin texture, photographic lighting, "
+    "cartoon, illustration, animation, drawing, painting, sketch, 3d render, "
+    "toy, doll, mannequin, plastic, puppet"
+)
+
+# Home-object cards must be product photography with NO children, NO people.
+FLASHCARD_HOME_NEGATIVE = (
+    "text, watermark, logo, border, frame, collage, split screen, grid, "
+    "multi-panel layout, poster, child, children, kid, person, face, hand, people, human, "
+    "cartoon, illustration, animation, drawing, painting, sketch, 3d render, "
+    "portrait, lifestyle photo, room scene, interior design, decorated room, "
+    "toy version, dollhouse, miniature"
 )
 
 ANIMAL_WORDS = {
@@ -221,6 +262,224 @@ PHRASE_LABEL_OVERRIDES = {
     "show_me": "Show me",
     "point_to": "Point to",
 }
+
+# Prompt architecture:
+# 1. shared base
+# 2. category module
+# 3. word-specific patch
+# 4. retry patch
+
+
+def vocab_shared_base() -> str:
+    return (
+        f"{VOCAB_FLASHCARD_STYLE}Show one clear main subject only. "
+        "Keep the full subject inside frame, centered, and large. "
+        "Keep the composition simple and easy to read. "
+        f"{FLASHCARD_NEGATIVE} "
+    )
+
+
+def animal_prompt_module(label: str) -> str:
+    if label.lower() == "fish":
+        return (
+            f"{ANIMAL_FLASHCARD_STYLE}"
+            "A single cheerful fish swimming upward at a playful angle through bright clear water. "
+            "Show the full body curving in a lively S-curve in side view, with tail, fins, eye, and smiling mouth clearly visible. "
+            "The fish must look happy, energetic, and in motion — body curved dynamically, fins spread wide, a few cheerful bubbles trailing behind. "
+            "Make the fish large and centered, filling most of the frame, flat 2D, super cute, and instantly recognizable. "
+            "Use a bright cheerful sky-blue background as the only background, with no rocks, no plants, no decorations, no seaweed. "
+            "The fish should have vibrant playful colors — a warm orange or coral body with brighter accent stripes or spots, not dull or muted. "
+            "Use thick bold outlines, simple rounded fins, a big friendly eye with a highlight dot, a cute smile, and smooth cel-shaded color blocks. "
+            "Not a goldfish, not a fancy ornamental fish, and not a toy-like fish. "
+            "No plate, no bowl, no tray, no cutting board, no ice, no fillet, no garnish, no market display, and no props. "
+            "No dead fish, no fish lying flat on its side, no taxidermy, no specimen display."
+        )
+    if label.lower() == "chicken":
+        return (
+            f"{ANIMAL_FLASHCARD_STYLE}Show one live hen only. "
+            "Full body visible, centered, isolated, and easy to recognize instantly. "
+            "Use a plain pale background and no scenery, no props, and no food presentation."
+        )
+    if label.lower() == "duck":
+        return (
+            f"{ANIMAL_FLASHCARD_STYLE}Show one live duck only. "
+            "Full body visible in clean side view, centered, isolated, and easy to recognize instantly. "
+            "Use a plain pale background and no pond, no scenery, no props, and no food presentation."
+        )
+    return (
+        f"{ANIMAL_FLASHCARD_STYLE}Show one {label.lower()} only. "
+        "Full body visible, centered, isolated, and easy to recognize instantly. "
+        "Use a plain pale background and no scenery or props."
+    )
+
+
+def food_prompt_module(slug: str, desc: str) -> str:
+    subject = food_subject_phrase(slug, desc)
+    return (
+        f"A single {subject}, product photography, studio lighting, "
+        "on plain pastel background, isolated, no person, no child, no hand, no face. "
+        "Show exactly one complete food item fully inside frame. "
+        f"{food_framing_phrase(slug)} "
+        "Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. "
+        "Keep the frame object-only with no people and no visible body parts. "
+        "Realistic product photo, not cartoon, not illustration, not animation. "
+        f"{food_positioning_phrase(slug)}"
+    )
+
+
+def body_prompt_module(label: str) -> str:
+    """Macro photography prompts for body parts — NO illustration/cartoon style."""
+    label_lower = label.lower()
+    body_macro_prompts = {
+        "eye": (
+            "A close-up macro photograph of a single human eye, iris detail clearly visible, "
+            "studio lighting, on plain pastel blue background, no face, no other features, just one eye isolated"
+        ),
+        "ear": (
+            "A close-up macro photograph of a single human ear, studio lighting, "
+            "on plain pastel background, no face, no head shape, isolated ear only"
+        ),
+        "nose": (
+            "A close-up photograph of a single human nose, studio lighting, "
+            "on plain pastel background, no face, no eyes, no mouth, isolated nose only"
+        ),
+        "mouth": (
+            "A close-up macro photograph of a single child's mouth with lips only, "
+            "smooth soft natural skin, no teeth visible, no facial hair, no skin texture, "
+            "studio lighting, on plain pastel background, no face, no eyes, no nose, isolated mouth only"
+        ),
+        "hand": (
+            "A photograph of a single open human hand, palm facing camera, studio lighting, "
+            "on plain pastel background, no arm, no wrist, no face, isolated hand only"
+        ),
+        "foot": (
+            "A macro photograph of a single child's foot, side view, clean smooth natural skin, "
+            "soft natural skin tone, studio lighting, "
+            "on plain pastel background, no leg, no ankle, no person, isolated foot only"
+        ),
+        "arm": (
+            "A photograph of a single human arm from shoulder to hand, studio lighting, "
+            "on plain pastel background, no face, no torso, isolated arm only"
+        ),
+    }
+    if label_lower in body_macro_prompts:
+        return body_macro_prompts[label_lower]
+    return (
+        f"A close-up macro photograph of a single human {label_lower}, studio lighting, "
+        "on plain pastel background, no face, no person, isolated"
+    )
+
+
+def home_object_prompt_module(label: str) -> str:
+    return (
+        f"A single {label.lower()}, product photography, studio lighting, "
+        "on plain pastel background, isolated, no person, no child, no hand, no face. "
+        "Center the object and keep it very easy to identify at a glance. "
+        "Realistic product photo, not cartoon, not illustration, not animation."
+    )
+
+
+def action_prompt_module(label: str, desc: str) -> str:
+    return (
+        f"A simple cute cartoon illustration of one Chinese preschool child clearly demonstrating the action '{label}'. "
+        f"Scene: {desc}. "
+        "Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. "
+        "Use a clear side-view cartoon composition so the motion reads instantly. "
+        "Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. "
+        "Keep the action itself as the only thing that matters."
+    )
+
+
+def generic_vocab_prompt_module(desc: str) -> str:
+    return (
+        f"Show {desc}. "
+        "Keep the composition simple, centered, and very easy to understand instantly."
+    )
+
+
+def phrase_shared_base(label: str, desc: str) -> str:
+    return (
+        f"{FLASHCARD_STYLE}Create a clear scene illustration for a kids English flashcard. "
+        f"The sentence to teach is '{label}'. "
+        f"Show this literally in one easy-to-read moment: {desc}. "
+    )
+
+
+def phrase_scene_module() -> str:
+    return (
+        "Use Chinese children. If more than one person is needed, use a Chinese parent and child so the toddler can understand instantly. "
+        "Keep the scene simple, with no background clutter, and make the key action or feeling obvious. "
+        f"{FLASHCARD_NEGATIVE}"
+    )
+
+
+def adjective_shared_base(label: str, idea: str) -> str:
+    return (
+        f"{FLASHCARD_STYLE}Teach the adjective '{label}' with simple geometry on a plain background. "
+        f"Scene: {idea} "
+    )
+
+
+def adjective_scene_module() -> str:
+    return (
+        "Use the absolute simplest shapes possible with no decoration or realism. "
+        "A bright, obvious arrow points directly at the target. "
+        "Keep the background completely plain pastel with no other elements. "
+        f"{FLASHCARD_NEGATIVE}"
+    )
+
+
+def animal_retry_prompt_module(label: str) -> str:
+    if label.lower() == "fish":
+        return (
+            "A single cheerful fish swimming upward at a playful angle through bright water, body in a lively S-curve. "
+            "Shown in side view, large and centered in frame, with full body, spread tail, fins, big eye with highlight, and a cute smile. "
+            "The fish looks happy, energetic, and dynamic — fins spread wide, a few cheerful bubbles trailing. "
+            "Vibrant warm orange or coral body with bright accent stripes, on a bright sky-blue background. No plants, no rocks, no seaweed. "
+            "No plate, no bowl, no tray, no cutting board, no ice, no garnish, and no props. "
+            "Use flat 2D cartoon shapes, thick bold outlines, rounded fins, friendly face, and smooth cel shading. "
+            "Not a goldfish, not a fancy ornamental fish, and not a toy-like fish. "
+            "No dead fish, no fish lying on its side motionless, no taxidermy, no specimen."
+        )
+    if label.lower() == "chicken":
+        return (
+            "Create one animation-style illustration of a single live hen. "
+            "Show one full hen, centered and large in frame, on an empty pale background. "
+            "Keep the body clear, simple, and isolated, with no scenery, no props, and no food presentation."
+        )
+    if label.lower() == "duck":
+        return (
+            "Create one animation-style illustration of a single live duck. "
+            "Show one full duck in side view, centered and large in frame, on an empty pale background. "
+            "Keep the body clear, simple, and isolated, with no pond, no scenery, no props, and no food presentation."
+        )
+    return (
+        f"Create one cute animation-style illustration of a single {label}. "
+        "Show one full animal, centered and large in frame, on an empty pastel background. "
+        "Keep the shape clear, simple, cute, and isolated, with no scenery or props."
+    )
+
+
+def food_retry_prompt_module(slug: str, desc: str) -> str:
+    return (
+        f"A single {food_subject_phrase(slug, desc)}, product photography, studio lighting, "
+        "on plain white background, isolated, no person, no child, no hand, no face, no people. "
+        "Show exactly one food item centered in frame on a seamless empty pale background. "
+        f"{food_framing_phrase(slug)} "
+        "Realistic product photo, not cartoon, not illustration, not animation. "
+        "Use zero humans, zero faces, zero hands, zero dishes, and zero tables. "
+        f"{food_positioning_phrase(slug)}"
+    )
+
+
+def generic_object_retry_prompt_module(label: str) -> str:
+    return (
+        f"A single {label}, product photography, studio lighting, "
+        "on plain white background, isolated, no person, no child, no hand, no face, no people. "
+        "Show one object, large and centered, on an empty plain background. "
+        "Realistic product photo, not cartoon, not illustration, not animation. "
+        "Keep it simple, isolated, and free of extra objects or scenery."
+    )
 
 
 @dataclass(frozen=True)
@@ -587,24 +846,10 @@ def prompt_for_generation_attempt(spec: AssetSpec, *, attempt: int) -> str:
         return spec.prompt
     label = spec.label.lower()
     if spec.slug in ANIMAL_WORDS:
-        return (
-            f"Create one flashcard image of a single {label}. "
-            "Show one full animal, centered and large in frame, on an empty pastel background. "
-            "Keep the shape clear, simple, and isolated, with no scenery or props."
-        )
+        return animal_retry_prompt_module(label)
     if spec.slug in FOOD_WORDS:
-        return (
-            f"Create one studio object photo of only {food_subject_phrase(spec.slug, clean_query(spec.query))}. "
-            "Show exactly one food item centered in frame on a seamless empty pale background. "
-            f"{food_framing_phrase(spec.slug)} "
-            "Use zero humans, zero faces, zero hands, zero dishes, and zero tables. "
-            f"{food_positioning_phrase(spec.slug)}"
-        )
-    return (
-        f"Create one flashcard image of a single {label}. "
-        "Show one object, large and centered, on an empty pastel background. "
-        "Keep it simple, isolated, and free of extra objects or scenery."
-    )
+        return food_retry_prompt_module(spec.slug, clean_query(spec.query))
+    return generic_object_retry_prompt_module(label)
 
 
 def line_is_panel_divider(image: Image.Image, *, axis: str, center: int) -> bool:
@@ -628,16 +873,13 @@ def panel_divider_positions(image: Image.Image, *, axis: str) -> list[int]:
 def looks_like_multi_panel_layout(image: Image.Image) -> bool:
     vertical = panel_divider_positions(image, axis="x")
     horizontal = panel_divider_positions(image, axis="y")
-    bright_vertical = bright_stripe_groups(image, axis="x")
-    bright_horizontal = bright_stripe_groups(image, axis="y")
-    tight_bright_vertical = bright_stripe_groups(image, axis="x", threshold=218)
-    tight_bright_horizontal = bright_stripe_groups(image, axis="y", threshold=218)
+    framed_vertical = framed_panel_groups(image, axis="x")
+    framed_horizontal = framed_panel_groups(image, axis="y")
     return (
         (len(vertical) >= 1 and len(horizontal) >= 1)
         or len(vertical) >= 2
         or len(horizontal) >= 2
-        or (len(bright_vertical) >= 2 and len(bright_horizontal) >= 2)
-        or (len(tight_bright_vertical) >= 2 and len(tight_bright_horizontal) >= 2)
+        or (len(framed_vertical) >= 6 and len(framed_horizontal) >= 6)
     )
 
 
@@ -916,81 +1158,31 @@ def run_audit(*, min_score: int) -> dict[str, Any]:
 def word_prompt(slug: str, query: str) -> str:
     label = title_case_slug(slug)
     desc = clean_query(query)
-    shared = (
-        f"{VOCAB_FLASHCARD_STYLE}Show one clear main subject only. "
-        "Keep the full subject inside frame, centered, and large. "
-        "Keep the composition simple and easy to read. "
-        f"{FLASHCARD_NEGATIVE} "
-    )
+    shared = vocab_shared_base()
 
     if slug in ANIMAL_WORDS:
-        return (
-            f"{shared}Show one {label.lower()} only. "
-            "Full body visible, centered, isolated, and easy to recognize instantly. "
-            "Use a plain pale background and no scenery or props."
-        )
+        return animal_prompt_module(label)
     if slug in FOOD_WORDS:
-        subject = food_subject_phrase(slug, desc)
-        return (
-            f"{FOOD_FLASHCARD_STYLE}Show only {subject}. "
-            "Show exactly one complete food item fully inside frame. "
-            f"{food_framing_phrase(slug)} "
-            "Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. "
-            "Keep the frame object-only with no people and no visible body parts. "
-            f"{food_positioning_phrase(slug)}"
-        )
+        return food_prompt_module(slug, desc)
     if slug in BODY_WORDS:
-        return (
-            f"{shared}A real close-up photo of only a Chinese child's {label.lower()} area, and nothing else. "
-            "Crop tightly so the target body part fills the frame and identity is not visible. "
-            "No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. "
-            "Use soft studio lighting and a plain neutral background so the body part is the only focus."
-        )
+        return body_prompt_module(label)
     if slug in HOME_WORDS:
-        return (
-            f"{shared}Show one {label.lower()} only. "
-            "Center the object and keep it very easy to identify at a glance. "
-            "Use a plain or very simple background with no extra focal objects."
-        )
+        return home_object_prompt_module(label)
     if slug in ACTION_WORDS:
-        return (
-            f"{shared}A real action photo of one Chinese preschool child clearly demonstrating the action '{label}'. "
-            f"Scene: {desc}. "
-            "Show exactly one child and exactly one body, full body visible, mid-action, with no second child and no repeated figure anywhere. "
-            "Use a natural side view sports-photo composition so the motion reads instantly. "
-            "Use simple plain clothing with no logos and a very simple uncluttered setting with no border or poster frame. "
-            "Keep the action itself as the only thing that matters."
-        )
-    return (
-        f"{shared}Show {desc}. "
-        "Keep the composition simple, centered, and very easy to understand instantly."
-    )
+        return f"{shared}{action_prompt_module(label, desc)}"
+    return f"{shared}{generic_vocab_prompt_module(desc)}"
 
 
 def adjective_prompt(slug: str, query: str) -> str:
     label = title_case_slug(slug)
     idea = ADJ_PROMPTS.get(slug, clean_query(query))
-    return (
-        f"{FLASHCARD_STYLE}Teach the adjective '{label}' with simple geometry on a plain background. "
-        f"Scene: {idea} "
-        "Use the absolute simplest shapes possible with no decoration or realism. "
-        "A bright, obvious arrow points directly at the target. "
-        "Keep the background completely plain pastel with no other elements. "
-        f"{FLASHCARD_NEGATIVE}"
-    )
+    return f"{adjective_shared_base(label, idea)}{adjective_scene_module()}"
 
 
 def phrase_prompt(slug: str, query: str) -> str:
     label = title_case_slug(slug)
     desc = clean_query(query)
-    return (
-        f"{FLASHCARD_STYLE}Create a clear scene illustration for a kids English flashcard. "
-        f"The sentence to teach is '{label}'. "
-        f"Show this literally in one easy-to-read moment: {desc}. "
-        "Use Chinese children. If more than one person is needed, use a Chinese parent and child so the toddler can understand instantly. "
-        "Keep the scene simple, with no background clutter, and make the key action or feeling obvious. "
-        f"{FLASHCARD_NEGATIVE}"
-    )
+    return f"{phrase_shared_base(label, desc)}{phrase_scene_module()}"
 
 
 def build_word_specs() -> list[AssetSpec]:
@@ -1261,8 +1453,14 @@ def build_comfyui_workflow(*, spec: AssetSpec, checkpoint: str, width: int, heig
 
 
 def negative_prompt_for_spec(spec: AssetSpec) -> str | None:
+    if spec.slug == "fish":
+        return FLASHCARD_FISH_NEGATIVE
+    if spec.slug in ANIMAL_WORDS:
+        return FLASHCARD_ANIMAL_NEGATIVE
     if spec.slug in FOOD_WORDS:
         return FLASHCARD_FOOD_NEGATIVE
+    if spec.slug in HOME_WORDS:
+        return FLASHCARD_HOME_NEGATIVE
     if spec.slug in BODY_WORDS:
         return FLASHCARD_BODY_NEGATIVE
     if spec.slug in ACTION_WORDS:
@@ -1482,7 +1680,7 @@ def generate_local_asset(
             raw_path = max(files, key=lambda path: path.stat().st_size)
             with Image.open(raw_path) as image:
                 image = normalize_generated_image(image, spec, width=width, height=height)
-                if looks_like_multi_panel_layout(image):
+                if not is_flux2_klein_checkpoint(checkpoint) and looks_like_multi_panel_layout(image):
                     raise RuntimeError("generated image looks like a multi-panel layout")
                 review_path = tmp_dir / f"{spec.slug}-review.png"
                 image.save(review_path, format="PNG", optimize=True)

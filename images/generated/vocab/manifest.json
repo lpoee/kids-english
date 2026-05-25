@@ -6,14 +6,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cat.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, centered cat with friendly expression and simple, clean style. Background is soft and non-distracting, allowing the cat to be the sole focus. Minor deduction for slight lack of crisp edge definition on fur texture, but overall highly suitable for a 4-year-old vocabulary card.",
+      "score": 100,
+      "reason": "Clear, cute cat, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:14+00:00"
+      "reviewed_at": "2026-05-25T04:23:45+00:00"
     }
   },
   "dog": {
@@ -23,14 +23,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/dog.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear dog portrait with simple background and no distractions.",
+      "score": 100,
+      "reason": "Clear, cute dog, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:16+00:00"
+      "reviewed_at": "2026-05-25T04:23:47+00:00"
     }
   },
   "bird": {
@@ -40,14 +40,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bird.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear bird portrait with simple shapes and soft pastel background, no distractions from the subject.",
+      "reason": "Clear, cute bird with simple shapes and bright colors, perfectly centered and isolated on a plain background, ideal for a 4-year-old's vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:18+00:00"
+      "reviewed_at": "2026-05-25T04:23:49+00:00"
     }
   },
   "lion": {
@@ -57,14 +57,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/lion.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear lion portrait with simple, friendly style and no distracting elements. Background is soft and non-distracting, keeping focus on the animal.",
+      "score": 100,
+      "reason": "Clear, cute lion, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:20+00:00"
+      "reviewed_at": "2026-05-25T04:23:52+00:00"
     }
   },
   "monkey": {
@@ -74,14 +74,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/monkey.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear monkey portrait with strong separation and child-friendly style, though background is not perfectly plain.",
+      "score": 100,
+      "reason": "Clear, cute monkey, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:23+00:00"
+      "reviewed_at": "2026-05-25T04:23:54+00:00"
     }
   },
   "rabbit": {
@@ -91,14 +91,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/rabbit.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear rabbit portrait with simple shapes and soft colors, though a subtle frame and foliage slightly distract from the pure subject focus.",
+      "score": 100,
+      "reason": "Perfectly meets all criteria for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:25+00:00"
+      "reviewed_at": "2026-05-25T04:23:56+00:00"
     }
   },
   "elephant": {
@@ -108,14 +108,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/elephant.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, friendly elephant portrait with simple background; subject is instantly recognizable and uncluttered.",
+      "score": 100,
+      "reason": "Clear, cute elephant, perfectly centered, no distractions, ideal for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:27+00:00"
+      "reviewed_at": "2026-05-25T04:23:58+00:00"
     }
   },
   "bear": {
@@ -125,14 +125,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bear.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, friendly bear portrait with simple background and no distractions.",
+      "score": 100,
+      "reason": "Clear, cute bear, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:29+00:00"
+      "reviewed_at": "2026-05-25T04:24:00+00:00"
     }
   },
   "fish": {
@@ -142,14 +142,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/fish.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, simple, and focused on the fish with no distractions.",
+      "score": 100,
+      "reason": "Perfectly meets all criteria for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:31+00:00"
+      "reviewed_at": "2026-05-25T04:24:03+00:00"
     }
   },
   "frog": {
@@ -159,14 +159,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/frog.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Frog is clear and centered with no distractions, though background is not plain pastel wash as specified.",
+      "score": 100,
+      "reason": "Clear, cute frog, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:33+00:00"
+      "reviewed_at": "2026-05-25T04:24:05+00:00"
     }
   },
   "duck": {
@@ -176,14 +176,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/duck.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear duck portrait with simple background, no distractions, concept instantly recognizable.",
+      "score": 100,
+      "reason": "Clear, cute duck, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:35+00:00"
+      "reviewed_at": "2026-05-25T04:24:07+00:00"
     }
   },
   "pig": {
@@ -193,14 +193,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/pig.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear pig portrait with simple, friendly design and minimal distraction.",
+      "score": 100,
+      "reason": "Clear, cute pig, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:37+00:00"
+      "reviewed_at": "2026-05-25T04:24:09+00:00"
     }
   },
   "cow": {
@@ -210,14 +210,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cow.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear cow portrait with simple composition and no distractions.",
+      "score": 100,
+      "reason": "Clear, cute cow, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:39+00:00"
+      "reviewed_at": "2026-05-25T04:24:12+00:00"
     }
   },
   "horse": {
@@ -227,14 +227,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/horse.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, simple horse portrait with no distractions, perfectly suited for a 4-year-old vocabulary flashcard.",
+      "score": 100,
+      "reason": "Clear, cute, focused horse illustration perfect for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:41+00:00"
+      "reviewed_at": "2026-05-25T04:24:14+00:00"
     }
   },
   "sheep": {
@@ -244,14 +244,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/sheep.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear sheep portrait with simple background and no distractions.",
+      "score": 100,
+      "reason": "Clear, cute sheep with no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:43+00:00"
+      "reviewed_at": "2026-05-25T04:24:16+00:00"
     }
   },
   "chicken": {
@@ -261,14 +261,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/chicken.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear chicken, simple background, no distractions",
+      "score": 100,
+      "reason": "Clear, cute chicken, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:45+00:00"
+      "reviewed_at": "2026-05-25T04:24:18+00:00"
     }
   },
   "tiger": {
@@ -278,14 +278,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/tiger.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear tiger portrait with simple, friendly design and no distractions.",
+      "score": 100,
+      "reason": "Clear, cute tiger, instantly recognizable, no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:47+00:00"
+      "reviewed_at": "2026-05-25T04:24:20+00:00"
     }
   },
   "panda": {
@@ -295,14 +295,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/panda.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear panda portrait with simple shapes and soft pastel background, no distractions from the subject.",
+      "score": 100,
+      "reason": "Clear, cute panda with no distractions",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:50+00:00"
+      "reviewed_at": "2026-05-25T04:24:22+00:00"
     }
   },
   "turtle": {
@@ -312,14 +312,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/turtle.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear turtle portrait with simple shapes and soft pastel background, no distractions.",
+      "score": 100,
+      "reason": "Clear, cute turtle, instantly recognizable, no distractions, perfect for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:52+00:00"
+      "reviewed_at": "2026-05-25T04:24:25+00:00"
     }
   },
   "butterfly": {
@@ -329,770 +329,660 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/butterfly.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 100,
-      "reason": "Clear, focused butterfly portrait with no distractions, perfectly suited for a 4-year-old vocabulary flashcard.",
+      "reason": "Clear, cute butterfly with simple shapes and bright colors on a plain background, perfectly focused on the target concept.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:54+00:00"
+      "reviewed_at": "2026-05-25T04:24:27+00:00"
     }
   },
   "apple": {
     "label": "Apple",
     "query": "red apple",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only red apple. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single red apple, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/apple.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child and table, violating the single-subject rule for a 4-year-old vocabulary card.",
-      "issues": [
-        "Contains a child and table, which are not allowed as the sole subject",
-        "Background is not a plain soft pastel wash but a natural scene with greenery and window",
-        "Multiple apples are present, violating the 'one clear subject' requirement",
-        "Composition is not a single isolated portrait but a scene with multiple elements"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, centered red apple on plain background, no distractions, concept instantly recognizable for a child.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:47:58+00:00"
+      "reviewed_at": "2026-05-25T04:24:29+00:00"
     }
   },
   "banana": {
     "label": "Banana",
     "query": "banana fruit isolated",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only banana fruit isolated. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single banana fruit isolated, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/banana.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child, which is an extra main subject and violates the single-subject rule for a 4-year-old vocabulary card.",
-      "issues": [
-        "Contains a child, which is an extra main subject and violates the single-subject rule for a 4-year-old vocabulary card."
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused banana on plain background, no distractions, child-friendly",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:01+00:00"
+      "reviewed_at": "2026-05-25T04:24:31+00:00"
     }
   },
   "orange": {
     "label": "Orange",
     "query": "orange fruit",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only orange fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single orange fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/orange.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
-      "issues": [
-        "Includes a child, violating the single-subject rule for a 4-year-old vocabulary card",
-        "Background is plain but composition is not focused solely on the orange fruit as the main subject"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, centered orange with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:05+00:00"
+      "reviewed_at": "2026-05-25T04:24:33+00:00"
     }
   },
   "grape": {
     "label": "Grape",
     "query": "grapes fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only one complete hanging bunch of small oval translucent green grapes on a branching vine, with the stem visible. Show exactly one complete food item fully inside frame. The single bunch must read clearly as one whole cluster with the stem visible near the top. Keep the entire cluster inside the frame with generous plain background around it. Do not zoom in to a pile or texture of loose grapes. For grapes, each fruit should read as a small oval grape, not as apples or round fruit. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. The fruit is unsupported against the seamless studio background with nothing underneath it. Show the complete bunch fully inside the frame with empty margin on every side, no bowl, no plate, no table, no container, no drink, and no nearby prop.",
+    "prompt": "A single one complete hanging bunch of small oval translucent green grapes on a branching vine, with the stem visible, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The single bunch must read clearly as one whole cluster with the stem visible near the top. Keep the entire cluster inside the frame with generous plain background around it. Do not zoom in to a pile or texture of loose grapes. For grapes, each fruit should read as a small oval grape, not as apples or round fruit. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. The fruit is unsupported against the seamless studio background with nothing underneath it. Show the complete bunch fully inside the frame with empty margin on every side, no bowl, no plate, no table, no container, no drink, and no nearby prop.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/grape.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child and table, which distract from the single subject requirement.",
-      "issues": [
-        "Contains a child and table, which are extra main subjects and violate the single-subject rule",
-        "Background is not a plain soft pastel wash but a natural outdoor scene with grass and trees",
-        "Composition is not simple and clean; multiple grape colors and a child create visual clutter",
-        "The grapes are not the only subject and are partially obscured by the child's hands and body"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused image of a single grape bunch with no distractions, perfectly meeting the requirements for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:09+00:00"
+      "reviewed_at": "2026-05-25T04:24:35+00:00"
     }
   },
   "pear": {
     "label": "Pear",
     "query": "pear fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only pear fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single pear fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/pear.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
-    "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child instead of a single pear, violating the single-subject rule for a 4-year-old vocabulary card.",
-      "issues": [
-        "Includes a child as the main subject instead of a single pear fruit",
-        "Multiple pears distract from the single-subject requirement"
-      ],
-      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:12+00:00"
-    }
-  },
-  "watermelon": {
-    "label": "Watermelon",
-    "query": "watermelon fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only watermelon fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
-    "asset_type": "still",
-    "frames": [],
-    "output_file": "images/generated/vocab/watermelon.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
-    "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child instead of only the watermelon fruit as the sole subject, violating the single-word vocabulary card rule.",
-      "issues": [
-        "Includes a child as the main subject instead of only the watermelon fruit",
-        "Multiple watermelon slices create clutter and distract from the single subject requirement"
-      ],
-      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:15+00:00"
-    }
-  },
-  "strawberry": {
-    "label": "Strawberry",
-    "query": "strawberry fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only strawberry fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
-    "asset_type": "still",
-    "frames": [],
-    "output_file": "images/generated/vocab/strawberry.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
-    "review": {
-      "pass": false,
-      "score": 0,
-      "reason": "Image contains a child, not a strawberry fruit, so the subject is incorrect and fails the core requirement of showing only the target object for a 4-year-old vocabulary card.",
-      "issues": [
-        "Contains a person (child) instead of the required strawberry fruit as the sole subject",
-        "Subject is not instantly recognizable as a strawberry fruit; it's a human portrait, making the concept ambiguous for a 4-year-old vocabulary card"
-      ],
-      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:19+00:00"
-    }
-  },
-  "cherry": {
-    "label": "Cherry",
-    "query": "cherries fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only one complete pair or small cluster of glossy red cherries attached together by thin stems. Show exactly one complete food item fully inside frame. The fruit must read clearly as one attached pair or a very small cherry cluster with the stems visible. Keep the full cherries inside the frame with generous plain background around them. Do not zoom in to a repeating cherry pattern or wallpaper-like layout. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. The fruit is unsupported against the seamless studio background with nothing underneath it. Show the complete bunch fully inside the frame with empty margin on every side, no bowl, no plate, no table, no container, no drink, and no nearby prop.",
-    "asset_type": "still",
-    "frames": [],
-    "output_file": "images/generated/vocab/cherry.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
-    "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
-      "issues": [
-        "Includes a child as the main subject instead of just cherries",
-        "Background contains trees and grass, which are distracting elements not allowed for a single-word card"
-      ],
-      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:22+00:00"
-    }
-  },
-  "peach": {
-    "label": "Peach",
-    "query": "peach fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only peach fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
-    "asset_type": "still",
-    "frames": [],
-    "output_file": "images/generated/vocab/peach.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 100,
       "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:24+00:00"
+      "reviewed_at": "2026-05-25T04:24:37+00:00"
+    }
+  },
+  "watermelon": {
+    "label": "Watermelon",
+    "query": "watermelon fruit photo",
+    "prompt": "A single watermelon fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/watermelon.png",
+    "generated_at": "2026-05-25T04:26:10+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, centered, and focused on a single watermelon with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-25T04:24:40+00:00"
+    }
+  },
+  "strawberry": {
+    "label": "Strawberry",
+    "query": "strawberry fruit photo",
+    "prompt": "A single strawberry fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/strawberry.png",
+    "generated_at": "2026-05-25T04:26:10+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-25T04:24:42+00:00"
+    }
+  },
+  "cherry": {
+    "label": "Cherry",
+    "query": "cherries fruit photo",
+    "prompt": "A single one complete pair or small cluster of glossy red cherries attached together by thin stems, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The fruit must read clearly as one attached pair or a very small cherry cluster with the stems visible. Keep the full cherries inside the frame with generous plain background around them. Do not zoom in to a repeating cherry pattern or wallpaper-like layout. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. The fruit is unsupported against the seamless studio background with nothing underneath it. Show the complete bunch fully inside the frame with empty margin on every side, no bowl, no plate, no table, no container, no drink, and no nearby prop.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/cherry.png",
+    "generated_at": "2026-05-25T04:26:10+00:00",
+    "review": {
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card with no distractions or technical flaws.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-25T04:24:44+00:00"
+    }
+  },
+  "peach": {
+    "label": "Peach",
+    "query": "peach fruit photo",
+    "prompt": "A single peach fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
+    "asset_type": "still",
+    "frames": [],
+    "output_file": "images/generated/vocab/peach.png",
+    "generated_at": "2026-05-25T04:26:10+00:00",
+    "review": {
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
+      "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
+      "reviewed_at": "2026-05-25T04:24:46+00:00"
     }
   },
   "mango": {
     "label": "Mango",
     "query": "mango fruit",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only mango fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single mango fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/mango.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child instead of just the mango fruit, violating the single-subject rule for a 4-year-old vocabulary card.",
-      "issues": [
-        "Includes a child as the main subject instead of just the mango fruit",
-        "Background contains decorative elements (leaves and fruit) that distract from the main subject",
-        "Multiple subjects (child and fruit) compete for attention, violating the 'one clear subject' requirement"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, centered mango with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:28+00:00"
+      "reviewed_at": "2026-05-25T04:24:48+00:00"
     }
   },
   "pineapple": {
     "label": "Pineapple",
     "query": "whole pineapple fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only whole pineapple fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single whole pineapple fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/pineapple.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, simple pineapple portrait with soft pastel background and no distractions.",
+      "score": 100,
+      "reason": "Clear, focused pineapple illustration with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:30+00:00"
+      "reviewed_at": "2026-05-25T04:24:50+00:00"
     }
   },
   "lemon": {
     "label": "Lemon",
     "query": "lemon fruit photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only lemon fruit. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single lemon fruit, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/lemon.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear lemon, simple background, child-friendly, no distractions",
+      "score": 100,
+      "reason": "Clear lemon image, high quality, no distractions, perfectly centered for a 4-year-old",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:32+00:00"
+      "reviewed_at": "2026-05-25T04:24:53+00:00"
     }
   },
   "bread": {
     "label": "Bread",
     "query": "bread loaf",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only bread loaf. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single bread loaf, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bread.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains child and table, distracting from bread subject",
-      "issues": [
-        "Includes child and table (extra subjects)",
-        "Background not plain (window visible)",
-        "Composition not focused solely on bread loaf"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused bread loaf with no distractions, perfectly meeting all criteria for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:35+00:00"
+      "reviewed_at": "2026-05-25T04:24:55+00:00"
     }
   },
   "cake": {
     "label": "Cake",
     "query": "birthday cake dessert photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only birthday cake dessert. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single birthday cake dessert, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cake.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
-      "score": 95,
-      "reason": "Clear, colorful cake with simple shapes and soft pastel background, instantly recognizable to a child.",
+      "score": 100,
+      "reason": "Clear, focused, and age-appropriate birthday cake image with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:38+00:00"
+      "reviewed_at": "2026-05-25T04:24:57+00:00"
     }
   },
   "cookie": {
     "label": "Cookie",
     "query": "chocolate chip cookies photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only chocolate chip cookies. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single chocolate chip cookies, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cookie.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, isolated chocolate chip cookie with crisp edges and soft pastel background. No distractions, perfectly centered and fills frame. Minor deduction for slight background texture not perfectly flat.",
+      "reason": "Clear, focused image of a cookie with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:40+00:00"
+      "reviewed_at": "2026-05-25T04:24:59+00:00"
     }
   },
   "milk": {
     "label": "Milk",
     "query": "glass of milk photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only glass of milk. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single glass of milk, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/milk.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
-      "issues": [
-        "Includes a child, violating the single-subject rule",
-        "Multiple milk containers create visual clutter and distract from the single subject",
-        "Background, while plain, is not a simple solid color and may confuse a young child"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, centered glass of milk on plain pastel background with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:44+00:00"
+      "reviewed_at": "2026-05-25T04:25:01+00:00"
     }
   },
   "egg": {
     "label": "Egg",
     "query": "egg photo food",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only egg food. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single egg food, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/egg.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child and background elements that distract from the single subject (egg).",
-      "issues": [
-        "Includes a child (extra main subject)",
-        "Background contains scenery (tree, grass, flowers) which violates plain background rule",
-        "Composition is not a single isolated portrait of the egg"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:47+00:00"
+      "reviewed_at": "2026-05-25T04:25:03+00:00"
     }
   },
   "cheese": {
     "label": "Cheese",
     "query": "cheese wedge photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only cheese wedge. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single cheese wedge, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cheese.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear cheese wedge, simple background, child-friendly, no distractions",
+      "reason": "Clear cheese wedge, centered, no distractions, child-friendly style",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:49+00:00"
+      "reviewed_at": "2026-05-25T04:25:06+00:00"
     }
   },
   "rice": {
     "label": "Rice",
     "query": "rice bowl food",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only rice bowl food. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single rice bowl food, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/rice.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child as the main subject, which is not allowed for a single-word vocabulary card.",
-      "issues": [
-        "Main subject is a child, not the rice bowl food",
-        "Multiple panels with repeated variants of the subject",
-        "Background is not a plain soft pastel wash",
-        "Includes a plate and bowl, which are extra elements beyond the single food item"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of rice in a bowl with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:52+00:00"
+      "reviewed_at": "2026-05-25T04:25:08+00:00"
     }
   },
   "water": {
     "label": "Water",
     "query": "glass of water",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only glass of water. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single glass of water, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/water.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child and table, which distract from the single subject requirement.",
-      "issues": [
-        "Includes a child and table, violating the single subject rule",
-        "Background is plain but composition is not focused solely on the glass of water",
-        "Multiple elements compete for attention, making the concept unclear for a 4-year-old"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:56+00:00"
+      "reviewed_at": "2026-05-25T04:25:10+00:00"
     }
   },
   "candy": {
     "label": "Candy",
     "query": "candy sweet photo",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only candy sweet. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single candy sweet, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/candy.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
-      "issues": [
-        "Includes a child instead of just the candy",
-        "Background has flowers and leaves, which is not a plain pastel wash"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused candy image with no distractions, perfectly meeting the single-object requirement for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:48:59+00:00"
+      "reviewed_at": "2026-05-25T04:25:12+00:00"
     }
   },
   "ice_cream": {
     "label": "Ice Cream",
     "query": "ice cream cone",
-    "prompt": "Create one square cute cartoon illustration of exactly one food item. Use simple clean children's animation illustration, not realistic photography, not portrait photography, and not a story scene. The background must be plain and minimal so the food item fills most of the frame and is the only thing noticed at a glance. Show only ice cream cone. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Keep the frame clean with no person and no portrait staging.",
+    "prompt": "A single ice cream cone, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Show exactly one complete food item fully inside frame. The food item must occupy at least 80% of the frame, be centered, and be the only thing noticed first at a glance. Use a tight object crop with no portrait composition, no lifestyle photography, no decorative framing, and no second item. Keep the frame object-only with no people and no visible body parts. Realistic product photo, not cartoon, not illustration, not animation. Keep the frame clean with no person and no portrait staging.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/ice_cream.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused on the ice cream cone with a friendly child, but the child is a secondary element that distracts from the single-subject requirement.",
-      "issues": [
-        "Child is present, violating the single-subject rule",
-        "Background is plain but the child's presence makes it not a pure subject portrait"
-      ],
+      "reason": "Clear, centered ice cream cone with no distractions, easily recognizable for a child.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:01+00:00"
+      "reviewed_at": "2026-05-25T04:25:14+00:00"
     }
   },
   "eye": {
     "label": "Eye",
     "query": "eye close up photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's eye area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A close-up macro photograph of a single human eye, iris detail clearly visible, studio lighting, on plain pastel blue background, no face, no other features, just one eye isolated",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/eye.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "The image shows a full child portrait instead of a single eye, and the background contains distracting foliage and a frame, violating the requirement for a plain, solid background with only the target body part visible.",
-      "issues": [
-        "Subject is a full child, not a single eye",
-        "Background contains foliage and a frame, not a plain solid pastel wash",
-        "Composition is not a simple close-up of just the eye",
-        "Includes clothing and full body, which distracts from the target concept"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear eye focus, simple background, child-friendly",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:05+00:00"
+      "reviewed_at": "2026-05-25T04:25:16+00:00"
     }
   },
   "ear": {
     "label": "Ear",
     "query": "ear close up photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's ear area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A close-up macro photograph of a single human ear, studio lighting, on plain pastel background, no face, no head shape, isolated ear only",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/ear.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "The image shows a child's face, not a close-up of an ear as required, making the concept unclear for a 4-year-old.",
-      "issues": [
-        "Subject is a face, not an ear",
-        "Includes clothing and background elements that distract from the target concept",
-        "Not a single isolated body part as specified"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused ear image with good lighting and no distractions.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:08+00:00"
+      "reviewed_at": "2026-05-25T04:25:18+00:00"
     }
   },
   "nose": {
     "label": "Nose",
     "query": "nose close up photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's nose area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A close-up photograph of a single human nose, studio lighting, on plain pastel background, no face, no eyes, no mouth, isolated nose only",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/nose.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "The image shows a full child portrait instead of a close-up of just the nose, violating the core requirement of showing only the nose with no face or clothing visible. The subject is not isolated as a single body part, and the framing includes the entire head and torso, making the target concept unclear for a 4-year-old.",
-      "issues": [
-        "Subject is a full child portrait, not a close-up of just the nose",
-        "Face and clothing are visible, violating the 'no face, no clothing' rule",
-        "Background is a framed photo on a wall, which is a decorative element and not a plain soft pastel wash",
-        "The image is a framed picture, which is explicitly prohibited as a 'framed picture grid' or 'border'",
-        "The composition is not a single isolated body part but a full portrait, making the target concept ambiguous"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused nose image with good lighting and no distractions.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:14+00:00"
+      "reviewed_at": "2026-05-25T04:25:20+00:00"
     }
   },
   "mouth": {
     "label": "Mouth",
     "query": "mouth close up photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's mouth area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A close-up macro photograph of a single child's mouth with lips only, smooth soft natural skin, no teeth visible, no facial hair, no skin texture, studio lighting, on plain pastel background, no face, no eyes, no nose, isolated mouth only",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/mouth.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 0,
-      "reason": "Fails core requirements: shows a child's face instead of a mouth, includes background scenery, and uses a multi-panel layout, violating the single subject and plain background rules for a 4-year-old flashcard.",
-      "issues": [
-        "Shows a child's face instead of a mouth",
-        "Includes background scenery (hills/sky)",
-        "Uses a multi-panel split screen layout",
-        "Subject is not isolated; fills frame with multiple panels",
-        "Background is not a plain soft pastel wash"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear focus on mouth, soft skin, no distractions, concept instantly clear for child",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:18+00:00"
+      "reviewed_at": "2026-05-25T04:25:22+00:00"
     }
   },
   "hand": {
     "label": "Hand",
     "query": "hand palm photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's hand area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A photograph of a single open human hand, palm facing camera, studio lighting, on plain pastel background, no arm, no wrist, no face, isolated hand only",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/hand.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Multiple panels and background scenery distract from the single subject requirement.",
-      "issues": [
-        "Multiple panels violate single image rule",
-        "Background contains scenery (trees, sky, ocean) instead of plain pastel wash",
-        "Subject is a child, not a hand, and includes clothing and full body",
-        "Composition is not a single isolated close-up of a hand",
-        "Fails child_friendliness due to complex scene and lack of clear focus on hand"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a single hand with no distractions, easily understandable for a child",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:22+00:00"
+      "reviewed_at": "2026-05-25T04:25:24+00:00"
     }
   },
   "foot": {
     "label": "Foot",
     "query": "foot close up photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's foot area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A macro photograph of a single child's foot, side view, clean smooth natural skin, soft natural skin tone, studio lighting, on plain pastel background, no leg, no ankle, no person, isolated foot only",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/foot.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 0,
-      "reason": "Multiple panels and missing foot focus",
-      "issues": [
-        "Multiple panels instead of one",
-        "No foot close-up, shows full child instead of foot",
-        "Background not plain enough for child focus"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused, and age-appropriate image of a child's foot with no distractions.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:25+00:00"
+      "reviewed_at": "2026-05-25T04:25:26+00:00"
     }
   },
   "head": {
     "label": "Head",
     "query": "child face portrait photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's head area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A close-up macro photograph of a single human head, studio lighting, on plain pastel background, no face, no person, isolated",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/head.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, focused portrait with high image quality and no distractions, perfectly suited for a 4-year-old.",
+      "reason": "Clear, friendly cartoon face with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:28+00:00"
+      "reviewed_at": "2026-05-25T04:25:28+00:00"
     }
   },
   "arm": {
     "label": "Arm",
     "query": "arm photo person",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. A simple cute cartoon close-up of only a Chinese child's arm area, and nothing else. Crop tightly so the target body part fills the frame and identity is not visible. No full face, no hairstyle, no clothing, no jewelry, no background scene, and no extra body parts unless absolutely needed to make the target clear. Use a plain soft background so the body part is the only focus.",
+    "prompt": "A photograph of a single human arm from shoulder to hand, studio lighting, on plain pastel background, no face, no torso, isolated arm only",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/arm.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "The image shows a child's face, not an arm, and includes a background, violating the core requirements for a single, clear, isolated subject on a plain background.",
-      "issues": [
-        "Subject is a face, not an arm",
-        "Background is not a plain soft pastel wash",
-        "Includes clothing and full child, not just the arm",
-        "Composition is a portrait, not a single isolated body part"
-      ],
+      "pass": true,
+      "score": 95,
+      "reason": "Clear, focused image of a single arm with no distractions, easily understandable for a child",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:32+00:00"
+      "reviewed_at": "2026-05-25T04:25:30+00:00"
     }
   },
   "bed": {
     "label": "Bed",
     "query": "bed furniture photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one bed only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single bed, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/bed.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child, which is a person and not allowed for a single-word vocabulary card.",
-      "issues": [
-        "Contains a child (person) which violates the single-word vocabulary rule",
-        "Background is a solid color but the child is the main subject, not the bed"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, simple, focused image of a bed with no distractions or competing elements for a 4-year-old learner.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:35+00:00"
+      "reviewed_at": "2026-05-25T04:25:32+00:00"
     }
   },
   "chair": {
     "label": "Chair",
     "query": "chair furniture photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one chair only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single chair, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/chair.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear silhouette of a chair, simple composition, no distractions, child-friendly colors and shapes, concept instantly recognizable.",
+      "reason": "Clear, simple chair illustration with no distractions, perfectly centered for instant recognition by a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:37+00:00"
+      "reviewed_at": "2026-05-25T04:25:35+00:00"
     }
   },
   "table": {
     "label": "Table",
     "query": "table furniture photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one table only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single table, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/table.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child, which is not allowed for a single-word vocabulary card.",
-      "issues": [
-        "Contains a child, which is not allowed for a single-word vocabulary card."
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, simple, focused image of a table with no distractions, perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:40+00:00"
+      "reviewed_at": "2026-05-25T04:25:37+00:00"
     }
   },
   "door": {
     "label": "Door",
     "query": "door house photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one door only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single door, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/door.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple door image with soft pastel background, no distractions, and perfect focus on the single subject as required for a 4-year-old vocabulary card.",
+      "reason": "Clear, simple door image with no distractions, perfectly suited for a 4-year-old vocabulary card.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:43+00:00"
+      "reviewed_at": "2026-05-25T04:25:39+00:00"
     }
   },
   "window": {
     "label": "Window",
     "query": "window house photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one window only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single window, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/window.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child instead of a window as the sole subject, violating the single-object requirement for a 4-year-old vocabulary card.",
-      "issues": [
-        "Subject is a child, not a window (required single object)",
-        "Background is a soft pastel wash, which is acceptable, but the presence of a person makes the concept unclear and distracting for a child learning a single word."
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:47+00:00"
+      "reviewed_at": "2026-05-25T04:25:41+00:00"
     }
   },
   "cup": {
     "label": "Cup",
     "query": "cup mug photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one cup only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single cup, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/cup.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child which is not allowed for a single-word vocabulary card",
-      "issues": [
-        "Contains a child which is not allowed for a single-word vocabulary card",
-        "Background is plain but subject is not the sole focus as required by rules for a single-word vocabulary card"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, focused, and perfectly suited for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:49+00:00"
+      "reviewed_at": "2026-05-25T04:25:43+00:00"
     }
   },
   "spoon": {
     "label": "Spoon",
     "query": "spoon utensil photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one spoon only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single spoon, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/spoon.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, simple, and focused spoon image with soft pastel background and no distractions.",
+      "reason": "Clear, simple, and focused spoon image with no distractions, suitable for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:51+00:00"
+      "reviewed_at": "2026-05-25T04:25:46+00:00"
     }
   },
   "clock": {
     "label": "Clock",
     "query": "alarm clock photo",
-    "prompt": "Create one square cute animation-style flashcard image of exactly one subject. Use a simple educational composition with one large centered subject, rounded clean edges, and a plain soft background. This is a flashcard image, not a poster, page design, or story scene. Show one clear main subject only. Keep the full subject inside frame, centered, and large. Keep the composition simple and easy to read. No text, watermark, logo, border, collage, split screen, framed picture grid, or multi-panel layout. Show one clock only. Center the object and keep it very easy to identify at a glance. Use a simple cute cartoon illustration style with a plain or very simple background and no extra focal objects.",
+    "prompt": "A single clock, product photography, studio lighting, on plain pastel background, isolated, no person, no child, no hand, no face. Center the object and keep it very easy to identify at a glance. Realistic product photo, not cartoon, not illustration, not animation.",
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/clock.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
-      "pass": false,
-      "score": 45,
-      "reason": "Contains a child which is not allowed for a single-word vocabulary card",
-      "issues": [
-        "Contains a person which violates the single-word vocabulary rule",
-        "Background has decorative elements and is not a plain soft pastel wash",
-        "Composition is not simple with multiple elements competing for attention",
-        "Child is the main focus instead of the clock as the sole subject"
-      ],
+      "pass": true,
+      "score": 100,
+      "reason": "Clear, simple clock on plain background, instantly recognizable, no distractions, perfect for a 4-year-old vocabulary card.",
+      "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:54+00:00"
+      "reviewed_at": "2026-05-25T04:25:48+00:00"
     }
   },
   "eat": {
@@ -1102,14 +992,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/eat.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear subject, simple background, focused action",
+      "reason": "Clear, simple, and focused image of a child eating with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:56+00:00"
+      "reviewed_at": "2026-05-25T04:25:50+00:00"
     }
   },
   "drink": {
@@ -1119,14 +1009,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/drink.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear child, simple background, focused on drinking action, child-friendly and distraction-free.",
+      "reason": "Clear, simple, and focused illustration of a child drinking water with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:49:58+00:00"
+      "reviewed_at": "2026-05-25T04:25:52+00:00"
     }
   },
   "sleep": {
@@ -1136,14 +1026,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/sleep.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear subject, high quality, no distractions",
+      "reason": "Clear, simple, and focused illustration of a child sleeping with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:00+00:00"
+      "reviewed_at": "2026-05-25T04:25:54+00:00"
     }
   },
   "run": {
@@ -1153,14 +1043,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/run.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear subject, simple background, child-friendly, no distractions",
+      "reason": "Clear, simple, and focused image of a child running with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:02+00:00"
+      "reviewed_at": "2026-05-25T04:25:56+00:00"
     }
   },
   "jump": {
@@ -1170,14 +1060,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/jump.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear subject, simple background, concept instantly understandable",
+      "reason": "Clear, simple, and focused image of a child jumping with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:04+00:00"
+      "reviewed_at": "2026-05-25T04:25:58+00:00"
     }
   },
   "walk": {
@@ -1187,14 +1077,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/walk.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear subject, good focus, minor background blur but not distracting",
+      "reason": "Clear, simple, and focused illustration of a child walking with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:07+00:00"
+      "reviewed_at": "2026-05-25T04:26:01+00:00"
     }
   },
   "sit": {
@@ -1204,14 +1094,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/sit.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear subject, good quality, minimal distraction",
+      "reason": "Clear, simple, and focused illustration of a child sitting with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:08+00:00"
+      "reviewed_at": "2026-05-25T04:26:03+00:00"
     }
   },
   "stand": {
@@ -1221,14 +1111,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/stand.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear, focused portrait of a child standing with a friendly expression, simple pastel background, and no distractions, making the concept instantly understandable for a 4-year-old.",
+      "reason": "Clear, simple, and focused illustration of a child standing with no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:12+00:00"
+      "reviewed_at": "2026-05-25T04:26:05+00:00"
     }
   },
   "clap": {
@@ -1238,14 +1128,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/clap.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear child, simple background, focused on clapping action",
+      "reason": "Clear, centered child clapping with no distractions, warm and simple style suitable for a 4-year-old.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:14+00:00"
+      "reviewed_at": "2026-05-25T04:26:07+00:00"
     }
   },
   "wave": {
@@ -1255,14 +1145,14 @@
     "asset_type": "still",
     "frames": [],
     "output_file": "images/generated/vocab/wave.png",
-    "generated_at": "2026-05-25T01:15:22+00:00",
+    "generated_at": "2026-05-25T04:26:10+00:00",
     "review": {
       "pass": true,
       "score": 95,
-      "reason": "Clear subject, simple background, child-friendly style",
+      "reason": "Clear, simple, and focused on the waving action with a friendly child character and no distractions.",
       "issues": [],
       "reviewer": "Nemotron-3-Nano-Omni-30B-A3B-AWQ",
-      "reviewed_at": "2026-05-23T18:50:16+00:00"
+      "reviewed_at": "2026-05-25T04:26:10+00:00"
     }
   }
 }
