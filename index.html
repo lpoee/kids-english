@@ -190,22 +190,27 @@ function literalWords(words) {
   return words.map(literalItem);
 }
 
+const COLOR_PALETTE = {
+  Red:{base:'#ff5f57',soft:'#ffd6d3'},
+  Blue:{base:'#4c8dff',soft:'#d8e7ff'},
+  Green:{base:'#4fd26d',soft:'#dcf8e3'},
+  Yellow:{base:'#ffd44d',soft:'#fff5bd'},
+  Orange:{base:'#ff9a45',soft:'#ffe1c4'},
+  Purple:{base:'#b16dff',soft:'#eadbff'},
+  Pink:{base:'#ff7eb3',soft:'#ffe0ec'},
+  Brown:{base:'#a0724e',soft:'#ede0d4'},
+  Gray:{base:'#999',soft:'#e8e8e8'},
+  Black:{base:'#333',soft:'#bbb'},
+  White:{base:'#f0f0f0',soft:'#fff'}
+};
+
+function isColorWord(name) {
+  return Object.prototype.hasOwnProperty.call(COLOR_PALETTE, name);
+}
+
 // Color block HTML (no image file)
 function colorBlock(name) {
-  const colors = {
-    Red:{base:'#ff5f57',soft:'#ffd6d3'},
-    Blue:{base:'#4c8dff',soft:'#d8e7ff'},
-    Green:{base:'#4fd26d',soft:'#dcf8e3'},
-    Yellow:{base:'#ffd44d',soft:'#fff5bd'},
-    Orange:{base:'#ff9a45',soft:'#ffe1c4'},
-    Purple:{base:'#b16dff',soft:'#eadbff'},
-    Pink:{base:'#ff7eb3',soft:'#ffe0ec'},
-    Brown:{base:'#a0724e',soft:'#ede0d4'},
-    Gray:{base:'#999',soft:'#e8e8e8'},
-    Black:{base:'#333',soft:'#bbb'},
-    White:{base:'#f0f0f0',soft:'#fff'}
-  };
-  const palette = colors[name] || {base:'#888',soft:'#ddd'};
+  const palette = COLOR_PALETTE[name] || {base:'#888',soft:'#ddd'};
   return `<div class="color-stage" style="--color:${palette.base};--color-soft:${palette.soft}">
     <div class="color-swatch"><div class="color-dot"></div></div>
     <div class="color-word">${name}</div>
@@ -551,7 +556,7 @@ function render() {
   imgContainer.className = '';
   imgCard.classList.remove('no-image-stage');
   if (word) {
-    if (word.w && ['Red','Blue','Green','Yellow','Orange','Purple'].includes(word.w)) {
+    if (word.w && isColorWord(word.w)) {
       imgContainer.innerHTML = colorBlock(word.w);
     } else if (IMAGES_ENABLED && word.img) {
       if (imageClass(word.img) === 'photo-asset') imgContainer.className = 'photo-stage';
