@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="15" y1="25" x2="85" y2="25" stroke="#fb923c" stroke-width="3" stroke-linecap="round"/>
+  <line x1="15" y1="65" x2="85" y2="65" stroke="#a78bfa" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="15" cy="25" r="3" fill="#fb923c"/>
+  <circle cx="85" cy="25" r="3" fill="#fb923c"/>
+  <circle cx="15" cy="65" r="5" fill="#a78bfa"/>
+  <circle cx="85" cy="65" r="5" fill="#a78bfa"/>
+  <text x="50" y="16" text-anchor="middle" font-size="8" font-weight="bold" fill="#ea580c">THIN</text>
+  <text x="50" y="56" text-anchor="middle" font-size="8" font-weight="bold" fill="#7c3aed">THICK</text>
+</svg>

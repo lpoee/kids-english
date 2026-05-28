@@ -122,35 +122,32 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 // Helper: image path for adjective
 function adjImg(w) {
   const lower = w.toLowerCase();
-  // New SDXL-generated adjectives (11 comparison words)
-  const sdxlWords = ['big','small','tall','short','long','round','square','fast','slow','wide','narrow'];
-  if (sdxlWords.includes(lower)) return 'images/generated/adjectives/' + lower + '.png';
   // All other words using clean SVG files (Twemoji + custom SVGs in images/adjectives/)
   const svgWords = [
     // Emotion (8)
     'happy','sad','angry','surprised','brave','scared','silly','serious',
     // Shape (7)
-    'flat','pointed','curved','straight','crooked',
+    'round','flat','square','pointed','curved','straight','crooked',
     // Logic (10)
     'same','different','alike','first','last','middle','next','simple','hard','tricky',
     // Touch (8)
-    'soft','fuzzy','prickly','slimy','sticky','freezing','boiling',
+    'hard','soft','fuzzy','prickly','slimy','sticky','freezing','boiling',
     // Weight (5)
     'heavy','light','strong','weak','sturdy',
     // Visual (7)
     'bright','dark','shiny','dull','clear','colorful','pale',
     // Sound (6)
     'loud','quiet','noisy','silent','squeaky','whispering',
-    // Size (9)
-    'tiny','huge','thick','thin',
+    // Size (11)
+    'big','small','tall','short','long','tiny','huge','wide','narrow','thick','thin',
     // Speed (4)
-    'quick','rapid',
+    'fast','slow','quick','rapid',
     // Condition (10)
     'clean','dirty','broken','fixed','new','old','wet','dry','empty','full',
     // Opinion (9)
     'good','bad','pretty','ugly','mean','nice','difficult','easy','important'
   ];
-  if (svgWords.includes(lower)) return 'images/adjectives/' + lower + '.png?v=7';
+  if (svgWords.includes(lower)) return 'images/adjectives/' + lower + '.png?v=11';
   // hot uses JPG
   if (lower === 'hot') return 'images/adj_hot.jpg';
   // cold and a few others still use GIF
@@ -166,7 +163,7 @@ function slugify(text) {
 }
 
 function generatedImg(kind, slug) {
-  return 'images/generated/' + kind + '/' + slug + '.png?v=7';
+  return 'images/generated/' + kind + '/' + slug + '.png?v=11';
 }
 
 function vocabImg(w) {
