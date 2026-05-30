@@ -219,16 +219,24 @@ function phraseEmoji(emoji) {
 }
 
 function phraseItem(text, emoji, fname) {
-  return {w:text, img:phraseImg(fname), aud:'audio/phrase_'+fname+'.mp3', emoji};
+  return {w:text, aud:'audio/phrase_'+fname+'.mp3', emoji};
 }
 
 function emojiItem(w, emoji) {
   return {w, img:generatedImg('emoji', slugify(w)), aud:'audio/' + slugify(w) + '.mp3'};
 }
 
+function actionItem(w, emoji) {
+  return {w, aud:'audio/' + slugify(w) + '.mp3', emoji};
+}
+
+function adjItem(w, emoji) {
+  return emoji ? {w, aud:adjAud(w), emoji} : {w, img:adjImg(w), aud:adjAud(w)};
+}
+
 function w(w) { return w; }
 function img(w,p) { return {w,img:p,aud:'audio/'+w.toLowerCase()+'.mp3'}; }
-function adj(w) { return {w,img:adjImg(w),aud:adjAud(w)}; }
+function adj(w) { return adjItem(w); }
 
 const DATA = {
   animal: {
@@ -258,7 +266,18 @@ const DATA = {
   },
   actions: {
     label: '🏃 Actions',
-    words: literalWords(['Eat','Drink','Sleep','Run','Jump','Walk','Sit','Stand','Clap','Wave'])
+    words: [
+      actionItem('Eat', '🍽️'),
+      actionItem('Drink', '🥤'),
+      actionItem('Sleep', '😴'),
+      actionItem('Run', '🏃'),
+      actionItem('Jump', '🦘'),
+      actionItem('Walk', '🚶'),
+      actionItem('Sit', '🪑'),
+      actionItem('Stand', '🧍'),
+      actionItem('Clap', '👏'),
+      actionItem('Wave', '👋')
+    ]
   },
   color: {
     label: '🎨 Colors & Shapes',
@@ -274,17 +293,17 @@ const DATA = {
       {w:'Gray',aud:'audio/gray.mp3'},
       {w:'Black',aud:'audio/black.mp3'},
       {w:'White',aud:'audio/white.mp3'},
-      adj('Big'),
-      adj('Small'),
-      adj('Tall'),
-      adj('Short'),
-      adj('Long'),
-      adj('Wide'),
-      adj('Narrow'),
-      adj('Round'),
-      adj('Square'),
-      adj('Fast'),
-      adj('Slow')
+      adjItem('Big', '🐘'),
+      adjItem('Small', '🐜'),
+      adjItem('Tall', '🦒'),
+      adjItem('Short', '🐕'),
+      adjItem('Long', '🚂'),
+      adjItem('Wide', '↔️'),
+      adjItem('Narrow', '🛤️'),
+      adjItem('Round', '⚪'),
+      adjItem('Square', '⬜'),
+      adjItem('Fast', '🚀'),
+      adjItem('Slow', '🐢')
     ]
   },
   phrases: {
