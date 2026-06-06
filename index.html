@@ -262,7 +262,7 @@ const DATA = {
   },
   home: {
     label: '🏠 Home',
-    words: literalWords(['Bed','Chair','Table','Door','Window','Cup','Spoon','Clock'])
+    words: literalWords(['Bed','Chair','Table','Door','Window'])
   },
   actions: {
     label: '🏃 Actions',
@@ -835,6 +835,9 @@ function scheduleAutoplay() {
 //  INIT
 // ═══════════════════════════════════════════
 function init() {
+  if (init.done) return;
+  init.done = true;
+
   // Ensure AudioContext is resumed on first user interaction
   document.addEventListener('touchstart', () => ensureAudioCtx(), {once: true});
   document.addEventListener('click', () => ensureAudioCtx(), {once: true});
