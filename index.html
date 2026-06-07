@@ -163,7 +163,7 @@ function slugify(text) {
 }
 
 function generatedImg(kind, slug) {
-  return 'images/generated/' + kind + '/' + slug + '.png?v=11';
+  return 'images/generated/' + kind + '/' + slug + '.png?v=14';
 }
 
 function vocabImg(w) {
@@ -537,6 +537,16 @@ function imageClass(path) {
   return 'vector-asset';
 }
 
+function alternateImageSrc(src) {
+  if (!src) return null;
+  const qIndex = src.indexOf('?');
+  const base = qIndex >= 0 ? src.slice(0, qIndex) : src;
+  const query = qIndex >= 0 ? src.slice(qIndex) : '';
+  if (base.endsWith('.png')) return base.slice(0, -4) + '.jpg' + query;
+  if (base.endsWith('.jpg')) return base.slice(0, -4) + '.png' + query;
+  return null;
+}
+
 function fallbackGradient(cls) {
   const gradients = {
     animal: 'linear-gradient(135deg,#1f3f63,#2f6fa1,#2c8d83)',
@@ -580,6 +590,12 @@ function render() {
       const img = imgContainer.querySelector('img');
       if (img) {
         img.addEventListener('error', () => {
+          const fallback = alternateImageSrc(img.src);
+          if (fallback && img.dataset.altTried !== '1') {
+            img.dataset.altTried = '1';
+            img.src = fallback;
+            return;
+          }
           imgCard.classList.add('no-image-stage');
           imgContainer.className = 'no-image-stage';
           imgContainer.innerHTML = fallbackStage(word, cls);
