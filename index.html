@@ -119,11 +119,6 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 //  DATA — complete category tree
 // ═══════════════════════════════════════════
 
-// Helper: image path for adjective
-function adjImg(w) {
-  return generatedImg('adjs', slugify(w));
-}
-
 function adjAud(w) {
   return 'audio/adj_' + w.toLowerCase() + '.mp3';
 }
@@ -136,12 +131,26 @@ function generatedImg(kind, slug, ext = 'jpg') {
   return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=15';
 }
 
-function vocabImg(w) {
-  const slug = slugify(w);
-  return generatedImg('vocab', slug);
+function vocabImg(value) {
+  return generatedImg('vocab', slugify(value));
 }
 
+function adjImg(w) {
+  return generatedImg('adjs', slugify(w));
+}
+
+const PHRASE_GIF_SLUGS = new Set([
+  'wake_up','get_up','brush_teeth','wash_face','wash_hands','get_dressed',
+  'put_on_shoes','take_off_shoes','clean_up','bath_time','go_to_sleep',
+  'lets_go','lets_play','my_turn','your_turn','share_please','slow_down',
+  'sit_down','stand_up','line_up','raise_your_hand','try_again',
+  'come_here','go_there','put_it_here','give_me','show_me','touch','point_to'
+]);
+
 function phraseImg(fname) {
+  if (PHRASE_GIF_SLUGS.has(fname)) {
+    return generatedImg('phrase_gifs', fname, 'gif');
+  }
   return generatedImg('phrases', fname);
 }
 
@@ -157,56 +166,77 @@ function literalWords(words) {
   return words.map(literalItem);
 }
 
-const COLOR_PALETTE = {
-  Red:{base:'#ff5f57',soft:'#ffd6d3'},
-  Blue:{base:'#4c8dff',soft:'#d8e7ff'},
-  Green:{base:'#4fd26d',soft:'#dcf8e3'},
-  Yellow:{base:'#ffd44d',soft:'#fff5bd'},
-  Orange:{base:'#ff9a45',soft:'#ffe1c4'},
-  Purple:{base:'#b16dff',soft:'#eadbff'},
-  Pink:{base:'#ff7eb3',soft:'#ffe0ec'},
-  Brown:{base:'#a0724e',soft:'#ede0d4'},
-  Gray:{base:'#999',soft:'#e8e8e8'},
-  Black:{base:'#333',soft:'#bbb'},
-  White:{base:'#f0f0f0',soft:'#fff'}
-};
-
-function isColorWord(name) {
-  return Object.prototype.hasOwnProperty.call(COLOR_PALETTE, name);
-}
-
-// Color block HTML (no image file)
-function colorBlock(name) {
-  const palette = COLOR_PALETTE[name] || {base:'#888',soft:'#ddd'};
-  return `<div class="color-stage" style="--color:${palette.base};--color-soft:${palette.soft}">
-    <div class="color-swatch"><div class="color-dot"></div></div>
-    <div class="color-word">${name}</div>
-  </div>`;
-}
-
-function phraseEmoji(emoji) {
-  return '<div style="font-size:100px;text-align:center;line-height:1">' + emoji + '</div>';
-}
-
-function phraseItem(text, emoji, fname) {
-  return {w:text, aud:'audio/phrase_'+fname+'.mp3', emoji};
+function phraseItem(text, fname) {
+  return {w:text, img:phraseImg(fname), aud:'audio/phrase_'+fname+'.mp3'};
 }
 
 function emojiItem(w, emoji) {
   return {w, img:generatedImg('emoji', slugify(w)), aud:'audio/' + slugify(w) + '.mp3'};
 }
 
-function actionItem(w, emoji) {
-  return {w, aud:'audio/' + slugify(w) + '.mp3', emoji};
+function actionItem(w) {
+  return {w, img:vocabImg(w), aud:'audio/' + slugify(w) + '.mp3'};
 }
 
-function adjItem(w, emoji) {
-  return emoji ? {w, aud:adjAud(w), emoji} : {w, img:adjImg(w), aud:adjAud(w)};
+function adjItem(w) {
+  return {w, img:adjImg(w), aud:adjAud(w)};
+}
+
+function colorItem(w, slug = null, audSlug = null) {
+  const resolvedSlug = slug || slugify(w);
+  const resolvedAud = audSlug || resolvedSlug;
+  return {w, img:generatedImg('vocab', resolvedSlug), aud:'audio/' + resolvedAud + '.mp3'};
 }
 
 function w(w) { return w; }
 function img(w,p) { return {w,img:p,aud:'audio/'+w.toLowerCase()+'.mp3'}; }
 function adj(w) { return adjItem(w); }
+
+const BLOCKED_WORDS = new Set([
+  "chicken",
+  "strawberry",
+  "water",
+  "candy",
+  "ear",
+  "arm",
+  "eat",
+  "long",
+  "dog",
+  "bird",
+  "head",
+  "small",
+  "tall",
+  "wide",
+  "fast",
+  "get_up",
+  "bath_time",
+  "goodbye",
+  "see_you_later",
+  "my_name_is",
+  "nice_to_meet_you",
+  "please",
+  "thank_you",
+  "you_re_welcome",
+  "sorry",
+  "more_please",
+  "no_more",
+  "line_up",
+  "good_job",
+  "well_done",
+  "you_can_do_it",
+  "what_s_that",
+  "go_there",
+  "wait",
+  "show_me"
+]);
+
+function isBlockedWord(word) {
+  return !!word && BLOCKED_WORDS.has(slugify(word.w || ''));
+}
+
+function visibleWords(words) {
+  return words.filter(word => !isBlockedWord(word));
+}
 
 const DATA = {
   animal: {
@@ -237,43 +267,43 @@ const DATA = {
   actions: {
     label: '🏃 Actions',
     words: [
-      actionItem('Eat', '🍽️'),
-      actionItem('Drink', '🥤'),
-      actionItem('Sleep', '😴'),
-      actionItem('Run', '🏃'),
-      actionItem('Jump', '🦘'),
-      actionItem('Walk', '🚶'),
-      actionItem('Sit', '🪑'),
-      actionItem('Stand', '🧍'),
-      actionItem('Clap', '👏'),
-      actionItem('Wave', '👋')
+      actionItem('Eat'),
+      actionItem('Drink'),
+      actionItem('Sleep'),
+      actionItem('Run'),
+      actionItem('Jump'),
+      actionItem('Walk'),
+      actionItem('Sit'),
+      actionItem('Stand'),
+      actionItem('Clap'),
+      actionItem('Wave')
     ]
   },
   color: {
     label: '🎨 Colors & Shapes',
     words: [
-      {w:'Red',aud:'audio/red.mp3'},
-      {w:'Blue',aud:'audio/blue.mp3'},
-      {w:'Green',aud:'audio/green.mp3'},
-      {w:'Yellow',aud:'audio/yellow.mp3'},
-      {w:'Orange',aud:'audio/orange_color.mp3'},
-      {w:'Purple',aud:'audio/purple.mp3'},
-      {w:'Pink',aud:'audio/pink.mp3'},
-      {w:'Brown',aud:'audio/brown.mp3'},
-      {w:'Gray',aud:'audio/gray.mp3'},
-      {w:'Black',aud:'audio/black.mp3'},
-      {w:'White',aud:'audio/white.mp3'},
-      adjItem('Big', '🐘'),
-      adjItem('Small', '🐜'),
-      adjItem('Tall', '🦒'),
-      adjItem('Short', '🐕'),
-      adjItem('Long', '🚂'),
-      adjItem('Wide', '↔️'),
-      adjItem('Narrow', '🛤️'),
-      adjItem('Round', '⚪'),
-      adjItem('Square', '⬜'),
-      adjItem('Fast', '🚀'),
-      adjItem('Slow', '🐢')
+      colorItem('Red'),
+      colorItem('Blue'),
+      colorItem('Green'),
+      colorItem('Yellow'),
+      colorItem('Orange', 'orange_color', 'orange_color'),
+      colorItem('Purple'),
+      colorItem('Pink'),
+      colorItem('Brown'),
+      colorItem('Gray'),
+      colorItem('Black'),
+      colorItem('White'),
+      adjItem('Big'),
+      adjItem('Small'),
+      adjItem('Tall'),
+      adjItem('Short'),
+      adjItem('Long'),
+      adjItem('Wide'),
+      adjItem('Narrow'),
+      adjItem('Round'),
+      adjItem('Square'),
+      adjItem('Fast'),
+      adjItem('Slow')
     ]
   },
   phrases: {
@@ -282,127 +312,127 @@ const DATA = {
       daily: {
         label:'Daily',
         words:[
-          phraseItem('Wake up','☀️','wake_up'),
-          phraseItem('Get up','🛏️','get_up'),
-          phraseItem('Brush teeth','🪥','brush_teeth'),
-          phraseItem('Wash face','💧','wash_face'),
-          phraseItem('Wash hands','🤲','wash_hands'),
-          phraseItem('Get dressed','👕','get_dressed'),
-          phraseItem('Put on shoes','👟','put_on_shoes'),
-          phraseItem('Take off shoes','👟','take_off_shoes'),
-          phraseItem('Time to eat','🍽️','time_to_eat'),
-          phraseItem('Breakfast time','🥣','breakfast_time'),
-          phraseItem('Lunch time','🍱','lunch_time'),
-          phraseItem('Dinner time','🍛','dinner_time'),
-          phraseItem('Snack time','🍪','snack_time'),
-          phraseItem('Clean up','🧹','clean_up'),
-          phraseItem('Bath time','🛁','bath_time'),
-          phraseItem('Time for bed','😴','time_for_bed'),
-          phraseItem('Go to sleep','💤','go_to_sleep'),
-          phraseItem('Good morning','☀️','good_morning'),
-          phraseItem('Good night','🌙','good_night')
+          phraseItem('Wake up','wake_up'),
+          phraseItem('Get up','get_up'),
+          phraseItem('Brush teeth','brush_teeth'),
+          phraseItem('Wash face','wash_face'),
+          phraseItem('Wash hands','wash_hands'),
+          phraseItem('Get dressed','get_dressed'),
+          phraseItem('Put on shoes','put_on_shoes'),
+          phraseItem('Take off shoes','take_off_shoes'),
+          phraseItem('Time to eat','time_to_eat'),
+          phraseItem('Breakfast time','breakfast_time'),
+          phraseItem('Lunch time','lunch_time'),
+          phraseItem('Dinner time','dinner_time'),
+          phraseItem('Snack time','snack_time'),
+          phraseItem('Clean up','clean_up'),
+          phraseItem('Bath time','bath_time'),
+          phraseItem('Time for bed','time_for_bed'),
+          phraseItem('Go to sleep','go_to_sleep'),
+          phraseItem('Good morning','good_morning'),
+          phraseItem('Good night','good_night')
         ]
       },
       greetings: {
         label:'Greetings',
         words:[
-          phraseItem('Hello','👋','hello'),
-          phraseItem('Goodbye','👋','goodbye'),
-          phraseItem('See you later','👋','see_you_later'),
-          phraseItem('How are you','🤔','how_are_you'),
-          phraseItem("I'm fine",'😊','im_fine'),
-          phraseItem("I'm okay",'🙂','im_okay'),
-          phraseItem("What's your name",'🏷️','whats_your_name'),
-          phraseItem('My name is','📛','my_name_is'),
-          phraseItem('Nice to meet you','🤝','nice_to_meet_you'),
-          phraseItem('Please','🥺','please'),
-          phraseItem('Thank you','🙏','thank_you'),
-          phraseItem("You're welcome",'😊','youre_welcome'),
-          phraseItem('Excuse me','🤚','excuse_me'),
-          phraseItem('Sorry','😔','sorry'),
-          phraseItem("It's okay",'👌','its_okay')
+          phraseItem('Hello','hello'),
+          phraseItem('Goodbye','goodbye'),
+          phraseItem('See you later','see_you_later'),
+          phraseItem('How are you','how_are_you'),
+          phraseItem("I'm fine",'im_fine'),
+          phraseItem("I'm okay",'im_okay'),
+          phraseItem("What's your name",'whats_your_name'),
+          phraseItem('My name is','my_name_is'),
+          phraseItem('Nice to meet you','nice_to_meet_you'),
+          phraseItem('Please','please'),
+          phraseItem('Thank you','thank_you'),
+          phraseItem("You're welcome",'youre_welcome'),
+          phraseItem('Excuse me','excuse_me'),
+          phraseItem('Sorry','sorry'),
+          phraseItem("It's okay",'its_okay')
         ]
       },
       feelings: {
         label:'Feelings',
         words:[
-          phraseItem("I'm happy",'😊','im_happy'),
-          phraseItem("I'm sad",'😢','im_sad'),
-          phraseItem("I'm angry",'😠','im_angry'),
-          phraseItem("I'm scared",'😨','im_scared'),
-          phraseItem('I like it','👍','i_like_it'),
-          phraseItem("I don't like it",'👎','i_dont_like_it'),
-          phraseItem('I love you','❤️','i_love_you'),
-          phraseItem("That's funny",'😂','thats_funny')
+          phraseItem("I'm happy",'im_happy'),
+          phraseItem("I'm sad",'im_sad'),
+          phraseItem("I'm angry",'im_angry'),
+          phraseItem("I'm scared",'im_scared'),
+          phraseItem('I like it','i_like_it'),
+          phraseItem("I don't like it",'i_dont_like_it'),
+          phraseItem('I love you','i_love_you'),
+          phraseItem("That's funny",'thats_funny')
         ]
       },
       needs: {
         label:'Needs',
         words:[
-          phraseItem("I'm hungry",'🍽️','im_hungry'),
-          phraseItem("I'm thirsty",'🥤','im_thirsty'),
-          phraseItem("I'm tired",'😴','im_tired'),
-          phraseItem('I need help','🆘','help_me'),
-          phraseItem('Can you help me','❓','can_you_help_me'),
-          phraseItem('I want','✋','i_want'),
-          phraseItem("I don't want",'🙅','i_dont_want'),
-          phraseItem('More please','➕','more_please'),
-          phraseItem('No more','✋','no_more'),
-          phraseItem("I'm done",'✅','im_done'),
-          phraseItem('All done','🎉','all_done'),
-          phraseItem("I don't know",'🤷','i_dont_know')
+          phraseItem("I'm hungry",'im_hungry'),
+          phraseItem("I'm thirsty",'im_thirsty'),
+          phraseItem("I'm tired",'im_tired'),
+          phraseItem('I need help','help_me'),
+          phraseItem('Can you help me','can_you_help_me'),
+          phraseItem('I want','i_want'),
+          phraseItem("I don't want",'i_dont_want'),
+          phraseItem('More please','more_please'),
+          phraseItem('No more','no_more'),
+          phraseItem("I'm done",'im_done'),
+          phraseItem('All done','all_done'),
+          phraseItem("I don't know",'i_dont_know')
         ]
       },
       play: {
         label:'Play',
         words:[
-          phraseItem("Let's go",'🚀','lets_go'),
-          phraseItem("Let's play",'🎮','lets_play'),
-          phraseItem('My turn','🙋','my_turn'),
-          phraseItem('Your turn','👉','your_turn'),
-          phraseItem('Share please','🤝','share_please'),
-          phraseItem('Be careful','⚠️','be_careful'),
-          phraseItem('Slow down','🐢','slow_down'),
-          phraseItem('Listen','👂','listen'),
-          phraseItem('Look','👀','look'),
-          phraseItem('Sit down','💺','sit_down'),
-          phraseItem('Stand up','🧍','stand_up'),
-          phraseItem('Line up','🚶','line_up'),
-          phraseItem('Quiet please','🤫','quiet_please'),
-          phraseItem('Raise your hand','✋','raise_your_hand'),
-          phraseItem('Try again','🔄','try_again'),
-          phraseItem('Good job','🌟','good_job'),
-          phraseItem('Well done','👏','well_done'),
-          phraseItem('You can do it','💪','you_can_do_it')
+          phraseItem("Let's go",'lets_go'),
+          phraseItem("Let's play",'lets_play'),
+          phraseItem('My turn','my_turn'),
+          phraseItem('Your turn','your_turn'),
+          phraseItem('Share please','share_please'),
+          phraseItem('Be careful','be_careful'),
+          phraseItem('Slow down','slow_down'),
+          phraseItem('Listen','listen'),
+          phraseItem('Look','look'),
+          phraseItem('Sit down','sit_down'),
+          phraseItem('Stand up','stand_up'),
+          phraseItem('Line up','line_up'),
+          phraseItem('Quiet please','quiet_please'),
+          phraseItem('Raise your hand','raise_your_hand'),
+          phraseItem('Try again','try_again'),
+          phraseItem('Good job','good_job'),
+          phraseItem('Well done','well_done'),
+          phraseItem('You can do it','you_can_do_it')
         ]
       },
       questions: {
         label:'Questions',
         words:[
-          phraseItem("What's this",'❓','whats_this'),
-          phraseItem("What's that",'👉','whats_that'),
-          phraseItem('Where is it','🔍','where_is_it'),
-          phraseItem('Where are you','🗺️','where_are_you'),
-          phraseItem('Who is it','🕵️','who_is_it'),
-          phraseItem('Can I','🙋','can_i')
+          phraseItem("What's this",'whats_this'),
+          phraseItem("What's that",'whats_that'),
+          phraseItem('Where is it','where_is_it'),
+          phraseItem('Where are you','where_are_you'),
+          phraseItem('Who is it','who_is_it'),
+          phraseItem('Can I','can_i')
         ]
       },
       instructions: {
         label:'Instructions',
         words:[
-          phraseItem('Yes','👍','yes'),
-          phraseItem('No','🙅','no'),
-          phraseItem('Come here','👉','come_here'),
-          phraseItem('Go there','👈','go_there'),
-          phraseItem('Wait','⏳','wait'),
-          phraseItem('Stop','✋','stop'),
-          phraseItem('Open','📂','open'),
-          phraseItem('Close','📁','close'),
-          phraseItem('Put it here','📍','put_it_here'),
-          phraseItem('Give me','🤲','give_me'),
-          phraseItem('Show me','👆','show_me'),
-          phraseItem('Touch','👉','touch'),
-          phraseItem('Point to','☝️','point_to')
+          phraseItem('Yes','yes'),
+          phraseItem('No','no'),
+          phraseItem('Come here','come_here'),
+          phraseItem('Go there','go_there'),
+          phraseItem('Wait','wait'),
+          phraseItem('Stop','stop'),
+          phraseItem('Open','open'),
+          phraseItem('Close','close'),
+          phraseItem('Put it here','put_it_here'),
+          phraseItem('Give me','give_me'),
+          phraseItem('Show me','show_me'),
+          phraseItem('Touch','touch'),
+          phraseItem('Point to','point_to')
         ]
       }
     }
@@ -455,24 +485,24 @@ function getCurrentWords() {
         all = all.concat(cat.words);
       }
     }
-    return all;
+    return visibleWords(all);
   }
   const cat = DATA[state.mainCat];
   if (!cat) return [];
   if (cat.subcats) {
     if (state.subCat && cat.subcats[state.subCat]) {
-      return cat.subcats[state.subCat].words;
+      return visibleWords(cat.subcats[state.subCat].words);
     }
     // Default to first subcat
     const firstKey = Object.keys(cat.subcats)[0];
     if (firstKey) {
       // Auto-set subCat if not set
       if (!state.subCat) state.subCat = firstKey;
-      return cat.subcats[firstKey].words;
+      return visibleWords(cat.subcats[firstKey].words);
     }
     return [];
   }
-  return cat.words;
+  return visibleWords(cat.words);
 }
 
 function getCurrentWord() {
@@ -553,9 +583,7 @@ function render() {
   imgContainer.className = '';
   imgCard.classList.remove('no-image-stage');
   if (word) {
-    if (word.w && isColorWord(word.w)) {
-      imgContainer.innerHTML = colorBlock(word.w);
-    } else if (IMAGES_ENABLED && word.img) {
+    if (IMAGES_ENABLED && word.img) {
       if (imageClass(word.img) === 'photo-asset') imgContainer.className = 'photo-stage';
       imgContainer.innerHTML = `<img class="${imageClass(word.img)}" src="${word.img}" alt="${word.w}">`;
       const img = imgContainer.querySelector('img');
