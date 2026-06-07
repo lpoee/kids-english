@@ -121,37 +121,7 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 
 // Helper: image path for adjective
 function adjImg(w) {
-  const lower = w.toLowerCase();
-  // All other words using clean SVG files (Twemoji + custom SVGs in images/adjectives/)
-  const svgWords = [
-    // Emotion (8)
-    'happy','sad','angry','surprised','brave','scared','silly','serious',
-    // Shape (7)
-    'round','flat','square','pointed','curved','straight','crooked',
-    // Logic (10)
-    'same','different','alike','first','last','middle','next','simple','hard','tricky',
-    // Touch (8)
-    'hard','soft','fuzzy','prickly','slimy','sticky','freezing','boiling',
-    // Weight (5)
-    'heavy','light','strong','weak','sturdy',
-    // Visual (7)
-    'bright','dark','shiny','dull','clear','colorful','pale',
-    // Sound (6)
-    'loud','quiet','noisy','silent','squeaky','whispering',
-    // Size (11)
-    'big','small','tall','short','long','tiny','huge','wide','narrow','thick','thin',
-    // Speed (4)
-    'fast','slow','quick','rapid',
-    // Condition (10)
-    'clean','dirty','broken','fixed','new','old','wet','dry','empty','full',
-    // Opinion (9)
-    'good','bad','pretty','ugly','mean','nice','difficult','easy','important'
-  ];
-  if (svgWords.includes(lower)) return 'images/adjectives/' + lower + '.png?v=11';
-  // hot uses JPG
-  if (lower === 'hot') return 'images/adj_hot.jpg';
-  // cold and a few others still use GIF
-  return 'images/adjectives/' + lower + '.gif';
+  return generatedImg('adjs', slugify(w));
 }
 
 function adjAud(w) {
@@ -162,8 +132,8 @@ function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
 }
 
-function generatedImg(kind, slug) {
-  return 'images/generated/' + kind + '/' + slug + '.png?v=14';
+function generatedImg(kind, slug, ext = 'jpg') {
+  return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=15';
 }
 
 function vocabImg(w) {
@@ -542,6 +512,7 @@ function alternateImageSrc(src) {
   const qIndex = src.indexOf('?');
   const base = qIndex >= 0 ? src.slice(0, qIndex) : src;
   const query = qIndex >= 0 ? src.slice(qIndex) : '';
+  if (base.endsWith('.svg')) return base.slice(0, -4) + '.png' + query;
   if (base.endsWith('.png')) return base.slice(0, -4) + '.jpg' + query;
   if (base.endsWith('.jpg')) return base.slice(0, -4) + '.png' + query;
   return null;
