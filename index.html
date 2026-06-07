@@ -151,7 +151,7 @@ function phraseImg(fname) {
   if (PHRASE_GIF_SLUGS.has(fname)) {
     return generatedImg('phrase_gifs', fname, 'gif');
   }
-  return generatedImg('phrases', fname);
+  return generatedImg('phrases', fname, 'svg');
 }
 
 function literalImg(w) {
