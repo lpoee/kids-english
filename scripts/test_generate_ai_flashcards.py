@@ -393,14 +393,95 @@ class GenerateAiFlashcardsTest(unittest.TestCase):
         self.assertTrue(left_found)
         self.assertTrue(right_found)
 
-    def test_phrase_prompt_requires_toddler_friendly_scene_illustration(self):
-        prompt = self.module.phrase_prompt("lets_play", "two children happily starting a simple game together")
-        self.assertIn("clear scene illustration", prompt)
-        self.assertIn("one easy-to-read moment", prompt)
-        self.assertIn("toddler can understand instantly", prompt)
-        self.assertIn("no background clutter", prompt)
-        self.assertIn("Use Chinese children", prompt)
-        self.assertIn("use a Chinese parent and child", prompt)
+    def _structured_card(self):
+        return self.module.create_card_template(
+            card={"id": "give_me", "type": "phrase", "language": "English"},
+            teaching_content={
+                "target": "Give me",
+                "child_interpretation": "A child politely asks for the block.",
+            },
+            scene_inventory=[
+                {"id": "child_1", "role": "requester", "count": 1, "description": "Chinese preschool child"},
+                {"id": "block_1", "role": "target object", "count": 2, "description": "red toy blocks"},
+            ],
+            identity_lock=["child_1 is the only child", "keep child_1's appearance consistent"],
+            teaching_action={
+                "description": "child_1 requests block_1",
+                "actor_pose": "child_1 holds an open palm facing upward",
+                "target_response": "block_1 is offered toward child_1",
+            },
+            interaction_geometry=[
+                "child_1's palm is directly below block_1",
+                "block_1 stays above ground",
+                "motion direction is from helper toward child_1",
+            ],
+            spatial_layout=["child_1 on the left", "block_1 centered above the palm"],
+            environment={"setting": "quiet playroom", "optional_props": []},
+            composition=["one easy-to-read moment", "square framing"],
+            style=["clear scene illustration", "warm child-friendly colors"],
+            hard_constraints=["no text", "no watermark"],
+            validation={"checks": ["target action is instantly readable"], "optional_checks": []},
+        )
+
+    def test_structured_prompt_compiles_in_semantic_priority_order(self):
+        prompt = self.module.compile_card_prompt(self._structured_card())
+        headings = [
+            "IDENTITY LOCK:", "SCENE INVENTORY:", "TEACHING ACTION:",
+            "INTERACTION GEOMETRY:", "SPATIAL LAYOUT:", "COMPOSITION:",
+            "ENVIRONMENT:", "STYLE:", "HARD CONSTRAINTS:",
+        ]
+        positions = [prompt.index(heading) for heading in headings]
+        self.assertEqual(positions, sorted(positions))
+        self.assertLess(prompt.index("IDENTITY LOCK:"), prompt.index("TEACHING ACTION:"))
+
+    def test_scene_inventory_states_exact_counts_once(self):
+        prompt = self.module.compile_card_prompt(self._structured_card())
+        self.assertEqual(prompt.count("exactly 1 Chinese preschool child"), 1)
+        self.assertEqual(prompt.count("exactly 2 red toy blocks"), 1)
+        action = prompt.split("TEACHING ACTION:", 1)[1]
+        self.assertNotIn("2 red toy blocks", action)
+        self.assertIn("child_1 requests block_1", action)
+
+    def test_interaction_geometry_preserves_palm_height_and_direction(self):
+        prompt = self.module.compile_card_prompt(self._structured_card())
+        geometry = prompt.split("INTERACTION GEOMETRY:", 1)[1].split("SPATIAL LAYOUT:", 1)[0]
+        self.assertIn("palm is directly below", geometry)
+        self.assertIn("above ground", geometry)
+        self.assertIn("from helper toward child_1", geometry)
+
+    def test_empty_optional_arrays_emit_no_placeholder_content(self):
+        prompt = self.module.compile_card_prompt(self._structured_card())
+        self.assertNotIn("optional_props", prompt)
+        self.assertNotIn("optional_checks", prompt)
+        self.assertNotIn("[]", prompt)
+        self.assertNotIn("none", prompt.lower())
+
+    def test_phrase_prompt_uses_structured_compiler(self):
+        with mock.patch.object(self.module, "compile_card_prompt", wraps=self.module.compile_card_prompt) as compiler:
+            prompt = self.module.phrase_prompt("give_me", "child asking for a toy")
+        compiler.assert_called_once()
+        card = compiler.call_args.args[0]
+        self.assertEqual(card["card"]["id"], "give_me")
+        self.assertEqual(card["teaching_content"]["child_interpretation"], "child asking for a toy")
+        self.assertIn("IDENTITY LOCK:", prompt)
+        self.assertIn("SCENE INVENTORY:", prompt)
+
+    def test_card_template_is_json_serializable_and_has_latest_fields(self):
+        card = self._structured_card()
+        encoded = json.dumps(card, sort_keys=True)
+        self.assertEqual(json.loads(encoded), card)
+        self.assertEqual(
+            list(card),
+            [
+                "card", "teaching_content", "scene_inventory", "identity_lock",
+                "teaching_action", "interaction_geometry", "spatial_layout", "environment",
+                "composition", "style", "hard_constraints", "validation",
+                "prompt_compilation_order",
+            ],
+        )
+        self.assertIn("child_interpretation", card["teaching_content"])
+        self.assertIn("actor_pose", card["teaching_action"])
+        self.assertIn("target_response", card["teaching_action"])
 
     def test_body_word_prompt_avoids_identifiable_identity_features(self):
         prompt = self.module.word_prompt("eye", "eye")
