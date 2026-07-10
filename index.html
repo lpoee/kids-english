@@ -148,9 +148,6 @@ const PHRASE_GIF_SLUGS = new Set([
 ]);
 
 function phraseImg(fname) {
-  if (PHRASE_GIF_SLUGS.has(fname)) {
-    return generatedImg('phrase_gifs', fname, 'gif');
-  }
   return generatedImg('phrases', fname, 'svg');
 }
 
