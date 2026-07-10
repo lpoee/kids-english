@@ -223,19 +223,132 @@ PHRASE_SCENES = {
 }
 
 
-def phrase_prompt(slug: str, query: str) -> str:
+PROMPT_COMPILATION_ORDER = [
+    "identity_lock",
+    "scene_inventory",
+    "teaching_action",
+    "interaction_geometry",
+    "spatial_layout",
+    "composition",
+    "environment",
+    "style",
+    "hard_constraints",
+]
+
+
+def create_card_template(
+    *,
+    card: dict,
+    teaching_content: dict,
+    scene_inventory: list[dict],
+    identity_lock: list[str],
+    teaching_action: dict,
+    interaction_geometry: list[str],
+    spatial_layout: list[str],
+    environment: dict,
+    composition: list[str],
+    style: list[str],
+    hard_constraints: list[str],
+    validation: dict,
+) -> dict:
+    """Return the canonical, JSON-serializable educational image card."""
+    return {
+        "card": card,
+        "teaching_content": teaching_content,
+        "scene_inventory": scene_inventory,
+        "identity_lock": identity_lock,
+        "teaching_action": teaching_action,
+        "interaction_geometry": interaction_geometry,
+        "spatial_layout": spatial_layout,
+        "environment": environment,
+        "composition": composition,
+        "style": style,
+        "hard_constraints": hard_constraints,
+        "validation": validation,
+        "prompt_compilation_order": list(PROMPT_COMPILATION_ORDER),
+    }
+
+
+def _nonempty_strings(value: object) -> list[str]:
+    if isinstance(value, str):
+        return [value] if value.strip() else []
+    if isinstance(value, list):
+        return [str(item) for item in value if str(item).strip()]
+    if isinstance(value, dict):
+        result: list[str] = []
+        for item in value.values():
+            result.extend(_nonempty_strings(item))
+        return result
+    return []
+
+
+def compile_card_prompt(template: dict) -> str:
+    """Compile a card in fixed semantic order, stating inventory counts only once."""
+    teaching = template.get("teaching_content", {})
+    intro_parts = _nonempty_strings(teaching)
+    sections: list[str] = []
+    if intro_parts:
+        sections.append("TEACHING CONTENT: " + "; ".join(intro_parts) + ".")
+
+    order = template.get("prompt_compilation_order", PROMPT_COMPILATION_ORDER)
+    for field in order:
+        value = template.get(field)
+        lines: list[str]
+        if field == "scene_inventory":
+            lines = []
+            for item in value or []:
+                count = item.get("count")
+                description = item.get("description")
+                item_id = item.get("id")
+                role = item.get("role")
+                if count is None or not description or not item_id:
+                    continue
+                suffix = f" ({item_id}"
+                if role:
+                    suffix += f", role: {role}"
+                lines.append(f"exactly {count} {description}{suffix})")
+        else:
+            lines = _nonempty_strings(value)
+        if lines:
+            sections.append(f"{field.replace('_', ' ').upper()}: " + "; ".join(lines) + ".")
+    return "\n".join(sections)
+
+
+def phrase_card_template(slug: str, query: str) -> dict:
+    """Build a concrete sentence/phrase scene using stable actor and object IDs."""
     label = title_case_slug(slug)
-    desc = clean_query(query)
-    scene = PHRASE_SCENES.get(slug, desc)
-    return (
-        "Create a realistic square educational photo for a private kids English app. "
-        f"The meaning to teach is '{label}'. "
-        f"Show this literally: {scene}. "
-        "Keep the scene simple and immediately understandable for a toddler. "
-        "Use one child or a parent and child when needed. "
-        "No text, no watermark, no split screen, no collage, no illustration, and do not render "
-        "the sentence itself as written words anywhere in the image."
+    interpretation = clean_query(query)
+    scene = PHRASE_SCENES.get(slug, interpretation)
+    return create_card_template(
+        card={"id": slug, "type": "phrase", "language": "English"},
+        teaching_content={"target": label, "child_interpretation": interpretation},
+        scene_inventory=[
+            {"id": "child_1", "role": "learner/primary actor", "count": 1, "description": "Chinese preschool child"},
+        ],
+        identity_lock=[
+            "child_1 is the same primary actor throughout the single moment",
+            "do not duplicate child_1 or add unlisted people",
+        ],
+        teaching_action={
+            "description": f"child_1 demonstrates this literal scene: {scene}",
+            "actor_pose": "child_1 uses a natural, readable pose and facial expression",
+            "target_response": "the visible response makes the taught meaning immediately clear",
+        },
+        interaction_geometry=["hands, gaze, and any target are visibly aligned with the action"],
+        spatial_layout=["child_1 and any referenced target are fully visible and clearly separated"],
+        environment={"setting": "simple uncluttered setting", "optional_props": []},
+        composition=["one easy-to-read moment", "square flashcard framing", "no background clutter"],
+        style=["clear scene illustration", "warm child-friendly realistic detail"],
+        hard_constraints=[
+            "no text or sentence rendered in the image",
+            "no watermark, split screen, collage, or extra unlisted subjects",
+        ],
+        validation={"checks": ["a toddler can understand the meaning instantly"], "optional_checks": []},
     )
+
+
+def phrase_prompt(slug: str, query: str) -> str:
+    return compile_card_prompt(phrase_card_template(slug, query))
 
 
 def build_word_specs() -> list[AssetSpec]:
