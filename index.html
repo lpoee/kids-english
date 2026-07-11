@@ -128,7 +128,7 @@ function slugify(text) {
 }
 
 function generatedImg(kind, slug, ext = 'jpg') {
-  return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=28';
+  return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=29';
 }
 
 function vocabImg(value) {
@@ -150,13 +150,11 @@ const PHRASE_GIF_SLUGS = new Set([
 ]);
 
 const APPROVED_PHRASE_JPGS = new Set([
-  'bath_time','breakfast_time','brush_teeth','can_i','can_you_help_me','clean_up',
-  'close','come_here','get_dressed','good_morning','hello','i_dont_know','i_like_it',
-  'i_want','im_angry','im_happy','im_okay','im_sad','im_scared','im_thirsty','im_tired',
-  'its_okay','lets_play','listen','lunch_time','more_please','no_more','open','please',
-  'point_to','put_it_here','put_on_shoes','quiet_please','show_me','sit_down','snack_time',
-  'sorry','stand_up','stop','take_off_shoes','thats_funny','time_to_eat','touch','try_again',
-  'wait','wash_face','wash_hands','whats_this','where_is_it','yes','your_turn','youre_welcome'
+  'bath_time','brush_teeth','can_you_help_me','clean_up','close','get_dressed','hello',
+  'i_dont_know','i_like_it','i_want','im_angry','im_happy','im_sad','im_scared',
+  'im_thirsty','im_tired','its_okay','lets_play','listen','no_more','point_to',
+  'put_it_here','put_on_shoes','quiet_please','show_me','sit_down','stand_up','stop',
+  'take_off_shoes','thats_funny','time_to_eat','touch','wash_face','wash_hands'
 ]);
 
 function phraseImg(fname) {
