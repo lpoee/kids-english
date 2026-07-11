@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Render exact, text-free color/shape teaching cards without generative ambiguity."""
+import math
 from pathlib import Path
 from PIL import Image, ImageDraw
 
@@ -16,6 +17,7 @@ COLORS = {
     "pink": "#EC6F9E", "brown": "#795548", "gray": "#80868B",
     "black": "#171717", "white": "#FFFFFF",
 }
+SHAPES = ("round", "square", "circle", "triangle", "rectangle", "oval", "star", "heart", "diamond", "pentagon", "hexagon")
 
 
 def canvas():
@@ -65,8 +67,35 @@ def render_shape(slug):
     # Exact shape cards use transparency outside the shape: no background field.
     im = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
     d = ImageDraw.Draw(im); fill = "#16A6A1"
-    if slug == "round": circle(d, 512, 512, 320, fill)
-    else: d.rectangle((192, 192, 832, 832), fill=fill)
+    if slug in {"round", "circle"}:
+        circle(d, 512, 512, 320, fill)
+    elif slug == "square":
+        d.rectangle((192, 192, 832, 832), fill=fill)
+    elif slug == "triangle":
+        d.polygon([(512, 150), (865, 830), (159, 830)], fill=fill)
+    elif slug == "rectangle":
+        d.rectangle((132, 292, 892, 732), fill=fill)
+    elif slug == "oval":
+        d.ellipse((132, 292, 892, 732), fill=fill)
+    elif slug == "diamond":
+        d.polygon([(512, 130), (865, 512), (512, 894), (159, 512)], fill=fill)
+    elif slug == "heart":
+        d.polygon([(512, 870), (155, 510), (155, 315), (260, 190), (420, 210),
+                   (512, 330), (604, 210), (764, 190), (869, 315), (869, 510)], fill=fill)
+    elif slug == "star":
+        points = []
+        for i in range(10):
+            angle = -math.pi / 2 + i * math.pi / 5
+            radius = 370 if i % 2 == 0 else 165
+            points.append((512 + radius * math.cos(angle), 512 + radius * math.sin(angle)))
+        d.polygon(points, fill=fill)
+    elif slug in {"pentagon", "hexagon"}:
+        sides = 5 if slug == "pentagon" else 6
+        points = [(512 + 350 * math.cos(-math.pi / 2 + i * 2 * math.pi / sides),
+                   512 + 350 * math.sin(-math.pi / 2 + i * 2 * math.pi / sides)) for i in range(sides)]
+        d.polygon(points, fill=fill)
+    else:
+        raise ValueError(f"unknown shape: {slug}")
     path = ADJS / f"{slug}.png"
     path.parent.mkdir(parents=True, exist_ok=True)
     im.save(path, "PNG", optimize=True)
@@ -76,7 +105,7 @@ def main():
     for slug, fill in COLORS.items(): render_color(slug, fill)
     for slug in ("big", "small", "tall", "short", "long", "wide", "narrow"):
         render_comparison(slug)
-    for slug in ("round", "square"): render_shape(slug)
-    print("rendered 20 color/shape cards")
+    for slug in SHAPES: render_shape(slug)
+    print(f"rendered {len(COLORS) + 7 + len(SHAPES)} color/shape cards")
 
 if __name__ == "__main__": main()

@@ -128,7 +128,7 @@ function slugify(text) {
 }
 
 function generatedImg(kind, slug, ext = 'jpg') {
-  return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=25';
+  return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=26';
 }
 
 function vocabImg(value) {
@@ -137,7 +137,8 @@ function vocabImg(value) {
 
 function adjImg(w) {
   const slug = slugify(w);
-  return generatedImg('adjs', slug, (slug === 'round' || slug === 'square') ? 'png' : 'jpg');
+  const exactShapes = new Set(['round','square','circle','triangle','rectangle','oval','star','heart','diamond','pentagon','hexagon']);
+  return generatedImg('adjs', slug, exactShapes.has(slug) ? 'png' : 'jpg');
 }
 
 const PHRASE_GIF_SLUGS = new Set([
@@ -300,6 +301,15 @@ const DATA = {
       adjItem('Narrow'),
       adjItem('Round'),
       adjItem('Square'),
+      adjItem('Circle'),
+      adjItem('Triangle'),
+      adjItem('Rectangle'),
+      adjItem('Oval'),
+      adjItem('Star'),
+      adjItem('Heart'),
+      adjItem('Diamond'),
+      adjItem('Pentagon'),
+      adjItem('Hexagon'),
       adjItem('Fast'),
       adjItem('Slow')
     ]
