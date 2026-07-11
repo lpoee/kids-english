@@ -28,10 +28,9 @@ def save(im, path):
 
 
 def render_color(slug, fill):
-    im = canvas(); d = ImageDraw.Draw(im)
-    box = (162, 162, 862, 862)
-    d.ellipse(box, fill=fill, outline=OUTLINE if slug == "white" else fill, width=10)
-    save(im, VOCAB / f"{slug}.jpg")
+    # Color cards are pure full-bleed fields: no contrasting background,
+    # outline, shape, shadow, texture, or decoration.
+    save(Image.new("RGB", (SIZE, SIZE), fill), VOCAB / f"{slug}.jpg")
 
 
 def circle(d, cx, cy, r, fill):
