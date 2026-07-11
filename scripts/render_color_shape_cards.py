@@ -62,10 +62,14 @@ def render_comparison(slug):
 
 
 def render_shape(slug):
-    im = canvas(); d = ImageDraw.Draw(im); fill = "#16A6A1"
+    # Exact shape cards use transparency outside the shape: no background field.
+    im = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im); fill = "#16A6A1"
     if slug == "round": circle(d, 512, 512, 320, fill)
     else: d.rectangle((192, 192, 832, 832), fill=fill)
-    save(im, ADJS / f"{slug}.jpg")
+    path = ADJS / f"{slug}.png"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    im.save(path, "PNG", optimize=True)
 
 
 def main():

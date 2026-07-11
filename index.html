@@ -128,7 +128,7 @@ function slugify(text) {
 }
 
 function generatedImg(kind, slug, ext = 'jpg') {
-  return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=24';
+  return 'images/generated/' + kind + '/' + slug + '.' + ext + '?v=25';
 }
 
 function vocabImg(value) {
@@ -136,7 +136,8 @@ function vocabImg(value) {
 }
 
 function adjImg(w) {
-  return generatedImg('adjs', slugify(w));
+  const slug = slugify(w);
+  return generatedImg('adjs', slug, (slug === 'round' || slug === 'square') ? 'png' : 'jpg');
 }
 
 const PHRASE_GIF_SLUGS = new Set([

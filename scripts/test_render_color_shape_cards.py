@@ -33,6 +33,15 @@ class ColorCardTest(unittest.TestCase):
                 self.assertGreater(pixel[0], 210)
                 self.assertLess(pixel[1], 80)
                 self.assertLess(pixel[2], 80)
+    def test_shape_card_has_transparent_background(self):
+        module = load_module()
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(module, "ADJS", Path(tmp)):
+                module.render_shape("round")
+            with Image.open(Path(tmp) / "round.png") as image:
+                rgba = image.convert("RGBA")
+                self.assertEqual(rgba.getpixel((0, 0))[3], 0)
+                self.assertEqual(rgba.getpixel((512, 512))[3], 255)
 
 
 if __name__ == "__main__":
