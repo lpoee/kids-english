@@ -45,15 +45,17 @@ HOME_WORDS = {"bed", "chair", "table", "door", "window", "cup", "spoon", "clock"
 ACTION_WORDS = {"eat", "drink", "sleep", "run", "jump", "walk", "sit", "stand", "clap", "wave"}
 
 ADJ_PROMPTS = {
-    "big": "A very large elephant beside a tiny toy block so the meaning of big is immediately obvious.",
-    "small": "A very small kitten next to a much larger shoe so the meaning of small is immediately obvious.",
-    "tall": "A very tall tree stretching high in the frame with a short fence nearby for scale.",
-    "short": "A short pencil next to a much longer pencil so short is obvious.",
-    "long": "Two simple horizontal lines on a plain background, one clearly much longer than the other, with the long line emphasized.",
-    "round": "A perfectly round red ball centered in the frame.",
-    "square": "A clear square gift box centered in the frame.",
-    "fast": "A child sprinting across a playground with obvious motion blur or wind cues.",
-    "slow": "A slow snail moving across a leaf in close-up.",
+    "big": "Two identical circles; one is very large and one is very small. Emphasize the large circle.",
+    "small": "Two identical circles; one is very large and one is very small. Emphasize the small circle.",
+    "tall": "Two rectangles with exactly the same width; one is very tall and one is very short. Emphasize the tall rectangle.",
+    "short": "Two rectangles with exactly the same width; one is very tall and one is very short. Emphasize the short rectangle.",
+    "long": "Two horizontal lines with exactly the same thickness; one is very long and one is very short. Emphasize the long line.",
+    "wide": "Two rectangles with exactly the same height; one is very wide and one is very narrow. Emphasize the wide rectangle.",
+    "narrow": "Two rectangles with exactly the same height; one is very wide and one is very narrow. Emphasize the narrow rectangle.",
+    "round": "One perfect circle as flat front-facing geometry.",
+    "square": "One exact square with four equal straight sides and four sharp corners as flat front-facing geometry.",
+    "fast": "A child sprinting across a playground with obvious body lean, long stride, and motion cues.",
+    "slow": "A snail moving slowly across a leaf with its short traveled path clearly visible.",
 }
 
 PHRASE_LABEL_OVERRIDES = {
@@ -154,8 +156,9 @@ def word_prompt(slug: str, query: str) -> str:
     if slug in ANIMAL_WORDS:
         return (
             f"{shared} Show one {label.lower()} clearly and fully visible. "
-            "Use a natural but uncluttered background with soft blur. "
-            "Center the subject and keep the animal easy to recognize."
+            "Include one natural context cue that helps explain where the animal lives or what it does. "
+            "The context must explain the subject but must not compete with it. "
+            "Center the animal, keep it dominant, and keep the setting uncluttered."
         )
     if slug in FOOD_WORDS:
         background = "clean pale studio background" if slug in PLAIN_BG_WORDS else "simple clean background"
@@ -180,7 +183,9 @@ def word_prompt(slug: str, query: str) -> str:
         return (
             f"{shared} Show one young child clearly demonstrating the action '{label}'. "
             f"Scene: {desc}. "
-            "Full body visible when helpful. Use a simple uncluttered setting."
+            "Show the body position, motion direction, and visible result of the action. "
+            "The action must be understood without reading. Full body visible when helpful. "
+            "Use only context needed to explain the action."
         )
     return (
         f"{shared} Show {desc}. "
@@ -191,12 +196,23 @@ def word_prompt(slug: str, query: str) -> str:
 def adjective_prompt(slug: str, query: str) -> str:
     label = title_case_slug(slug)
     idea = ADJ_PROMPTS.get(slug, clean_query(query))
+    if slug in {"round", "square"}:
+        return (
+            f"Teach the shape '{label}' directly with {idea} "
+            "Use flat front-facing geometry on a plain background: no scene, props, perspective, depth, or shadow. "
+            "No text, symbols, arrows, labels, collage, or decoration."
+        )
+    if slug in {"big", "small", "tall", "short", "long", "wide", "narrow"}:
+        return (
+            f"Teach the adjective '{label}' with a controlled same-category comparison. {idea} "
+            "Change only the target dimension; keep every non-target property identical. "
+            "Use simple flat geometry, strong visual hierarchy, and a plain background. "
+            "No text, labels, measurement marks, collage, or decorative scene."
+        )
     return (
-        "Create a realistic square educational flashcard photo for a private kids English app. "
-        f"Teach the adjective '{label}' in one instant literal image. "
-        f"Scene: {idea} "
-        "Simple composition, child-friendly, no text, no watermark, no collage, no illustration, "
-        "no labels, no signs, and no readable words anywhere in frame."
+        f"Teach the adjective '{label}' through visible evidence. Scene: {idea} "
+        "Make the motion or defining property unmistakable without text. Keep only context that explains the meaning. "
+        "Child-friendly, no watermark, no collage, no labels, no signs, and no readable words."
     )
 
 
