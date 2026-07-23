@@ -113,6 +113,7 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
   </div>
   <div id="counter"><span id="idx-num">1</span> / <span id="total-num">1</span></div>
 </div>
+<audio id="audio-player" preload="auto" playsinline></audio>
 
 <script>
 // ═══════════════════════════════════════════
@@ -457,21 +458,10 @@ const DATA = {
 };
 
 // ═══════════════════════════════════════════
-//  WEB AUDIO API — reliable on mobile Safari
+//  AUDIO — one persistent media element for mobile Safari
 // ═══════════════════════════════════════════
-let audioCtx = null;
-let currentSource = null;
 let cnPlayTimer = null;
-
-function ensureAudioCtx() {
-  if (!audioCtx) {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  }
-  if (audioCtx.state === 'suspended') {
-    audioCtx.resume();
-  }
-  return audioCtx;
-}
+let audioPlaybackId = 0;
 
 // ═══════════════════════════════════════════
 //  STATE
@@ -545,6 +535,7 @@ function getBackgroundClass() {
 //  VIEW
 // ═══════════════════════════════════════════
 const $ = id => document.getElementById(id);
+const audioPlayer = $('audio-player');
 const IMAGES_ENABLED = true;
 
 function imageClass(path) {
@@ -781,77 +772,50 @@ function playAudio() {
   const word = getCurrentWord();
   if (!word) return;
   if (!word.aud) return;
-  
-  // Stop any current playback
-  if (currentSource) {
-    try { currentSource.stop(); } catch(e) {}
-    currentSource = null;
-  }
-  // Cancel any pending Chinese playback from previous word
+
+  stopAudioPlayback();
+  const playbackId = audioPlaybackId;
+
+  playAudioFile(word.aud, playbackId, () => {
+    cnPlayTimer = setTimeout(() => {
+      if (playbackId !== audioPlaybackId) return;
+      const cnPath = word.aud.replace('audio/', 'audio_cn/');
+      playAudioFile(cnPath, playbackId, () => {
+        if (state.autoplay) setTimeout(() => next(), 600);
+      });
+    }, 500);
+  });
+}
+
+function playAudioFile(path, playbackId, onEnded) {
+  if (playbackId !== audioPlaybackId) return;
+  audioPlayer.onended = () => {
+    if (playbackId === audioPlaybackId) onEnded();
+  };
+  audioPlayer.src = path;
+  audioPlayer.volume = state.volume;
+  audioPlayer.currentTime = 0;
+  audioPlayer.play().catch(error => console.error('Audio playback failed', error));
+}
+
+function stopAudioPlayback() {
+  audioPlaybackId += 1;
   if (cnPlayTimer) {
     clearTimeout(cnPlayTimer);
     cnPlayTimer = null;
   }
-  
-  const ctx = ensureAudioCtx();
-  
-  fetch(word.aud)
-    .then(r => {
-      if (!r.ok) throw new Error('fetch failed');
-      return r.arrayBuffer();
-    })
-    .then(buf => ctx.decodeAudioData(buf))
-    .then(audioBuffer => {
-      const source = ctx.createBufferSource();
-      source.buffer = audioBuffer;
-      const gain = ctx.createGain();
-      gain.gain.value = state.volume;
-      source.connect(gain);
-      gain.connect(ctx.destination);
-      source.start(0);
-      currentSource = source;
-      
-      source.onended = () => {
-        currentSource = null;
-        // Play Chinese audio after 500ms delay (for ALL words)
-        if (cnPlayTimer) clearTimeout(cnPlayTimer);
-        cnPlayTimer = setTimeout(() => {
-          const cnPath = word.aud.replace('audio/', 'audio_cn/');
-          fetch(cnPath)
-            .then(r => { if (!r.ok) throw new Error('no cn'); return r.arrayBuffer(); })
-            .then(buf => ctx.decodeAudioData(buf))
-            .then(cnBuf => {
-              const cnSource = ctx.createBufferSource();
-              cnSource.buffer = cnBuf;
-              const cnGain = ctx.createGain();
-              cnGain.gain.value = state.volume;
-              cnSource.connect(cnGain);
-              cnGain.connect(ctx.destination);
-              cnSource.start(0);
-              cnSource.onended = () => {
-                if (state.autoplay) setTimeout(() => next(), 600);
-              };
-            })
-            .catch(() => {
-              // No Chinese audio — advance autoplay if needed
-              if (state.autoplay) setTimeout(() => next(), 600);
-            });
-        }, 500);
-      };
-    })
-    .catch(() => {});
+  audioPlayer.onended = null;
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
 }
 
 function toggleAutoplay() {
   state.autoplay = !state.autoplay;
   toggleAutoplayUI(state.autoplay);
-  if (state.autoplay) scheduleAutoplay();
+  if (state.autoplay) tapWord();
   else {
     clearTimeout(state.autoplayTimer);
-    if (currentSource) {
-      try { currentSource.stop(); } catch(e) {}
-      currentSource = null;
-    }
+    stopAudioPlayback();
   }
 }
 
@@ -869,10 +833,6 @@ function scheduleAutoplay() {
 function init() {
   if (init.done) return;
   init.done = true;
-
-  // Ensure AudioContext is resumed on first user interaction
-  document.addEventListener('touchstart', () => ensureAudioCtx(), {once: true});
-  document.addEventListener('click', () => ensureAudioCtx(), {once: true});
 
   // Build main tabs dynamically from DATA
   renderMainTabs();
