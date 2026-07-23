@@ -26,6 +26,13 @@ class IPadAudioPlaybackTests(unittest.TestCase):
         self.assertRegex(HTML, r"playAudioFile\(cnPath")
         self.assertNotIn("new Audio(", HTML)
 
+    def test_each_audio_file_has_a_one_shot_ended_handler(self):
+        self.assertRegex(
+            HTML,
+            r"audioPlayer\.addEventListener\('ended',\s*activeEndedHandler,\s*\{once:\s*true\}\)",
+        )
+        self.assertNotIn("audioPlayer.onended =", HTML)
+
     def test_autoplay_starts_from_the_button_gesture(self):
         toggle = re.search(
             r"function toggleAutoplay\(\)\s*\{(?P<body>.*?)\n\}", HTML, re.S

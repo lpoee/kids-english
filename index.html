@@ -462,6 +462,7 @@ const DATA = {
 // ═══════════════════════════════════════════
 let cnPlayTimer = null;
 let audioPlaybackId = 0;
+let activeEndedHandler = null;
 
 // ═══════════════════════════════════════════
 //  STATE
@@ -789,9 +790,14 @@ function playAudio() {
 
 function playAudioFile(path, playbackId, onEnded) {
   if (playbackId !== audioPlaybackId) return;
-  audioPlayer.onended = () => {
+  if (activeEndedHandler) {
+    audioPlayer.removeEventListener('ended', activeEndedHandler);
+  }
+  activeEndedHandler = () => {
+    activeEndedHandler = null;
     if (playbackId === audioPlaybackId) onEnded();
   };
+  audioPlayer.addEventListener('ended', activeEndedHandler, {once: true});
   audioPlayer.src = path;
   audioPlayer.volume = state.volume;
   audioPlayer.currentTime = 0;
@@ -804,7 +810,10 @@ function stopAudioPlayback() {
     clearTimeout(cnPlayTimer);
     cnPlayTimer = null;
   }
-  audioPlayer.onended = null;
+  if (activeEndedHandler) {
+    audioPlayer.removeEventListener('ended', activeEndedHandler);
+    activeEndedHandler = null;
+  }
   audioPlayer.pause();
   audioPlayer.currentTime = 0;
 }
