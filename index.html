@@ -89,6 +89,25 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 #arrow-left{left:8px}#arrow-right{right:8px}
 #counter{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.5);font-size:12px;cursor:pointer;padding:4px 14px;border-radius:20px;z-index:15;background:rgba(0,0,0,.2);backdrop-filter:blur(4px)}
 #counter span{color:#ffd700;font-weight:700;font-size:15px}
+#phrase-panel{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden}
+#phrase-panel[hidden],#social-panel[hidden]{display:none}
+#social-panel{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:8px;color:#fff;background:linear-gradient(135deg,#0c1929,#1a365d,#234e52)}
+#social-top{width:min(720px,100%);display:flex;align-items:center;gap:8px}
+#mode-phrases{min-height:42px;padding:7px 14px;border-radius:14px;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-weight:900}
+#social-header{flex:1;display:flex;align-items:center;justify-content:space-between;gap:8px}
+#social-title{font-family:'Fredoka One',cursive;font-size:clamp(20px,5vw,28px);color:#ffe08a;line-height:1.05}
+#social-progress{font-size:12px;font-weight:900;color:rgba(255,255,255,.5);white-space:nowrap}
+#social-story-select{width:min(720px,100%);min-height:42px;border:2px solid rgba(255,255,255,.15);border-radius:14px;background:#16283d;color:#fff;font-size:15px;font-weight:800;padding:7px 12px}
+#social-video-card{position:relative;width:min(720px,100%);height:min(54vh,480px);border-radius:22px;overflow:hidden;background:#07101a;border:3px solid rgba(255,255,255,.1);box-shadow:0 16px 48px rgba(0,0,0,.32);cursor:pointer}
+#social-video{width:100%;height:100%;display:block;object-fit:contain;background:#07101a}
+#social-speaker{min-height:20px;font-size:15px;font-weight:900;color:#7bed9f;letter-spacing:.04em}
+#social-text{min-height:48px;max-width:720px;padding:0 10px;font-family:'Fredoka One',cursive;font-size:clamp(27px,6vw,44px);line-height:1.05;text-align:center;color:#fff;text-shadow:0 4px 14px rgba(0,0,0,.3)}
+#social-choices{width:min(620px,100%);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;min-height:58px}
+.social-choice{min-height:56px;border-radius:17px;border:3px solid rgba(255,255,255,.16);background:linear-gradient(135deg,#ff9f43,#ee5253);color:#fff;font-size:17px;font-weight:900;padding:8px 10px}
+.social-choice:nth-child(2){background:linear-gradient(135deg,#54a0ff,#5f27cd)}
+.social-choice.continue{grid-column:1/-1;background:linear-gradient(135deg,#10ac84,#2e86de)}
+#social-controls{display:flex;gap:7px;justify-content:center}
+.social-control{min-height:42px;padding:7px 12px;border-radius:14px;border:2px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);color:#fff;font-size:13px;font-weight:900}
 #autoplay{position:absolute;top:80px;right:8px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.25);border:2px solid rgba(255,255,255,.1);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;z-index:20;color:rgba(255,255,255,.6);transition:all .2s;backdrop-filter:blur(4px)}
 #autoplay.active{background:rgba(255,215,0,.2);border-color:#ffd700;color:#ffd700}
 .confetti-piece{position:fixed;pointer-events:none;z-index:400;animation:cf 1.4s ease-out forwards}
@@ -99,6 +118,7 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 <body class="all-bg">
 
 <div id="app">
+  <div id="phrase-panel">
   <div id="tabs">
   </div>
   <div id="sub-tabs"></div>
@@ -112,6 +132,30 @@ linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
     </div>
   </div>
   <div id="counter"><span id="idx-num">1</span> / <span id="total-num">1</span></div>
+  </div>
+
+  <section id="social-panel" hidden aria-label="Social stories">
+    <div id="social-top">
+      <button id="mode-phrases" type="button">Cards</button>
+      <header id="social-header">
+        <h1 id="social-title">Social Story</h1>
+        <span id="social-progress">1 / 18</span>
+      </header>
+    </div>
+    <select id="social-story-select" aria-label="Choose a social story"></select>
+    <div id="social-video-card" role="button" tabindex="0" aria-label="Replay current line">
+      <video id="social-video" muted loop playsinline preload="auto"></video>
+    </div>
+    <div id="social-speaker" aria-live="polite"></div>
+    <div id="social-text">Watch what is happening.</div>
+    <div id="social-choices" aria-label="Choose what to say"></div>
+    <div id="social-controls">
+      <button id="social-replay" class="social-control" type="button">Replay</button>
+      <button id="social-restart" class="social-control" type="button">Start over</button>
+      <button id="social-next" class="social-control" type="button">Next story</button>
+    </div>
+    <audio id="social-audio" preload="auto" playsinline></audio>
+  </section>
 </div>
 <audio id="audio-player" preload="auto" playsinline></audio>
 
@@ -648,14 +692,15 @@ function renderMainTabs() {
   const container = $('tabs');
   const keys = Object.keys(DATA);
   // Build tabs: 'All' first, then each category
-  let html = `<button class="tab${state.mainCat === 'all' ? ' active' : ''}" data-cat="all">🌍 All</button>`;
+  let html = `<button class="tab" id="mode-social" type="button">Social</button>`;
+  html += `<button class="tab${state.mainCat === 'all' ? ' active' : ''}" data-cat="all">🌍 All</button>`;
   for (const k of keys) {
     const cat = DATA[k];
     html += `<button class="tab${k === state.mainCat ? ' active' : ''}" data-cat="${k}">${cat.label}</button>`;
   }
   container.innerHTML = html;
   // Re-bind tab clicks
-  container.querySelectorAll('.tab').forEach(btn => {
+  container.querySelectorAll('.tab[data-cat]').forEach(btn => {
     btn.addEventListener('click', () => setMainCat(btn.dataset.cat));
   });
   // Scroll active tab into view
@@ -904,6 +949,10 @@ document.addEventListener('DOMContentLoaded', init);
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
   init();
 }
+</script>
+<script type="module">
+import {mountSocialPlayer} from './assets/social-player.js?v=1';
+mountSocialPlayer().catch(error => console.error('Social stories failed to load', error));
 </script>
 </body>
 </html>
