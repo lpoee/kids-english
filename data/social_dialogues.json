@@ -1,0 +1,2287 @@
+{
+  "version": "2.0",
+  "mode": "social-dialogues",
+  "language": "en",
+  "stories": [
+    {
+      "id": "toy_car",
+      "title": "Can I Play With the Car?",
+      "skill": "ask to use a toy and accept yes or no",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "car",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/toy_car/setup.mp4",
+          "poster": "images/social-dialogues/toy_car/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Can I play with it?",
+          "visual": {
+            "prop": "car",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/toy_car/request.mp4",
+          "poster": "images/social-dialogues/toy_car/request.jpg",
+          "audio": "audio/dialogues/toy_car/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "Sure!",
+                "next": "accept"
+              },
+              {
+                "label": "Not right now.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Sure! Here you go.",
+          "visual": {
+            "prop": "car",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/toy_car/accept.mp4",
+          "poster": "images/social-dialogues/toy_car/accept.jpg",
+          "audio": "audio/dialogues/toy_car/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Thank you!",
+          "visual": {
+            "prop": "car",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/toy_car/thanks.mp4",
+          "poster": "images/social-dialogues/toy_car/thanks.jpg",
+          "audio": "audio/dialogues/toy_car/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Not right now. I'm still using it.",
+          "visual": {
+            "prop": "car",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/toy_car/decline.mp4",
+          "poster": "images/social-dialogues/toy_car/decline.jpg",
+          "audio": "audio/dialogues/toy_car/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll wait.",
+          "visual": {
+            "prop": "car",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/toy_car/wait.mp4",
+          "poster": "images/social-dialogues/toy_car/wait.jpg",
+          "audio": "audio/dialogues/toy_car/wait.mp3",
+          "next": "next_turn"
+        },
+        {
+          "id": "next_turn",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "You can have it next.",
+          "visual": {
+            "prop": "car",
+            "action": "repair",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/toy_car/next_turn.mp4",
+          "poster": "images/social-dialogues/toy_car/next_turn.jpg",
+          "audio": "audio/dialogues/toy_car/next_turn.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "join_play",
+      "title": "Can I Play With You?",
+      "skill": "join another child's play",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "blocks",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/join_play/setup.mp4",
+          "poster": "images/social-dialogues/join_play/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Can I play with you?",
+          "visual": {
+            "prop": "blocks",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/join_play/request.mp4",
+          "poster": "images/social-dialogues/join_play/request.jpg",
+          "audio": "audio/dialogues/join_play/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "Yes!",
+                "next": "accept"
+              },
+              {
+                "label": "Not yet.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Yes! Come play.",
+          "visual": {
+            "prop": "blocks",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/join_play/accept.mp4",
+          "poster": "images/social-dialogues/join_play/accept.jpg",
+          "audio": "audio/dialogues/join_play/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Yay! Let's play together.",
+          "visual": {
+            "prop": "blocks",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/join_play/thanks.mp4",
+          "poster": "images/social-dialogues/join_play/thanks.jpg",
+          "audio": "audio/dialogues/join_play/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Not yet. I'm finishing this part.",
+          "visual": {
+            "prop": "blocks",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/join_play/decline.mp4",
+          "poster": "images/social-dialogues/join_play/decline.jpg",
+          "audio": "audio/dialogues/join_play/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll watch for now.",
+          "visual": {
+            "prop": "blocks",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/join_play/wait.mp4",
+          "poster": "images/social-dialogues/join_play/wait.jpg",
+          "audio": "audio/dialogues/join_play/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "borrow_toy",
+      "title": "Can I Use the Truck?",
+      "skill": "borrow a toy for a short time",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "truck",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/borrow_toy/setup.mp4",
+          "poster": "images/social-dialogues/borrow_toy/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Can I use the truck for a little while?",
+          "visual": {
+            "prop": "truck",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/borrow_toy/request.mp4",
+          "poster": "images/social-dialogues/borrow_toy/request.jpg",
+          "audio": "audio/dialogues/borrow_toy/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "Sure.",
+                "next": "accept"
+              },
+              {
+                "label": "Not yet.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Sure. Here you go.",
+          "visual": {
+            "prop": "truck",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/borrow_toy/accept.mp4",
+          "poster": "images/social-dialogues/borrow_toy/accept.jpg",
+          "audio": "audio/dialogues/borrow_toy/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Thanks! I'll bring it back.",
+          "visual": {
+            "prop": "truck",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/borrow_toy/thanks.mp4",
+          "poster": "images/social-dialogues/borrow_toy/thanks.jpg",
+          "audio": "audio/dialogues/borrow_toy/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Not yet. I'm using it.",
+          "visual": {
+            "prop": "truck",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/borrow_toy/decline.mp4",
+          "poster": "images/social-dialogues/borrow_toy/decline.jpg",
+          "audio": "audio/dialogues/borrow_toy/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll wait.",
+          "visual": {
+            "prop": "truck",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/borrow_toy/wait.mp4",
+          "poster": "images/social-dialogues/borrow_toy/wait.jpg",
+          "audio": "audio/dialogues/borrow_toy/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "take_turns",
+      "title": "Can I Have a Turn?",
+      "skill": "ask for and negotiate a turn",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "ball",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/take_turns/setup.mp4",
+          "poster": "images/social-dialogues/take_turns/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Can I have a turn?",
+          "visual": {
+            "prop": "ball",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/take_turns/request.mp4",
+          "poster": "images/social-dialogues/take_turns/request.jpg",
+          "audio": "audio/dialogues/take_turns/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "After me.",
+                "next": "accept"
+              },
+              {
+                "label": "More time.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Sure. You can go after me.",
+          "visual": {
+            "prop": "ball",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/take_turns/accept.mp4",
+          "poster": "images/social-dialogues/take_turns/accept.jpg",
+          "audio": "audio/dialogues/take_turns/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay! I'll wait here.",
+          "visual": {
+            "prop": "ball",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/take_turns/thanks.mp4",
+          "poster": "images/social-dialogues/take_turns/thanks.jpg",
+          "audio": "audio/dialogues/take_turns/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "I need a little more time.",
+          "visual": {
+            "prop": "ball",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/take_turns/decline.mp4",
+          "poster": "images/social-dialogues/take_turns/decline.jpg",
+          "audio": "audio/dialogues/take_turns/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. Tell me when you're done.",
+          "visual": {
+            "prop": "ball",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/take_turns/wait.mp4",
+          "poster": "images/social-dialogues/take_turns/wait.jpg",
+          "audio": "audio/dialogues/take_turns/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "share_materials",
+      "title": "Can We Share the Crayons?",
+      "skill": "share materials without grabbing",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "crayons",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/share_materials/setup.mp4",
+          "poster": "images/social-dialogues/share_materials/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Can we share the crayons?",
+          "visual": {
+            "prop": "crayons",
+            "action": "request",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/share_materials/request.mp4",
+          "poster": "images/social-dialogues/share_materials/request.jpg",
+          "audio": "audio/dialogues/share_materials/request.mp3",
+          "choice": {
+            "prompt": "What can Mia say?",
+            "options": [
+              {
+                "label": "Let's share.",
+                "next": "accept"
+              },
+              {
+                "label": "These are busy.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Yes. Let's share them.",
+          "visual": {
+            "prop": "crayons",
+            "action": "accept",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/share_materials/accept.mp4",
+          "poster": "images/social-dialogues/share_materials/accept.jpg",
+          "audio": "audio/dialogues/share_materials/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Thank you! I'll use the blue one.",
+          "visual": {
+            "prop": "crayons",
+            "action": "positive_result",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/share_materials/thanks.mp4",
+          "poster": "images/social-dialogues/share_materials/thanks.jpg",
+          "audio": "audio/dialogues/share_materials/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "I'm using these colors right now.",
+          "visual": {
+            "prop": "crayons",
+            "action": "boundary",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/share_materials/decline.mp4",
+          "poster": "images/social-dialogues/share_materials/decline.jpg",
+          "audio": "audio/dialogues/share_materials/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. I'll use the other colors.",
+          "visual": {
+            "prop": "crayons",
+            "action": "respect",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/share_materials/wait.mp4",
+          "poster": "images/social-dialogues/share_materials/wait.jpg",
+          "audio": "audio/dialogues/share_materials/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "accept_yes",
+      "title": "Do You Want to Build?",
+      "skill": "accept an invitation",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "blocks",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/accept_yes/setup.mp4",
+          "poster": "images/social-dialogues/accept_yes/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Do you want to build with me?",
+          "visual": {
+            "prop": "blocks",
+            "action": "request",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/accept_yes/request.mp4",
+          "poster": "images/social-dialogues/accept_yes/request.jpg",
+          "audio": "audio/dialogues/accept_yes/request.mp3",
+          "choice": {
+            "prompt": "What can Mia say?",
+            "options": [
+              {
+                "label": "Sure!",
+                "next": "accept"
+              },
+              {
+                "label": "No, thank you.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Sure! Let's build.",
+          "visual": {
+            "prop": "blocks",
+            "action": "accept",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/accept_yes/accept.mp4",
+          "poster": "images/social-dialogues/accept_yes/accept.jpg",
+          "audio": "audio/dialogues/accept_yes/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Great! We can make a bridge.",
+          "visual": {
+            "prop": "blocks",
+            "action": "positive_result",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/accept_yes/thanks.mp4",
+          "poster": "images/social-dialogues/accept_yes/thanks.jpg",
+          "audio": "audio/dialogues/accept_yes/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "No, thank you. I want to draw.",
+          "visual": {
+            "prop": "blocks",
+            "action": "boundary",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/accept_yes/decline.mp4",
+          "poster": "images/social-dialogues/accept_yes/decline.jpg",
+          "audio": "audio/dialogues/accept_yes/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. Maybe later.",
+          "visual": {
+            "prop": "blocks",
+            "action": "respect",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/accept_yes/wait.mp4",
+          "poster": "images/social-dialogues/accept_yes/wait.jpg",
+          "audio": "audio/dialogues/accept_yes/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "polite_no",
+      "title": "Do You Want to Play Tag?",
+      "skill": "say no politely and choose quiet play",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "tag",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/polite_no/setup.mp4",
+          "poster": "images/social-dialogues/polite_no/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Do you want to play tag?",
+          "visual": {
+            "prop": "tag",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/polite_no/request.mp4",
+          "poster": "images/social-dialogues/polite_no/request.jpg",
+          "audio": "audio/dialogues/polite_no/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "Yes!",
+                "next": "accept"
+              },
+              {
+                "label": "No, thank you.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Yes! Let's play.",
+          "visual": {
+            "prop": "tag",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/polite_no/accept.mp4",
+          "poster": "images/social-dialogues/polite_no/accept.jpg",
+          "audio": "audio/dialogues/polite_no/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay! You can chase me.",
+          "visual": {
+            "prop": "tag",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/polite_no/thanks.mp4",
+          "poster": "images/social-dialogues/polite_no/thanks.jpg",
+          "audio": "audio/dialogues/polite_no/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "No, thank you. I want quiet play.",
+          "visual": {
+            "prop": "tag",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/polite_no/decline.mp4",
+          "poster": "images/social-dialogues/polite_no/decline.jpg",
+          "audio": "audio/dialogues/polite_no/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll play something quiet too.",
+          "visual": {
+            "prop": "tag",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/polite_no/wait.mp4",
+          "poster": "images/social-dialogues/polite_no/wait.jpg",
+          "audio": "audio/dialogues/polite_no/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "accept_no",
+      "title": "Can I Sit Here?",
+      "skill": "accept another child's need for space",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "bench",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/accept_no/setup.mp4",
+          "poster": "images/social-dialogues/accept_no/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Can I sit here?",
+          "visual": {
+            "prop": "bench",
+            "action": "request",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/accept_no/request.mp4",
+          "poster": "images/social-dialogues/accept_no/request.jpg",
+          "audio": "audio/dialogues/accept_no/request.mp3",
+          "choice": {
+            "prompt": "What can Mia say?",
+            "options": [
+              {
+                "label": "Yes.",
+                "next": "accept"
+              },
+              {
+                "label": "I need space.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Yes. You can sit here.",
+          "visual": {
+            "prop": "bench",
+            "action": "accept",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/accept_no/accept.mp4",
+          "poster": "images/social-dialogues/accept_no/accept.jpg",
+          "audio": "audio/dialogues/accept_no/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Thanks!",
+          "visual": {
+            "prop": "bench",
+            "action": "positive_result",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/accept_no/thanks.mp4",
+          "poster": "images/social-dialogues/accept_no/thanks.jpg",
+          "audio": "audio/dialogues/accept_no/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "I need some space right now.",
+          "visual": {
+            "prop": "bench",
+            "action": "boundary",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/accept_no/decline.mp4",
+          "poster": "images/social-dialogues/accept_no/decline.jpg",
+          "audio": "audio/dialogues/accept_no/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. I'll sit over there.",
+          "visual": {
+            "prop": "bench",
+            "action": "respect",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/accept_no/wait.mp4",
+          "poster": "images/social-dialogues/accept_no/wait.jpg",
+          "audio": "audio/dialogues/accept_no/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "still_using",
+      "title": "I'm Still Using It",
+      "skill": "state that an item is still in use",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "train",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/still_using/setup.mp4",
+          "poster": "images/social-dialogues/still_using/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Can I use the train?",
+          "visual": {
+            "prop": "train",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/still_using/request.mp4",
+          "poster": "images/social-dialogues/still_using/request.jpg",
+          "audio": "audio/dialogues/still_using/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "I'm done.",
+                "next": "accept"
+              },
+              {
+                "label": "Still using it.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Sure. I'm done with it.",
+          "visual": {
+            "prop": "train",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/still_using/accept.mp4",
+          "poster": "images/social-dialogues/still_using/accept.jpg",
+          "audio": "audio/dialogues/still_using/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Thank you!",
+          "visual": {
+            "prop": "train",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/still_using/thanks.mp4",
+          "poster": "images/social-dialogues/still_using/thanks.jpg",
+          "audio": "audio/dialogues/still_using/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "I'm still using it.",
+          "visual": {
+            "prop": "train",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/still_using/decline.mp4",
+          "poster": "images/social-dialogues/still_using/decline.jpg",
+          "audio": "audio/dialogues/still_using/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll wait.",
+          "visual": {
+            "prop": "train",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/still_using/wait.mp4",
+          "poster": "images/social-dialogues/still_using/wait.jpg",
+          "audio": "audio/dialogues/still_using/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "wait_calmly",
+      "title": "Is It My Turn?",
+      "skill": "wait calmly for a turn",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "swing",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/wait_calmly/setup.mp4",
+          "poster": "images/social-dialogues/wait_calmly/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Is it my turn?",
+          "visual": {
+            "prop": "swing",
+            "action": "request",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/wait_calmly/request.mp4",
+          "poster": "images/social-dialogues/wait_calmly/request.jpg",
+          "audio": "audio/dialogues/wait_calmly/request.mp3",
+          "choice": {
+            "prompt": "What can Mia say?",
+            "options": [
+              {
+                "label": "Your turn.",
+                "next": "accept"
+              },
+              {
+                "label": "Please wait.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Yes. It's your turn now.",
+          "visual": {
+            "prop": "swing",
+            "action": "accept",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/wait_calmly/accept.mp4",
+          "poster": "images/social-dialogues/wait_calmly/accept.jpg",
+          "audio": "audio/dialogues/wait_calmly/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Thank you!",
+          "visual": {
+            "prop": "swing",
+            "action": "positive_result",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/wait_calmly/thanks.mp4",
+          "poster": "images/social-dialogues/wait_calmly/thanks.jpg",
+          "audio": "audio/dialogues/wait_calmly/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Not yet. Please wait.",
+          "visual": {
+            "prop": "swing",
+            "action": "boundary",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/wait_calmly/decline.mp4",
+          "poster": "images/social-dialogues/wait_calmly/decline.jpg",
+          "audio": "audio/dialogues/wait_calmly/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. I can wait.",
+          "visual": {
+            "prop": "swing",
+            "action": "respect",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/wait_calmly/wait.mp4",
+          "poster": "images/social-dialogues/wait_calmly/wait.jpg",
+          "audio": "audio/dialogues/wait_calmly/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "next_turn",
+      "title": "Can I Go Next?",
+      "skill": "ask to be next in line",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "ball",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/next_turn/setup.mp4",
+          "poster": "images/social-dialogues/next_turn/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Can I have the ball next?",
+          "visual": {
+            "prop": "ball",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/next_turn/request.mp4",
+          "poster": "images/social-dialogues/next_turn/request.jpg",
+          "audio": "audio/dialogues/next_turn/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "You're next.",
+                "next": "accept"
+              },
+              {
+                "label": "One more turn.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Yes. You're next.",
+          "visual": {
+            "prop": "ball",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/next_turn/accept.mp4",
+          "poster": "images/social-dialogues/next_turn/accept.jpg",
+          "audio": "audio/dialogues/next_turn/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay! I'll be ready.",
+          "visual": {
+            "prop": "ball",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/next_turn/thanks.mp4",
+          "poster": "images/social-dialogues/next_turn/thanks.jpg",
+          "audio": "audio/dialogues/next_turn/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "I promised one more turn first.",
+          "visual": {
+            "prop": "ball",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/next_turn/decline.mp4",
+          "poster": "images/social-dialogues/next_turn/decline.jpg",
+          "audio": "audio/dialogues/next_turn/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll go after that.",
+          "visual": {
+            "prop": "ball",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/next_turn/wait.mp4",
+          "poster": "images/social-dialogues/next_turn/wait.jpg",
+          "audio": "audio/dialogues/next_turn/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "please_stop",
+      "title": "Please Stop",
+      "skill": "ask someone to stop an unwanted action",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "tower",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/please_stop/setup.mp4",
+          "poster": "images/social-dialogues/please_stop/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Please stop. I don't like that.",
+          "visual": {
+            "prop": "tower",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/please_stop/request.mp4",
+          "poster": "images/social-dialogues/please_stop/request.jpg",
+          "audio": "audio/dialogues/please_stop/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "I'll stop.",
+                "next": "accept"
+              },
+              {
+                "label": "I'll move back.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. I'll stop.",
+          "visual": {
+            "prop": "tower",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/please_stop/accept.mp4",
+          "poster": "images/social-dialogues/please_stop/accept.jpg",
+          "audio": "audio/dialogues/please_stop/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Thank you for listening.",
+          "visual": {
+            "prop": "tower",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/please_stop/thanks.mp4",
+          "poster": "images/social-dialogues/please_stop/thanks.jpg",
+          "audio": "audio/dialogues/please_stop/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "I didn't know. I'll move back.",
+          "visual": {
+            "prop": "tower",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/please_stop/decline.mp4",
+          "poster": "images/social-dialogues/please_stop/decline.jpg",
+          "audio": "audio/dialogues/please_stop/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Thank you. That feels better.",
+          "visual": {
+            "prop": "tower",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/please_stop/wait.mp4",
+          "poster": "images/social-dialogues/please_stop/wait.jpg",
+          "audio": "audio/dialogues/please_stop/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "personal_space",
+      "title": "I Need Some Space",
+      "skill": "express and respect personal space",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "book",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/personal_space/setup.mp4",
+          "poster": "images/social-dialogues/personal_space/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "I need some space, please.",
+          "visual": {
+            "prop": "book",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/personal_space/request.mp4",
+          "poster": "images/social-dialogues/personal_space/request.jpg",
+          "audio": "audio/dialogues/personal_space/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "I'll move back.",
+                "next": "accept"
+              },
+              {
+                "label": "Is this enough?",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. I'll move back.",
+          "visual": {
+            "prop": "book",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/personal_space/accept.mp4",
+          "poster": "images/social-dialogues/personal_space/accept.jpg",
+          "audio": "audio/dialogues/personal_space/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Thank you. That's better.",
+          "visual": {
+            "prop": "book",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/personal_space/thanks.mp4",
+          "poster": "images/social-dialogues/personal_space/thanks.jpg",
+          "audio": "audio/dialogues/personal_space/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Is this far enough?",
+          "visual": {
+            "prop": "book",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/personal_space/decline.mp4",
+          "poster": "images/social-dialogues/personal_space/decline.jpg",
+          "audio": "audio/dialogues/personal_space/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "A little more, please.",
+          "visual": {
+            "prop": "book",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/personal_space/wait.mp4",
+          "poster": "images/social-dialogues/personal_space/wait.jpg",
+          "audio": "audio/dialogues/personal_space/wait.mp3",
+          "next": "next_turn"
+        },
+        {
+          "id": "next_turn",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. How about now?",
+          "visual": {
+            "prop": "book",
+            "action": "repair",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/personal_space/next_turn.mp4",
+          "poster": "images/social-dialogues/personal_space/next_turn.jpg",
+          "audio": "audio/dialogues/personal_space/next_turn.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "ask_for_help",
+      "title": "Can You Help Me?",
+      "skill": "ask for help and accept availability",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "jar",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/ask_for_help/setup.mp4",
+          "poster": "images/social-dialogues/ask_for_help/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Can you help me open this?",
+          "visual": {
+            "prop": "jar",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/ask_for_help/request.mp4",
+          "poster": "images/social-dialogues/ask_for_help/request.jpg",
+          "audio": "audio/dialogues/ask_for_help/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "Sure!",
+                "next": "accept"
+              },
+              {
+                "label": "Not right now.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Sure! I can help.",
+          "visual": {
+            "prop": "jar",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/ask_for_help/accept.mp4",
+          "poster": "images/social-dialogues/ask_for_help/accept.jpg",
+          "audio": "audio/dialogues/ask_for_help/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Thank you!",
+          "visual": {
+            "prop": "jar",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/ask_for_help/thanks.mp4",
+          "poster": "images/social-dialogues/ask_for_help/thanks.jpg",
+          "audio": "audio/dialogues/ask_for_help/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "I can't help right now.",
+          "visual": {
+            "prop": "jar",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/ask_for_help/decline.mp4",
+          "poster": "images/social-dialogues/ask_for_help/decline.jpg",
+          "audio": "audio/dialogues/ask_for_help/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll try again.",
+          "visual": {
+            "prop": "jar",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/ask_for_help/wait.mp4",
+          "poster": "images/social-dialogues/ask_for_help/wait.jpg",
+          "audio": "audio/dialogues/ask_for_help/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "offer_help",
+      "title": "Do You Want Some Help?",
+      "skill": "offer help without taking over",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/offer_help/setup.mp4",
+          "poster": "images/social-dialogues/offer_help/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Do you want some help?",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "request",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/offer_help/request.mp4",
+          "poster": "images/social-dialogues/offer_help/request.jpg",
+          "audio": "audio/dialogues/offer_help/request.mp3",
+          "choice": {
+            "prompt": "What can Mia say?",
+            "options": [
+              {
+                "label": "Yes, please.",
+                "next": "accept"
+              },
+              {
+                "label": "No, thanks.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Yes, please. Let's pick them up.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "accept",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/offer_help/accept.mp4",
+          "poster": "images/social-dialogues/offer_help/accept.jpg",
+          "audio": "audio/dialogues/offer_help/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay! I'll help with these.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "positive_result",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/offer_help/thanks.mp4",
+          "poster": "images/social-dialogues/offer_help/thanks.jpg",
+          "audio": "audio/dialogues/offer_help/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "No, thanks. I can do it.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "boundary",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/offer_help/decline.mp4",
+          "poster": "images/social-dialogues/offer_help/decline.jpg",
+          "audio": "audio/dialogues/offer_help/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Okay. I'll let you do it.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "respect",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/offer_help/wait.mp4",
+          "poster": "images/social-dialogues/offer_help/wait.jpg",
+          "audio": "audio/dialogues/offer_help/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "apologize",
+      "title": "I'm Sorry",
+      "skill": "apologize and repair harm",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/apologize/setup.mp4",
+          "poster": "images/social-dialogues/apologize/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "I'm sorry I knocked it down.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/apologize/request.mp4",
+          "poster": "images/social-dialogues/apologize/request.jpg",
+          "audio": "audio/dialogues/apologize/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "Let's fix it.",
+                "next": "accept"
+              },
+              {
+                "label": "I need a minute.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "That's okay. Let's fix it.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/apologize/accept.mp4",
+          "poster": "images/social-dialogues/apologize/accept.jpg",
+          "audio": "audio/dialogues/apologize/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Yes. I'll help rebuild it.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/apologize/thanks.mp4",
+          "poster": "images/social-dialogues/apologize/thanks.jpg",
+          "audio": "audio/dialogues/apologize/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "I'm upset. I need a minute.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/apologize/decline.mp4",
+          "poster": "images/social-dialogues/apologize/decline.jpg",
+          "audio": "audio/dialogues/apologize/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. I'll give you time.",
+          "visual": {
+            "prop": "repair_blocks",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/apologize/wait.mp4",
+          "poster": "images/social-dialogues/apologize/wait.jpg",
+          "audio": "audio/dialogues/apologize/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "invite_friend",
+      "title": "Do You Want to Play?",
+      "skill": "invite a child who is alone",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "ball",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/invite_friend/setup.mp4",
+          "poster": "images/social-dialogues/invite_friend/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Do you want to play with me?",
+          "visual": {
+            "prop": "ball",
+            "action": "request",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/invite_friend/request.mp4",
+          "poster": "images/social-dialogues/invite_friend/request.jpg",
+          "audio": "audio/dialogues/invite_friend/request.mp3",
+          "choice": {
+            "prompt": "What can Leo say?",
+            "options": [
+              {
+                "label": "Yes!",
+                "next": "accept"
+              },
+              {
+                "label": "No, thank you.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Yes! I'd like to play.",
+          "visual": {
+            "prop": "ball",
+            "action": "accept",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/invite_friend/accept.mp4",
+          "poster": "images/social-dialogues/invite_friend/accept.jpg",
+          "audio": "audio/dialogues/invite_friend/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Great! Let's roll the ball.",
+          "visual": {
+            "prop": "ball",
+            "action": "positive_result",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/invite_friend/thanks.mp4",
+          "poster": "images/social-dialogues/invite_friend/thanks.jpg",
+          "audio": "audio/dialogues/invite_friend/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "No, thank you. I want to read.",
+          "visual": {
+            "prop": "ball",
+            "action": "boundary",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/invite_friend/decline.mp4",
+          "poster": "images/social-dialogues/invite_friend/decline.jpg",
+          "audio": "audio/dialogues/invite_friend/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Okay. Maybe later.",
+          "visual": {
+            "prop": "ball",
+            "action": "respect",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/invite_friend/wait.mp4",
+          "poster": "images/social-dialogues/invite_friend/wait.jpg",
+          "audio": "audio/dialogues/invite_friend/wait.mp3",
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "work_together",
+      "title": "Let's Build Together",
+      "skill": "cooperate when ideas are different",
+      "age_range": "4-6",
+      "start": "setup",
+      "characters": [
+        {
+          "id": "mia",
+          "name": "Mia",
+          "voice": "en-US-AnaNeural",
+          "pitch": "+8Hz",
+          "rate": "-8%",
+          "appearance": "pink long-sleeve shirt, blue jeans, dark ponytail"
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "voice": "en-US-AnaNeural",
+          "pitch": "-12Hz",
+          "rate": "-12%",
+          "appearance": "blue-and-white striped shirt, blue jeans, short dark hair"
+        }
+      ],
+      "turns": [
+        {
+          "id": "setup",
+          "kind": "scene",
+          "visual": {
+            "prop": "blocks",
+            "action": "setup"
+          },
+          "video": "videos/social-dialogues/work_together/setup.mp4",
+          "poster": "images/social-dialogues/work_together/setup.jpg",
+          "next": "request"
+        },
+        {
+          "id": "request",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "What should we build together?",
+          "visual": {
+            "prop": "blocks",
+            "action": "request",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/work_together/request.mp4",
+          "poster": "images/social-dialogues/work_together/request.jpg",
+          "audio": "audio/dialogues/work_together/request.mp3",
+          "choice": {
+            "prompt": "What can Mia say?",
+            "options": [
+              {
+                "label": "A bridge.",
+                "next": "accept"
+              },
+              {
+                "label": "A tower.",
+                "next": "decline"
+              }
+            ]
+          }
+        },
+        {
+          "id": "accept",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Let's build a bridge.",
+          "visual": {
+            "prop": "blocks",
+            "action": "accept",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/work_together/accept.mp4",
+          "poster": "images/social-dialogues/work_together/accept.jpg",
+          "audio": "audio/dialogues/work_together/accept.mp3",
+          "next": "thanks"
+        },
+        {
+          "id": "thanks",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Good idea! I'll make this side.",
+          "visual": {
+            "prop": "blocks",
+            "action": "positive_result",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/work_together/thanks.mp4",
+          "poster": "images/social-dialogues/work_together/thanks.jpg",
+          "audio": "audio/dialogues/work_together/thanks.mp3",
+          "next": null
+        },
+        {
+          "id": "decline",
+          "kind": "line",
+          "speaker": "mia",
+          "text": "Let's build a tower.",
+          "visual": {
+            "prop": "blocks",
+            "action": "boundary",
+            "focus": "mia"
+          },
+          "video": "videos/social-dialogues/work_together/decline.mp4",
+          "poster": "images/social-dialogues/work_together/decline.jpg",
+          "audio": "audio/dialogues/work_together/decline.mp3",
+          "next": "wait"
+        },
+        {
+          "id": "wait",
+          "kind": "line",
+          "speaker": "leo",
+          "text": "Good idea! I'll pass you the blocks.",
+          "visual": {
+            "prop": "blocks",
+            "action": "respect",
+            "focus": "leo"
+          },
+          "video": "videos/social-dialogues/work_together/wait.mp4",
+          "poster": "images/social-dialogues/work_together/wait.jpg",
+          "audio": "audio/dialogues/work_together/wait.mp3",
+          "next": null
+        }
+      ]
+    }
+  ]
+}
