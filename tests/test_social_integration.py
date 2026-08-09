@@ -56,3 +56,19 @@ def test_social_videos_are_browser_ready_and_silent() -> None:
     )
     streams = json.loads(probe.stdout)["streams"]
     assert streams == [{"codec_name": "h264", "codec_type": "video", "width": 720, "height": 480}]
+
+
+def test_first_story_uses_reviewed_minimax_media_without_model_audio() -> None:
+    manifest = json.loads((ROOT / "data" / "social_media_manifest.json").read_text(encoding="utf-8"))
+    first = manifest["stories"]["toy_car"]
+    assert first["renderer"] == "minimax-h3"
+    assert first["model_audio"] == "stripped"
+    assert first["dialogue_audio"] == "approved-child-tts"
+    assert first["source_size"] == [608, 352]
+    assert first["published_size"] == [720, 480]
+    assert first["turns"] == ["setup", "request", "accept", "thanks", "decline", "wait", "next_turn"]
+
+
+def test_social_player_busts_the_minimax_media_cache() -> None:
+    script = (ROOT / "assets" / "social-player.js").read_text(encoding="utf-8")
+    assert "const ASSET_VERSION = '4';" in script

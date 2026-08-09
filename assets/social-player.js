@@ -1,4 +1,4 @@
-const ASSET_VERSION = '3';
+const ASSET_VERSION = '4';
 
 export function createStorySession(story) {
   const turns = new Map(story.turns.map(turn => [turn.id, turn]));
