@@ -95,6 +95,7 @@ def _character(
     facing: int,
     mood: str = "happy",
     seated: bool = False,
+    running: bool = False,
 ) -> None:
     is_mia = character == "mia"
     skin = "#d89b73"
@@ -108,6 +109,12 @@ def _character(
         draw.line((x + 20, y + 118, x + 42, y + 140, x + 42, y + 166), fill=pants, width=18)
         draw.ellipse((x - 57, y + 158, x - 25, y + 175), fill="#f7f7f7")
         draw.ellipse((x + 25, y + 158, x + 57, y + 175), fill="#f7f7f7")
+    elif running:
+        stride = 22 if facing > 0 else -22
+        draw.line((x - 18, y + 118, x - 38 - stride, y + 158), fill=pants, width=18)
+        draw.line((x + 18, y + 118, x + 38 + stride, y + 150), fill=pants, width=18)
+        draw.ellipse((x - 58 - stride, y + 149, x - 24 - stride, y + 166), fill="#f7f7f7")
+        draw.ellipse((x + 22 + stride, y + 141, x + 56 + stride, y + 158), fill="#f7f7f7")
     else:
         draw.line((x - 20, y + 118, x - 25, y + 166), fill=pants, width=18)
         draw.line((x + 20, y + 118, x + 25, y + 166), fill=pants, width=18)
@@ -131,6 +138,10 @@ def _character(
     elif hand == "offer":
         draw.line((x - 28, shoulder_y, x - 4, y + 105), fill=skin, width=16)
         draw.line((x + 28, shoulder_y, x + 4, y + 105), fill=skin, width=16)
+    elif hand == "grip":
+        draw.line((x + 28 * facing, shoulder_y, x + 88 * facing, y + 142), fill=skin, width=16)
+        draw.ellipse((x + 82 * facing - 10, y + 132, x + 82 * facing + 10, y + 152), fill=skin)
+        draw.line((x - 28 * facing, shoulder_y, x - 20 * facing, y + 116), fill=skin, width=16)
     else:
         draw.line((x - 28, shoulder_y, x - 38, y + 118), fill=skin, width=16)
         draw.line((x + 28, shoulder_y, x + 38, y + 118), fill=skin, width=16)
@@ -165,8 +176,8 @@ def _prop(draw: ImageDraw.ImageDraw, prop: str, x: int, y: int, action: str, sca
         draw.ellipse((x - 37, y - 37, x + 37, y + 37), fill="#ff6b6b", outline="#fff", width=5)
         draw.arc((x - 30, y - 30, x + 30, y + 30), 70, 250, fill="#ffd166", width=6)
     elif prop == "crayons":
-        for index, color in enumerate(("#ff4d6d", "#4dabf7", "#51cf66", "#ffd43b", "#845ef7")):
-            px = x - 50 + index * 24
+        for index, color in enumerate(("#ff4d6d", "#4dabf7", "#51cf66", "#ffd43b", "#845ef7", "#ff922b")):
+            px = x - 62 + index * 24
             draw.rounded_rectangle((px, y - 42, px + 12, y + 30), radius=5, fill=color)
     elif prop == "bench":
         _rounded(draw, (x - 95, y - 20, x + 95, y + 12), 8, "#c68642")
@@ -230,7 +241,7 @@ def scene_plan(item: RenderItem, phase: float) -> dict[str, Any]:
         state["owner"] = item.responder
 
     if item.story_id == "toy_car" and item.turn_id == "next_turn":
-        state["future_turn"] = "mia"
+        state.update(future_turn="mia", direction_from="leo", direction_to="mia")
 
     if item.story_id == "join_play":
         if item.turn_id in {"accept", "thanks"}:
@@ -258,19 +269,26 @@ def scene_plan(item: RenderItem, phase: float) -> dict[str, Any]:
         if item.turn_id in {"accept", "thanks", "wait"}:
             state["split_prop"] = True
             state["active_children"] = ["mia", "leo"]
-            state["crayon_allocation"] = {"mia": 3, "leo": 2}
+            state["crayon_allocation"] = {"mia": 3, "leo": 3}
         if item.turn_id == "thanks":
             state["highlight_color"] = "blue"
+            state["drawing_with_blue"] = True
 
     if item.story_id == "accept_yes":
         if item.turn_id in {"accept", "thanks"}:
             state.update(active_children=["mia", "leo"], build_shape="bridge")
+        if item.turn_id == "accept":
+            state["blocks_state"] = "scattered" if phase < 0.34 else "partial" if phase < 0.72 else "bridge"
+            state["joint_build"] = True
         if item.turn_id in {"decline", "wait"}:
             state["alternative"] = "drawing"
 
     if item.story_id == "polite_no":
-        if item.turn_id == "accept":
-            state["active_children"] = ["mia", "leo"]
+        if item.turn_id in {"accept", "thanks"}:
+            state.update(
+                active_children=["mia", "leo"], motion="chase",
+                running_children=["mia", "leo"], chaser="leo", runner="mia", chase_gap=170,
+            )
         if item.turn_id in {"decline", "wait"}:
             state["alternative"] = "book"
         if item.turn_id == "wait":
@@ -315,6 +333,8 @@ def scene_plan(item: RenderItem, phase: float) -> dict[str, Any]:
             state["waiting_child"] = "mia"
 
     if item.story_id == "please_stop":
+        state["unwanted_action"] = "tower_interference" if item.turn_id in {"setup", "request"} else None
+        state["unwanted_actor"] = "leo" if state["unwanted_action"] else None
         state["intrusion"] = item.turn_id in {"setup", "request", "decline"}
         if item.turn_id == "request":
             state["boundary_hand"] = "mia"
@@ -332,10 +352,15 @@ def scene_plan(item: RenderItem, phase: float) -> dict[str, Any]:
             state["relief"] = True
 
     if item.story_id == "personal_space":
+        state["owner"] = "mia"
         if item.turn_id in {"setup", "request"}:
             state["distance"] = 120
-        elif item.turn_id in {"accept", "decline", "wait"}:
+        elif item.turn_id == "accept":
             state["distance"] = int(120 + 210 * phase)
+        elif item.turn_id == "decline":
+            state["distance"] = int(120 + 120 * phase)
+        elif item.turn_id == "wait":
+            state["distance"] = int(240 + 90 * phase)
         else:
             state["distance"] = 330
 
@@ -345,6 +370,10 @@ def scene_plan(item: RenderItem, phase: float) -> dict[str, Any]:
         if item.turn_id == "accept":
             state["jar_open"] = phase >= 0.6
             state["active_children"] = ["mia", "leo"]
+            state["joint_grip"] = phase < 0.72
+            state["gripping_children"] = ["mia", "leo"]
+        if item.turn_id == "decline":
+            state["jar_open"] = False
         if item.turn_id == "wait":
             state["active_children"] = ["mia"]
 
@@ -358,6 +387,10 @@ def scene_plan(item: RenderItem, phase: float) -> dict[str, Any]:
         elif item.turn_id == "wait":
             state["active_children"] = ["mia"]
             state["blocks_state"] = "partial" if phase >= 0.6 else "scattered"
+        elif item.turn_id == "decline":
+            state["active_children"] = ["mia"]
+            state["independent_builder"] = "mia"
+            state["blocks_state"] = "partial" if phase >= 0.72 else "scattered"
 
     if item.story_id == "apologize":
         state["blocks_state"] = "scattered"
@@ -378,6 +411,9 @@ def scene_plan(item: RenderItem, phase: float) -> dict[str, Any]:
     if item.story_id == "work_together":
         if item.turn_id in {"accept", "thanks"}:
             state.update(build_shape="bridge", active_children=["mia", "leo"])
+        if item.turn_id == "accept":
+            state["blocks_state"] = "scattered" if phase < 0.34 else "partial" if phase < 0.72 else "bridge"
+            state["joint_build"] = True
         if item.turn_id == "decline":
             state.update(build_shape="tower", active_children=["mia", "leo"])
         if item.turn_id == "wait":
@@ -479,8 +515,11 @@ def draw_frame(item: RenderItem, frame_index: int, total_frames: int = FRAMES) -
     waiting_child = scene.get("waiting_child")
     if waiting_child:
         positions[waiting_child] = 145 if waiting_child == "mia" else 575
-    if item.story_id == "polite_no" and scene.get("active_children"):
-        positions = {"mia": int(170 + 70 * phase), "leo": int(410 + 70 * phase)}
+    if item.story_id == "polite_no" and scene.get("motion") == "chase":
+        gap = int(scene["chase_gap"])
+        positions = {"mia": int(250 + 250 * phase), "leo": int(250 + 250 * phase - gap)}
+    if scene.get("joint_grip"):
+        positions = {"mia": 260, "leo": 460}
     if item.story_id == "wait_calmly":
         occupant = str(scene.get("owner", "mia"))
         positions[occupant] = 360
@@ -511,6 +550,8 @@ def draw_frame(item: RenderItem, frame_index: int, total_frames: int = FRAMES) -
         responder_hand = "ask"
     if scene.get("active_children"):
         requester_hand, responder_hand = "ask", "offer"
+    if scene.get("joint_grip"):
+        requester_hand = responder_hand = "grip"
     if scene.get("passing_blocks"):
         requester_hand, responder_hand = "offer", "ask"
 
@@ -521,15 +562,16 @@ def draw_frame(item: RenderItem, frame_index: int, total_frames: int = FRAMES) -
     mood_leo = "upset" if item.story_id == "apologize" and item.turn_id in {"decline", "wait"} else "happy"
     mia_seated = "mia" in scene.get("seated_children", [])
     leo_seated = "leo" in scene.get("seated_children", [])
+    running_children = set(scene.get("running_children", []))
     seated_y = 252 if item.story_id == "wait_calmly" else 212
     mia_y = seated_y if mia_seated else 175
     leo_y = seated_y if leo_seated else 175
     _character(draw, "mia", positions["mia"], mia_y, talking=talking_mia,
                hand=requester_hand if item.requester == "mia" else responder_hand,
-               bob=bob, facing=1, mood=mood_mia, seated=mia_seated)
+               bob=bob, facing=1, mood=mood_mia, seated=mia_seated, running="mia" in running_children)
     _character(draw, "leo", positions["leo"], leo_y, talking=talking_leo,
                hand=requester_hand if item.requester == "leo" else responder_hand,
-               bob=-bob, facing=-1, mood=mood_leo, seated=leo_seated)
+               bob=-bob, facing=-1, mood=mood_leo, seated=leo_seated, running="leo" in running_children)
 
     requester_x = positions[item.requester]
     responder_x = positions[item.responder]
@@ -553,7 +595,7 @@ def draw_frame(item: RenderItem, frame_index: int, total_frames: int = FRAMES) -
     elif item.story_id == "accept_no":
         pass
     elif item.story_id in {"join_play", "accept_yes", "work_together"} and not scene.get("alternative"):
-        shape = scene.get("build_shape")
+        shape = scene.get("blocks_state") or scene.get("build_shape")
         if shape:
             _draw_blocks(draw, 360, 397, shape)
         else:
@@ -561,23 +603,37 @@ def draw_frame(item: RenderItem, frame_index: int, total_frames: int = FRAMES) -
         if scene.get("passing_blocks"):
             block_x = int(positions["leo"] + (positions["mia"] - positions["leo"]) * phase)
             draw.rounded_rectangle((block_x - 28, 320, block_x + 28, 350), radius=5, fill="#ff922b")
+        if scene.get("joint_build") and phase < 0.72:
+            left_x = int(positions["mia"] + (330 - positions["mia"]) * phase)
+            right_x = int(positions["leo"] + (390 - positions["leo"]) * phase)
+            draw.rounded_rectangle((left_x - 24, 320, left_x + 24, 348), radius=5, fill="#69db7c")
+            draw.rounded_rectangle((right_x - 24, 350, right_x + 24, 378), radius=5, fill="#4dabf7")
     elif item.story_id in {"offer_help", "apologize"}:
         state = scene.get("blocks_state", "scattered")
         if item.turn_id in {"accept"} and phase < 0.72:
             moving_x = int(positions[item.requester] + (360 - positions[item.requester]) * phase)
             draw.rounded_rectangle((moving_x - 28, 322, moving_x + 28, 352), radius=5, fill="#69db7c")
+        if scene.get("independent_builder") and phase < 0.8:
+            moving_x = int(positions["mia"] + (330 - positions["mia"]) * phase)
+            draw.rounded_rectangle((moving_x - 28, 322, moving_x + 28, 352), radius=5, fill="#ff922b")
         _draw_blocks(draw, 360, 397, state)
     elif item.story_id == "ask_for_help":
         jar_x = 360 if scene.get("active_children") else owner_x
         _draw_jar(draw, jar_x, 382, bool(scene.get("jar_open")))
+        if scene.get("joint_grip"):
+            draw.arc((jar_x - 58, 274, jar_x + 58, 340), 205, 335, fill="#2f9e44", width=6)
+            draw.polygon([(jar_x + 49, 296), (jar_x + 61, 316), (jar_x + 36, 316)], fill="#2f9e44")
         if item.turn_id in {"setup", "wait"}:
             _direction_arrow(draw, jar_x - 35, jar_x + 35, 305)
     elif item.story_id == "share_materials" and scene.get("split_prop"):
-        palette = ["#ff4d6d", "#51cf66", "#ffd43b", "#4dabf7", "#845ef7"]
+        palette = ["#ff4d6d", "#51cf66", "#ffd43b", "#4dabf7", "#845ef7", "#ff922b"]
         mia_colors = palette[:3]
-        leo_colors = ["#4dabf7"] if scene.get("highlight_color") == "blue" else palette[3:]
+        leo_colors = palette[3:]
         for child, colors in (("mia", mia_colors), ("leo", leo_colors)):
             base_x = positions[child] - 13 * (len(colors) - 1)
+            if child == "leo" and scene.get("drawing_with_blue"):
+                draw.rectangle((360, 300, 455, 420), fill="#ffffff", outline="#74c0fc", width=5)
+                draw.line((390, 360, 420, 340, 445, 365), fill="#4dabf7", width=8)
             if child == "leo" and scene.get("highlight_color") == "blue":
                 draw.ellipse((positions[child] - 52, prop_y - 72, positions[child] + 52, prop_y + 50), fill="#d0ebff", outline="#1c7ed6", width=7)
             for index, color in enumerate(colors):
@@ -598,6 +654,11 @@ def draw_frame(item: RenderItem, frame_index: int, total_frames: int = FRAMES) -
         pass
     elif item.story_id == "please_stop":
         _draw_blocks(draw, positions["mia"] + 35, 397, "tower")
+        if scene.get("unwanted_action"):
+            block_x = int(positions["leo"] - 72 - 16 * math.sin(phase * math.pi * 4))
+            draw.rounded_rectangle((block_x - 25, 300, block_x + 25, 330), radius=5, fill="#ff922b")
+            for dx in (-12, 12):
+                draw.line((positions["mia"] + 35 + dx, 260, positions["mia"] + 35 + dx * 2, 245), fill="#e03131", width=5)
         if scene.get("comfortable"):
             draw.ellipse((positions["mia"] - 22, 88, positions["mia"] + 22, 132), fill="#69db7c")
     else:
@@ -615,9 +676,11 @@ def draw_frame(item: RenderItem, frame_index: int, total_frames: int = FRAMES) -
     if scene.get("busy_more_time"):
         _clock(draw, positions[scene["busy_more_time"]], 115)
     if scene.get("future_turn"):
-        future_x = positions[scene["future_turn"]]
+        direction_from = scene.get("direction_from", owner)
+        direction_to = scene.get("direction_to", scene["future_turn"])
+        future_x = positions[direction_to]
         _clock(draw, 360, 295)
-        _direction_arrow(draw, owner_x, future_x, 330)
+        _direction_arrow(draw, positions[direction_from], future_x, 330)
     if scene.get("queued_before"):
         _clock(draw, 360, 295)
         for x, color in ((300, "#4dabf7"), (360, "#ffd43b"), (420, "#ff6b6b")):
