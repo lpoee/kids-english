@@ -71,4 +71,15 @@ def test_first_story_uses_reviewed_minimax_media_without_model_audio() -> None:
 
 def test_social_player_busts_the_minimax_media_cache() -> None:
     script = (ROOT / "assets" / "social-player.js").read_text(encoding="utf-8")
-    assert "const ASSET_VERSION = '4';" in script
+    assert "const ASSET_VERSION = '5';" in script
+
+
+def test_second_story_uses_reviewed_minimax_media_without_model_audio() -> None:
+    manifest = json.loads((ROOT / "data" / "social_media_manifest.json").read_text(encoding="utf-8"))
+    story = manifest["stories"]["join_play"]
+    assert story["renderer"] == "minimax-h3"
+    assert story["model_audio"] == "stripped"
+    assert story["dialogue_audio"] == "approved-child-tts"
+    assert story["source_size"] == [608, 352]
+    assert story["published_size"] == [720, 480]
+    assert story["turns"] == ["setup", "request", "accept", "thanks", "decline", "wait"]
