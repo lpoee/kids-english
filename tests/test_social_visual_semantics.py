@@ -51,9 +51,9 @@ def test_waiting_and_next_turn_are_not_drawn_as_immediate_transfer() -> None:
 
 
 def test_sharing_and_alternatives_have_distinct_visible_results() -> None:
-    assert plan("share_materials", "accept")["crayon_allocation"] == {"mia": 3, "leo": 2}
+    assert plan("share_materials", "accept")["crayon_allocation"] == {"mia": 3, "leo": 3}
     assert plan("share_materials", "thanks")["highlight_color"] == "blue"
-    assert plan("share_materials", "wait")["crayon_allocation"] == {"mia": 3, "leo": 2}
+    assert plan("share_materials", "wait")["crayon_allocation"] == {"mia": 3, "leo": 3}
     assert plan("polite_no", "decline")["alternative"] == "book"
     assert plan("polite_no", "wait")["quiet_children"] == ["mia", "leo"]
     assert plan("accept_yes", "decline")["alternative"] == "drawing"
@@ -134,6 +134,80 @@ def test_play_and_work_outcomes_match_each_branch() -> None:
     assert plan("work_together", "accept")["build_shape"] == "bridge"
     assert plan("work_together", "decline")["build_shape"] == "tower"
     assert plan("work_together", "wait")["passing_blocks"] is True
+
+
+def test_reviewed_future_transfer_has_explicit_correct_direction() -> None:
+    future = plan("toy_car", "next_turn")
+    assert future["direction_from"] == "leo"
+    assert future["direction_to"] == "mia"
+
+
+def test_reviewed_crayon_branches_conserve_six_crayons() -> None:
+    for turn in ("accept", "thanks", "wait"):
+        allocation = plan("share_materials", turn)["crayon_allocation"]
+        assert allocation == {"mia": 3, "leo": 3}
+        assert sum(allocation.values()) == 6
+
+
+def test_reviewed_highlight_keeps_leos_other_two_crayons_visible() -> None:
+    state = plan("share_materials", "thanks")
+    assert state["drawing_with_blue"] is True
+    frame = draw_frame(ITEMS[("share_materials", "thanks")], 18)
+    assert frame.getpixel((489, 380)) == (77, 171, 247)   # blue
+    assert frame.getpixel((515, 380)) == (132, 94, 247)  # purple
+    assert frame.getpixel((541, 380)) == (255, 146, 43)  # orange
+    assert frame.getpixel((380, 360)) == (255, 255, 255)  # drawing paper
+    assert frame.getpixel((420, 340)) == (77, 171, 247)   # visible blue mark
+
+
+def test_reviewed_build_acceptances_show_progress_before_the_result() -> None:
+    for story in ("accept_yes", "work_together"):
+        assert plan(story, "accept", 0.0)["blocks_state"] == "scattered"
+        assert plan(story, "accept", 0.5)["blocks_state"] == "partial"
+        assert plan(story, "accept", 1.0)["blocks_state"] == "bridge"
+        assert plan(story, "accept", 0.5)["joint_build"] is True
+        start = draw_frame(ITEMS[(story, "accept")], 0)
+        end = draw_frame(ITEMS[(story, "accept")], 35)
+        assert start.getpixel((360, 267)) != end.getpixel((360, 267))
+
+
+def test_reviewed_tag_acceptance_and_result_have_chase_motion() -> None:
+    for turn in ("accept", "thanks"):
+        state = plan("polite_no", turn, 0.5)
+        assert state["motion"] == "chase"
+        assert state["running_children"] == ["mia", "leo"]
+        assert state["chaser"] == "leo"
+        assert state["runner"] == "mia"
+        assert state["chase_gap"] >= 160
+
+
+def test_reviewed_stop_story_shows_the_unwanted_action_before_relief() -> None:
+    for turn in ("setup", "request"):
+        state = plan("please_stop", turn, 0.5)
+        assert state["unwanted_action"] == "tower_interference"
+        assert state["unwanted_actor"] == "leo"
+    assert plan("please_stop", "accept", 1.0)["unwanted_action"] is None
+
+
+def test_reviewed_personal_space_branch_preserves_continuity_and_book_owner() -> None:
+    for turn in ("setup", "request", "accept", "thanks", "decline", "wait", "next_turn"):
+        assert plan("personal_space", turn)["owner"] == "mia"
+    assert plan("personal_space", "decline", 1.0)["distance"] == plan("personal_space", "wait", 0.0)["distance"]
+    assert plan("personal_space", "wait", 1.0)["distance"] > plan("personal_space", "wait", 0.0)["distance"]
+
+
+def test_reviewed_jar_help_has_joint_grip_and_decline_stays_closed() -> None:
+    accepting = plan("ask_for_help", "accept", 0.5)
+    assert accepting["joint_grip"] is True
+    assert set(accepting["gripping_children"]) == {"mia", "leo"}
+    assert plan("ask_for_help", "decline", 0.0)["jar_open"] is False
+    assert plan("ask_for_help", "decline", 1.0)["jar_open"] is False
+
+
+def test_reviewed_declined_help_shows_mia_making_independent_progress() -> None:
+    assert plan("offer_help", "decline", 0.0)["blocks_state"] == "scattered"
+    assert plan("offer_help", "decline", 1.0)["blocks_state"] == "partial"
+    assert plan("offer_help", "decline", 0.5)["independent_builder"] == "mia"
 
 
 def test_every_request_keeps_the_prop_stable_while_asking() -> None:
