@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "stories": {
+    "toy_car": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [608, 352],
+      "published_size": [720, 480],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait",
+        "next_turn"
+      ]
+    }
+  }
+}
