@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -43,19 +44,28 @@ def test_every_social_turn_has_real_media() -> None:
                 assert (ROOT / turn["audio"]).is_file(), turn["audio"]
 
 
-def test_social_videos_are_browser_ready_and_silent() -> None:
-    first = load_document()["stories"][0]["turns"][0]
-    probe = subprocess.run(
-        [
-            "ffprobe", "-v", "error", "-show_entries", "stream=codec_name,codec_type,width,height",
-            "-of", "json", str(ROOT / first["video"]),
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    streams = json.loads(probe.stdout)["streams"]
-    assert streams == [{"codec_name": "h264", "codec_type": "video", "width": 720, "height": 480}]
+def test_social_videos_are_browser_ready_silent_and_unique() -> None:
+    videos = [
+        ROOT / turn["video"]
+        for story in load_document()["stories"]
+        for turn in story["turns"]
+    ]
+    hashes = set()
+    for video in videos:
+        probe = subprocess.run(
+            [
+                "ffprobe", "-v", "error", "-show_entries", "stream=codec_name,codec_type,width,height",
+                "-of", "json", str(video),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        streams = json.loads(probe.stdout)["streams"]
+        assert streams == [{"codec_name": "h264", "codec_type": "video", "width": 720, "height": 480}], video
+        hashes.add(hashlib.sha256(video.read_bytes()).hexdigest())
+    assert len(videos) == 110
+    assert len(hashes) == len(videos)
 
 
 def test_first_story_uses_reviewed_minimax_media_without_model_audio() -> None:
@@ -71,7 +81,7 @@ def test_first_story_uses_reviewed_minimax_media_without_model_audio() -> None:
 
 def test_social_player_busts_the_minimax_media_cache() -> None:
     script = (ROOT / "assets" / "social-player.js").read_text(encoding="utf-8")
-    assert "const ASSET_VERSION = '5';" in script
+    assert "const ASSET_VERSION = '6';" in script
 
 
 def test_second_story_uses_reviewed_minimax_media_without_model_audio() -> None:
@@ -83,3 +93,16 @@ def test_second_story_uses_reviewed_minimax_media_without_model_audio() -> None:
     assert story["source_size"] == [608, 352]
     assert story["published_size"] == [720, 480]
     assert story["turns"] == ["setup", "request", "accept", "thanks", "decline", "wait"]
+
+
+def test_all_social_stories_have_reviewed_minimax_media() -> None:
+    document = load_document()
+    manifest = json.loads((ROOT / "data" / "social_media_manifest.json").read_text(encoding="utf-8"))
+    expected = {story["id"] for story in document["stories"]}
+    assert set(manifest["stories"]) == expected
+    for story in document["stories"]:
+        media = manifest["stories"][story["id"]]
+        assert media["renderer"] == "minimax-h3"
+        assert media["model_audio"] == "stripped"
+        assert media["visual_review"] == "start-middle-end-approved"
+        assert media["turns"] == [turn["id"] for turn in story["turns"]]

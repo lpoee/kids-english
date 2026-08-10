@@ -5,8 +5,14 @@
       "renderer": "minimax-h3",
       "model_audio": "stripped",
       "dialogue_audio": "approved-child-tts",
-      "source_size": [608, 352],
-      "published_size": [720, 480],
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
       "frame_rate": 24,
       "duration_seconds": 3.04,
       "visual_review": "start-middle-end-approved",
@@ -24,8 +30,399 @@
       "renderer": "minimax-h3",
       "model_audio": "stripped",
       "dialogue_audio": "approved-child-tts",
-      "source_size": [608, 352],
-      "published_size": [720, 480],
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "borrow_toy": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "take_turns": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "share_materials": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "accept_yes": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "polite_no": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "accept_no": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "still_using": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "wait_calmly": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "next_turn": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "please_stop": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "personal_space": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait",
+        "next_turn"
+      ]
+    },
+    "ask_for_help": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "offer_help": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "apologize": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "invite_friend": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
+      "frame_rate": 24,
+      "duration_seconds": 3.04,
+      "visual_review": "start-middle-end-approved",
+      "turns": [
+        "setup",
+        "request",
+        "accept",
+        "thanks",
+        "decline",
+        "wait"
+      ]
+    },
+    "work_together": {
+      "renderer": "minimax-h3",
+      "model_audio": "stripped",
+      "dialogue_audio": "approved-child-tts",
+      "source_size": [
+        608,
+        352
+      ],
+      "published_size": [
+        720,
+        480
+      ],
       "frame_rate": 24,
       "duration_seconds": 3.04,
       "visual_review": "start-middle-end-approved",
