@@ -18,7 +18,7 @@ def test_original_site_exposes_social_mode_without_becoming_2_0() -> None:
     assert "<title>English Fun!</title>" in html
     assert 'id="mode-social"' in html
     assert 'id="social-panel"' in html
-    assert 'assets/social-player.js' in html
+    assert 'assets/social-player.js?v=2' in html
     assert "Kids English 2.0" not in html
 
 

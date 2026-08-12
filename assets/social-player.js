@@ -45,6 +45,21 @@ export function createStorySession(story) {
 
 export async function mountSocialPlayer({ dataUrl = `data/social_dialogues.json?v=${ASSET_VERSION}` } = {}) {
   const byId = id => document.getElementById(id);
+  function showMode(mode) {
+    const social = mode === 'social';
+    byId('phrase-panel').hidden = social;
+    byId('social-panel').hidden = !social;
+    byId('mode-phrases').classList.toggle('active', !social);
+    byId('mode-social')?.classList.toggle('active', social);
+  }
+
+  byId('mode-phrases').addEventListener('click', () => showMode('phrases'));
+  byId('phrase-panel').addEventListener('click', event => {
+    if (!event.target.closest('#mode-social')) return;
+    window.stopAudioPlayback?.();
+    showMode('social');
+  });
+
   const response = await fetch(dataUrl);
   if (!response.ok) throw new Error('Unable to load social stories');
   const documentData = await response.json();
@@ -135,21 +150,12 @@ export async function mountSocialPlayer({ dataUrl = `data/social_dialogues.json?
   }
 
   function setMode(mode) {
-    const social = mode === 'social';
     stopAudio();
-    byId('phrase-panel').hidden = social;
-    byId('social-panel').hidden = !social;
-    byId('mode-phrases').classList.toggle('active', !social);
-    byId('mode-social').classList.toggle('active', social);
-    if (social) renderTurn(false);
+    showMode(mode);
+    if (mode === 'social') renderTurn(false);
   }
 
   byId('mode-phrases').addEventListener('click', () => setMode('phrases'));
-  byId('phrase-panel').addEventListener('click', event => {
-    if (!event.target.closest('#mode-social')) return;
-    window.stopAudioPlayback?.();
-    setMode('social');
-  });
   byId('social-video-card').addEventListener('click', playCurrent);
   byId('social-replay').addEventListener('click', playCurrent);
   byId('social-restart').addEventListener('click', () => {
