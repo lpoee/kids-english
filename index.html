@@ -8,6 +8,27 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover,maximum-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<script>
+// Stale-cache guard: pages cached before this version self-reload once.
+const SITE_VERSION = '20260820.1';
+(function () {
+  try {
+    if (!location.protocol.startsWith('http')) return;
+    if (sessionStorage.getItem('keVg') === SITE_VERSION) return;
+    fetch('data/site_version.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        if (!j) return;
+        var serverV = String(j.version);
+        if (serverV === SITE_VERSION) return;
+        if (sessionStorage.getItem('keVg') === serverV) return;
+        sessionStorage.setItem('keVg', serverV);
+        location.replace(location.pathname + '?v=' + encodeURIComponent(serverV));
+      })
+      .catch(function () {});
+  } catch (e) {}
+})();
+</script>
 <title>English Fun!</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
@@ -952,7 +973,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 }
 </script>
 <script type="module">
-import {mountSocialPlayer} from './assets/social-player.js?v=2';
+import {mountSocialPlayer} from './assets/social-player.js?v=3';
 mountSocialPlayer().catch(error => console.error('Social stories failed to load', error));
 </script>
 </body>
