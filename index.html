@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <script>
 // Stale-cache guard: pages cached before this version self-reload once.
-const SITE_VERSION = '20260820.1';
+const SITE_VERSION = '20260820.2';
 (function () {
   try {
     if (!location.protocol.startsWith('http')) return;
@@ -713,13 +713,13 @@ function render() {
 function renderMainTabs() {
   const container = $('tabs');
   const keys = Object.keys(DATA);
-  // Build tabs: 'All' first, then each category
-  let html = `<button class="tab" id="mode-social" type="button">Social</button>`;
-  html += `<button class="tab${state.mainCat === 'all' ? ' active' : ''}" data-cat="all">🌍 All</button>`;
+  // Build tabs: 'All' first, then each category, Social last
+  let html = `<button class="tab${state.mainCat === 'all' ? ' active' : ''}" data-cat="all">🌍 All</button>`;
   for (const k of keys) {
     const cat = DATA[k];
     html += `<button class="tab${k === state.mainCat ? ' active' : ''}" data-cat="${k}">${cat.label}</button>`;
   }
+  html += `<button class="tab" id="mode-social" type="button">Social</button>`;
   container.innerHTML = html;
   // Re-bind tab clicks
   container.querySelectorAll('.tab[data-cat]').forEach(btn => {
