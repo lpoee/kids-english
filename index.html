@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <script>
 // Stale-cache guard: pages cached before this version self-reload once.
-const SITE_VERSION = '20260820.2';
+const SITE_VERSION = '20260820.3';
 (function () {
   try {
     if (!location.protocol.startsWith('http')) return;
@@ -725,6 +725,24 @@ function renderMainTabs() {
   container.querySelectorAll('.tab[data-cat]').forEach(btn => {
     btn.addEventListener('click', () => setMainCat(btn.dataset.cat));
   });
+  // Social tab — plain inline handler (classic script, no module dependency) so it
+  // works on older iOS even before the social-player module finishes loading.
+  // When the module has bound its own handler it sets __keSocialReady and takes
+  // over (it re-renders the story); the inline version only swaps the panels.
+  const socialTab = container.querySelector('#mode-social');
+  if (socialTab) {
+    socialTab.addEventListener('click', function() {
+      if (window.__keSocialReady) return;
+      if (window.stopAudioPlayback) window.stopAudioPlayback();
+      const phrasePanel = document.getElementById('phrase-panel');
+      const socialPanel = document.getElementById('social-panel');
+      const phrasesTab = document.getElementById('mode-phrases');
+      if (phrasePanel) phrasePanel.hidden = true;
+      if (socialPanel) socialPanel.hidden = false;
+      if (phrasesTab) phrasesTab.classList.remove('active');
+      socialTab.classList.add('active');
+    });
+  }
   // Scroll active tab into view
   const activeTab = container.querySelector('.tab.active');
   if (activeTab) activeTab.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
@@ -973,7 +991,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 }
 </script>
 <script type="module">
-import {mountSocialPlayer} from './assets/social-player.js?v=3';
+import {mountSocialPlayer} from './assets/social-player.js?v=4';
 mountSocialPlayer().catch(error => console.error('Social stories failed to load', error));
 </script>
 </body>

@@ -19,7 +19,8 @@ export function createStorySession(story) {
   return {
     current,
     choices() {
-      return current().choice?.options ?? [];
+      const choice = current().choice;
+      return choice && choice.options ? choice.options : [];
     },
     advance() {
       const nextId = current().next;
@@ -50,13 +51,14 @@ export async function mountSocialPlayer({ dataUrl = `data/social_dialogues.json?
     byId('phrase-panel').hidden = social;
     byId('social-panel').hidden = !social;
     byId('mode-phrases').classList.toggle('active', !social);
-    byId('mode-social')?.classList.toggle('active', social);
+    const socialTab = byId('mode-social');
+    if (socialTab) socialTab.classList.toggle('active', social);
   }
 
   byId('mode-phrases').addEventListener('click', () => showMode('phrases'));
   byId('phrase-panel').addEventListener('click', event => {
     if (!event.target.closest('#mode-social')) return;
-    window.stopAudioPlayback?.();
+    if (window.stopAudioPlayback) window.stopAudioPlayback();
     showMode('social');
   });
 
@@ -109,7 +111,7 @@ export async function mountSocialPlayer({ dataUrl = `data/social_dialogues.json?
   function renderActions() {
     const turn = session.current();
     const container = byId('social-choices');
-    container.replaceChildren();
+    container.innerHTML = '';
     for (const option of session.choices()) {
       container.append(actionButton(option.label, () => {
         stopAudio();
@@ -140,8 +142,8 @@ export async function mountSocialPlayer({ dataUrl = `data/social_dialogues.json?
     byId('social-title').textContent = story.title;
     byId('social-progress').textContent = `${storyIndex + 1} / ${stories.length}`;
     storySelect.value = String(storyIndex);
-    byId('social-speaker').textContent = character?.name ?? '';
-    byId('social-text').textContent = turn.text ?? 'Watch what is happening.';
+    byId('social-speaker').textContent = character ? character.name : '';
+    byId('social-text').textContent = turn.text !== null && turn.text !== undefined ? turn.text : 'Watch what is happening.';
     video.poster = turn.poster;
     video.src = `${turn.video}?v=${ASSET_VERSION}`;
     video.play().catch(() => {});
@@ -156,6 +158,7 @@ export async function mountSocialPlayer({ dataUrl = `data/social_dialogues.json?
   }
 
   byId('mode-phrases').addEventListener('click', () => setMode('phrases'));
+  window.__keSocialReady = true;
   byId('social-video-card').addEventListener('click', playCurrent);
   byId('social-replay').addEventListener('click', playCurrent);
   byId('social-restart').addEventListener('click', () => {
